@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Lembrete</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script type="text/javascript">
+		let vh = window.innerHeight * 0.01
+		document.documentElement.style.setProperty('--vh', `${vh}px`)
+		window.addEventListener('resize', function(){
+			let vh = window.innerHeight * 0.01;
+			document.documentElement.style.setProperty('--vh', `${vh}px`);
+		});
+		
+		function registrar(){
+			let sai = "";
+			document.getElementById("saida").innerHTML = sai;
+			for(i=0;i<4;i++){
+				ent = document.getElementById(i).value;
+				sai = '<input class="entrada" disabled="true" value="'+ent+'">';
+				document.getElementById("saida").innerHTML += sai;
+				console.log(ent)
+			}
+		}
+		
+		document.addEventListener("keyup", function(e){
+			if(e.key === 'Enter') {
+				registrar();
+			}
+		});
+		
+	</script>
+
+	<style type="text/css">
+	*{
+		height: calc(var(--vh, 1vh) * 70);
+		margin: 0;
+		padding: 0;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		-webkit-appearance: none;
+	}
+	.entrada{
+		width: calc(var(--vh, 1vh) * 100);
+		height: calc(var(--vh, 1vh) * 5);
+		margin: calc(var(--vh, 1vh) * 0.5);
+		border: solid 3px;
+		border-radius: calc(var(--vh, 1vh) * 2);
+		text-align: center;
+		font-size: calc(var(--vh, 1vh) * 3);
+		overflow: auto;
+    	box-sizing: border-box;  	
+		background: #FFFFFF
+	}
+	.saida{
+		height: 35%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		border: solid 3px;
+		text-align: center;
+		font-size: calc(var(--vh, 1vh) * 6);
+		font-family: impact, sans-serif;
+		font-weight:bold;
+	}
+	.sub{
+		height: 15%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		border: solid 3px;
+		text-align: center;
+		font-size: calc(var(--vh, 1vh) * 6);
+		font-family: impact, sans-serif;
+		cursor: pointer;
+	}
+	.sub:hover{
+		color: white;
+		background: black;
+	}
+	</style>
+
+</head>
+	<body style="flex: display; flex-direction: column;">
+		<div class="sub" style="border: none; flex: display; justify-content: center;">
+			<span>Complete os campos abaixo</span>
+		</div>
+		<div class="saida" id="form">
+			<input class="entrada" id="0" placeholder="Nome completo"> 
+			<input class="entrada" id="1" placeholder="Endereço"> 
+			<input class="entrada" id="2" placeholder="CEP"> 
+			<input class="entrada" id="3" placeholder="Telefone">
+		</div>
+		<div class="sub" onclick="registrar()">enviar</div>
+		<div class="saida" id="saida"></div>
+	</body>
+</html>
