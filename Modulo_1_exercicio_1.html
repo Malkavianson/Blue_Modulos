@@ -46,14 +46,14 @@
 			}
 		}
 		function registrar(id){
+			document.getElementById(id).style.background="#c9b8a8"
 			let resposta = id[0];
 			if(resposta==="s"){
 				sim++;
 			}else{nao++;}
 			questao.push(id);
-			pai = document.getElementById(id).parentNode;
-			idp = pai.parentNode.id;
-			desabilitar(idp);
+			pai = document.getElementById(id).parentNode.id;
+			desabilitar(pai);
 		}
 		</script>
 
@@ -220,11 +220,11 @@
 						Conseguiu entrar no prédio?
 					</span>
 					<div class="checksquare" id="sq1">
-						<div class="choice">
-							<input type="checkbox" class="check" id="s1" onclick="registrar(id)"><label class="tex" for="s1">SIM</label>
+						<div class="choice" id="s1" onclick="registrar(id)">
+							<label class="tex" for="s1">SIM</label>
 						</div>
-						<div class="choice">
-							<input type="checkbox" class="check" id="n1" onclick="registrar(id)"><label class="tex" for="n1">NÃO</label>
+						<div class="choice" id="n1" onclick="registrar(id)">
+							<label class="tex" for="n1">NÃO</label>
 						</div>
 					</div>
 				</div>
@@ -233,11 +233,11 @@
 						Desativou o sistema de ALARMES
 					</span>
 					<div class="checksquare" id="sq2">
-						<div class="choice">
-							<input type="checkbox" class="check" id="s2" onclick="registrar(id)"><label class="tex" for="s1">SIM</label>
+						<div class="choice" id="s2" onclick="registrar(id)">
+							<label class="tex" for="s1">SIM</label>
 						</div>
-						<div class="choice">
-							<input type="checkbox" class="check" id="n2" onclick="registrar(id)"><label class="tex" for="n1">NÃO</label>
+						<div class="choice" id="n2" onclick="registrar(id)">
+							<label class="tex" for="n1">NÃO</label>
 						</div>
 					</div>
 				</div>
@@ -246,11 +246,11 @@
 						Desligou a CHAVE GERAL?
 					</span>
 					<div class="checksquare" id="sq3">
-						<div class="choice">
-							<input type="checkbox" class="check" id="s3" onclick="registrar(id)"><label class="tex" for="s1">SIM</label>
+						<div class="choice" id="s3" onclick="registrar(id)">
+							<label class="tex" for="s1">SIM</label>
 						</div>
-						<div class="choice">
-							<input type="checkbox" class="check" id="n3" onclick="registrar(id)"><label class="tex" for="n1">NÃO</label>
+						<div class="choice" id="n3" onclick="registrar(id)">
+							<label class="tex" for="n1">NÃO</label>
 						</div>
 					</div>
 				</div>
@@ -259,11 +259,11 @@
 						Perguntou à porta "Qual a semelhança entre o corvo e a escrivaninha?"
 					</span>
 					<div class="checksquare" id="sq4">
-						<div class="choice">
-							<input type="checkbox" class="check" id="s4" onclick="registrar(id)"><label class="tex" for="s1">SIM</label>
+						<div class="choice" id="s4" onclick="registrar(id)">
+							<label class="tex" for="s1">SIM</label>
 						</div>
-						<div class="choice">
-							<input type="checkbox" class="check" id="n4" onclick="registrar(id)"><label class="tex" for="n1">NÃO</label>
+						<div class="choice" id="n4" onclick="registrar(id)">
+							<label class="tex" for="n1">NÃO</label>
 						</div>
 					</div>
 				</div>
@@ -272,11 +272,11 @@
 						IMPLANTOU A BOMBA NO SUBSOLO?
 					</span>
 					<div class="checksquare" id="sq5">
-						<div class="choice">
-							<input type="checkbox" class="check" id="s5" onclick="registrar(id)"><label class="tex" for="s1">SIM</label>
+						<div class="choice" id="s5" onclick="registrar(id)">
+							<label class="tex" for="s1">SIM</label>
 						</div>
-						<div class="choice">
-							<input type="checkbox" class="check" id="n5" onclick="registrar(id)"><label class="tex" for="n1">NÃO</label>
+						<div class="choice" id="n5" onclick="registrar(id)">
+							<label class="tex" for="n1">NÃO</label>
 						</div>
 					</div>
 				</div>
