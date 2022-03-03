@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Lembrete</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script type="text/javascript">
+		let vh = window.innerHeight * 0.01
+		document.documentElement.style.setProperty('--vh', `${vh}px`)
+		window.addEventListener('resize', function(){
+			let vh = window.innerHeight * 0.01;
+			document.documentElement.style.setProperty('--vh', `${vh}px`);
+		});
+		let p="O primeiro programa a gente nunca esquece!";
+		let reset="";
+		function init(){
+			document.getElementById("dots").innerHTML = reset;
+			for (let i=0;i<p.length;i++){
+				setTimeout( function() {
+					let result="<div><span>"+p[i]+"</span></div>";
+					document.getElementById("dots").innerHTML += result;
+				}, i*25 );
+			}
+	}
+	</script>
+
+	<style type="text/css">
+	*{
+		height: calc(var(--vh, 1vh) * 70);
+		margin: 0;
+		padding: 0;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		-webkit-appearance: none;
+	}
+	.dots{
+		height: 15%;
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		border: solid 3px;
+		text-align: center;
+		font-size: calc(var(--vh, 1vh) * 6);
+		font-family: impact, sans-serif;
+		font-weight:bold;
+	}
+	.dots div{
+		width: calc(var(--vh, 1vh) * 1);
+		height: calc(var(--vh, 1vh) * 1);
+		margin: calc(var(--vh, 1vh) * 2);
+		animation: move 5s ease-in-out infinite alternate;
+	}
+	@keyframes move {
+		from {
+			transform: translateY(-50%);
+		}
+		to {
+			transform: translateY(50%);
+		}
+	}
+	.dots div:nth-child(9){
+		animation-delay: -1.6s;
+	}
+	.dots div:nth-child(8){
+		animation-delay: -1.4s;
+	}
+	.dots div:nth-child(7){
+		animation-delay: -1.2s;
+	}
+	.dots div:nth-child(6){
+		animation-delay: -1s;
+	}
+	.dots div:nth-child(5){
+		animation-delay: -0.8s;
+	}
+	.dots div:nth-child(4){
+		animation-delay: -0.6s;
+	}
+	.dots div:nth-child(3){
+		animation-delay: -0.4s;
+	}
+	.dots div:nth-child(2){
+		animation-delay: -0.2s;
+	}
+	</style>
+
+</head>
+	<body style="flex: display; flex-direction: column;" onclick="init()">
+		<div class="dots" id="dots"></div>
+		<div class="dots" style="border: none; flex: display; justify-content: center;"><span>Clique para iniciar</span><div>
+	</body>
+</html>
