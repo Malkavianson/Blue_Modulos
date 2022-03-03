@@ -1,0 +1,335 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>Musica</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script type="text/javascript">
+			let vh = window.innerHeight * 0.01
+			document.documentElement.style.setProperty('--vh', `${vh}px`)
+			window.addEventListener('resize', function(){
+				let vh = window.innerHeight * 0.01;
+				document.documentElement.style.setProperty('--vh', `${vh}px`);
+			});
+			ly_ant="init";
+			function choice(id){
+				if(id==="rock"){
+					document.getElementById(ly_ant).style.display="none"
+					document.getElementById("lmf").style.display="flex"
+					ly_ant="lmf";
+				}else if(id==="pop"){
+					document.getElementById(ly_ant).style.display="none"
+					document.getElementById("bab").style.display="flex"
+					ly_ant="bab";
+				}else if(id==="indie"){
+					document.getElementById(ly_ant).style.display="none"
+					document.getElementById("can").style.display="flex"
+					ly_ant="can";
+				}else if(id==="trap"){
+					document.getElementById(ly_ant).style.display="none"
+					document.getElementById("per").style.display="flex"
+					ly_ant="per";
+				}else{
+					document.getElementById(ly_ant).style.display="none";
+					document.getElementById("mqp").style.display="flex";
+					ly_ant="mqp";
+				}
+			}
+
+		</script>
+		<style type="text/css">
+		*{
+			height: 95%;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			-webkit-appearance: none;
+		}
+		.main{
+			display: flex;
+			flex-direction: column;
+			margin: calc(var(--vh, 1vh) * 0.1);
+		}
+		.intro{
+			height: calc(var(--vh, 1vh) * 20);
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.menu{
+			height: calc(var(--vh, 1vh) * 10);
+			position: relative;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-evenly;
+		}
+		.estilo{
+			height: calc(var(--vh, 1vh) * 10);
+			width: calc(var(--vh, 1vh) * 10);
+			position: relative;
+			margin: calc(var(--vh, 1vh) * 5);
+			border: groove 3px aqua;
+			display: flex;
+			font-style: oblique;
+			font-family: candara, sans-serif;
+			font-weight:bold;
+			font-size: calc(var(--vh, 1vh) * 3);
+			text-align: center;
+			align-items: center;
+			justify-content: center;
+			align-content: center;
+		}
+		.estilo:hover{
+			background: green;
+		}
+		.song{
+			height: calc(var(--vh, 1vh) * 50);
+			position: relative;
+			display: flex;
+			justify-content: center;
+		}
+		.lyrics{
+			position: relative;
+			font-style: oblique;
+			font-family: candara, sans-serif;
+			font-weight:bold;
+			font-size: calc(var(--vh, 1vh) * 4);
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			text-align: center;
+		}
+
+		</style>
+	</head>
+	<body>
+	<main class="main">
+		<div class="intro">
+			<h1>A proposta inicial do exercício seria uma única música</h1>
+			<h3>Mas como não é possível escolher apenas uma, vamos logo com cinco!</h3>
+		</div>
+		<div class="menu">
+			<div class="estilo" id="rock" onmouseover="choice(id)">		Rock	</div>
+			<div class="estilo" id="pop" onmouseover="choice(id)">		POP		</div>
+			<div class="estilo" id="indie" onmouseover="choice(id)">	Indie	</div>
+			<div class="estilo" id="trap" onmouseover="choice(id)">		Trap	</div>
+			<div class="estilo" id="infantil" onmouseover="choice(id)">	Infantil</div>
+		</div>
+		<div class="song" id="song">
+			<div class="lyrics" id="init" style="display: flex">Escolha um estilo</div>
+			<div class="lyrics" id="bab" style="display: none;">
+				<h1>Build a Bitch</h1>
+				<h3>Bella Poarch</h3>
+				<p>
+					This ain't build a bitch (a bitch)</br>
+					You don't get to pick and choose</br>
+					Different ass and bigger boobs</br>
+					If my eyes are brown or blue</br>
+					</br>
+					This ain't build a bitch (a bitch)</br>
+					I'm filled with flaws and attitude</br>
+					So if you need perfect, I'm not built for you (yeah)</br>
+					</br>
+					Bob the Builder broke my heart</br>
+					Told me I need fixing</br>
+					Said that I'm just nuts and bolts</br>
+					Lot of parts were missing</br>
+					Curvy like a cursive font</br>
+					Virgin and a vixen</br>
+					That's the kind of girl he wants</br>
+					But he forgot</br>
+					</br>
+					This ain't build a bitch (a bitch)</br>
+					You don't get to pick and choose</br>
+					Different ass and bigger boobs</br>
+					If my eyes are brown or blue</br>
+					</br>
+					This ain't build a bitch (a bitch)</br>
+					I'm filled with flaws and attitude</br>
+					So if you need perfect, I'm not built for you (one, two, three, ooh)</br>
+					</br>
+					La, la, la, la, la, la, la, la, la, la, la</br>
+					La, la, la, la, la, la, la, la, la, la, la</br>
+					</br>
+					The boys are always playing dolls</br>
+					Looking for their Barbie</br>
+					They don't look like Ken at all</br>
+					Hardly have a heartbeat</br>
+					Need someone who falls apart</br>
+					So he can play Prince Charming</br>
+					If that's the kind of girl he wants</br>
+					Then he forgot</br>
+					</br>
+					This ain't build a bitch (a bitch)</br>
+					You don't get to pick and choose</br>
+					Different ass and bigger boobs</br>
+					If my eyes are brown or blue</br>
+					</br>
+					This ain't build a bitch (a bitch)</br>
+					I'm filled with flaws and attitude</br>
+					So if you need perfect, I'm not built for you (one, two, three)</br>
+					</br>
+					La, la, la, la, la, la, la, la, la, la, la</br>
+					La, la, la, la, la, la, la, la, la, la, la</br>
+					La, la, la, la, la, la, la, la, la, la, la, la, la, la, la
+				</p>
+			</div>
+			<div class="lyrics" id="can" style="display: none;">
+				<h1>Cancer(cover MCR)</h1>
+				<h3>Twenty One pilots</h3>
+				<p>
+					Turn away</br>
+					If you could get me a drink</br>
+					Of water 'cause my lips are chapped and faded</br>
+					Call my aunt Marie</br>
+					Help her gather all my things</br>
+					And bury me</br>
+					In all my favorite colors</br>
+					My sisters and my brothers, still</br>
+					I will not kiss you</br>
+					'Cause the hardest part of this</br>
+					Is leaving you</br>
+					</br>
+					Now turn away</br>
+					'Cause I'm awful just to see</br>
+					'Cause all my hair's abandoned all my body</br>
+					All my agony</br>
+					</br>
+					Know that I will never marry</br>
+					Baby I'm just soggy from the chemo</br>
+					But counting down the days to go</br>
+					It just ain't living</br>
+					And I just hope you know</br>
+					</br>
+					Now turn away</br>
+					'Cause I'm awful just to see</br>
+					'Cause all my hair's abandoned all my body</br>
+					All my agony</br>
+					</br>
+					That if you say (if you say)</br>
+					Good-bye today (good-bye today)</br>
+					I'd ask you to be true (I'd ask you to be true)</br>
+					'Cause the hardest part of this</br>
+					Is leaving you</br>
+					'Cause the hardest part of this</br>
+					Is leaving you
+				</p>
+			</div>
+			<div class="lyrics" id="lmf" style="display: none;">
+				<h1>Light My Fire </h1>
+				<h3>The Doors</h3>
+				<p>
+					You know that it would be untrue</br>
+					You know that I would be a liar</br>
+					If I was to say to you</br>
+					Girl, we couldn't get much higher</br>
+					</br>
+					Come on, baby, light my fire</br>
+					Come on, baby, light my fire</br>
+					Try to set the night on fire</br>
+					</br>
+					The time to hesitate is through</br>
+					No time to wallow in the mire</br>
+					Try now we can only lose</br>
+					And our love become a funeral pyre</br>
+					</br>
+					Come on, baby, light my fire</br>
+					Come on, baby, light my fire</br>
+					Try to set the night on fire, yeah</br>
+					</br>
+					The time to hesitate is through</br>
+					No time to wallow in the mire</br>
+					Try now we can only lose</br>
+					And our love become a funeral pyre</br>
+					</br>
+					Come on, baby, light my fire</br>
+					Come on, baby, light my fire</br>
+					Try to set the night on fire, yeah</br>
+					You know that it would be untrue</br>
+					You know that I would be a liar</br>
+					If I was to say to you</br>
+					Girl, we couldn't get much higher</br>
+					</br>
+					Come on, baby, light my fire</br>
+					Come on, baby, light my fire</br>
+					</br>
+					Try to set the night on fire</br>
+					Try to set the night on fire</br>
+					Try to set the night on fire</br>
+					Try to set the night on fire
+				</p>
+			</div>
+			<div class="lyrics" id="mqp" style="display: none;">
+				<h1>Meu Querido Paiol</h1>
+				<h3>Hélio Ziskind, A Turma do Cocoricó</h3>
+				<p>
+					Meu Querido Paiol</br>
+					meu Querido Paiol</br>
+					meu Querido Paiol</br>
+					meu Querido Paiol</br>
+					é onde eu moro</br>
+					onde eu guardo as minhas coisas</br>
+					onde a chuva não me alcança</br>
+					nem o vento, nem o frio</br>
+					onde eu durmo</br>
+					onde eu relaxo</br>
+					a minha casa</br>
+					onde eu me sinto bem</br>
+					meu Querido Paiol</br>
+					meu Querido Paiol</br>
+					é arejado</br>
+					muito bem iluminado</br>
+					a vista é linda</br>
+					primeiro andar</br>
+					escada</br>
+					segundo andar</br>
+					tudo muito organizado</br>
+					caprichado</br>
+					cada coisa em seu lugar
+				</p>
+			</div>
+			<div class="lyrics" id="per" style="display: none;">
+				<h1>Perigo</h1>
+				<h3>Profeta</h3>
+				<p>
+					Na paz de um amor  tranquilo </br>
+					Naquela noite vc era um abrigo </br>
+					Me chamou de princesa na frente dos amigos</br>
+					Olha o perigo</br>
+					Olha o perigo</br>
+					Me chamou pra sentar e nao era na mesa</br>
+					E quando era dançar </br>
+					Eu fiquei vermelha</br>
+					Numa terça feira</br>
+					Olha q bobeira</br>
+					Eu bolando um cha com você na cabeça</br>
+					</br>
+					Na sua mao sou uma flor</br>
+					Espinhos nao sentem calor</br>
+					na sua mao sou uma flor</br>
+					toma cuidado com a dor</br>
+					</br>
+					Com vc na cabeça  uma correnteza</br>
+					Descendo como cachaça num beco onde nao tem nada</br>
+					Depois de uma noite inteira</br>
+					Sou tua maladeza</br>
+					Esse teu jeito solto</br>
+					Que me deixa louco</br>
+					Ponto no fraco no pescoço</br>
+					Amanha quero de novoo</br>
+					Noite escura em claro</br>
+					Aquel brilho azulado de um favelado</br>
+					Suor deixando nós grudado</br>
+					Isso é um fato</br>
+					Isso é um fato</br>
+					Aquele olhar discimulado de cigano obliquo</br>
+					te fazendo delirar em todos os sentidos</br>
+					Parecendo até castigo
+				</p>
+			</div>
+
+		</div>
+	</main>
+	</body>
+<html>
