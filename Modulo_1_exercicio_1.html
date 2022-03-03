@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>RPG</title>
+		<script type="text/javascript">
+		let respondido=0;
+		let resultado="";
+		let questao=[];
+		let sim=0;
+		let nao=0;
+		
+		function desabilitar(id){
+			respondido++;
+			document.getElementById(id).classList.remove("checksquare");
+			document.getElementById(id).classList.add("checksquarem");
+			if(respondido===5){
+				if(sim===0){
+					resultado="Você deixa o detonador cair na água enquanto tentava fugir. Ao parar para pega-lo, é surpreendido por um dos seguranças</br>Você falhou miseravelmente!";
+				}else if(sim===1&&questao.includes("s4")===true){
+					document.getElementById("result").style.alignItems="center";
+					document.getElementById("result").style.background="#680000bf";
+					document.getElementById("result").style.fontSize="10px";
+					document.getElementById("result").style.fontFamily="tahoma, sans-serif";
+					resultado="Vocês se entreolham, e caem na risada. _Você é um louco varrido??????-diz a porta estupefata.</br>Você responde que está em uma missão importantíssima e que precisa acabar com o dono daquele prédio. A porta te conta que ele é um homem rude que lucra em cima de pessoas pobres, superfaturando o preço dos produtos para visar enormes ganhos. E ainda por cima bate todas as portas quando passa por elas! Você já o odiava, não pode aceitar ele bater em pobres e indefesas portas sem consequências. A porta te mostra uma passagem secreta para o aposento dele, e assim você o encontra dormindo. Foi uma morte rápida e indolor...</br>Você aniquilou seu arqui-rival e ainda salvou todas as portas do prédio! Parabéns.</br>A propósito, Você é um verdadeiro Malkavian!";
+	
+				}else if(sim===1||sim===2){
+					document.getElementById("result").style.padding="0px 109px";
+					resultado="Você não contava com cães no prédio, que rapidamente te encontraram! Você corre o mais rápido que pode e chega até o muro. O animal não te pega por centímetros.</br>Você falhou, porém conseguiu escapar";
+				}else if(sim===3){
+					resultado="Já do lado de fora do prédio, você aguarda a explosão... Porém, nada acontece</br>Você então percebe que se esqueceu de ativar a bomba, e o prédio já está protegido novamente.</br>Você chega perto de conseguir alcançar seu objetivo, mas acaba falhando por pouco.";
+				}else if(sim===4){
+					if(questao.includes("n4")===true){
+					resultado="Ao tentar sair do prédio, se deparou com a porta emperrada. Parecia não querer abrir, e você perde seus últimos 30 segundos tentando encontrar outra saída e bomba é detonada antes que você consiga sair.</br>Depois de muito esforço você conquista seu objetivo, embora não de maneira perfeita."
+					}else{
+					resultado="Ao tentar subir as escadas correndo, você tropeça em seus cadarços. Rola as escadas até o subsolo novamente, infelizmente você não chega à saída antes da detonação.</br>Depois de muito esforço você conquista seu objetivo, embora não de maneira perfeita.";
+					}
+				}else{
+					resultado="Parabéns</br>Você derrubou o prédio de 18 andares da corporação farmacêutica</br>Você triunfa de maneira inquestionável e seus feitos serão lembrados por muitas gerações.";
+				}
+			document.getElementById("result").innerHTML = resultado;
+			console.log(questao);
+			}
+		}
+		function registrar(id){
+			let resposta = id[0];
+			if(resposta==="s"){
+				sim++;
+			}else{nao++;}
+			questao.push(id);
+			pai = document.getElementById(id).parentNode;
+			idp = pai.parentNode.id;
+			desabilitar(idp);
+		}
+		</script>
+
+		<style type="text/css">
+		*{
+			height: 99%;
+			box-sizing: border-box;
+		}
+		.all{
+			background: #391d34;
+			border: ridge 5px #f8af8c;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.header{
+			height: 22%;
+			background: #a24d52;
+			text-align: center;
+			font-variant: small-caps;
+			font-style: oblique;
+			font-family: impact, sans-serif;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			margin: 10px;
+			border: groove 3px #f8af8c;
+			border-radius: 100px;
+			padding: 0px 70px;
+			font-size: 26px;
+		}
+		.main{
+			height: 60%;
+			background: #5a3044;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			border: groove 3px #f8af8c;
+			border-radius: 100px;
+			align-items: center;
+		}
+		.ask{
+			height: 18%;
+			width: 90%;
+			position: relative;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			margin: 10px;
+			align-items: center;
+		}
+		.check{
+			height: 80%;
+			width: 30%;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			border: solid 2px;
+			cursor: help;
+		}
+		.checksquare{
+			height: 90%;
+			width: 50%;
+			border-radius: 30px;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-around;
+		}
+		.checksquarem{
+			height: 90%;
+			width: 50%;
+			background: #e9cde4;
+			border: solid 5px;
+			border-radius: 30px;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-around;
+			pointer-events: none;
+			cursor: none;
+		}
+		.checksquare:hover{
+			background: #391d34;
+		}
+		.choice{
+			height: 80%;
+			width: 45%;
+			border: double 2px;
+			border-radius: 10px;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+		}
+		.choice:hover{
+			background: #c9b8a8;
+		}
+		.texto{
+			width: 50%;
+			height: 95%;
+			margin: 2px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border: solid 3px;
+			border-radius: 30px;
+			text-align: center;
+			font-variant: small-caps;
+			font-style: oblique;
+			font-family: tahoma, sans-serif;
+			font-size: 20px;
+		}
+		.tex{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			font-variant: small-caps;
+			font-style: oblique;
+			font-family: tahoma, sans-serif;
+			font-size: 30px;
+		}
+		.result{
+			height: 14%;
+			width: 95%;
+			color: white;
+			background: #a24d52;
+			display: flex;
+			justify-content: center;
+			border: groove 3px #f8af8c;
+			border-radius: 10px;
+			text-align: center;
+			font-style: oblique;
+			font-family: impact, sans-serif;
+			font-size: 22px;
+		}
+		.result div{
+			width: 20%;
+			height: 20%;
+			margin: 2px;
+		}
+		</style>
+
+	</head>
+
+	<body>
+		<div class="all">
+			<header class="header">
+				<p>
+					O mundo é um lugar sombrio, você só consegue sobreviver graças às suas habilidades.
+				</br>
+					Dentro de sua própria loucura você alcança a sobrevivência, e isso é o que diferencia você dos demais. Cada detalhe é importante!
+				</br>
+					Você está dentro do prédio de seu arqui-inimigo, sabote o máximo de coisas que puder!
+				</br>
+					Mostre seu poder e aniquile seu INIMIGO! 
+				</p>
+			</header>
+			<main class="main">
+				<div class="ask">
+					<span class="texto">
+						Conseguiu entrar no prédio?
+					</span>
+					<div class="checksquare" id="sq1">
+						<div class="choice">
+							<input type="checkbox" class="check" id="s1" onclick="registrar(id)"><label class="tex" for="s1">SIM</label>
+						</div>
+						<div class="choice">
+							<input type="checkbox" class="check" id="n1" onclick="registrar(id)"><label class="tex" for="n1">NÃO</label>
+						</div>
+					</div>
+				</div>
+				<div class="ask">
+					<span class="texto">
+						Desativou o sistema de ALARMES
+					</span>
+					<div class="checksquare" id="sq2">
+						<div class="choice">
+							<input type="checkbox" class="check" id="s2" onclick="registrar(id)"><label class="tex" for="s1">SIM</label>
+						</div>
+						<div class="choice">
+							<input type="checkbox" class="check" id="n2" onclick="registrar(id)"><label class="tex" for="n1">NÃO</label>
+						</div>
+					</div>
+				</div>
+				<div class="ask">
+					<span class="texto">
+						Desligou a CHAVE GERAL?
+					</span>
+					<div class="checksquare" id="sq3">
+						<div class="choice">
+							<input type="checkbox" class="check" id="s3" onclick="registrar(id)"><label class="tex" for="s1">SIM</label>
+						</div>
+						<div class="choice">
+							<input type="checkbox" class="check" id="n3" onclick="registrar(id)"><label class="tex" for="n1">NÃO</label>
+						</div>
+					</div>
+				</div>
+				<div class="ask">
+					<span class="texto">
+						Perguntou à porta "Qual a semelhança entre o corvo e a escrivaninha?"
+					</span>
+					<div class="checksquare" id="sq4">
+						<div class="choice">
+							<input type="checkbox" class="check" id="s4" onclick="registrar(id)"><label class="tex" for="s1">SIM</label>
+						</div>
+						<div class="choice">
+							<input type="checkbox" class="check" id="n4" onclick="registrar(id)"><label class="tex" for="n1">NÃO</label>
+						</div>
+					</div>
+				</div>
+				<div class="ask">
+					<span class="texto">
+						IMPLANTOU A BOMBA NO SUBSOLO?
+					</span>
+					<div class="checksquare" id="sq5">
+						<div class="choice">
+							<input type="checkbox" class="check" id="s5" onclick="registrar(id)"><label class="tex" for="s1">SIM</label>
+						</div>
+						<div class="choice">
+							<input type="checkbox" class="check" id="n5" onclick="registrar(id)"><label class="tex" for="n1">NÃO</label>
+						</div>
+					</div>
+				</div>
+			</main>
+			<footer class="result" id="result"></footer>
+		</div>
+</html>

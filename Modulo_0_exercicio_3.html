@@ -5,7 +5,7 @@
 
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+		<title>DETETIVE</TITLE>
 		<script type="text/javascript">
 		let respondido=0;
 		let resultado="";
@@ -15,14 +15,14 @@
 		
 		function final(){
 			for(i=0;i<resultado.length;i++){
-				let r="<div><h1>"+resultado[i]+"</h1></div>"
+				let r="<div><h1>"+resultado[i]+"</h1></div>";
 				setTimeout( function() {
-					document.getElementById("result").innerHTML += r
-				}, i*200 )
+					document.getElementById("result").innerHTML += r;
+				}, i*200 );
 			}
 		}
 		function desabilitar(id){
-			respondido++
+			respondido++;
 			document.getElementById(id).classList.remove("checksquare");
 			document.getElementById(id).classList.add("checksquarem");
 			if(respondido===5){
@@ -31,20 +31,19 @@
 				}else if(sim===3){
 					resultado="suspeito";
 				}else{
-					resultado="inocente"
+					resultado="inocente";
 				}
-			final()
-			console.log("respostas "+sim+" "+nao)
+			final();
 			}
 		}
 		function registrar(id){
-			resposta = id[0]
+			resposta = id[0];
 			if(resposta==="s"){
-				sim++
-			}else{nao++}
-			pai = document.getElementById(id).parentNode
-			idp = pai.parentNode.id
-			desabilitar(idp)
+				sim++;
+			}else{nao++;}
+			pai = document.getElementById(id).parentNode;
+			idp = pai.parentNode.id;
+			desabilitar(idp);
 		}
 		</script>
 
