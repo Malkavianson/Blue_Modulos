@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<script type="text/javascript">
+		let respondido=0;
+		let resultado="";
+		let sim=0;
+		let nao=0;
+		
+		
+		function final(){
+			for(i=0;i<resultado.length;i++){
+				let r="<div><h1>"+resultado[i]+"</h1></div>"
+				setTimeout( function() {
+					document.getElementById("result").innerHTML += r
+				}, i*200 )
+			}
+		}
+		function desabilitar(id){
+			respondido++
+			document.getElementById(id).classList.remove("checksquare");
+			document.getElementById(id).classList.add("checksquarem");
+			if(respondido===5){
+				if(sim>3){
+					resultado="culpado";
+				}else if(sim===3){
+					resultado="suspeito";
+				}else{
+					resultado="inocente"
+				}
+			final()
+			console.log("respostas "+sim+" "+nao)
+			}
+		}
+		function registrar(id){
+			resposta = id[0]
+			if(resposta==="s"){
+				sim++
+			}else{nao++}
+			pai = document.getElementById(id).parentNode
+			idp = pai.parentNode.id
+			desabilitar(idp)
+		}
+		</script>
+
+		<style type="text/css">
+		*{
+			height: 99%;
+			margin: 1;
+			padding: 1;
+			box-sizing: border-box;
+		}
+		.header{
+			height: 20%;
+			background: white;
+			text-align: center;
+			font-variant: small-caps;
+			font-style: oblique;
+			font-family: Tahoma, sans-serif;
+			font-weight: bold;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+		}
+		.asks{
+			height: 60%;
+			background: #002fa5;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		.ask{
+			height: 18%;
+			width: 90%;
+			position: relative;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			margin: 10px;
+			align-items: center;
+		}
+		.check{
+			height: 80%;
+			width: 30%;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			border: solid 2px;
+			cursor: help;
+		}
+		.checksquare{
+			height: 90%;
+			width: 50%;
+			border-radius: 30px;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-around;
+		}
+		.checksquarem{
+			height: 90%;
+			width: 50%;
+			background: #000024;
+			border: solid 5px;
+			border-radius: 30px;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-around;
+			pointer-events: none;
+			cursor: none;
+		}
+		.checksquare:hover{
+			background: #000064;
+		}
+		.choice{
+			height: 80%;
+			width: 45%;
+			border: double 2px;
+			border-radius: 10px;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+		}
+		.choice:hover{
+			background: #988aff;
+		}
+		.texto{
+			width: 50%;
+			height: 95%;
+			margin: 2px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border: solid 3px;
+			border-radius: 30px;
+			text-align: center;
+			font-variant: small-caps;
+			font-style: oblique;
+			font-family: tahoma, sans-serif;
+			font-size: 20px;
+		}
+		.tex{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			font-variant: small-caps;
+			font-style: oblique;
+			font-family: tahoma, sans-serif;
+			font-size: 30px;
+		}
+		.result{
+			background: #f21e36;
+			height: 19%;
+			display: flex;
+			text-align: center;
+			font-variant: small-caps;
+			font-style: oblique;
+			font-family: impact, sans-serif;
+			font-weight: bold;
+			font-size: 20px;
+		}
+		.result div{
+			width: 20%;
+			height: 20%;
+			margin: 2px;
+			animation: move 1s ease-in-out infinite alternate;
+		}
+		@keyframes move {
+			from {
+				transform: translateY(0%);
+			}
+			to {
+				transform: translateY(25%);
+			}
+		}
+		.result div:nth-child(8){
+			animation-delay: -1.4s;
+		}
+		.result div:nth-child(7){
+			animation-delay: -1.2s;
+		}
+		.result div:nth-child(6){
+			animation-delay: -1s;
+		}
+		.result div:nth-child(5){
+			animation-delay: -0.8s;
+		}
+		.result div:nth-child(4){
+			animation-delay: -0.6s;
+		}
+		.result div:nth-child(3){
+			animation-delay: -0.4s;
+		}
+		.result div:nth-child(2){
+			animation-delay: -0.2s;
+		}
+
+		</style>
+
+	</head>
+
+	<body>
+			<div class="header">
+				<h1 style="border: Solid 3px black; border-radius: 40px; padding: 10px; font-size: 30px;">você é o CULPADO?</h1>
+				<p style="margin: 2px; border: dotted 3px black; border-radius: 15px; padding: 10px 3px; font-size: 18px;">
+				No dia 27 de outubro de 2019, foi relatado que foram comidas 3 panquecas de dona MARIA, deixadas dentro da geladeira. 
+				</br>
+				No local do delito foi encontrado um pino de pulseira de RELÓGIO e pegadas de terra do JARDIM foram deixadas na cozinha com os traços da marca de TÊNIS all-star.
+				</br>
+				Você é um dos suspeitos, então você não pode mudar sua resposta. PENSE bem antes de RESPONDER!
+				</p>
+			</div>
+			<div class="asks">
+				<div class="ask">
+					<span class="texto">
+						Você conhece alguma MARIA?
+					</span>
+					<div class="checksquare" id="sq1">
+						<div class="choice">
+						<input type="checkbox" class="check" id="s1" onclick="registrar(id)"><label class="tex" for="s1">SIM</label>
+						</div>
+						<div class="choice">
+						<input type="checkbox" class="check" id="n1" onclick="registrar(id)"><label class="tex" for="n1">NÃO</label>
+						</div>
+					</div>
+				</div>
+				<div class="ask">
+					<span class="texto">
+						Você gosta de PANQUECAS?
+					</span>
+					<div class="checksquare" id="sq2">
+						<div class="choice">
+						<input type="checkbox" class="check" id="s2" onclick="registrar(id)"><label class="tex" for="s1">SIM</label>
+						</div>
+						<div class="choice">
+						<input type="checkbox" class="check" id="n2" onclick="registrar(id)"><label class="tex" for="n1">NÃO</label>
+						</div>
+					</div>
+				</div>
+				<div class="ask">
+					<span class="texto">
+						Você tem, ou já teve um TENIS ALL-STAR?
+					</span>
+					<div class="checksquare" id="sq3">
+						<div class="choice">
+						<input type="checkbox" class="check" id="s3" onclick="registrar(id)"><label class="tex" for="s1">SIM</label>
+						</div>
+						<div class="choice">
+						<input type="checkbox" class="check" id="n3" onclick="registrar(id)"><label class="tex" for="n1">NÃO</label>
+						</div>
+					</div>
+				</div>
+				<div class="ask">
+					<span class="texto">
+						No dia 27 de OUTUBRO de 2019 você estava no BRASIL?
+					</span>
+					<div class="checksquare" id="sq4">
+						<div class="choice">
+						<input type="checkbox" class="check" id="s4" onclick="registrar(id)"><label class="tex" for="s1">SIM</label>
+						</div>
+						<div class="choice">
+						<input type="checkbox" class="check" id="n4" onclick="registrar(id)"><label class="tex" for="n1">NÃO</label>
+						</div>
+					</div>
+				</div>
+				<div class="ask">
+					<span class="texto">
+						Você costuma usar RELÓGIO?
+					</span>
+					<div class="checksquare" id="sq5">
+						<div class="choice">
+						<input type="checkbox" class="check" id="s5" onclick="registrar(id)"><label class="tex" for="s1">SIM</label>
+						</div>
+						<div class="choice">
+						<input type="checkbox" class="check" id="n5" onclick="registrar(id)"><label class="tex" for="n1">NÃO</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="result" id="result"></div>
+		</div>
+</html>
