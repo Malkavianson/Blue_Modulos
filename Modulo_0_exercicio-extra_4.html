@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Informações</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script type="text/javascript">
+		let vh = window.innerHeight * 0.01
+		document.documentElement.style.setProperty('--vh', `${vh}px`)
+		window.addEventListener('resize', function(){
+			let vh = window.innerHeight * 0.01;
+			document.documentElement.style.setProperty('--vh', `${vh}px`);
+		});
+		
+		function registrar(id){
+			let sai = "";
+			document.getElementById("saida").innerHTML = sai;
+			for(i=0;i<4;i++){
+				ent = document.getElementById(i).value;
+				sai = '<input class="entrada" disabled="true" value="'+ent+'">';
+				document.getElementById("saida").innerHTML += sai;
+				console.log(ent)
+			}
+			let ctt=document.getElementById(id).innerText;
+			let fctt='<span class="entrada" style="height: calc(var(--vh, 1vh) * 10);background: #2e4347; color: #fff8d4;font-weight: normal;">Você deseja contratar um desenvolvedor </br>'+ctt+'</span>'
+			document.getElementById("saida").innerHTML += fctt;
+			console.log(ctt)
+		}
+		
+		document.addEventListener("keyup", function(e){
+			if(e.key === 'Enter') {
+				registrar();
+			}
+		});
+		
+	</script>
+
+	<style type="text/css">
+	*{
+		height: calc(var(--vh, 1vh) * 70);
+		margin: 0;
+		padding: 0;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		-webkit-appearance: none;
+	}
+	.entrada{
+		width: calc(var(--vh, 1vh) * 60);
+		height: calc(var(--vh, 1vh) * 5);
+		margin: calc(var(--vh, 1vh) * 0.5);
+		border: solid 3px;
+		border-radius: calc(var(--vh, 1vh) * 2);
+		text-align: center;
+		font-size: calc(var(--vh, 1vh) * 3);
+		overflow: auto;
+		box-sizing: border-box;
+		background: #FFFFFF;
+	}
+	.choicebox{
+		height: calc(var(--vh, 1vh) * 5);
+		display: flex;
+	}
+	.choice:hover{
+		background: #8fA3A7;
+	}
+	.choice{
+		width: calc(var(--vh, 1vh) * 20);
+		height: calc(var(--vh, 1vh) * 5);
+		margin: calc(var(--vh, 1vh) * 0.5);
+		border: solid 3px;
+		border-radius: calc(var(--vh, 1vh) * 2);
+		text-align: center;
+		font-size: calc(var(--vh, 1vh) * 3);
+		overflow: auto;
+		box-sizing: border-box;
+		background: #FFFFFF;
+		cursor: pointer;
+	}
+	.saida{
+		height: calc(var(--vh, 1vh) * 40);
+		width: calc(var(--vh, 1vh) * 70);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		font-size: calc(var(--vh, 1vh) * 6);
+		font-family: helvetica, tahoma, sans-serif;
+		font-weight: bold;
+	}
+	.block{
+		display: flex;
+		justify-content: space-around;
+	}
+	.sub{
+		height: 15%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		border: solid 3px;
+		text-align: center;
+		font-size: calc(var(--vh, 1vh) * 6);
+		font-family: helvetica, tahoma, sans-serif;
+		cursor: pointer;
+	}
+	.sub:hover{
+		color: #fff8d4;
+		background: #2e4347;
+	}
+	</style>
+
+</head>
+	<body style="height: max-height; background: #c0d1c2; flex: display; flex-direction: column;">
+		<div class="sub" style="border: none; flex: display; justify-content: center;">
+			<span>Complete os campos abaixo</span>
+		</div>
+		<div class="block">
+			<div class="saida" id="form">
+				<input class="entrada" id="0" placeholder="Nome completo"> 
+				<input class="entrada" id="1" placeholder="Endereço"> 
+				<input class="entrada" id="2" placeholder="CEP"> 
+				<input class="entrada" id="3" placeholder="Telefone">
+				<span class="entrada" style="background: #2e4347; color: #fff8d4;font-weight: normal;">Qual tipo de DEV você deseja contratar?</span>
+				<div class="choicebox">
+					<div class="choice" id="be" onclick="registrar(id)">BACKEND</div>
+					<div class="choice" id="fe" onclick="registrar(id)">FRONTEND</div>
+					<div class="choice" id="fs" onclick="registrar(id)">FULLSTACK</div>
+				</div>
+			</div>
+			<div class="saida" id="saida"></div>
+		</div>
+	</body>
+</html>
