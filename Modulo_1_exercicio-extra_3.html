@@ -43,8 +43,11 @@
 			-webkit-box-sizing: border-box;
 			box-sizing: border-box;
 			-webkit-appearance: none;
+			background: #171f25;
 		}
 		.main{
+			background: #171f25;
+			height: fit-content;
 			display: flex;
 			flex-direction: column;
 			margin: calc(var(--vh, 1vh) * 0.1);
@@ -52,6 +55,7 @@
 		.intro{
 			height: calc(var(--vh, 1vh) * 20);
 			position: relative;
+			color: #f7f8fc;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -59,6 +63,7 @@
 		.menu{
 			height: calc(var(--vh, 1vh) * 10);
 			position: relative;
+			color: #f7f8fc;
 			display: flex;
 			flex-direction: row;
 			align-items: center;
@@ -68,6 +73,7 @@
 			height: calc(var(--vh, 1vh) * 10);
 			width: calc(var(--vh, 1vh) * 10);
 			position: relative;
+			background: #752e2b;
 			margin: calc(var(--vh, 1vh) * 5);
 			border: groove 3px aqua;
 			display: flex;
@@ -81,15 +87,16 @@
 			align-content: center;
 		}
 		.estilo:hover{
-			background: green;
+			background: #c90a02;
 		}
 		.song{
-			height: calc(var(--vh, 1vh) * 50);
 			position: relative;
+			color: #e7e8ff;
 			display: flex;
 			justify-content: center;
 		}
 		.lyrics{
+			height: fit-content;
 			position: relative;
 			font-style: oblique;
 			font-family: candara, sans-serif;
@@ -119,8 +126,8 @@
 		<div class="song" id="song">
 			<div class="lyrics" id="init" style="display: flex">Escolha um estilo</div>
 			<div class="lyrics" id="bab" style="display: none;">
-				<h1>Build a Bitch</h1>
-				<h3>Bella Poarch</h3>
+				<span style="font-size:64px;">Build a Bitch</span>
+				<span style="font-size:24px;">Bella Poarch</span>
 				<p>
 					This ain't build a bitch (a bitch)</br>
 					You don't get to pick and choose</br>
@@ -176,8 +183,8 @@
 				</p>
 			</div>
 			<div class="lyrics" id="can" style="display: none;">
-				<h1>Cancer(cover MCR)</h1>
-				<h3>Twenty One pilots</h3>
+				<span style="font-size:64px;">Cancer(cover MCR)</span>
+				<span style="font-size:24px;">Twenty One pilots</span>
 				<p>
 					Turn away</br>
 					If you could get me a drink</br>
@@ -217,8 +224,8 @@
 				</p>
 			</div>
 			<div class="lyrics" id="lmf" style="display: none;">
-				<h1>Light My Fire </h1>
-				<h3>The Doors</h3>
+				<span style="font-size:64px;">Light My Fire </span>
+				<span style="font-size:24px;">The Doors</span>
 				<p>
 					You know that it would be untrue</br>
 					You know that I would be a liar</br>
@@ -261,8 +268,8 @@
 				</p>
 			</div>
 			<div class="lyrics" id="mqp" style="display: none;">
-				<h1>Meu Querido Paiol</h1>
-				<h3>Hélio Ziskind, A Turma do Cocoricó</h3>
+				<span style="font-size:64px;">Meu Querido Paiol</span>
+				<span style="font-size:24px;">Hélio Ziskind, A Turma do Cocoricó</span>
 				<p>
 					Meu Querido Paiol</br>
 					meu Querido Paiol</br>
@@ -290,8 +297,8 @@
 				</p>
 			</div>
 			<div class="lyrics" id="per" style="display: none;">
-				<h1>Perigo</h1>
-				<h3>Profeta</h3>
+				<span style="font-size:64px;">Perigo</span>
+				<span style="font-size:24px;">Profeta</span>
 				<p>
 					Na paz de um amor  tranquilo </br>
 					Naquela noite vc era um abrigo </br>
