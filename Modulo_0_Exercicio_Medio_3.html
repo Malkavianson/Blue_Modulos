@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Positivo ou Negativo</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script type="text/javascript">
+		let vh = window.innerHeight * 0.01
+		document.documentElement.style.setProperty('--vh', `${vh}px`)
+		window.addEventListener('resize', function(){
+			let vh = window.innerHeight * 0.01;
+			document.documentElement.style.setProperty('--vh', `${vh}px`);
+		});
+		
+		function conferir(){
+			let num1 = document.getElementById("numero1").value;
+			num1=parseInt(num1);
+			let num2 = document.getElementById("numero2").value;
+			num2=parseInt(num2);
+			let result = "";
+			if(isNaN(num1)||isNaN(num2)){ 
+				result = "Digite números por gentileza."
+			}else{
+				if(num1===num2){ result = "Números iguais"
+				}else if(num1>num2){ 
+					result = "O Número "+num1+" é maior!";
+				}else{ 
+					result = "O Número "+num2+" é maior!";
+				}
+			}
+			console.log(result);
+			document.getElementById("saida").innerText = result;
+		}
+		
+		document.addEventListener("keyup", function(e){
+			if(e.key === 'Enter') {
+				conferir();
+			}
+		});
+		
+	</script>
+
+	<style type="text/css">
+	*{
+		height: calc(var(--vh, 1vh) * 70);
+		margin: 1;
+		padding: 0;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		-webkit-appearance: none;
+	}
+	.entrada{
+		width: calc(var(--vh, 1vh) * 60);
+		height: calc(var(--vh, 1vh) * 5);
+		margin: calc(var(--vh, 1vh) * 0.5);
+		border: solid 3px;
+		border-radius: calc(var(--vh, 1vh) * 2);
+		text-align: center;
+		font-size: calc(var(--vh, 1vh) * 3);
+		overflow: auto;
+		box-sizing: border-box;
+		background: #FFFFFF;
+	}
+	.saida{
+		height: calc(var(--vh, 1vh) * 40);
+		width: calc(var(--vh, 1vh) * 70);
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		text-align: center;
+		font-size: calc(var(--vh, 1vh) * 6);
+		font-family: helvetica, tahoma, sans-serif;
+		font-weight: bold;
+	}
+	.block{
+		display: flex;
+		justify-content: space-around;
+	}
+	.sub{
+		height: 15%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		border: solid 3px;
+		text-align: center;
+		font-size: calc(var(--vh, 1vh) * 6);
+		font-family: helvetica, tahoma, sans-serif;
+		cursor: pointer;
+	}
+	.sub:hover{
+		color: #fff8d4;
+		background: #2e4347;
+	}
+	.btn{
+		height: calc(var(--vh, 1vh) * 4);
+		width: calc(var(--vh, 1vh) * 4);
+		display: flex;
+		flex-direction: column;
+		border-radius: calc(var(--vh, 1vh) * 1.5);
+		align-items: center;
+		text-align: center;
+		font-size: calc(var(--vh, 1vh) * 3);
+		font-family: helvetica, tahoma, sans-serif;
+	}
+	</style>
+
+</head>
+	<body style="height: max-height; background: #c0d1c2; flex: display; flex-direction: column;">
+		<div class="sub" style="border: none; flex: display; justify-content: center;">
+			<span>É positivo ou negativo?</span>
+		</div>
+		<div class="block">
+			<div class="saida" id="form">
+				<input class="entrada" id="numero1" placeholder="Digite um número">
+				<input class="entrada" id="numero2" placeholder="Digite um número">
+				<button class="btn" onclick="conferir()"> > </button>
+			</div>
+			<div class="saida" id="saida"></div>
+		</div>
+	</body>
+</html>
