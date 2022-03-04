@@ -21,7 +21,7 @@
 			if(isNaN(num)){ 
 				result = "Digite um número por gentileza."
 			}else{
-				if(num===0){ result = "O zero, não é positivo nem negativo, mas sim neutro."
+				if(num===0){ result = "O zero, não é positivo nem negativo, mas sim neutro. Digite outro número por gentileza"
 				}else if(num>0){ 
 					result = "O Número "+num+" é positivo!";
 				}else{ 
@@ -43,7 +43,7 @@
 	<style type="text/css">
 	*{
 		height: calc(var(--vh, 1vh) * 70);
-		margin: 0;
+		margin: 1;
 		padding: 0;
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
@@ -96,6 +96,7 @@
 		width: calc(var(--vh, 1vh) * 4);
 		display: flex;
 		flex-direction: column;
+		border-radius: calc(var(--vh, 1vh) * 1.5);
 		align-items: center;
 		text-align: center;
 		font-size: calc(var(--vh, 1vh) * 3);
