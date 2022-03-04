@@ -18,14 +18,22 @@
 		});
 		
 		function conferir(){
-			let nasc = document.getElementById("ano").value;
-			nasc=parseInt(nasc);
-			let date = new Date();
-			let anoAtual = date.getFullYear();
-			let idade = anoAtual-nasc;
-			let result = "você tem "+idade+" anos e está na flor da idade!"
-			console.log(result);
-			document.getElementById("saida").innerText = result;
+			if(document.getElementById("ano").value!=0){
+				let nasc = document.getElementById("ano").value;
+				nasc=parseInt(nasc);
+				let date = new Date();
+				let anoAtual = date.getFullYear();
+				let idade = anoAtual-nasc;
+				let result = 0;
+				if(isNaN(idade)){ 
+					result = "Digite um número por gentileza."
+					}else{
+					result = "você tem "+idade+" anos e está na flor da idade!"
+				}
+				console.log(result);
+				document.getElementById("saida").innerText = result;
+			}
+		
 		}
 		
 		document.addEventListener("keyup", function(e){
@@ -90,12 +98,14 @@
 	.btn{
 		height: calc(var(--vh, 1vh) * 4);
 		width: calc(var(--vh, 1vh) * 4);
+		border-radius: calc(var(--vh, 1vh) * 2);
 		display: flex;
-		flex-direction: column;
+		justify-content: center;
 		align-items: center;
 		text-align: center;
 		font-size: calc(var(--vh, 1vh) * 3);
 		font-family: helvetica, tahoma, sans-serif;
+		cursor: pointer;
 	}
 	</style>
 
