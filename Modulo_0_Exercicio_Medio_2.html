@@ -2,7 +2,7 @@
 <html>
 <head>
 
-<title>Par ou Impar?</title>
+<title>Positivo ou Negativo</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -21,10 +21,11 @@
 			if(isNaN(num)){ 
 				result = "Digite um número por gentileza."
 			}else{
-				if(num%2===0){ 
-					result = "O Número "+num+" é par!";
+				if(num===0){ result = "O zero, não é positivo nem negativo, mas sim neutro."
+				}else if(num>0){ 
+					result = "O Número "+num+" é positivo!";
 				}else{ 
-					result = "O Número "+num+" é impar!";
+					result = "O Número "+num+" é negativo!";
 				}
 			}
 			console.log(result);
@@ -105,7 +106,7 @@
 </head>
 	<body style="height: max-height; background: #c0d1c2; flex: display; flex-direction: column;">
 		<div class="sub" style="border: none; flex: display; justify-content: center;">
-			<span>É par ou impar?</span>
+			<span>É positivo ou negativo?</span>
 		</div>
 		<div class="block">
 			<div class="saida" id="form">
