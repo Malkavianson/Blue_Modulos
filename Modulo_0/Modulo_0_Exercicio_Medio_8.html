@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Tabuada</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script type="text/javascript">
+		let vh = window.innerHeight * 0.01
+		document.documentElement.style.setProperty('--vh', `${vh}px`)
+		window.addEventListener('resize', function(){
+			let vh = window.innerHeight * 0.01;
+			document.documentElement.style.setProperty('--vh', `${vh}px`);
+		});
+		let reset="";
+		let tabuada=[];
+		let vlrInit=1;
+		function init(){
+			document.getElementById("tab").innerHTML = reset;
+			let st = 1;
+			for(l=0;l<10;l++){
+				lin='<div class="dots" id="dots'+l+'"></div>';
+				document.getElementById("tab").innerHTML += lin;
+				for(let i=st;i<st+10;i++){
+					let vlr = vlrInit*i;
+					let result="<div><span>"+vlr+"</span></div>";
+					document.getElementById("dots"+l).innerHTML += result;
+					tabuada.push(vlr)
+				}
+				vlrInit++;
+			}
+			
+			console.log(tabuada)
+	}
+	</script>
+
+	<style type="text/css">
+	*{
+		height: calc(var(--vh, 1vh) * 70);
+		margin: 0;
+		padding: 0;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		-webkit-appearance: none;
+	}
+	.dots{
+		height: 10%;
+		width: fit-content;
+		display: flex;
+		flex-direction: row;
+		border: solid 3px;
+		text-align: center;
+		font-size: calc(var(--vh, 1vh) * 3);
+		font-family: impact, sans-serif;
+		font-weight:bold;
+	}
+	.dots div{
+		width: calc(var(--vh, 1vh) * 1);
+		height: calc(var(--vh, 1vh) * 1);
+		margin: calc(var(--vh, 1vh) * 1) calc(var(--vh, 1vh) * 3);
+		display: flex;
+		justify-content: center;
+		animation: move 5s cubic-bezier(0.50, 0.20, 0.50, 0.80) infinite alternate;
+	}
+	@keyframes move {
+		from {
+			transform: translateY(-50%);
+		}
+		to {
+			transform: translateY(50%);
+		}
+	}
+	.dots div:nth-child(9){
+		animation-delay: -1.6s;
+	}
+	.dots div:nth-child(8){
+		animation-delay: -1.4s;
+	}
+	.dots div:nth-child(7){
+		animation-delay: -1.2s;
+	}
+	.dots div:nth-child(6){
+		animation-delay: -1s;
+	}
+	.dots div:nth-child(5){
+		animation-delay: -0.8s;
+	}
+	.dots div:nth-child(4){
+		animation-delay: -0.6s;
+	}
+	.dots div:nth-child(3){
+		animation-delay: -0.4s;
+	}
+	.dots div:nth-child(2){
+		animation-delay: -0.2s;
+	}
+	</style>
+
+</head>
+	<body style="display: flex;flex-direction: column;align-items: center;" onclick="init()">
+		<div class="dots" style="border: none; flex: display; justify-content: center;"><span>Clique para ver a TABUADA</span></div>
+		<div id="tab"></div>
+	</body>
+</html>
