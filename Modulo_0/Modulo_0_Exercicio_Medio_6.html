@@ -23,7 +23,8 @@
 			ent = ent.replace(",",".");
 			ent = ent.split(" ");
 			for(i=0;i<ent.length;i++){
-				if(fim.includes(ent[i])){	} else { fim.push(ent[i]) }
+				if(isNaN(ent[i])){ }else{
+				if(fim.includes(ent[i])){	} else { fim.push(ent[i]) }}
 			}
 			fim.sort(function(a, b) {
 				return a - b;
