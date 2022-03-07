@@ -22,25 +22,27 @@
 				num = num.replace(",",".");
 			}
 			num = parseFloat(num);
-			if(num>10){
-				txt = "digite um número até 10";
+			if(isNaN(num)){ 
+				txt = "Digite um número até 10 por gentileza."
 			}else{
-				if(num<=6){
-					result = "F";
-				}else if(num>6&&num<7){
-					result = "D";
-				}else if(num>=7&&num<8){
-					result = "C";
-				}else if(num>=8&&num<=9){
-					result = "B";
-				}else if(num>9&&num<=10){
-					result = "A";
+				if(num>10){
+					txt = "Digite um número até 10 por gentileza."
+				}else{
+					if(num<=6){
+						result = "F";
+					}else if(num>6&&num<7){
+						result = "D";
+					}else if(num>=7&&num<8){
+						result = "C";
+					}else if(num>=8&&num<=9){
+						result = "B";
+					}else if(num>9&&num<=10){
+						result = "A";
+					}
+					console.log("A nota do aluno é: "+result+".");
+					txt = "A nota do aluno é: "+result+".";
 				}
-				console.log("A nota do aluno é: "+result+".");
-				txt = "A nota do aluno é: "+result+".";
-
 			}
-			
 			document.getElementById("saida").innerText = txt;
 		}
 		
@@ -119,7 +121,7 @@
 </head>
 	<body style="height: max-height; background: #c0d1c2; flex: display; flex-direction: column;">
 		<div class="sub" style="border: none; flex: display; justify-content: center;">
-			<span>É positivo ou negativo?</span>
+			<span>Verifique a sua pontuação e descubra a Nota</span>
 		</div>
 		<div class="block">
 			<div class="saida" id="form">
