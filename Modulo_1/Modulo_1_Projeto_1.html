@@ -20,6 +20,7 @@
 			if(respondido===5){
 				if(sim===0){
 					resultado="Você deixa o detonador cair na água enquanto tentava fugir. Ao parar para pega-lo, é surpreendido por um dos seguranças</br>Você falhou miseravelmente!";
+					console.log(resultado)
 				}else if(sim===1&&questao.includes("s4")===true){
 					document.getElementById("result").style.alignItems="center";
 					document.getElementById("result").style.background="#680000bf";
@@ -42,7 +43,7 @@
 					resultado="Parabéns</br>Você derrubou o prédio de 18 andares da corporação farmacêutica</br>Você triunfa de maneira inquestionável e seus feitos serão lembrados por muitas gerações.";
 				}
 			document.getElementById("result").innerHTML = resultado;
-			console.log(questao);
+			console.log(resultado);
 			}
 		}
 		function registrar(id){
