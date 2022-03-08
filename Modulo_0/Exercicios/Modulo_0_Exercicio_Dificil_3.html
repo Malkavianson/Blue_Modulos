@@ -5,7 +5,7 @@
 <html>
 <head>
 
-<title>Advinhe o número</title>
+<title>Informações</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -19,17 +19,16 @@
 		
 		function conferir(){
 			if(document.getElementById("ano").value!=0){
-				let n = Math.floor(Math.random() * 10)
-				if(isNaN(nasc)){ 
+				let nasc = document.getElementById("ano").value;
+				nasc=parseInt(nasc);
+				let date = new Date();
+				let anoAtual = date.getFullYear();
+				let idade = anoAtual-nasc;
+				let result = 0;
+				if(isNaN(n)||n>10){ 
 					result = "Digite um número por gentileza."
 					}else{
-					if(anoAtual-nasc<16){
-						result= "NEGADO - Você não possui idade para votar";
-					}else if(anoAtual-nasc>=16&&anoAtual-nasc<18||anoAtual-nasc>=70){
-						result= "OPCIONAL - Seu voto é facultativo";
-					}else if(anoAtual-nasc>=18&&anoAtual-nasc<70){
-						result= "OBRIGATÓRIO - Você precisa comparecer às urnas ou justificar seu voto!"
-					}
+					result = "você tem "+idade+" anos e está na flor da idade!"
 				}
 				console.log(result);
 				document.getElementById("saida").innerText = result;
@@ -113,11 +112,11 @@
 </head>
 	<body style="height: max-height; background: #c0d1c2; flex: display; flex-direction: column;">
 		<div class="sub" style="border: none; flex: display; justify-content: center;">
-			<span>Advinhe o número</span>
+			<span>Você está na flor da idade?</span>
 		</div>
 		<div class="block">
 			<div class="saida" id="form">
-				<input class="entrada" id="ano" placeholder="Qual o número a máquina pensou"><button class="btn" onclick="conferir()"> > </button>
+				<input class="entrada" id="num" placeholder="Qual o número pensado pela maquina"><button class="btn" onclick="conferir()"> > </button>
 			</div>
 			<div class="saida" id="saida"></div>
 		</div>
