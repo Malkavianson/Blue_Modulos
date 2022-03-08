@@ -18,18 +18,19 @@
 		});
 		
 		function conferir(){
-			if(document.getElementById("ano").value!=0){
-				let nasc = document.getElementById("ano").value;
-				nasc=parseInt(nasc);
-				let date = new Date();
-				let anoAtual = date.getFullYear();
-				let idade = anoAtual-nasc;
+			if(document.getElementById("num").value!=0){
+				let num = document.getElementById("num").value;
+				num=parseInt(num);
+				let n = Math.floor(Math.random() * 10)
+
 				let result = 0;
-				if(isNaN(n)||n>10){ 
-					result = "Digite um número por gentileza."
+				if(isNaN(num)||num>10){ 
+					result = "Digite um número abaixo de 10 por gentileza."
 					}else{
-					result = "você tem "+idade+" anos e está na flor da idade!"
-				}
+						if(n==num){ 
+							result = "Parabéns, você acertou o número ("+n+") escolhido pela máquina";
+						}else { result = "desculpe você escolheu o numero "+num+" e o número escolhido pela máquina é "+n}
+						}
 				console.log(result);
 				document.getElementById("saida").innerText = result;
 			}
@@ -112,7 +113,7 @@
 </head>
 	<body style="height: max-height; background: #c0d1c2; flex: display; flex-direction: column;">
 		<div class="sub" style="border: none; flex: display; justify-content: center;">
-			<span>Você está na flor da idade?</span>
+			<span>Descubra o número escolhido pela máquina</span>
 		</div>
 		<div class="block">
 			<div class="saida" id="form">
