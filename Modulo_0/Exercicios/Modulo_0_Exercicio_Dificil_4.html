@@ -43,7 +43,7 @@
 			if(document.getElementById("saque").value!=undefined){
 				let saque = document.getElementById("saque").value;
 				if(isNaN(saque)||saque<10||saque>600){ 
-					result = "Você precisa digitar o valor em números, não por extenso!";
+					result = "Digite um valor NUMÉRICO de 10 à 600";
 					}else{ 
 						dist(saque);
 						console.log(`Você recebeu:\n ${nc.val} notas de R$100\n ${nl.val} notas de R$50\n ${nx.val} notas de R$10\n ${nv.val} notas de R$5\n ${ni.val} notas de R$1`);
