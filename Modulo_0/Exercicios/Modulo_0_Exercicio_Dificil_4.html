@@ -42,7 +42,7 @@
 			zerar();
 			if(document.getElementById("saque").value!=undefined){
 				let saque = document.getElementById("saque").value;
-				if(isNaN(saque)){ 
+				if(isNaN(saque)||saque<10||saque>600){ 
 					result = "Você precisa digitar o valor em números, não por extenso!";
 					}else{ 
 						dist(saque);
@@ -134,7 +134,7 @@
 		</div>
 		<div class="block">
 			<div class="saida" id="form">
-				<input class="entrada" id="saque" placeholder="Quanto deseja sacar?"><button class="btn" onclick="conferir()"> > </button>
+				<input class="entrada" id="saque" placeholder="Quanto deseja sacar? Min: R$10 e Max: R$600"><button class="btn" onclick="conferir()"> > </button>
 			</div>
 			<div class="saida" id="saida"></div>
 		</div>
