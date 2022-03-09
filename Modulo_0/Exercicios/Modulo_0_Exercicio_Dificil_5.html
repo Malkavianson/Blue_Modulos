@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>JO-KEN-PO</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script type="text/javascript">
+		let vh = window.innerHeight * 0.01
+		document.documentElement.style.setProperty('--vh', `${vh}px`)
+		window.addEventListener('resize', function(){
+			let vh = window.innerHeight * 0.01;
+			document.documentElement.style.setProperty('--vh', `${vh}px`);
+		});
+
+
+		let rod = 0;
+		let esc = ['pedra', 'papel', 'tesoura'];
+		let p1 = {esc: "", vit: 0};
+		let p2 = {esc: "", vit: 0};
+
+		function verific(){
+			p2.esc = esc[Math.floor(Math.random() * 2)]
+			while(rod!=0){
+				rod--;
+				let p1e = esc.indexOf(p1.esc);
+				let p2e = esc.indexOf(p2.esc);
+				if(p1e>p2e||(p1e===2&&p2e===0)){
+					p1.vit++
+				}else{ p2.vit++ }}
+			}
+		
+
+
+		function conferir(id){
+			console.clear();
+			p1.esc = id;
+			verific();
+			console.log(p1.esc, p2.esc);
+			console.log(rod);
+			console.log(p1.vit, p2.vit)
+		}		
+	</script>
+
+	<style type="text/css">
+	*{
+		height: calc(var(--vh, 1vh) * 70);
+		margin: 0;
+		padding: 0;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		-webkit-appearance: none;
+	}
+	.saida{
+		height: fit-content;
+		width: fit-content;
+		margin: calc(var(--vh, 1vh) * 1);
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		text-align: initial;
+		font-size: calc(var(--vh, 1vh) * 4);
+		font-family: helvetica, tahoma, sans-serif;
+		font-weight: bold;
+		border: solid 1px;
+	}
+	.block{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.sub{
+		height: 15%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		border: solid 3px;
+		text-align: center;
+		font-size: calc(var(--vh, 1vh) * 6);
+		font-family: helvetica, tahoma, sans-serif;
+		cursor: pointer;
+	}
+	.sub:hover{
+		color: #FCDB05;
+		background: #9F5A9A;
+	}
+	.op{
+		height: fit-content;
+		width: fit-content;
+		margin: calc(var(--vh, 1vh) * 2);
+		padding: calc(var(--vh, 1vh) * 2);
+		border: solid 3px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.op:hover{
+		color: #FCDB05;
+		background: #AC5BA5;
+	}
+	.rod{
+		width: calc(var(--vh, 1vh) * 20);
+		height: calc(var(--vh, 1vh) * 5);
+		margin: calc(var(--vh, 1vh) * 0.5);
+		border: solid 3px;
+		border-radius: calc(var(--vh, 1vh) * 2);
+		text-align: center;
+		font-size: calc(var(--vh, 1vh) * 1.5);
+		box-sizing: border-box;
+		background: #FFFFFF;
+
+	}
+	</style>
+
+</head>
+	<body style="height: max-height; background: #EBA0F9; flex: display; flex-direction: column;">
+		<div class="sub" style="border: none; flex: display; justify-content: center;">
+			<span>JO-KEN-PO</span>
+		</div>
+		<div class="block">
+			<div class="saida">
+				<span class="op"> Determine a quantidade de rodadas </span>
+				<input class="rod" id="rod">
+			</div>
+			<div class="saida" id="form">
+				<div class="op" id="pedra" onclick="conferir(id)"> pedra </div>
+				<div class="op" id="papel" onclick="conferir(id)"> papel </div>
+				<div class="op" id="tesoura" onclick="conferir(id)"> tesoura </div>
+			</div>
+			<div class="saida" id="saida"></div>
+		</div>
+	</body>
+</html>
