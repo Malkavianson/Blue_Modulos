@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,24 +13,44 @@
 			let vh = window.innerHeight * 0.01;
 			document.documentElement.style.setProperty('--vh', `${vh}px`);
 		});
+
+		let nts = [100,50,10,5,1];
+		let nc = {val: 0};
+		let nl = {val: 0};
+		let nx = {val: 0};
+		let nv = {val: 0};
+		let ni = {val: 0};
+		seq = [nc,nl,nx,nv,ni];
+		
+		function zerar(){
+			for(i=0;i<seq.length;i++){
+				seq[i].val = 0;
+			}
+		}
+		
+		function dist(saque){
+			for(i=0;i<nts.length;i++){
+				if(saque>=nts[i]){
+					seq[i].val = parseInt(saque/nts[i]);
+					saque = saque - parseInt(saque/nts[i])*nts[i];
+				}
+			}
+		}
 		
 		function conferir(){
-			if(document.getElementById("ano").value!=0){
-				let nasc = document.getElementById("ano").value;
-				nasc=parseInt(nasc);
-				let date = new Date();
-				let anoAtual = date.getFullYear();
-				let idade = anoAtual-nasc;
-				let result = 0;
-				if(isNaN(idade)){ 
-					result = "Digite um número por gentileza."
-					}else{
-					result = "você tem "+idade+" anos e está na flor da idade!"
+			console.clear();
+			zerar();
+			if(document.getElementById("saque").value!=undefined){
+				let saque = document.getElementById("saque").value;
+				if(isNaN(saque)){ 
+					result = "Você precisa digitar o valor em números, não por extenso!";
+					}else{ 
+						dist(saque);
+						console.log(`Você recebeu:\n ${nc.val} notas de R$100\n ${nl.val} notas de R$50\n ${nx.val} notas de R$10\n ${nv.val} notas de R$5\n ${ni.val} notas de R$1`);
+						result = '<span>Você recebeu:</br> '+nc.val+' notas de R$100</br> '+nl.val+' notas de R$50</br> '+nx.val+' notas de R$10</br> '+nv.val+' notas de R$5</br> '+ni.val+' notas de R$1</span>';
 				}
-				console.log(result);
-				document.getElementById("saida").innerText = result;
+				document.getElementById("saida").innerHTML = result;
 			}
-		
 		}
 		
 		document.addEventListener("keyup", function(e){
@@ -68,10 +85,11 @@
 	.saida{
 		height: calc(var(--vh, 1vh) * 40);
 		width: calc(var(--vh, 1vh) * 70);
+		margin: calc(var(--vh, 1vh) * 1);
 		display: flex;
 		flex-direction: row;
-		align-items: center;
-		text-align: center;
+		align-items: flex-start;
+		text-align: initial;
 		font-size: calc(var(--vh, 1vh) * 6);
 		font-family: helvetica, tahoma, sans-serif;
 		font-weight: bold;
@@ -116,7 +134,7 @@
 		</div>
 		<div class="block">
 			<div class="saida" id="form">
-				<input class="entrada" id="ano" placeholder="Quanto deseja sacar?"><button class="btn" onclick="conferir()"> > </button>
+				<input class="entrada" id="saque" placeholder="Quanto deseja sacar?"><button class="btn" onclick="conferir()"> > </button>
 			</div>
 			<div class="saida" id="saida"></div>
 		</div>
