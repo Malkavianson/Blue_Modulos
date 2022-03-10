@@ -1,46 +1,106 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
 
 <title>JO-KEN-PO</title>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<script type="text/javascript">
-		let vh = window.innerHeight * 0.01
+		const vh = window.innerHeight * 0.01
 		document.documentElement.style.setProperty('--vh', `${vh}px`)
 		window.addEventListener('resize', function(){
-			let vh = window.innerHeight * 0.01;
+			const vh = window.innerHeight * 0.01;
 			document.documentElement.style.setProperty('--vh', `${vh}px`);
 		});
 
-
-		let rod = 0;
-		let esc = ['pedra', 'papel', 'tesoura'];
+		let result = "";
+		let rodada = 0;
+		const esc = ['pedra', 'papel', 'tesoura'];
 		let p1 = {esc: "", vit: 0};
 		let p2 = {esc: "", vit: 0};
+		let emp = 0;
 
 		function verific(){
 			p2.esc = esc[Math.floor(Math.random() * 2)]
-			while(rod!=0){
-				rod--;
-				let p1e = esc.indexOf(p1.esc);
-				let p2e = esc.indexOf(p2.esc);
-				if(p1e>p2e||(p1e===2&&p2e===0)){
-					p1.vit++
-				}else{ p2.vit++ }}
+			esmaq = ('Máquina escolheu: '+p2.esc);
+			document.getElementById('emaquina').innerText = esmaq;
+			rodada--;
+			const p1e = esc.indexOf(p1.esc);
+			const p2e = esc.indexOf(p2.esc);
+			const pp1 = (p1e===2&&p2e===0);
+			const pp2 = (p2e===2&&p1e===0);
+			const p1p = (p1e===0&&p2e===2);
+			const p2p = (p2e===0&&p1e===2);
+			if((p1e>p2e&&(pp1===false))||(p1p===true)){
+				console.log("Você venceu")
+				result = "Você venceu";
+				p1.vit = p1.vit + 1;
+			}else if((p2e>p1e&&(pp2===false))||(p2p===true)){ 
+				console.log("Máquina Venceu")
+				result = "Máquina Venceu";
+				p2.vit = p2.vit + 1; 
+			}else{
+				console.log("Empate")
+				result = "Empate";
+				emp=+1;
 			}
+			if(rodada===0){
+				document.getElementById("form").style.display = "none";
+				document.getElementById("qtd").style.display = "flex";
+				document.getElementById("vitorioso").style.display = "flex";
+				if(p1.vit>p2.vit){
+					let v = "Você venceu a máquina!"
+					console.log(v);
+					document.getElementById("vitorioso").innerText = v;
+				}else{
+					let v = "A Máquina te venceu!"
+					console.log(v);
+					document.getElementById("vitorioso").innerText = v;
+				}
+				result = "Fim da Partida";
+				console.log(result)
+			}
+			console.log('Rodada:',rodada);
+		}	
 		
-
+function init(){
+	rodada = document.getElementById("rod").value;
+	console.log('Quantidades de RODADAS:',rodada);
+	if((isNaN(rodada))===false){
+		p1.vit = 0;
+		p2.vit = 0;
+		result = "";
+		document.getElementById('saida').innerText = result;
+		document.getElementById('p1v').innerText = p1.vit;
+		document.getElementById('p2v').innerText = p2.vit;
+		document.getElementById("vitorioso").style.display = "none";
+		document.getElementById("plc").style.display = "flex";
+		document.getElementById("form").style.display = "flex";
+		document.getElementById("qtd").style.display = "none";
+		
+	}else{
+		result = 'Você precisa colocar números';
+		console.log(result)
+		document.getElementById('saida').innerText = result;
+	}
+}
 
 		function conferir(id){
 			console.clear();
 			p1.esc = id;
 			verific();
-			console.log(p1.esc, p2.esc);
-			console.log(rod);
-			console.log(p1.vit, p2.vit)
-		}		
+			console.log('Você escolheu:', p1.esc, '|| Máquina escolheu:', p2.esc);
+			document.getElementById('p1v').innerText = p1.vit;
+			document.getElementById('p2v').innerText = p2.vit;
+			document.getElementById('saida').innerText = result;
+		}
+
+		document.addEventListener("keyup", function(e){
+			if(e.key === 'Enter') {
+				init();
+			}
+		});
 	</script>
 
 	<style type="text/css">
@@ -51,6 +111,13 @@
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
 		-webkit-appearance: none;
+	}
+	.corpo{
+		height: inherit; 
+		background: #fcd7da; 
+		display: flex; 
+		flex-direction: column;
+		align-items: center;	
 	}
 	.saida{
 		height: fit-content;
@@ -63,16 +130,36 @@
 		font-size: calc(var(--vh, 1vh) * 4);
 		font-family: helvetica, tahoma, sans-serif;
 		font-weight: bold;
-		border: solid 1px;
+	}
+	.plc{
+		height: fit-content;
+		width: fit-content;
+		background: #ff8006;
+		margin: calc(var(--vh, 1vh) * 1);
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		text-align: initial;
+		font-size: calc(var(--vh, 1vh) * 4);
+		font-family: helvetica, tahoma, sans-serif;
+		font-weight: bold;
+		border: ridge calc(var(--vh, 1vh) * 1) #4b538b;
+		border-radius: calc(var(--vh, 1vh) * 10);
 	}
 	.block{
+		width: fit-content;
+		height: fit-content;
+		background: #f0aaf6;
+		border: outset calc(var(--vh, 1vh) * 0.5) #3D7F4A;
+		border-radius: calc(var(--vh, 1vh) * 10);
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+		align-items: center;	
 	}
 	.sub{
 		height: 15%;
 		width: 100%;
+		color: #3c363b;
 		display: flex;
 		flex-direction: column;
 		border: solid 3px;
@@ -85,6 +172,20 @@
 		color: #FCDB05;
 		background: #9F5A9A;
 	}
+	.emaquina{
+		height: fit-content;
+		width: fit-content;
+		margin: calc(var(--vh, 1vh) * 2);
+		padding: calc(var(--vh, 1vh) * 2);
+		border: solid 3px;
+		display: flex;
+		font-weight: bold;
+		font-family: cursive, sans-serif;
+		align-items: center;
+		justify-content: center;
+		border: ridge calc(var(--vh, 1vh) * 1) #4b538b;
+		border-radius: calc(var(--vh, 1vh) * 20);
+	}
 	.op{
 		height: fit-content;
 		width: fit-content;
@@ -94,10 +195,20 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		border: ridge calc(var(--vh, 1vh) * 1) #4b538b;
+		border-radius: calc(var(--vh, 1vh) * 20);
 	}
 	.op:hover{
 		color: #FCDB05;
 		background: #AC5BA5;
+	}
+	.op#vc:hover{
+		color: #be0001;
+		background: #2f003f;
+	}
+	.op#maq:hover{
+		color: #2f003f;
+		background: #be0001;
 	}
 	.rod{
 		width: calc(var(--vh, 1vh) * 20);
@@ -106,28 +217,52 @@
 		border: solid 3px;
 		border-radius: calc(var(--vh, 1vh) * 2);
 		text-align: center;
-		font-size: calc(var(--vh, 1vh) * 1.5);
+		font-size: calc(var(--vh, 1vh) * 2);
 		box-sizing: border-box;
 		background: #FFFFFF;
-
 	}
+	.btn{
+		width: calc(var(--vh, 1vh) * 4);
+		height: calc(var(--vh, 1vh) * 4);
+		margin: calc(var(--vh, 1vh) * 0.5);
+		border: solid 2px;
+		border-radius: calc(var(--vh, 1vh) * 2);
+		text-align: center;
+		font-size: calc(var(--vh, 1vh) * 3);
+		box-sizing: border-box;
+		background: #FFFFFF;
+	}
+	
 	</style>
 
 </head>
-	<body style="height: max-height; background: #EBA0F9; flex: display; flex-direction: column;">
+	<body class="corpo">
 		<div class="sub" style="border: none; flex: display; justify-content: center;">
 			<span>JO-KEN-PO</span>
 		</div>
 		<div class="block">
-			<div class="saida">
+			<div class="saida" id="qtd">
 				<span class="op"> Determine a quantidade de rodadas </span>
 				<input class="rod" id="rod">
+				<button class="btn" onclick="init(value)"> > </button>
 			</div>
-			<div class="saida" id="form">
+			<div class="saida" id="form" style="display: none">
 				<div class="op" id="pedra" onclick="conferir(id)"> pedra </div>
 				<div class="op" id="papel" onclick="conferir(id)"> papel </div>
 				<div class="op" id="tesoura" onclick="conferir(id)"> tesoura </div>
 			</div>
+			<div class="plc" id="plc" style="display: none;">
+				<div class="op" id="vc">
+					<span class="op" style="border: none;">Você</span>
+					<span class="op" id="p1v"></span>
+				</div>
+				<div class="op" id="maq">
+					<span class="op"style="border: none;">Máquina</span>
+					<span class="op" id="p2v"></span>
+				</div>
+			</div>
+			<div class="emaquina" id='emaquina'></div>
+			<div class="saida" id="vitorioso" style="display: none;"></div>
 			<div class="saida" id="saida"></div>
 		</div>
 	</body>
