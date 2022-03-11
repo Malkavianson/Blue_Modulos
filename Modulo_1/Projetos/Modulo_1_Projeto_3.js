@@ -208,20 +208,19 @@ function tempo(){
 			// console.log();
 			// console.log('inicio da semana');
 			for(let d = 0; d < 7; d++){
+				if(hoje===1){
+					console.log(ma[m]);
+				}
+
 				// console.log(ds[d]+': dia '+hoje+', ')
 				hoje++
 				if(m31%2===0){
 					if(hoje===32){
 						hoje = 1;
-						console.log(mes 31);
-						console.log(ma[m]);
 					}
 				}else{
 					if(hoje===31){
 						hoje = 1;
-						console.log('Mes 30')
-						console.log();
-						console.log(ma[m]);
 					}
 				}
 			}
