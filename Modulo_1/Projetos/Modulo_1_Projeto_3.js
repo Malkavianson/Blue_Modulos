@@ -200,7 +200,7 @@ let ma = ['Agosto','Setembro','Outubro','Novembro','Dezembro'];
 
 function tempo(){	
 	let hoje = 1;
-	let m31 = 1;
+	let m31 = 0;
 	for(let m = 0; m < 5; m++){
 		m31++
 		for(let s = 0; s < 4; s++){
@@ -208,9 +208,9 @@ function tempo(){
 			// console.log('inicio da semana');
 			for(let d = 0; d < 7; d++){
 				if(hoje===1){
+					console.log();
 					console.log(ma[m]);
 				}
-
 				console.log(ds[d]+': dia '+hoje+', ')
 				hoje++
 				if(m31%2===0){
