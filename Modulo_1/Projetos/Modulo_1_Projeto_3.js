@@ -225,6 +225,7 @@ function histF(){
 	console.log();
 	console.log(hf004);
 	console.log();
+	let hf005 = '';
 	do{
 		hf005 = prompt('pressione N para escolher um parceiro ou S para continuar solteiro ').toLowerCase();
 	console.log();
