@@ -3,6 +3,16 @@ const prompt = require('prompt-sync')();
 		let questao=[];
 		let sim=0;
 		let hist=`O mundo é um lugar sombrio, você só consegue sobreviver graças às suas habilidades.\nDentro de sua própria loucura você alcança a sobrevivência, e isso é o que diferencia você dos demais.\nCada detalhe é importante!\nVocê está nos arredores do prédio de seu arqui-inimigo, sabote o máximo de coisas que puder!\nMostre seu poder e aniquile seu INIMIGO!`;
+		let pt1 = `Conseguiu entrar no prédio? `;
+		let pt2 = `Desativou o sistema de ALARMES? `;
+		let pt3 = `Desligou a CHAVE GERAL? `;
+		let pt4 = `Perguntou à porta "Qual a semelhança entre o corvo e a escrivaninha? `;
+		let pt5 = `IMPLANTOU A BOMBA NO SUBSOLO? `;
+		let p1 = '';
+		let p2 = '';
+		let p3 = '';
+		let p4 = '';
+		let p5 = '';
 
 		function resp(){
 			if(sim===0){
@@ -24,6 +34,17 @@ const prompt = require('prompt-sync')();
 			}else{
 				resultado=`Parabéns\nVocê derrubou o prédio de 18 andares da corporação farmacêutica\nVocê triunfou de maneira inquestionável e seus feitos serão lembrados por muitas gerações.`;
 			}
+		console.log();
+		console.log(`HISTÓRIA: `);
+		console.log();
+		console.log(hist);
+		console.log();
+		console.log();
+		console.log(`Questão / RESPOSTA`);
+		console.log();
+		console.log(`${pt1} ${(questao[0])[0]} \n${pt2} ${(questao[1])[0]} \n${pt3} ${(questao[2])[0]} \n${pt4} ${(questao[3])[0]} \n${pt5} ${(questao[4])[0]}`);
+		console.log();
+		console.log(`Resultado final:`);
 		console.log(resultado);
 		}
 		
@@ -32,12 +53,10 @@ const prompt = require('prompt-sync')();
 		console.log();
 		console.log(hist);
 		console.log();
-		let p1 = '';
 		while((p1!='sim'&&p1!='s')&&(p1!='nao'&&p1!='n')){
 			console.log('responda somente SIM ou NAO');
 			console.log();
-			p1 = prompt(`Conseguiu entrar no prédio? `);
-			p1 = p1.toLowerCase();
+			p1 = prompt(pt1).toLowerCase();
 		}
 		if(p1==='s'||p1==='sim'){
 			sim++;
@@ -50,12 +69,10 @@ const prompt = require('prompt-sync')();
 		console.log();
 		console.log(hist);
 		console.log();
-		let p2 = '';
 		while((p2!='sim'&&p2!='s')&&(p2!='nao'&&p2!='n')){
 			console.log('responda somente SIM ou NAO');
 			console.log();
-			p2 = prompt(`Desativou o sistema de ALARMES? `);
-			p2 = p2.toLowerCase();
+			p2 = prompt(pt2).toLowerCase();
 		}
 		if(p2==='s'||p2==='sim'){
 			sim++;
@@ -68,12 +85,10 @@ const prompt = require('prompt-sync')();
 		console.log();
 		console.log(hist);
 		console.log();
-		let p3 = '';
 		while((p3!='sim'&&p3!='s')&&(p3!='nao'&&p3!='n')){
 			console.log('responda somente SIM ou NAO');
 			console.log();
-			p3 = prompt(`Desligou a CHAVE GERAL? `);
-			p3 = p3.toLowerCase();
+			p3 = prompt(pt3).toLowerCase();
 		}
 		if(p3==='s'||p3==='sim'){
 			sim++;
@@ -86,12 +101,11 @@ const prompt = require('prompt-sync')();
 		console.log();
 		console.log(hist);
 		console.log();
-		let p4 = '';
+		var p4 = '';
 		while((p4!='sim'&&p4!='s')&&(p4!='nao'&&p4!='n')){
 			console.log('responda somente SIM ou NAO');
 			console.log();
-			p4 = prompt(`Perguntou à porta "Qual a semelhança entre o corvo e a escrivaninha? `);
-			p4 = p4.toLowerCase();
+			p4 = prompt(pt4).toLowerCase();
 		}
 		if(p4==='s'||p4==='sim'){
 			sim++;
@@ -104,12 +118,10 @@ const prompt = require('prompt-sync')();
 		console.log();
 		console.log(hist);
 		console.log();
-		let p5 = '';
 		while((p5!='sim'&&p5!='s')&&(p5!='nao'&&p5!='n')){
 			console.log('responda somente SIM ou NAO');
 			console.log();
-			p5 = prompt(`IMPLANTOU A BOMBA NO SUBSOLO? `);
-			p5 = p5.toLowerCase();
+			p5 = prompt(pt5).toLowerCase();
 		}
 		if(p5==='s'||p5==='sim'){
 			sim++;
