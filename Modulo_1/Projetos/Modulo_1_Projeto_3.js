@@ -203,7 +203,6 @@ function tempo(){
 	let m31 = 1;
 	for(let m = 0; m < 5; m++){
 		m31++
-		console.log(m31);
 		for(let s = 0; s < 4; s++){
 			// console.log();
 			// console.log('inicio da semana');
@@ -212,7 +211,7 @@ function tempo(){
 					console.log(ma[m]);
 				}
 
-				// console.log(ds[d]+': dia '+hoje+', ')
+				console.log(ds[d]+': dia '+hoje+', ')
 				hoje++
 				if(m31%2===0){
 					if(hoje===32){
