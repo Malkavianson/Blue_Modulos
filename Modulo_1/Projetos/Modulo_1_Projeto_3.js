@@ -285,13 +285,13 @@ Agora foco no futuro, e aproveite todas as oportunidades que surgirem
 }
 
 function namorar(namor) {
-	// [0] sem requisito mínimo para namorar [devagar]
-	// [1] todos > 50
-	// [2] Atributos Fisicos > 100
-	// [3] Artes > 100
-	// [4] Beleza > 100
-	// [5] conhecimento > 100
-	// [6] popularidade > 100
+	// Carrancuda e puta da cara 	[0] sem requisito mínimo para namorar [devagar]
+	// Fofinha doce e meiga 		[1] todos > 50
+	// Heterotop esportista 		[2] Atributos Fisicos > 100
+	// Tímida introvertida 			[3] Artes > 100
+	// Fofoqueira e barraqueira 	[4] Beleza > 100
+	// CDF linda e arrogante		[5] conhecimento > 100
+	// Safada gostosa				[6] popularidade > 100
 
 
 	// ${ao(i)}
@@ -419,7 +419,7 @@ function tempo() {
 	let m31 = 1;
 	for (let m = 0; m < ma.length; m++) {
 		m31++;
-		for (let s = 0; s < 5; s++) {
+		loopmes: for (let s = 0; s < 5; s++) {
 			console.log();
 			for (let d = 0; d < ds.length; d++) {
 				let data = ` Dia ${hoje} de ${ma[m]} de 2021 - ${ds[d]}`;
@@ -428,28 +428,17 @@ function tempo() {
 					diario(data);
 				//
 				if (m === 4 && hoje === 18) {
-					break;
+					break loopmes;
 				} else if (m31 % 2 === 0) {
 					if (hoje === 32) {
-						break;
+						hoje = 1;
+						break loopmes;
 					};
 				} else {
 					if (hoje === 31) {
-						break;
+						hoje = 1;
+						break loopmes;
 					};
-				};
-			};
-			if (m === 4 && hoje === 18) {
-				break;
-			} else if (m31 % 2 === 0) {
-				if (hoje === 32) {
-					hoje = 1;
-					break;
-				}
-			} else {
-				if (hoje === 31) {
-					hoje = 1;
-					break;
 				};
 			};
 		};
@@ -498,5 +487,5 @@ function descansar() {
 }
 
 hist1();
-// tempo();
-histF()
+tempo();
+histF();
