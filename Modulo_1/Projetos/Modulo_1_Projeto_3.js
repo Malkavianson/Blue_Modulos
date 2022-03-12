@@ -4,7 +4,6 @@ let personagemPrincipal = 	{};
 let dinheiro = 0;
 let disposicao = 100;
 
-
 let op_id = ['homem', 'mulher'];
 let op_os = ['he', 'ho', 'bi'];
 
@@ -13,9 +12,18 @@ let horario = ['Alvorada', 'Manhã', 'Tarde', 'Noite', 'hora de dormir'];
 let ds = ['Domingo','Segunda', 'Terça','Quarta','Quinta','Sexta','Sábado'];
 let ma = ['Agosto','Setembro','Outubro','Novembro','Dezembro'];
 
-let garotas = ['Valeria',   'Sophia', 'Rosa',   'Alice',   'Ludmila', 'Rebecca', 'Monica'];
-let garotos = ['Frederico', 'Davi',   'Otavio', 'Marcelo', 'Ricardo', 'Otto',    'Alexandre'];
-let garotxs = ['Frederico', 'Sophia', 'Rosa',   'Alice',   'Ludmila', 'Otto',    'Alexandre'];
+function ao(i){
+	if(garotas.includes(personagensSecundarios[i])){
+		return 'a';
+	}else {
+		return 'o';
+	}
+}
+
+
+let garotas = ['Nivea', 'Sophia', 'Rosa', 'Alice', 'Ludmila', 'Rebecca', 'Monica'];
+let garotos = ['Frederico', 'Davi', 'Otavio', 'Marcelo', 'Ricardo', 'Otto', 'Alexandre'];
+let garotxs = ['Nivea', 'Sophia', 'Otavio', 'Alice', 'Ludmila', 'Otto', 'Alexandre'];
 let personagensSecundarios = [];
 
 function hist1(){
@@ -116,48 +124,43 @@ if(personagemPrincipal.identidadeGenero === 0){
 }
 
 let normal = {
-	portugues: 18,
-	matematica: 18,
-	historia: 18,
-	geografia: 18,
+	beleza: 18,
+	conhecimento: 18,
+	popularidade: 18,
 	artes: 18,
-	educacaoFisica: 18,
+	atributosFisicos: 18,
 	sorte: 18,
 }
 let inteligente = {
-	portugues: 14,
-	matematica: 30,
-	historia: 14,
-	geografia: 30,
+	beleza: 14,
+	conhecimento: 30,
+	popularidade: 14,
 	artes: 15,
-	educacaoFisica: 5,
+	atributosFisicos: 5,
 	sorte: 18,
 }
 let esportista = {
-	portugues: 15,
-	matematica: 10,
-	historia: 13,
-	geografia: 18,
+	beleza: 15,
+	conhecimento: 10,
+	popularidade: 13,
 	artes: 15,
-	educacaoFisica: 30,
+	atributosFisicos: 30,
 	sorte: 25,
 }
 let artista = {
-	portugues: 18,
-	matematica: 18,
-	historia: 20,
-	geografia: 17,
+	beleza: 18,
+	conhecimento: 18,
+	popularidade: 20,
 	artes: 35,
-	educacaoFisica: 3,
+	atributosFisicos: 3,
 	sorte: 15,
 }
 let faztudo = {
-	portugues: 15,
-	matematica: 17,
-	historia: 14,
-	geografia: 10,
+	beleza: 15,
+	conhecimento: 17,
+	popularidade: 14,
 	artes: 15,
-	educacaoFisica: 25,
+	atributosFisicos: 25,
 	sorte: 30,
 }
 
@@ -170,7 +173,7 @@ console.log(h100006);
 console.log();
 console.log(`Normal[n] Inteligente[i] Esportista[e] Artista[a] Faz-Tudo[f]`);
 console.log();
-ask_tp = prompt('Escolha seu tipo: ');
+ask_tp = prompt('Escolha seu tipo: ').toLowerCase();
 console.clear();
 }
 
@@ -237,13 +240,13 @@ function histF(){
 			console.clear();
 			console.log(`Quem você deseja pedir em namoro?`);
 			console.log(personagensSecundarios[0],personagensSecundarios[1],personagensSecundarios[2],personagensSecundarios[3],personagensSecundarios[4],personagensSecundarios[5],personagensSecundarios[6]);
-			namor = prompt('escolha: ');
-			namor = namor.toLowerCase();
+			namor = prompt('escolha: ').toLowerCase();
 			namor = namor[0].toUpperCase() + namor.substr(1) ;
 		}while((personagensSecundarios.includes(namor))===false)
 		console.clear();
 		console.log();
-		console.log(`Você decidiu namorar ${namor}`)
+		console.log(`Você decidiu namorar ${namor}`);
+		namorar(namor);
 	}else{
 		console.clear();
 		console.log();
@@ -251,6 +254,71 @@ function histF(){
 		console.log();
 		prompt('pressione ENTER para continuar');
 	}
+}
+
+function namorar(namor){
+// [0] sem requisito mínimo para namorar [devagar]
+// [1] todos > 50
+// [2] Atributos Fisicos > 100
+// [3] Artes > 100
+// [4] Beleza > 100
+// [5] conhecimento > 100
+// [6] popularidade > 100
+
+
+// ${ao( )}
+
+if(namor===personagensSecundarios[0]){
+	console.log();
+	console.log(`
+O jeito Agressivo e imperativo de ${personagensSecundarios[0]} te fascina, e você decide se declarar.\n
+Após falar sobre seu amor, ${personagensSecundarios[0]} te encara de uma forma estranha...\n
+Pelo olhar de ${personagensSecundarios[0]} você teme receber um SOCO, mas você logo percebe seus olhos enchendo de lágrimas\n
+${personagensSecundarios[0]}, em prantos, te diz o quão feliz ficou com esta notícia, e que o sentimento é recíproco!\n
+Com muita alegria, ${personagensSecundarios[0]} grita: \n
+\n
+	"SIIIIIIIIIIIIIIIIIIIIIIM VEELHOOOO, AAAAAAAAAAA QUE ÓÓÓÓÓÓDIOOOOOOOO, \n
+	VOCÊ É TÃO DEVAGAR VEY! DESDE OS 6 ANOS EU ESPERO POR ESSE MOMENTO! <3 <3 <3"
+	`);
+	console.log();
+	console.log(`
+Vocês decidem contar aos amigos, sobre a decisão de vocês,\n
+\n
+E a reação deles é basicamente um únissono\n
+	"aaaaawwwnnnnnnn <3 <3".\n
+\n
+Uma vez que todos já sabiam sobre os de ${personagensSecundarios[0]} e somente você não tinha percebido.
+	`);
+	console.log();
+	console.log(`
+O namoro de vocês se resume em assistir animes e filmes de terror todos os dias na casa de ${personagensSecundarios[0]}\n 
+vocês se tornam um lindo casal de comercial de margarina.\n
+voce ensina ${personagensSecundarios[0]} a ser um pouco mais doce e\n
+${personagensSecundarios[0]} te ensina como quebrar a cara de alguém!\n
+\n
+Vocês se completam e vocês sabem disso!
+`
+	);
+}else if(namor===personagensSecundarios[1]){
+	console.log();
+}else if(namor===personagensSecundarios[2]){
+	
+}else if(namor===personagensSecundarios[3]){
+	
+}else if(namor===personagensSecundarios[4]){
+	
+}else if(namor===personagensSecundarios[5]){
+	
+}else if(namor===personagensSecundarios[6]){
+	
+}
+
+
+
+
+
+
+
 }
 
 function tempo(){	
@@ -262,7 +330,6 @@ function tempo(){
 			console.log();
 			for(let d = 0; d < ds.length; d++){
 				let data = ` Dia ${hoje} de ${ma[m]} de 2021 - ${ds[d]}`
-				// console.log(data)
 				hoje++
 //	Aqui vao entrar as atividades diárias
 					
@@ -297,9 +364,13 @@ function tempo(){
 	}
 }
 
+// Quando bater 140pts vai aparecer um Deus
+// Quando bater 100pts vai conquistar a pessoa daquele interesse
+
+
 function diario(data){
 	console.clear();
-	console.log(` Areas de conhecimeto:\nPortuguês: ${personagemPrincipal.portugues}\nMatemática: ${personagemPrincipal.matematica}\nHistória: ${personagemPrincipal.geografia}\nGeografia: ${personagemPrincipal.geografia}\nArtes: ${personagemPrincipal.artes}\nEducação Física: ${personagemPrincipal.educacaoFisica}\nSorte: ${personagemPrincipal.sorte}\n`)
+	console.log(` Areas de conhecimento:\nBeleza: ${personagemPrincipal.beleza}\nConhecimento: ${personagemPrincipal.conhecimento}\nPopularidade: ${personagemPrincipal.popularidade}\nArtes: ${personagemPrincipal.artes}\nAtributos Físicos: ${personagemPrincipal.atributosFisicos}\nSorte: ${personagemPrincipal.sorte}\n`)
 	console.log(` DISPOSIÇÃO: ${disposicao}`)
 	console.log();
 	console.log(`Hoje é ${data}`);
@@ -317,12 +388,11 @@ function diario(data){
 
 function irParaAEscola(){
 	console.log(`Você foi para a escola!`)
-	personagemPrincipal.portugues++;
-	personagemPrincipal.matematica++;
-	personagemPrincipal.historia++;
-	personagemPrincipal.geografia++;
+	personagemPrincipal.beleza++;
+	personagemPrincipal.conhecimento++;
+	personagemPrincipal.popularidade++;
 	personagemPrincipal.artes++;
-	personagemPrincipal.educacaoFisica++;
+	personagemPrincipal.atributosFisicos++;
 	disposicao--;
 }
 
@@ -336,5 +406,5 @@ function descansar(){
 }
 
 hist1();
-tempo();
+// tempo();
 histF()
