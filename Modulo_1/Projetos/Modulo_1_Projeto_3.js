@@ -82,7 +82,7 @@ function hist1() {
 		
 	while (personagemPrincipal.identidadeGenero != 0 && personagemPrincipal.identidadeGenero != 1) {
 		console.log();
-		let ask_ig = prompt('Você é um Rapaz[r] ou uma Moça[m]?');
+		var ask_ig = prompt('Você é um Rapaz[r] ou uma Moça[m]?');
 		if (ask_ig.toLowerCase() == 'r') {
 			personagemPrincipal.identidadeGenero = 0;
 		} else if (ask_ig.toLowerCase() == 'm') {
@@ -281,7 +281,6 @@ As vezes é necessário colocar uma placa de "NÃO PERTURBE" no coração.\n
 Agora foco no futuro, e aproveite todas as oportunidades que surgirem
 		`);
 		console.log();
-		prompt('pressione ENTER para continuar');
 	}
 }
 
