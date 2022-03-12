@@ -28,7 +28,7 @@ function eas(i) {
 		return 'e';
 	};
 };
-function oap(i) {
+function oap() {
 	if (personagemPrincipal.identidadeGenero===1) {
 		return 'a';
 	} else if (personagemPrincipal.identidadeGenero===0) {
@@ -36,7 +36,7 @@ function oap(i) {
 	};
 };
 
-function eap(i) {
+function eap() {
 	if (personagemPrincipal.identidadeGenero===1) {
 		return 'a';
 	} else if (personagemPrincipal.identidadeGenero===1) {
@@ -50,7 +50,7 @@ let garotos = ['Frederico', 'Davi', 'Otavio', 'Marcelo', 'Ricardo', 'Otto', 'Ale
 let garotxs = ['Nivea', 'Sophia', 'Otavio', 'Alice', 'Ludmila', 'Otto', 'Alexandre'];
 let personagensSecundarios = [];
 
-function hist1() {
+function hist1() {	
 	//Primeira parte da historia
 	let h100000 = `Hoje é dia 01 de Agosto de 2021`;
 	let h100001 = `As férias de julho acabaram, você acaba de voltar do sítio dos seus avós onde eles fizeram uma grande festa para o seu aniversário!`;
@@ -147,6 +147,9 @@ function hist1() {
 	};
 
 	let normal = {
+		nome: personagemPrincipal.nome,
+		identidadeGenero: ask_ig.toLowerCase(),
+		orientacaoSexual: ask_os.toLowerCase(),
 		beleza: 18,
 		conhecimento: 18,
 		popularidade: 18,
@@ -224,6 +227,8 @@ function hist1() {
 	} else if (ask_os.toLowerCase() == 'b') {
 		personagemPrincipal.orientacaoSexual = 2;
 	}
+	return 	personagemPrincipal;
+
 }
 
 function histF() {
@@ -266,6 +271,7 @@ function histF() {
 			namor = namor[0].toUpperCase() + namor.substr(1);
 		} while ((personagensSecundarios.includes(namor)) === false)
 		console.clear();
+		console.log(personagemPrincipal.nome);
 		console.log();
 		console.log(`Você decidiu namorar ${namor}`);
 		namorar(namor);
@@ -301,7 +307,7 @@ Agora foco no futuro, e aproveite todas as oportunidades que surgirem
 	}
 }
 
-function namorar(namor) {
+function namorar(namor) {;
 	// Carrancuda e puta da cara 	[0] sem requisito mínimo para namorar [devagar]
 	// Fofinha doce e meiga 		[1] todos > 50
 	// Heterotop esportista 		[2] Atributos Fisicos > 100
@@ -345,6 +351,7 @@ ${personagensSecundarios[0]} te ensina como quebrar a cara de alguém!\n
 Vocês se completam e vocês sabem disso!
 `);
 	} else if (namor === personagensSecundarios[1]) {
+		console.log(personagemPrincipal.nome);
 		console.log();
 		console.log(`
 Do outro lado da rua da escola, conversando com seus amigos,\n 
@@ -356,7 +363,7 @@ Você decide então ir até el${eas(1)}.\n
 El${eas(1)} também estava te observando, com aquele jeito tímido e despistado de sempre... \n
 Mas abre um lindo sorriso quando vê que você vinha em sua direção.\n
 Você se aproxima de ${personagensSecundarios[1]}, envolve el${eas(1)} em seus braços, e cochicha em seu ouvido:\n
-	Amig${(1)}, posso te perguntar uma coisa?\n
+	Amig${oas(1)}, posso te perguntar uma coisa?\n
 Você sente ${personagensSecundarios[1]} arrepiar e enrubrecer, que te responde:\n
 	Claro meu anjo, pode me dizer o que quiser sempre que quiser...\n
 E nesse momento, você pergunta à ${personagensSecundarios[1]} se el${eas(1)} deseja namorar com você.
@@ -368,13 +375,12 @@ E nesse momento, você pergunta à ${personagensSecundarios[1]} se el${eas(1)} d
 			console.log();
 			console.log(`
 ${personagensSecundarios[1]} te olha estupefat${oas(1)} e se afasta com você com um pulo\n
-	Você está lélé da cuca ${personagemPrincipal}?????????? - ${personagensSecundarios[1]} te diz -\n
+	Você está lélé da cuca ${personagemPrincipal.nome}?????????? - ${personagensSecundarios[1]} te diz -\n
 Você se sente um pouco envergonh${oap(1)} e ${personagensSecundarios[1]} percebe isso...\n
 \n
 ${personagensSecundarios[1]} olha para você carinhosamente, te abraça e cochicha:\n
-	${personagemPrincipal}, eu também te amo... Mas como um amig${oap}!\n
+	${personagemPrincipal.nome}, eu também te amo... Mas como um amig${oap()}!\n
 		`);
-		console.log();
 		console.log(`
 Vocês se abraçam e decidem manter a amizade para toda a vida.\n
 Pessoalmente, você está chateado... Mas algo dentro de você já esperava essa resposta...\n
@@ -534,6 +540,7 @@ function descansar() {
 	}
 }
 
-hist1();
-tempo();
+personagemPrincipal = hist1();
+console.log(personagemPrincipal.nome)
+// tempo();
 histF();
