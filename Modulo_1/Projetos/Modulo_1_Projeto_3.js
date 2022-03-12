@@ -12,7 +12,8 @@ let horario = ['Alvorada', 'Manhã', 'Tarde', 'Noite', 'hora de dormir'];
 let ds = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
 let ma = ['Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
 
-function ao(i) {
+//Pronomes de sujeito
+function oas(i) {
 	if (garotas.includes(personagensSecundarios[i])) {
 		return 'a';
 	} else if (garotos.includes(personagensSecundarios[i])) {
@@ -20,13 +21,29 @@ function ao(i) {
 	};
 };
 
-function ae(i) {
+function eas(i) {
 	if (garotas.includes(personagensSecundarios[i])) {
 		return 'a';
 	} else if (garotos.includes(personagensSecundarios[i])) {
 		return 'e';
 	};
 };
+function oap(i) {
+	if (personagemPrincipal.identidadeGenero===1) {
+		return 'a';
+	} else if (personagemPrincipal.identidadeGenero===0) {
+		return 'o';
+	};
+};
+
+function eap(i) {
+	if (personagemPrincipal.identidadeGenero===1) {
+		return 'a';
+	} else if (personagemPrincipal.identidadeGenero===1) {
+		return 'e';
+	};
+};
+//Pronomes de sujeito - end
 
 let garotas = ['Nivea', 'Sophia', 'Rosa', 'Alice', 'Ludmila', 'Rebecca', 'Monica'];
 let garotos = ['Frederico', 'Davi', 'Otavio', 'Marcelo', 'Ricardo', 'Otto', 'Alexandre'];
@@ -330,16 +347,47 @@ Vocês se completam e vocês sabem disso!
 	} else if (namor === personagensSecundarios[1]) {
 		console.log();
 		console.log(`
-
+Do outro lado da rua da escola, conversando com seus amigos,\n 
+Você observa ${personagensSecundarios[1]} sentad${oas(1)} embaixo da árvore.\n
+${personagensSecundarios[1]} é meig${oas(1)}, ${personagensSecundarios[1]} é doce, ${personagensSecundarios[1]} é carinhos${oas(1)}...\n
+Você sempre viu isso, mas nunca percebeu o quanto isso te fazia bem!\n
+\n
+Você decide então ir até el${eas(1)}.\n
+El${eas(1)} também estava te observando, com aquele jeito tímido e despistado de sempre... \n
+Mas abre um lindo sorriso quando vê que você vinha em sua direção.\n
+Você se aproxima de ${personagensSecundarios[1]}, envolve el${eas(1)} em seus braços, e cochicha em seu ouvido:\n
+	Amig${(1)}, posso te perguntar uma coisa?\n
+Você sente ${personagensSecundarios[1]} arrepiar e enrubrecer, que te responde:\n
+	Claro meu anjo, pode me dizer o que quiser sempre que quiser...\n
+E nesse momento, você pergunta à ${personagensSecundarios[1]} se el${eas(1)} deseja namorar com você.
+		`);
+		let testf1 = (	personagemPrincipal.beleza >= 50 &&	personagemPrincipal.conhecimento >= 50 &&	personagemPrincipal.popularidade >= 50 &&	personagemPrincipal.artes >= 50 &&	personagemPrincipal.atributosFisicos >= 50);
+		if(testf1){
+			console.log('teste true')
+		}else{
+			console.log();
+			console.log(`
+${personagensSecundarios[1]} te olha estupefat${oas(1)} e se afasta com você com um pulo\n
+	Você está lélé da cuca ${personagemPrincipal}?????????? - ${personagensSecundarios[1]} te diz -\n
+Você se sente um pouco envergonh${oap(1)} e ${personagensSecundarios[1]} percebe isso...\n
+\n
+${personagensSecundarios[1]} olha para você carinhosamente, te abraça e cochicha:\n
+	${personagemPrincipal}, eu também te amo... Mas como um amig${oap}!\n
 		`);
 		console.log();
 		console.log(`
-
+Vocês se abraçam e decidem manter a amizade para toda a vida.\n
+Pessoalmente, você está chateado... Mas algo dentro de você já esperava essa resposta...\n
+\n
+Você tem outras coisas em mente e ter alguém ao lado pode ser inconveniente\n
+Já que descobrir o mundo é o que você deseja...\n
+E também,\n
+Estar solteiro não significa necessáriamente estar disponível.\n
+As vezes é necessário colocar uma placa de "NÃO PERTURBE" no coração.\n
+\n
+Agora foco no futuro, e aproveite todas as oportunidades que surgirem
 		`);
-		console.log();
-		console.log(`
-
-		`);
+		}
 	} else if (namor === personagensSecundarios[2]) {
 		console.log();
 		console.log(`
