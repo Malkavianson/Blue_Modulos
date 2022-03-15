@@ -79,7 +79,7 @@
 	//Seleção de sexo do personagem
 		while (personagemPrincipal.identidadeGenero != 0 && personagemPrincipal.identidadeGenero != 1) {
 			console.log();
-			var ask_ig = prompt('Você deseja ser um Rapaz[r] ou uma Moça[m]? ');
+			var ask_ig = prompt('		Você deseja ser um Rapaz[r] ou uma Moça[m]? ');
 			if (ask_ig.toLowerCase() == 'r') {
 				personagemPrincipal.identidadeGenero = 0;
 			} else if (ask_ig.toLowerCase() == 'm') {
@@ -92,7 +92,7 @@
 		}
 		while (personagemPrincipal.orientacaoSexual != 0 && personagemPrincipal.orientacaoSexual != 1 && personagemPrincipal.orientacaoSexual != 2) {
 			console.log();
-			var ask_os = prompt(`E você é Hetero[h], Gay[g] ou Bissexual[b]? `);
+			var ask_os = prompt(`		 Hetero[h], Gay[g] ou Bissexual[b]? `);
 			if (ask_os.toLowerCase() == 'h') {
 				personagemPrincipal.orientacaoSexual = 0;
 			} else if (ask_os.toLowerCase() == 'g') {
@@ -104,12 +104,12 @@
 				console.log('Voce precisa responder [h] ou [g] ou [b]');
 			}
 		}
-		let h100006 = `\nAgora nos diga com qual desses tipos você deseja ter?`;
+		let h100006 = `\n	Agora nos diga com qual desses tipos você deseja ter?`;
 		let ask_tp = "";
 		while (ask_tp != 'n' && ask_tp != 'i' && ask_tp != 'e' && ask_tp != 'a' && ask_tp != 'f') {
 			console.log(h100006);
 			console.log();
-			console.log(`Normal[n] Inteligente[i] Esportista[e] Artista[a] Faz-Tudo[f]`);
+			console.log(`	Normal[n] Inteligente[i] Esportista[e] Artista[a] Faz-Tudo[f]`);
 			console.log();
 			ask_tp = prompt('Escolha seu tipo: ').toLowerCase();
 			console.clear();
@@ -119,10 +119,10 @@
 		prompt('pressione ENTER para iniciar')
 		console.clear();
 		let h100000 = `Hoje é dia 01 de Agosto de 2021`;
-		let h100001 = `As férias de julho acabaram e eu voltei do sítio dos seus avós onde eles fizeram uma grande festa para meu aniversário!`;
+		let h100001 = `As férias de julho acabaram e eu voltei do sítio dos seus avós\n Onde eles fizeram uma grande festa para meu aniversário!`;
 		let h100002 = `Acabo de completar 18 anos, e estou terminando o Ensino médio.`;
 		let h100003 = `Vou começar a arruma as coisas para voltar às aulas... \n Contra minha vontade, como sempre...`;
-		let h100004 = `Já que você jamais fui ${oap()} primeir${oap()} da turma, mas também nunca fiquei para trás!`;
+		let h100004 = `Já que você jamais fui ${oap()} primeir${oap()} da turma...\n mas também nunca fiquei para trás!`;
 		let h100005 = `Este semestre decidí fazer diferente\nvou encontrar uma forma de fazer estes últimos meses inesquecíveis`;
 
 		//História para js
@@ -300,106 +300,13 @@
 	};
 //Inicio da História - end
 
-// Escopo dos personagens
-		// [0]
-			/*
-			sem requisito mínimo
-			Cis
-			Pard - Castanho acobreado - Na_altura_dos_ombros | cacheados|  - Olhos Castanhos folha	- magro 
-			Comportamento - Passivo-Agressivo | Anti-escola/pró-sistema
-			Personalidade - Carrancud e put da cara		 	
-			Bordão::
-				VOCÊ É TÃO DEVAGAR VEY!\n
-			Conexões
-			*/
-		// [1]
-			/*
-			todos > 50 	
-			Cis
-			Branc -  Loir - Longos | lisos | alguns_Dreads - Olhos azuis - magr
-			Comportamento - Tilelê | Exotéric | Anti-escola/Anti-sistema
-			Personalidade - Fofinh doce e meig 				
-			Bordão:
-				você é ${oap()} maluc${oap()} mais maluc${oap()} de todos os maluc${oap()}s\n
-			Conexões
-			*/
-		// [2] 
-			/*
-					Time de basquete regional
-			Atributos Fisicos > 100
-			Cis
-			Negr - Pretos -  |crespo | detalhes_em_navalha - Olhos Verdes - Forte
-			Comportamento - Topzero | Esportista | Pró-escola/Pró-sistema
-			Personalidade - Extrovertid e engraçad
-			Bordão:
-				
-			Conexões
-			
-			*/
-		// [3]
-			/*
-			Artes > 100
-			Cis
-			Pard - Castanho escuro -  |cacheado|  - Olhos Castanhos - Atletico
-			Comportamento - Tímid Otaku introvertid 		
-			Personalidade - 
-			Bordão:
-				Anatano gasuki desu ${personagemPrincipal.nome} senpai <3
-			Conexões
-			
-			*/
-		// [4] 
-			/*
-			Popularidade > 100
-			Trans
-			Pard - Preto - Pintado de Azul - Olhos Castanhos Claros - Esbelt
-			Comportamento - tiktoker	
-			Personalidade - Fofoqueir e barraqueir 
-			Bordão:
-				
-			Conexões
-				
-			*/
-		// [5]
-			/*
-			Conhecimento > 100	
-			Cis
-			Branc - Ruiv - Olhos Verder - Magr
-			Comportamento - CDF
-			Personalidade - Orgulhos - Militante
-			Bordão:
-				
-			Conexões
-				
-			*/
-		// [6]
-			/*
-			Beleza > 100
-			Cis
-			Asiático - Preto - Olhos Pretos - Magro
-			Comportamento -  e-girl/e-boy 
-			Personalidade - Pervertid 
-			Bordão:
-				
-			Conexões
-				
-			*/
-// Escopo dos personagens - end
-
-	// ${oap()}
-	// ${eap()}
-	// ${oas(i)}
-	// ${eas(i)}
-
-
-
 //fim da História
 	function histF() {
 		pressEnter();
 		let hf001 = `Fim do ano letivo`;
 		let hf002 = `Agora é hora de decidir o meu futuro`;
 		let hf003 = `As aulas terminaram e vou começar preparar para entrar na faculdade`
-			let hf004 = `Mas antes, preciso decidir se quero continuar solteiro, ou se vou começar um romance....`;
+			let hf004 = `	Mas antes, preciso decidir se quero continuar solteiro, ou se vou começar um romance....`;
 		console.log(hf001);
 		pressEnter();
 		console.log(hf002);
@@ -455,18 +362,19 @@
 	Estar solteiro não significa necessáriamente estar disponível.\n
 	As vezes é necessário colocar uma placa de "NÃO PERTURBE" no coração.\n
 	\n
-	Agora foco no futuro, e agarrar todas as oportunidades que surgirem
+	Agora foco é no futuro, e agarrar todas as oportunidades que surgirem...
 			`);
 			pressEnter();
 		}
 	}
+
 	function namorar(namor) {;
 		if (namor === personagensSecundarios[0]) {
 			console.log();
 			pressEnter();
 			console.log(`
-	O jeito Agressivo e imperativo de ${personagensSecundarios[0]} me fascinam, e decido me declarar.\n
-	Envio uma mensagem para el${eas(0)} e peço para el${eas(0)} me encontrar no Shopping Cidade\n
+	\nO jeito Agressivo e imperativo de ${personagensSecundarios[0]} me fascinam, e decido me declarar.\n
+	Envio uma mensagem para el${eas(0)} e peço para me encontrar no Shopping Cidade\n
 	Quando ${personagensSecundarios[0]} chega, vamos ao Burguer King e procuramos uma mesa vaga\n
 		${personagemPrincipal.nome}\n
 	Eu nem sei como eu falo isso sabe\n
@@ -523,7 +431,7 @@
 		${personagensSecundarios[1]}
 	Claro meu anjo, pode me dizer o que quiser sempre que quiser...\n\n
 		${personagemPrincipal.nome}
-	${personagensSecundarios[1]} você deseja unir nossos espíritos pela ETERNIDADE?
+	${personagensSecundarios[1]} você deseja unir nossas almas pela ETERNIDADE?
 			`);
 			pressEnter();
 			let testf1 = (	personagemPrincipal.beleza >= 50 &&	personagemPrincipal.conhecimento >= 50 &&	personagemPrincipal.popularidade >= 50 &&	personagemPrincipal.artes >= 50 &&	personagemPrincipal.atributosFisicos >= 50 );
@@ -531,8 +439,8 @@
 				console.log();
 				console.log(`
 	${personagensSecundarios[1]} rompe em lágrimas, me abraça e me traz junto ao corpo, de uma maneira que sinto nossos espíritos se tocarem\n
-	Aquela reação me deixa perplex${oas(1)} e você consego sentir meus olhos marejados.\n
-	Sento que agora somo definitivamente um só.\n
+	Aquela reação me deixa perplex${oas(1)} e consigo sentir meus olhos marejados.\n
+	Sinto que agora somos definitivamente um só.\n
 				`);
 				pressEnter();
 				console.log(`
@@ -547,9 +455,10 @@
 	${personagemPrincipal.nome}, eu te amo... você é ${oap()} maluc${oap()} mais maluc${oap()} de todos os maluc${oap()}s...\n
 	mas você é ${oap()} MEU maluc${oap()}...\n
 	\n
-	Eu à abraço e colocamos as alianças um no outro\n
-	E então nos deitamos observar as estrelas
-
+	Minhas energias recarregam nesse momento, agarro-n${oas(1)} num abraço e colocamos as alianças um no outro\n
+	E então nos deitamos para observar as estrelas...\n
+	Deitad${oap()}, viro de lado e vejo o perfil de ${personagensSecundarios(1)} sob a luz do luar...\n
+	Toco seus lábios com a ponta de meus dedos e aproximo meu rosto para dar-lhe um beijo\n\n
 		Sempre fomos um só, e o destino somente se encarregou de unír-nos.
 
 				`);
@@ -561,16 +470,16 @@
 	${personagensSecundarios[1]} me olha estupefat${oas(1)} e se afasta com um pulo\n
 		${personagensSecundarios[1]}
 	Você está lélé da cuca ${personagemPrincipal.nome}??????????\n
-	Me sente um pouco envergonh${oap(1)} e ${personagensSecundarios[1]} percebe...\n
+	Me sinto um pouco envergonh${oap(1)} e ${personagensSecundarios[1]} percebe...\n
 	\n
-	${personagensSecundarios[1]} me olha carinhosamente, me abraça e diz\n
+	${personagensSecundarios[1]} carinhosamente olha para mim, me abraça e diz\n
 		${personagensSecundarios[1]}
 	${personagemPrincipal.nome}, eu também te amo... Mas como um amig${oap()}!\n
 			`);
 			pressEnter();
 			console.log(`
 	Nós então nos abraçamos e decidemos manter a amizade para toda a vida.\n
-	Pessoalmente, sstou chatead${oap()}... Mas algo dentro de mim já esperava essa resposta...\n
+	Pessoalmente, estou chatead${oap()}... Mas algo dentro de mim já esperava essa resposta...\n
 	\n
 	Eu tenho outras coisas em mente e ter alguém ao lado pode ser inconveniente\n
 	Já que descobrir o mundo é o que desejo...\n
@@ -815,9 +724,24 @@
 		let pop = new status_("Popularidade", personagemPrincipal.popularidade);
 		let art = new status_("Gosto por Artes", personagemPrincipal.artes);
 		let atf = new status_("Atributos Físicos", personagemPrincipal.atributosFisicos);
-		let din = new status_("Dinheiro", dinheiro)
+		let din = new status_("Dinheiro R$", dinheiro+',00')
 		let statsBar = console.table([dis, blz, cnh, pop, art, atf, din]);
 		console.log();
+		if(hoje===15&&minasCap!=0){
+			console.log(`\n Hoje sai o resultado do MinasCap\n	Vou conferir o resultado pela TV...`)
+			pressEnter();
+			for(i=0;i<minasCap;i++){
+				loto = (Math.floor(Math.random() * 300));
+				if(loto%3===0&&loto%4===0){
+					console.log('MEU DEUS o prêmio!! no bilhete', 1+i);
+					console.log(`Valor do prêmio: R$ 5000,00`)
+					dinheiro+=5000;
+					break;
+				}else{
+					console.log('Infelizmente o bilhete', 1+b,'não foi sorteado...');
+				}
+			}
+		}
 		pressEnter();
 		console.log();
 		if (disposicao > 5) {
@@ -834,8 +758,6 @@
 //Seletor de rotina
 	function seletor(manha,tarde,noite){
 		console.clear();
-		let selecoes = [, , , , , , ];
-		let selections = ['v', 'd', 'e', 's', 'a', 'f', 't'];
 			if('ipe'===manha){
 				console.log(`			Manhã:`);
 				irParaAEscola();
@@ -942,7 +864,9 @@
 				manha = manhaA
 			};
 			manhaA = manha;
-		}else{manha = 'ipe'}
+		}else{
+			prompt(`De manhã eu vou para a escola!`);
+			manha = 'ipe'}
 		do{
 			console.clear();
 			statsBar,
@@ -995,7 +919,7 @@
 	function aDescansar(){
 		if (disposicao < 100) {
 			console.log(`\nNinguém é de ferro\nVou descansar um pouco`);
-			disposicao=+7;
+			disposicao+=7;
 			personagemPrincipal.sorte+=5;
 		}
 		if (disposicao > 100) {
@@ -1159,7 +1083,7 @@
 	function aArtes(){
 		console.log(`\nA arte liberta a alma e colore os pensamentos\nEstudei artes e culturas`);
 		personagemPrincipal.artes+=3;
-		conhecimento++;
+		personagemPrincipal.conhecimento++;
 		disposicao--;
 	}
 
@@ -1174,12 +1098,12 @@
 	function aFreela(){
 		console.log(`\nO trabalho dignifica!\nNada como um freela pra encher a carteira`);
 		dinheiro+=50;
-		sorte++;
-		disposicao--;
+		personagemPrincipal.sorte++;
+		disposicao-=2;
 	}
 
 	function exausto() {
-		console.log(`\nVocê se sentiu exausto e resolveu tirar o dia para descansar!`);
+		console.log(`\nMe sento muito exaust${oap()} e vou tirar o dia para descansar!`);
 			disposicao += 15;
 			personagemPrincipal.conhecimento--;
 			personagemPrincipal.artes--;
@@ -1188,24 +1112,106 @@
 //Ações diárias - end
 
 //Sequencia de execução
-	// personagemPrincipal = hist1();
+	personagemPrincipal = hist1();
 	
 	tempo();
 	
-	// console.log(`${personagemPrincipal.nome}`)
+	console.log(`${personagemPrincipal.nome}`)
 	
-	// histF();
+	histF();
 //Sequencia de execução
 
-
-
-
+// Escopo dos personagens
+		// [0]
+			/*
+			sem requisito mínimo
+			Cis
+			Pard - Castanho acobreado - Na_altura_dos_ombros | cacheados|  - Olhos Castanhos folha	- magro 
+			Comportamento - Passivo-Agressivo | Anti-escola/pró-sistema
+			Personalidade - Carrancud e put da cara		 	
+			Bordão::
+				VOCÊ É TÃO DEVAGAR VEY!\n
+			Conexões
+			*/
+		// [1]
+			/*
+			todos > 50 	
+			Cis
+			Branc -  Loir - Longos | lisos | alguns_Dreads - Olhos azuis - magr
+			Comportamento - Tilelê | Exotéric | Anti-escola/Anti-sistema
+			Personalidade - Fofinh doce e meig 				
+			Bordão:
+				você é ${oap()} maluc${oap()} mais maluc${oap()} de todos os maluc${oap()}s\n
+			Conexões
+			*/
+		// [2] 
+			/*
+					Time de basquete regional
+			Atributos Fisicos > 100
+			Cis
+			Negr - Pretos -  |crespo | detalhes_em_navalha - Olhos Verdes - Forte
+			Comportamento - Topzero | Esportista | Pró-escola/Pró-sistema
+			Personalidade - Extrovertid e engraçad
+			Bordão:
+				
+			Conexões
+			
+			*/
+		// [3]
+			/*
+			Artes > 100
+			Cis
+			Pard - Castanho escuro -  |cacheado|  - Olhos Castanhos - Atletico
+			Comportamento - Tímid Otaku introvertid 		
+			Personalidade - 
+			Bordão:
+				Anatano gasuki desu ${personagemPrincipal.nome} senpai <3
+			Conexões
+			
+			*/
+		// [4] 
+			/*
+			Popularidade > 100
+			Trans
+			Pard - Preto - Pintado de Azul - Olhos Castanhos Claros - Esbelt
+			Comportamento - tiktoker	
+			Personalidade - Fofoqueir e barraqueir 
+			Bordão:
+				
+			Conexões
+				
+			*/
+		// [5]
+			/*
+			Conhecimento > 100	
+			Cis
+			Branc - Ruiv - Olhos Verder - Magr
+			Comportamento - CDF
+			Personalidade - Orgulhos - Militante
+			Bordão:
+				
+			Conexões
+				
+			*/
+		// [6]
+			/*
+			Beleza > 100
+			Cis
+			Asiático - Preto - Olhos Pretos - Magro
+			Comportamento -  e-girl/e-boy 
+			Personalidade - Pervertid 
+			Bordão:
+				
+			Conexões
+				
+			*/
+ // Escopo dos personagens - end
 
 // Cenas dos Personagens:
-// Personagem 0{
+function Personagem0(mes,dia){
 
-	// mes 1[
-		 /*dia 1(
+	if(mes===1){
+		if(dia===1){
 			console.clear();
 			console.log();
 			console.log(`
@@ -1282,10 +1288,9 @@ Você ainda vê ${personagensSecundarios[0]} como aquela criancinha desengonçad
 	Vou te mandar o meu relatório no whatsapp para você tirar de exemplo\n
 	Copia mas não faz igual tá!
 			`)
-		 )
-		/*
+		}
 
-		/*dia 2(
+		else if(dia===2){
 			console.clear();
 			console.log();
 			console.log(`
@@ -1328,8 +1333,9 @@ Então, ${personagensSecundarios[0]} acena para Lily na fila do Burguer King\n\n
 	Ih, Alá a Lily... Tinha me perdido dela quando fui no Super Mercado comprar Refrigerante e Doritos\n
 	Hey, Você não quer vir assistir o filme com a gnt?
 			`);
-			cinema = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
-			if(cinema != 's' && cinema != 'n'){
+			do{
+				cinema = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
+				if(cinema != 's' && cinema != 'n'){
 				prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
 			}
 			}while(cinema != 's' && cinema != 'n')
@@ -1362,10 +1368,10 @@ Então, ${personagensSecundarios[0]} acena para Lily na fila do Burguer King\n\n
 				Texto 3
 			`);
 			pressEnter();
-		)*/
-	// ]
-/*	mes 2[
-		dia 1(
+		}
+	}
+	else if(mes===2){
+		if(dia===1){
 			console.clear();
 			console.log();
 			console.log(`
@@ -1381,8 +1387,8 @@ Então, ${personagensSecundarios[0]} acena para Lily na fila do Burguer King\n\n
 				Texto 3
 			`);
 			pressEnter();
-		)
-		dia 2(
+		}
+		else if (dia===2){
 			console.clear();
 			console.log();
 			console.log(`
@@ -1398,10 +1404,10 @@ Então, ${personagensSecundarios[0]} acena para Lily na fila do Burguer King\n\n
 				Texto 3
 			`);
 			pressEnter();
-		)
-	]
-	mes 3[
-		dia 1(
+		}
+	}
+	else if(mes===3){
+		if(dia===1){
 			console.clear();
 			console.log();
 			console.log(`
@@ -1417,8 +1423,8 @@ Então, ${personagensSecundarios[0]} acena para Lily na fila do Burguer King\n\n
 				Texto 3
 			`);
 			pressEnter();
-		)
-		dia 2(
+		}
+		else if (dia===2){
 			console.clear();
 			console.log();
 			console.log(`
@@ -1434,10 +1440,10 @@ Então, ${personagensSecundarios[0]} acena para Lily na fila do Burguer King\n\n
 				Texto 3
 			`);
 			pressEnter();
-		)
-	]
-	mes 4[
-		dia 1(
+		}
+	}
+	else if(mes===4){
+		if(dia===1){
 			console.clear();
 			console.log();
 			console.log(`
@@ -1453,8 +1459,8 @@ Então, ${personagensSecundarios[0]} acena para Lily na fila do Burguer King\n\n
 				Texto 3
 			`);
 			pressEnter();
-		)
-		dia 2(
+		}
+		else if (dia===2){
 			console.clear();
 			console.log();
 			console.log(`
@@ -1470,10 +1476,10 @@ Então, ${personagensSecundarios[0]} acena para Lily na fila do Burguer King\n\n
 				Texto 3
 			`);
 			pressEnter();
-		)
-	]
-	mes 5[
-		dia 1(
+		}
+	}
+	else if(mes===5){
+		if(dia===1){
 			console.clear();
 			console.log();
 			console.log(`
@@ -1489,8 +1495,8 @@ Então, ${personagensSecundarios[0]} acena para Lily na fila do Burguer King\n\n
 				Texto 3
 			`);
 			pressEnter();
-		)
-		dia 2(
+		}
+		else if (dia===2){
 			console.clear();
 			console.log();
 			console.log(`
@@ -1506,13 +1512,14 @@ Então, ${personagensSecundarios[0]} acena para Lily na fila do Burguer King\n\n
 				Texto 3
 			`);
 			pressEnter();
-		)
-	]
+		}
+	}
 }
 
-Personagem 1{
-	mes 1[
-		dia 1(
+function Personagem1(mes,dia){
+
+	if(mes===1){
+		if(dia===1){
 			console.clear();
 			console.log();
 			console.log(`
@@ -1528,8 +1535,8 @@ Personagem 1{
 				Texto 3
 			`);
 			pressEnter();
-		)
-		dia 2(
+		}
+		else if (dia===2){
 			console.clear();
 			console.log();
 			console.log(`
@@ -1545,10 +1552,10 @@ Personagem 1{
 				Texto 3
 			`);
 			pressEnter();
-		)
-	]
-	mes 2[
-		dia 1(
+		}
+	}
+	else if(mes===2){
+		if(dia===1){
 			console.clear();
 			console.log();
 			console.log(`
@@ -1564,8 +1571,8 @@ Personagem 1{
 				Texto 3
 			`);
 			pressEnter();
-		)
-		dia 2(
+		}
+		else if (dia===2){
 			console.clear();
 			console.log();
 			console.log(`
@@ -1581,10 +1588,10 @@ Personagem 1{
 				Texto 3
 			`);
 			pressEnter();
-		)
-	]
-	mes 3[
-		dia 1(
+		}
+	}
+	else if(mes===3){
+		if(dia===1){
 			console.clear();
 			console.log();
 			console.log(`
@@ -1600,8 +1607,8 @@ Personagem 1{
 				Texto 3
 			`);
 			pressEnter();
-		)
-		dia 2(
+		}
+		else if (dia===2){
 			console.clear();
 			console.log();
 			console.log(`
@@ -1617,10 +1624,10 @@ Personagem 1{
 				Texto 3
 			`);
 			pressEnter();
-		)
-	]
-	mes 4[
-		dia 1(
+		}
+	}
+	else if(mes===4){
+		if(dia===1){
 			console.clear();
 			console.log();
 			console.log(`
@@ -1636,8 +1643,8 @@ Personagem 1{
 				Texto 3
 			`);
 			pressEnter();
-		)
-		dia 2(
+		}
+		else if (dia===2){
 			console.clear();
 			console.log();
 			console.log(`
@@ -1653,10 +1660,10 @@ Personagem 1{
 				Texto 3
 			`);
 			pressEnter();
-		)
-	]
-	mes 5[
-		dia 1(
+		}
+	}
+	else if(mes===5){
+		if(dia===1){
 			console.clear();
 			console.log();
 			console.log(`
@@ -1672,8 +1679,8 @@ Personagem 1{
 				Texto 3
 			`);
 			pressEnter();
-		)
-		dia 2(
+		}
+		else if (dia===2){
 			console.clear();
 			console.log();
 			console.log(`
@@ -1689,13 +1696,14 @@ Personagem 1{
 				Texto 3
 			`);
 			pressEnter();
-		)
-	]
+		}
+	}
 }
 
-Personagem 2{
-	mes 1[
-		dia 1(
+function Personagem2(mes,dia){
+
+	if(mes===1){
+		if(dia===1){
 			console.clear();
 			console.log();
 			console.log(`
@@ -1711,8 +1719,8 @@ Personagem 2{
 				Texto 3
 			`);
 			pressEnter();
-		)
-		dia 2(
+		}
+		else if (dia===2){
 			console.clear();
 			console.log();
 			console.log(`
@@ -1728,10 +1736,10 @@ Personagem 2{
 				Texto 3
 			`);
 			pressEnter();
-		)
-	]
-	mes 2[
-		dia 1(
+		}
+	}
+	else if(mes===2){
+		if(dia===1){
 			console.clear();
 			console.log();
 			console.log(`
@@ -1747,8 +1755,8 @@ Personagem 2{
 				Texto 3
 			`);
 			pressEnter();
-		)
-		dia 2(
+		}
+		else if (dia===2){
 			console.clear();
 			console.log();
 			console.log(`
@@ -1764,10 +1772,10 @@ Personagem 2{
 				Texto 3
 			`);
 			pressEnter();
-		)
-	]
-	mes 3[
-		dia 1(
+		}
+	}
+	else if(mes===3){
+		if(dia===1){
 			console.clear();
 			console.log();
 			console.log(`
@@ -1783,8 +1791,8 @@ Personagem 2{
 				Texto 3
 			`);
 			pressEnter();
-		)
-		dia 2(
+		}
+		else if (dia===2){
 			console.clear();
 			console.log();
 			console.log(`
@@ -1800,10 +1808,10 @@ Personagem 2{
 				Texto 3
 			`);
 			pressEnter();
-		)
-	]
-	mes 4[
-		dia 1(
+		}
+	}
+	else if(mes===4){
+		if(dia===1){
 			console.clear();
 			console.log();
 			console.log(`
@@ -1819,8 +1827,8 @@ Personagem 2{
 				Texto 3
 			`);
 			pressEnter();
-		)
-		dia 2(
+		}
+		else if (dia===2){
 			console.clear();
 			console.log();
 			console.log(`
@@ -1836,10 +1844,10 @@ Personagem 2{
 				Texto 3
 			`);
 			pressEnter();
-		)
-	]
-	mes 5[
-		dia 1(
+		}
+	}
+	else if(mes===5){
+		if(dia===1){
 			console.clear();
 			console.log();
 			console.log(`
@@ -1855,8 +1863,8 @@ Personagem 2{
 				Texto 3
 			`);
 			pressEnter();
-		)
-		dia 2(
+		}
+		else if (dia===2){
 			console.clear();
 			console.log();
 			console.log(`
@@ -1872,13 +1880,14 @@ Personagem 2{
 				Texto 3
 			`);
 			pressEnter();
-		)
-	]
+		}
+	}
 }
 
-Personagem 3{
-	mes 1[
-		dia 1(
+function Personagem3(mes,dia){
+
+	if(mes===1){
+		if(dia===1){
 			console.clear();
 			console.log();
 			console.log(`
@@ -1894,8 +1903,8 @@ Personagem 3{
 				Texto 3
 			`);
 			pressEnter();
-		)
-		dia 2(
+		}
+		else if (dia===2){
 			console.clear();
 			console.log();
 			console.log(`
@@ -1911,10 +1920,10 @@ Personagem 3{
 				Texto 3
 			`);
 			pressEnter();
-		)
-	]
-	mes 2[
-		dia 1(
+		}
+	}
+	else if(mes===2){
+		if(dia===1){
 			console.clear();
 			console.log();
 			console.log(`
@@ -1930,8 +1939,8 @@ Personagem 3{
 				Texto 3
 			`);
 			pressEnter();
-		)
-		dia 2(
+		}
+		else if (dia===2){
 			console.clear();
 			console.log();
 			console.log(`
@@ -1947,10 +1956,10 @@ Personagem 3{
 				Texto 3
 			`);
 			pressEnter();
-		)
-	]
-	mes 3[
-		dia 1(
+		}
+	}
+	else if(mes===3){
+		if(dia===1){
 			console.clear();
 			console.log();
 			console.log(`
@@ -1966,8 +1975,8 @@ Personagem 3{
 				Texto 3
 			`);
 			pressEnter();
-		)
-		dia 2(
+		}
+		else if (dia===2){
 			console.clear();
 			console.log();
 			console.log(`
@@ -1983,10 +1992,10 @@ Personagem 3{
 				Texto 3
 			`);
 			pressEnter();
-		)
-	]
-	mes 4[
-		dia 1(
+		}
+	}
+	else if(mes===4){
+		if(dia===1){
 			console.clear();
 			console.log();
 			console.log(`
@@ -2002,8 +2011,8 @@ Personagem 3{
 				Texto 3
 			`);
 			pressEnter();
-		)
-		dia 2(
+		}
+		else if (dia===2){
 			console.clear();
 			console.log();
 			console.log(`
@@ -2019,10 +2028,10 @@ Personagem 3{
 				Texto 3
 			`);
 			pressEnter();
-		)
-	]
-	mes 5[
-		dia 1(
+		}
+	}
+	else if(mes===5){
+		if(dia===1){
 			console.clear();
 			console.log();
 			console.log(`
@@ -2038,8 +2047,8 @@ Personagem 3{
 				Texto 3
 			`);
 			pressEnter();
-		)
-		dia 2(
+		}
+		else if (dia===2){
 			console.clear();
 			console.log();
 			console.log(`
@@ -2055,13 +2064,14 @@ Personagem 3{
 				Texto 3
 			`);
 			pressEnter();
-		)
-	]
+		}
+	}
 }
 
-Personagem 4{
-	mes 1[
-		dia 1(
+function Personagem4(mes,dia){
+
+	if(mes===1){
+		if(dia===1){
 			console.clear();
 			console.log();
 			console.log(`
@@ -2077,8 +2087,8 @@ Personagem 4{
 				Texto 3
 			`);
 			pressEnter();
-		)
-		dia 2(
+		}
+		else if (dia===2){
 			console.clear();
 			console.log();
 			console.log(`
@@ -2094,10 +2104,10 @@ Personagem 4{
 				Texto 3
 			`);
 			pressEnter();
-		)
-	]
-	mes 2[
-		dia 1(
+		}
+	}
+	else if(mes===2){
+		if(dia===1){
 			console.clear();
 			console.log();
 			console.log(`
@@ -2113,8 +2123,8 @@ Personagem 4{
 				Texto 3
 			`);
 			pressEnter();
-		)
-		dia 2(
+		}
+		else if (dia===2){
 			console.clear();
 			console.log();
 			console.log(`
@@ -2130,10 +2140,10 @@ Personagem 4{
 				Texto 3
 			`);
 			pressEnter();
-		)
-	]
-	mes 3[
-		dia 1(
+		}
+	}
+	else if(mes===3){
+		if(dia===1){
 			console.clear();
 			console.log();
 			console.log(`
@@ -2149,8 +2159,8 @@ Personagem 4{
 				Texto 3
 			`);
 			pressEnter();
-		)
-		dia 2(
+		}
+		else if (dia===2){
 			console.clear();
 			console.log();
 			console.log(`
@@ -2166,10 +2176,10 @@ Personagem 4{
 				Texto 3
 			`);
 			pressEnter();
-		)
-	]
-	mes 4[
-		dia 1(
+		}
+	}
+	else if(mes===4){
+		if(dia===1){
 			console.clear();
 			console.log();
 			console.log(`
@@ -2185,8 +2195,8 @@ Personagem 4{
 				Texto 3
 			`);
 			pressEnter();
-		)
-		dia 2(
+		}
+		else if (dia===2){
 			console.clear();
 			console.log();
 			console.log(`
@@ -2202,10 +2212,10 @@ Personagem 4{
 				Texto 3
 			`);
 			pressEnter();
-		)
-	]
-	mes 5[
-		dia 1(
+		}
+	}
+	else if(mes===5){
+		if(dia===1){
 			console.clear();
 			console.log();
 			console.log(`
@@ -2221,8 +2231,8 @@ Personagem 4{
 				Texto 3
 			`);
 			pressEnter();
-		)
-		dia 2(
+		}
+		else if (dia===2){
 			console.clear();
 			console.log();
 			console.log(`
@@ -2238,13 +2248,14 @@ Personagem 4{
 				Texto 3
 			`);
 			pressEnter();
-		)
-	]
+		}
+	}
 }
 
-Personagem 5{
-	mes 1[
-		dia 1(
+function Personagem5(mes,dia){
+
+	if(mes===1){
+		if(dia===1){
 			console.clear();
 			console.log();
 			console.log(`
@@ -2260,8 +2271,8 @@ Personagem 5{
 				Texto 3
 			`);
 			pressEnter();
-		)
-		dia 2(
+		}
+		else if (dia===2){
 			console.clear();
 			console.log();
 			console.log(`
@@ -2277,10 +2288,10 @@ Personagem 5{
 				Texto 3
 			`);
 			pressEnter();
-		)
-	]
-	mes 2[
-		dia 1(
+		}
+	}
+	else if(mes===2){
+		if(dia===1){
 			console.clear();
 			console.log();
 			console.log(`
@@ -2296,8 +2307,8 @@ Personagem 5{
 				Texto 3
 			`);
 			pressEnter();
-		)
-		dia 2(
+		}
+		else if (dia===2){
 			console.clear();
 			console.log();
 			console.log(`
@@ -2313,10 +2324,10 @@ Personagem 5{
 				Texto 3
 			`);
 			pressEnter();
-		)
-	]
-	mes 3[
-		dia 1(
+		}
+	}
+	else if(mes===3){
+		if(dia===1){
 			console.clear();
 			console.log();
 			console.log(`
@@ -2332,8 +2343,8 @@ Personagem 5{
 				Texto 3
 			`);
 			pressEnter();
-		)
-		dia 2(
+		}
+		else if (dia===2){
 			console.clear();
 			console.log();
 			console.log(`
@@ -2349,10 +2360,10 @@ Personagem 5{
 				Texto 3
 			`);
 			pressEnter();
-		)
-	]
-	mes 4[
-		dia 1(
+		}
+	}
+	else if(mes===4){
+		if(dia===1){
 			console.clear();
 			console.log();
 			console.log(`
@@ -2368,8 +2379,8 @@ Personagem 5{
 				Texto 3
 			`);
 			pressEnter();
-		)
-		dia 2(
+		}
+		else if (dia===2){
 			console.clear();
 			console.log();
 			console.log(`
@@ -2385,10 +2396,10 @@ Personagem 5{
 				Texto 3
 			`);
 			pressEnter();
-		)
-	]
-	mes 5[
-		dia 1(
+		}
+	}
+	else if(mes===5){
+		if(dia===1){
 			console.clear();
 			console.log();
 			console.log(`
@@ -2404,8 +2415,8 @@ Personagem 5{
 				Texto 3
 			`);
 			pressEnter();
-		)
-		dia 2(
+		}
+		else if (dia===2){
 			console.clear();
 			console.log();
 			console.log(`
@@ -2421,13 +2432,14 @@ Personagem 5{
 				Texto 3
 			`);
 			pressEnter();
-		)
-	]
+		}
+	}
 }
 
-Personagem 6{
-	mes 1[
-		dia 1(
+function Personagem6(mes,dia){
+
+	if(mes===1){
+		if(dia===1){
 			console.clear();
 			console.log();
 			console.log(`
@@ -2443,8 +2455,8 @@ Personagem 6{
 				Texto 3
 			`);
 			pressEnter();
-		)
-		dia 2(
+		}
+		else if (dia===2){
 			console.clear();
 			console.log();
 			console.log(`
@@ -2460,10 +2472,10 @@ Personagem 6{
 				Texto 3
 			`);
 			pressEnter();
-		)
-	]
-	mes 2[
-		dia 1(
+		}
+	}
+	else if(mes===2){
+		if(dia===1){
 			console.clear();
 			console.log();
 			console.log(`
@@ -2479,8 +2491,8 @@ Personagem 6{
 				Texto 3
 			`);
 			pressEnter();
-		)
-		dia 2(
+		}
+		else if (dia===2){
 			console.clear();
 			console.log();
 			console.log(`
@@ -2496,10 +2508,10 @@ Personagem 6{
 				Texto 3
 			`);
 			pressEnter();
-		)
-	]
-	mes 3[
-		dia 1(
+		}
+	}
+	else if(mes===3){
+		if(dia===1){
 			console.clear();
 			console.log();
 			console.log(`
@@ -2515,8 +2527,8 @@ Personagem 6{
 				Texto 3
 			`);
 			pressEnter();
-		)
-		dia 2(
+		}
+		else if (dia===2){
 			console.clear();
 			console.log();
 			console.log(`
@@ -2532,10 +2544,10 @@ Personagem 6{
 				Texto 3
 			`);
 			pressEnter();
-		)
-	]
-	mes 4[
-		dia 1(
+		}
+	}
+	else if(mes===4){
+		if(dia===1){
 			console.clear();
 			console.log();
 			console.log(`
@@ -2551,8 +2563,8 @@ Personagem 6{
 				Texto 3
 			`);
 			pressEnter();
-		)
-		dia 2(
+		}
+		else if (dia===2){
 			console.clear();
 			console.log();
 			console.log(`
@@ -2568,10 +2580,10 @@ Personagem 6{
 				Texto 3
 			`);
 			pressEnter();
-		)
-	]
-	mes 5[
-		dia 1(
+		}
+	}
+	else if(mes===5){
+		if(dia===1){
 			console.clear();
 			console.log();
 			console.log(`
@@ -2587,8 +2599,8 @@ Personagem 6{
 				Texto 3
 			`);
 			pressEnter();
-		)
-		dia 2(
+		}
+		else if (dia===2){
 			console.clear();
 			console.log();
 			console.log(`
@@ -2604,8 +2616,8 @@ Personagem 6{
 				Texto 3
 			`);
 			pressEnter();
-		)
-	]
+		}
+	}
 }
-*/
+
 // Cenas dos Personagens - end
