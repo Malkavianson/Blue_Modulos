@@ -756,8 +756,11 @@
 	}
 
 //Seletor de rotina
-	function seletor(manha,tarde,noite){
+	function seletor(manha,tarde,noite,hoje,m,d){
 		console.clear();
+// Quadros especiais da manhã
+
+// Quadros especiais da manhã - end
 			if('ipe'===manha){
 				console.log(`			Manhã:`);
 				irParaAEscola();
@@ -783,6 +786,9 @@
 				console.log(`			Manhã:`);
 				aFreela()
 			}
+// Quadros especiais da tarde
+
+// Quadros especiais da tarde - end
 			if('v'=== tarde){
 				console.log(`			Tarde:`);
 				aVisual()		
@@ -805,6 +811,9 @@
 				console.log(`			Tarde:`);
 				aFreela()
 			}
+// Quadros especiais da noite
+
+// Quadros especiais da noite - end
 			if('v'=== noite){
 				console.log(`			Noite:`);
 				aVisual()		
@@ -898,7 +907,7 @@
 		};
 		noiteA = noite;
 		
-		seletor(manha,tarde,noite);
+		seletor(manha,tarde,noite,hoje,m,d);
 		pressEnter()
 	}
 
