@@ -1,5 +1,8 @@
 //Módulo
 const prompt = require('prompt-sync')();
+const colors = require('colors');
+
+// colors.enable();
 
 //Dados dos Jogadores
 let p1 = {
@@ -24,14 +27,14 @@ do {
 	function init() {
 		do {
 			console.log();
-			rodada = prompt(`	Quantas rodadas a partida terá? `);
+			rodada = prompt(`	Quantas rodadas a partida terá? `.blue);
 			if ((isNaN(rodada)) === false && rodada > 0) {
 				p1.vit = 0;
 				p2.vit = 0;
 			} else {
-				console.log('	Você precisa colocar números acima de ZERO');
+				console.log('	Você precisa colocar números acima de ZERO'.red);
 				console.log();
-				prompt('pressione ENTER para continuar')
+				prompt('pressione ENTER para continuar'.blue)
 				console.clear();
 			}
 		} while (isNaN(rodada)||rodada <= 0);
@@ -55,15 +58,15 @@ do {
 			//verifica vitorioso
 			if ((p1e > p2e && (pp1 === false)) || (p1p === true)) {
 				console.log()
-				console.log("	Você venceu")
+				console.log("	Você venceu".brightGreen)
 				p1.vit = p1.vit + 1;
 			} else if ((p2e > p1e && (pp2 === false)) || (p2p === true)) {
 				console.log();
-				console.log("	Máquina Venceu")
+				console.log("	Máquina Venceu".brightRed)
 				p2.vit = p2.vit + 1;
 			} else {
 				console.log();
-				console.log("	Empate");
+				console.log("	Empate".brightMagenta);
 				emp = +1;
 			}
 
@@ -73,22 +76,22 @@ do {
 			// Letreiro de pontuação:
 			console.log();
 			console.log();
-			console.log(`	Placar atual: `);
-			console.log(`	Você:    ${p1.vit}`);
-			console.log(`	Máquina: ${p2.vit}`);
-			console.log(`	Empates: ${emp}`);
+			console.log(`	Placar atual: `.blue);
+			console.log(`	Você:    ${p1.vit}`.green);
+			console.log(`	Máquina: ${p2.vit}`.red);
+			console.log(`	Empates: ${emp}`.magenta);
 			console.log();
 			console.log();
 			console.log();
-			console.log('	Quantidades de RODADAS:', rodada);
+			console.log('	Quantidades de RODADAS:', rodada.brightBlue);
 			console.log();
 			console.log();
-			console.log(`	Rodada Atual: ${rodadaAtual}`);
+			console.log(`	Rodada Atual:`, `${rodadaAtual}`.blue);
 			console.log();
 			console.log();
-			console.log(`	Você escolheu ${p1.esc}`);
+			console.log(`	Você escolheu ${p1.esc}`.green);
 			console.log();
-			console.log(`	Máquina escolheu:  ${p2.esc}`);
+			console.log(`	Máquina escolheu:  ${p2.esc}`.red);
 			console.log();
 			prompt(`pressione ENTER para continuar`);
 		} while (rodadas != 0);
@@ -98,7 +101,7 @@ do {
 	function entrada() {
 		do {
 			console.log();
-			console.log(`	Escolha entre: PEDRA || PAPEL || TESOURA `);
+			console.log(`	Escolha entre: PEDRA || PAPEL || TESOURA `.blue);
 			console.log();
 			p1.esc = prompt().toLowerCase(); //Escolha do jogador
 			console.clear();
@@ -110,18 +113,18 @@ do {
 	function resultadoFinal() {
 		if (p1.vit > p2.vit) {
 			console.log();
-			console.log("			Você venceu a máquina!");
+			console.log("			Você venceu a máquina!".brightGreen);
 		} else {
 			console.log();
-			console.log("			A Máquina te venceu!");
+			console.log("			A Máquina te venceu!".brightRed);
 		}
 		console.log();
-		console.log("			Fim da Partida");
+		console.log("			Fim da Partida".brightBlue);
 	}
 
 	verific();
 	resultadoFinal();
 
-	console.log(`Jogar Novamente?`);
-	jn = prompt(`pressione [S] ou [N] `);
+	console.log(`Jogar Novamente?`.brightYellow);
+	jn = prompt(`pressione [S] ou [N] `.yellow);
 } while (jn != 'n')
