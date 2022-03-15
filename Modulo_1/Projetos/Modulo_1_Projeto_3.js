@@ -10,9 +10,9 @@
 	let op_os = ['he', 'ho', 'bi'];
 
 	let horario = ['Alvorada', 'Manhã', 'Tarde', 'Noite', 'hora de dormir'];
-	let manhaA = '';
-	let tardeA = '';
-	let noiteA = '';
+	var manhaA = '';
+	var tardeA = '';
+	var noiteA = '';
 
 	let ds = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
 	let ma = ['Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
@@ -22,6 +22,16 @@
 	let garotxs = ['Nivea', 'Sophia', 'Otavio', 'Alice', 'Ludmila', 'Alexandre', 'Otto'];
 	let personagensSecundarios = [];
 	let personagensSecundariospts = [0,0,0,0,0,0,0];
+	
+	// Variaveis das compras
+	var cx_choco = 0; // Para dar ao [0]
+	var camisa_unicornio = 0; //para dar ao [6]
+	var livro = 0; //para dar ao [5]
+	var colar_micanga = 0; //para dar ao [1]
+	var minasCap = 0; //Random todo dia 15
+	var pocaoDoAmor = 0; //aumentar Status Beleza e Popularidade
+	// Variaveis das compras - end
+
 //Variaveis importantes - end
 
 //Pronomes de sujeito
@@ -107,6 +117,7 @@
 		console.clear();
 		//Primeira parte da historia
 		prompt('pressione ENTER para iniciar')
+		console.clear();
 		let h100000 = `Hoje é dia 01 de Agosto de 2021`;
 		let h100001 = `As férias de julho acabaram e eu voltei do sítio dos seus avós onde eles fizeram uma grande festa para meu aniversário!`;
 		let h100002 = `Acabo de completar 18 anos, e estou terminando o Ensino médio.`;
@@ -237,24 +248,23 @@
 			personagemPrincipal.orientacaoSexual = 2;
 		}
 		console.clear();
+		console.log(`\nAgora vamos entender como acompanhar o dia:`);
+		pressEnter();
+		console.log(`Estes são os atributos:`);
+		let dis = new status_('DISPOSIÇÃO: ', disposicao)
+		let blz = new status_('Beleza', personagemPrincipal.beleza);
+		let cnh = new status_('conhecimento', personagemPrincipal.conhecimento);
+		let pop = new status_("Popularidade", personagemPrincipal.popularidade);
+		let art = new status_("Gosto por Artes", personagemPrincipal.artes);
+		let atf = new status_("Atributos Físicos", personagemPrincipal.atributosFisicos);
+		let din = new status_("Dinheiro", dinheiro)
+		console.table([dis, blz, cnh, pop, art, atf, din]);
+		console.log(`\nSe a DISPOSIÇÃO cair para 5, ficarei exaust${oap()} e descansarei durante o dia inteiro.`);
 		console.log(`
-	\nAgora vamos entender como acompanhar o dia:
-	\nTodos os dias tenho que decidir o que vou fazer no meu dia...
+	\nTodos os dias tenho que decidir o que vou fazer...
 	\n Caso eu vá fazer as mesmas coisas de ontem, basta dar um enter\n
 		`)
 		pressEnter();
-		console.log();
-		console.log();
-		console.log(` Areas de STATUS:	
-		\nBeleza: ${personagemPrincipal.beleza}
-		\nConhecimento: ${personagemPrincipal.conhecimento}
-		\nPopularidade: ${personagemPrincipal.popularidade}
-		\nArtes: ${personagemPrincipal.artes}
-		\nAtributos Físicos: ${personagemPrincipal.atributosFisicos}
-		\nSorte: ${personagemPrincipal.sorte}\n`);
-		console.log(` DISPOSIÇÃO: ${disposicao}`);
-		console.log();
-
 		return 	personagemPrincipal;
 
 	}
@@ -269,7 +279,7 @@
 					let data = ` Dia ${hoje} de ${ma[m]} de 2021 - ${ds[d]}`;
 						hoje++;
 						//	Aqui vao entrar as atividades diárias
-						diario(data);
+						diario(data,hoje,m,d);
 					//
 					if (m === 4 && hoje === 18) {
 						break loopmes;
@@ -791,90 +801,400 @@
 
 	// Quando bater 140pts vai aparecer um Deus
 
-//Seleção de Rotina
-	function diario(data) {
+	function status_(attr, vlr) {
+			this.Status = attr;
+			this.Nivel = vlr;
+		}
+
+	function diario(data,hoje,m,d) {
 		console.clear();
-		//Escolha da rotina
 		console.log(`\nHoje é ${data}\n`);
-		let oQueDesejaFazerDuranteODia = oQDFDOD();
+		let dis = new status_('DISPOSIÇÃO: ', disposicao)
+		let blz = new status_('Beleza', personagemPrincipal.beleza);
+		let cnh = new status_('conhecimento', personagemPrincipal.conhecimento);
+		let pop = new status_("Popularidade", personagemPrincipal.popularidade);
+		let art = new status_("Gosto por Artes", personagemPrincipal.artes);
+		let atf = new status_("Atributos Físicos", personagemPrincipal.atributosFisicos);
+		let din = new status_("Dinheiro", dinheiro)
+		let statsBar = console.table([dis, blz, cnh, pop, art, atf, din]);
+		console.log();
 		pressEnter();
-		console.log('De manhã eu vou ', manha);
-		console.log('De tarde eu vou ', tarde);
-		console.log('E de noite eu vou ', noite);
-		pressEnter()
-		//Escolha da rotina - end
 		console.log();
 		if (disposicao > 5) {
-			irParaAEscola();
+			afazeresDia(statsBar,hoje,m,d);
 		} else {
-			descansar();
+			exausto();
 		}
 		pressEnter()
 		console.log(`Fim do dia`);
 		console.log();
 		pressEnter();
 	}
-//Seleção de Rotina - end
+
+//Seletor de rotina
+	function seletor(manha,tarde,noite){
+		console.clear();
+		let selecoes = [, , , , , , ];
+		let selections = ['v', 'd', 'e', 's', 'a', 'f', 't'];
+			if('ipe'===manha){
+				console.log(`			Manhã:`);
+				irParaAEscola();
+			}else if('v'=== manha){
+				console.log(`			Manhã:`);
+				aVisual()		
+			}else if('d'=== manha){
+				console.log(`			Manhã:`);
+				aDescansar()
+			}else if('e'=== manha){
+				console.log(`			Manhã:`);
+				aEstudar();
+			}else if('s'=== manha){
+				console.log(`			Manhã:`);
+				aCidade()				
+			}else if('a'=== manha){
+				console.log(`			Manhã:`);
+				aArtes()
+			}else if('f'=== manha){
+				console.log(`			Manhã:`);
+				aExercicios()
+			}else {
+				console.log(`			Manhã:`);
+				aFreela()
+			}
+			if('v'=== tarde){
+				console.log(`			Tarde:`);
+				aVisual()		
+			}else if('d'=== tarde){
+				console.log(`			Tarde:`);
+				aDescansar()
+			}else if('e'=== tarde){
+				console.log(`			Tarde:`);
+				aEstudar();
+			}else if('s'=== tarde){
+				console.log(`			Tarde:`);
+				aCidade()				
+			}else if('a'=== tarde){
+				console.log(`			Tarde:`);
+				aArtes()
+			}else if('f'=== tarde){
+				console.log(`			Tarde:`);
+				aExercicios()
+			}else {
+				console.log(`			Tarde:`);
+				aFreela()
+			}
+			if('v'=== noite){
+				console.log(`			Noite:`);
+				aVisual()		
+			}else if('d'=== noite){
+				console.log(`			Noite:`);
+				aDescansar()
+			}else if('e'=== noite){
+				console.log(`			Noite:`);
+				aEstudar();
+			}else if('s'=== noite){
+				console.log(`			Noite:`);
+				aCidade()				
+			}else if('a'=== noite){
+				console.log(`			Noite:`);
+				aArtes()
+			}else if('f'=== noite){
+				console.log(`			Noite:`);
+				aExercicios()
+			}else {
+				console.log(`			Noite:`);
+				aFreela()
+			}
+	}
+//Seletor de rotina - end
+
+
 
 //Ações diárias
-function oQDFDOD(){
+	function afazeresDia(statsBar,hoje,m,d){
+		function atvd(){
 			console.log(`Ações diárias:`);
 			console.log();
-			console.log(`Cuidar do visual`);
-			console.log(`Descansar`);
-			console.log(`Estudar`);
-			console.log(`Sair pela cidade`);
-			console.log(`Estudar sobre Artes e Culturas`);
-			console.log(`Praticar exercícios Físicos`);
-			console.log(`Pegar um Freela`);
+			console.log(`Cuidar do visual[v]`);
+			console.log(`Descansar[d]`);
+			console.log(`Estudar [e]`);
+			console.log(`Sair pela cidade [s]`);
+			console.log(`Estudar sobre Artes e Culturas [a]`);
+			console.log(`Praticar exercícios Físicos [f]`);
+			console.log(`Pegar um Freela [t]`);
 			console.log();
 			console.log(`MANHÃ		TARDE		NOITE`);
 			console.log();
-			manha = prompt(`De manhã eu vou `);
-			while(manhaA===''){
-				if(manha===''){manha = manhaA};
-				manhaA = manha;
-			}
-			tarde = prompt(`De tarde eu vou `);
-			while(tardeA===''){
-				if(tarde===''){tarde = tardeA};
-				tardeA = tarde;
-			}
-			noite = prompt(`De noite eu vou `);
-			while(noiteA===''){
-				if(noite===''){noite = noiteA};
-				noiteA = noite;
-			}
-			return manhaA, tardeA, noiteA;
 		}
+		if(d===0||d===6){
+			do{
+				console.clear();
+				statsBar,
+				atvd();
+				manha = prompt(`De manhã eu vou `);
+				if(manha != '' && manha != 'v' && manha != 'd' && manha != 'e' && manha != 's' && manha != 'a' && manha != 'f' && manha != 't'){
+					console.log();
+					console.log(`Digite somente a letra dentro dos colchetes\nOu pressione ENTER para repetir a atividade de ontem`);
+					pressEnter();
+				}
+			}while(manha != '' && manha != 'v' && manha != 'd' && manha != 'e' && manha != 's' && manha != 'a' && manha != 'f' && manha != 't');
+			if(manha==''){
+				manha = manhaA
+			};
+			manhaA = manha;
+		}else{manha = 'ipe'}
+		do{
+			console.clear();
+			statsBar,
+			atvd();
+			tarde = prompt(`De tarde eu vou `);
+			if(tarde != '' && tarde != 'v' && tarde != 'd' && tarde != 'e' && tarde != 's' && tarde != 'a' && tarde != 'f' && tarde != 't'){
+				console.log();
+				console.log(`Digite somente a letra dentro dos colchetes\nOu pressione ENTER para repetir a atividade de ontem`);
+				pressEnter();
+			}
+		}while(tarde != '' && tarde != 'v' && tarde != 'd' && tarde != 'e' && tarde != 's' && tarde != 'a' && tarde != 'f' && tarde != 't');
+		if(tarde==''){
+			tarde = tardeA
+		};
+		tardeA = tarde;
+		do{
+			console.clear();
+			statsBar,
+			atvd();
+			noite = prompt(`De noite eu vou `);
+			if(noite != '' && noite != 'v' && noite != 'd' && noite != 'e' && noite != 's' && noite != 'a' && noite != 'f' && noite != 't'){
+				console.log();
+				console.log(`Digite somente a letra dentro dos colchetes\nOu pressione ENTER para repetir a atividade de ontem`);
+				pressEnter();
+			}
+		}while(noite != '' && noite != 'v' && noite != 'd' && noite != 'e' && noite != 's' && noite != 'a' && noite != 'f' && noite != 't');
+		if(noite==''){
+			noite = noiteA
+		};
+		noiteA = noite;
+		
+		seletor(manha,tarde,noite);
+		pressEnter()
+	}
+
 	function irParaAEscola() {
 		console.log(`Você foi para a escola!`)
-		personagemPrincipal.beleza++;
 		personagemPrincipal.conhecimento++;
 		personagemPrincipal.popularidade++;
-		personagemPrincipal.artes++;
 		personagemPrincipal.atributosFisicos++;
 		disposicao--;
 	}
 
-	function descansar() {
-		console.log(`Você se sentiu exausto e resolveu parar para descansar!`);
+	function aVisual(){
+		console.log(`\nNada melhor que se sentir bel${oap()}\nParei para cuidar do meu visual`);
+		personagemPrincipal.beleza+=3;
+		disposicao--;
+	}
+
+	function aDescansar(){
 		if (disposicao < 100) {
-			disposicao += 10;
-		} else if (disposicao > 100) {
+			console.log(`\nNinguém é de ferro\nVou descansar um pouco`);
+			disposicao=+7;
+			personagemPrincipal.sorte+=5;
+		}
+		if (disposicao > 100) {
 			disposicao = 100;
 		}
+	}
+
+	function aEstudar(){
+		console.log(`\nConhecimento é poder!\nEstudei intensamente`);
+		personagemPrincipal.conhecimento+=3;
+		disposicao-=2;
+	}
+
+	function aCidade(){
+		console.log(`\nNada melhor que ver um pouco de gente\n\nSaí um pouco pela cidade`);
+		personagemPrincipal.popularidade+=3;
+		disposicao++;
+		do{
+			console.log(`\nSerá que farei alguma comprinha hoje?`);
+			aShopping = prompt(`[s] ou [n] `).toLowerCase();
+			if(aShopping==='s'){
+				console.clear();
+				do{
+					console.log(`\n		Ir ao shopping Cidade [s]\n		Ir à Casa Lotérica[l]\n		Ir à Loja de artigos Místicos[m]\n		VOLTAR[v]`);
+					aShoppingC = prompt(`Selecione um destino: `).toLowerCase();
+					console.clear();
+					if(aShoppingC==='s'){
+						
+						console.log(`\nO que deseja comprar no shopping\n?`);
+						
+						if(cx_choco===0){console.log(`Caixa de Chocolate - R$ 15,00 [c]`)};
+						console.log(`Energético - R$ 18,00 [e]`);
+						if(camisa_unicornio===0){console.log(`Camisa de Unicórnio - R$ 150,00 [u]`)}; 
+						console.log(`Livro sobre Artes - R$ 50,00 [a]`);
+						if(livro===0){console.log(`\nLivro de Ficção (romance) - R$ 80,00 [r]`)}; 
+						
+						aShoppingCompra = prompt(`\n O que deseja comprar?`).toLowerCase();
+						
+						if(aShoppingCompra==='c'){
+							if(dinheiro>=15){
+								console.clear();
+								console.log(`\n Acho que vou comprar uma caixa de chocolates...`);
+								cx_choco++;
+								dinheiro-=15;
+								pressEnter()
+							}else{
+								console.log(`Você não tem dinheiro suficiente...`)
+								pressEnter();
+							}
+						}else if(aShoppingCompra==='e'){
+							if(dinheiro>=18){
+								console.clear();
+								console.log(`\nUm Energético é sempre bom para recarregar as energias...`);
+								disposicao+=5;
+								dinheiro-=18;
+								pressEnter();
+							}else{
+								console.log(`Você não tem dinheiro suficiente...`)
+								pressEnter();
+							}
+						}else if(aShoppingCompra==='u'){
+							if(dinheiro>=150){
+								console.clear();
+								console.log(`\nAdorei essa camisa de unicórnio, darei para alguém especial`);
+								camisa_unicornio++;
+								dinheiro-=150;
+								pressEnter();
+							}else{
+								console.log(`Você não tem dinheiro suficiente...`)
+								pressEnter();
+							}
+						}else if(aShoppingCompra==='a'){
+							if(dinheiro>=50){
+								console.clear();
+								console.log(`\nUm material extra de artes nunca faz mal à ninguém!`);
+								personagemPrincipal.artes+=5;
+								dinheiro-=50
+								pressEnter();
+							}else{
+								console.log(`Você não tem dinheiro suficiente...`)
+								pressEnter();
+							}
+						}else if(aShoppingCompra==='r'){
+							if(dinheiro>=80){
+								console.clear();
+								console.log(`\nComo é bom me inspirar com um romance bem clichê!`);
+								personagemPrincipal.conhecimento++
+								livro++;
+								dinheiro-=80
+								pressEnter()
+							}else{
+								console.log(`Você não tem dinheiro suficiente...`)
+								pressEnter();
+							}
+						}
+						aShoppingC='v';
+					}else if(aShoppingC==='l'){
+						do{
+							console.log(`	"Deseja comprar um MINAS CAP garot${oap()}?\n		só R$ 5,00\n		Todo dia 15 sai o resultado!"`);
+							minasCapC = prompt(`Comprar bilhete de loteria? [s] ou [n]`).toLowerCase();
+							if(minasCapC==='s'){
+								if(dinheiro>=5){
+									console.log(`\n Você comprou um bilhete de loteria, aguarde até sair o resultado`)
+									minasCap++;
+									minasCapC='n';
+									dinheiro-=5;
+									pressEnter();
+								}else{
+									console.log(`\nVocê não tem dinheiro suficiente...`)
+									pressEnter();
+								}
+							}
+						}while(minasCapC!='n')
+						aShoppingC='v';
+					}else if(aShoppingC==='m'){
+						do{console.log(`\n\n		hey, psiu... Aqui você encontrará artigos misteriosos...`);
+						if(colar_micanga===0){console.log(`Colar de Miçangas - R$ 50,00 [m]`)};
+						if(pocaoDoAmor===0){console.log(`Poção do Amor - $200,00 [a]`)};
+						console.log(`VOLTAR[v]`)
+						aShoppingMisterio = prompt(`O que deseja comprar na loja misteriosa? `);
+						if(aShoppingMisterio==='m'){
+							if(dinheiro>=50){
+								console.log(`\nEsse lindo colar de miçangas me interessou!`)
+								colar_micanga++
+								aShoppingMisterio='v'
+								dinheiro-=50;
+								pressEnter();
+							}else{
+								console.log(`\nVocê não tem dinheiro suficiente...`);
+								pressEnter();
+							}
+						}else if(aShoppingMisterio==='a'){
+							if(dinheiro>=200){
+								console.log(`O que será que isso faz?`)
+								personagemPrincipal.beleza+=3;
+								personagemPrincipal.popularidade+=3;
+								pocaoDoAmor++
+								dinheiro-=200
+								aShoppingMisterio='v'
+								pressEnter();
+							}else{
+								console.log(`\nVocê não tem dinheiro suficiente...`)
+								pressEnter();
+							}
+						}
+						}while(aShoppingMisterio!='v')
+						aShoppingC='v';
+					}
+					if(aShoppingC==='v'){
+						break;
+					}
+				}while(aShoppingC!='v')
+			}else{
+				console.log(`\n Acho melhor voltar para casa...`)
+				break;
+			}
+		}while(aShopping!='n')
+		pressEnter();
+	}
+
+	function aArtes(){
+		console.log(`\nA arte liberta a alma e colore os pensamentos\nEstudei artes e culturas`);
+		personagemPrincipal.artes+=3;
+		conhecimento++;
+		disposicao--;
+	}
+
+	function aExercicios(){
+		console.log(`\nMens sana in corpore sano\nCuidar do corpo é essêncial!\nFui à academia me exercitar`);
+		personagemPrincipal.atributosFisicos+=3;
+		personagemPrincipal.beleza++;
+		personagemPrincipal.popularidade++
+		disposicao--;
+	}
+
+	function aFreela(){
+		console.log(`\nO trabalho dignifica!\nNada como um freela pra encher a carteira`);
+		dinheiro+=50;
+		sorte++;
+		disposicao--;
+	}
+
+	function exausto() {
+		console.log(`\nVocê se sentiu exausto e resolveu tirar o dia para descansar!`);
+			disposicao += 15;
+			personagemPrincipal.conhecimento--;
+			personagemPrincipal.artes--;
+			personagemPrincipal.atributosFisicos--;
 	}
 //Ações diárias - end
 
 //Sequencia de execução
-	personagemPrincipal = hist1();
+	// personagemPrincipal = hist1();
 	
 	tempo();
 	
-	console.log(`${personagemPrincipal.nome}`)
+	// console.log(`${personagemPrincipal.nome}`)
 	
-	histF();
+	// histF();
 //Sequencia de execução
 
 
