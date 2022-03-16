@@ -1309,7 +1309,7 @@ Ainda vejo ${personagensSecundarios[0]} como aquela criancinha desengonçada que
 			console.clear();
 			console.log();
 			console.log(`
-Passeando pelo Shopping Cidade, você resolve se sentar em uma mesa na praça de alimentação para tomar um sorvete\n\n
+Passeando pelo Shopping Cidade, resolvo me sentar em uma mesa na praça de alimentação para tomar um sorvete\n\n
 Quando derrepente...
 			`);
 			pressEnter();
