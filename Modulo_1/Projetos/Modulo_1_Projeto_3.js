@@ -1477,7 +1477,7 @@ function personagem0(mes,dia){
 			console.log(` \n
 \n		${personagensSecundarios[0]}
 \n	${personagemPrincipal.nome.toUpperCase()}, você está em casa????
-\n Abre aí, sou eu!
+\n Abre aí, sou eu!\n
 			`);
 				console.log(`
 \n Devo atender ${personagensSecundarios[0]}?
@@ -1491,7 +1491,50 @@ function personagem0(mes,dia){
 			if(pergunta==='s'){
 				console.clear()
 				console.log(`
-\n	// texto Positivo
+\n		${personagemPrincipal.nome}
+\n	JÁ VAAIII
+\n	Espera ai ${personagensSecundarios[0]}
+\n Só procurando a chave do portão...\n
+				`)
+				pressEnter();
+				console.clear()
+				console.log(`
+\nEu abro a porta e ${personagensSecundarios[0]} me cumprimenta com um calosoro abraço
+\nEu retribuo o abraço, meio cansad${oap()} e sonolento
+\n${personagensSecundarios[0]} percebe e me pergunta
+\n		${personagensSecundarios[0]}
+\n	Tá se sentindo bem?? Você parece bem esgotad${oap()} hoje...\n
+\n 		${personagemPrincipal.nome}
+\n	Foi uma semana difícil, mas é só cansaso mesmo...\n
+				`)
+				pressEnter();
+				console.clear()
+				console.log(`
+\n		${personagemPrincipal.nome}
+\n	Acabei de fazer um chá, você aceita uma xícara?\n
+\n		${personagensSecundarios[0]}
+\n	Sim, por favor. De quê é o chá?\n
+\n		${personagemPrincipal.nome}
+\n	Eu gosto de chá verde, mas tem outros se quiser\n
+\n		${personagensSecundarios[0]}
+\n	Ah, obrigada, adoro chá verde!\n
+				`)
+				pressEnter();
+				console.clear()
+				console.log(`
+\n		${personagensSecundarios[0]}
+\n	Estava fazendo caminhada aqui na avenida, e aproveitei para passar na sua casa.
+\n	Estudamos juntos, mas é tão dificil de te encontrar na escola\n
+				`)
+				pressEnter();
+				console.clear()
+				console.log(`
+\n		
+				`)
+				pressEnter();
+				console.clear()
+				console.log(`
+\n		
 				`)
 				pressEnter();
 			}

@@ -18,12 +18,12 @@ modelo de pergunta:
 				console.log(`
 \n	// texto Positivo
 				`)
-				
+				pressEnter();
 			}
 			else{
 				console.clear()
 				console.log(`
 \n	// texto negativo
 				`)			
+				pressEnter();
 			}
-			pressEnter()
