@@ -391,7 +391,7 @@
 		`);
 			pressEnter();
 			console.log(`
-	Decidemos contar aos amigos, sobre a nossa decisão\n
+	Decidimos contar aos amigos sobre a nossa decisão\n
 	\n
 	E a reação deles é basicamente um únissono\n
 		"aaaaawwwnnnnnnn <3 <3".\n
@@ -403,8 +403,8 @@
 	O nosso namoro resume em assistir animes e filmes de terror todos os dias na casa de ${personagensSecundarios[0]}\n 
 	Meio que nos tornamos um lindo casal de comercial de margarina.\n
 	Brincadeiras à parte...\n
-	Ensinei ${personagensSecundarios[0]} a ser um pouco mais doce e\n
-	${personagensSecundarios[0]} me ensinou como quebrar a cara de alguém!\n
+	Ensinei ${personagensSecundarios[0]} a ser um pouco mais doce\n e\n
+	${personagensSecundarios[0]} me ensinou como quebrar a cara de alguém! kkkkkkkk \n
 	\n
 	Nós nos completamos...\n
 		E nós sabemos disso...
@@ -1223,7 +1223,7 @@ function scoreTotal(data){
  // Escopo dos personagens - end
 
 // Cenas dos Personagens:
-function Personagem0(mes,dia){
+function personagem0(mes,dia){
 
 	if(mes===1){
 		if(dia===1){
@@ -1280,15 +1280,15 @@ Você dá de ombros e continua folheando o caderno...
 			`);
 			pressEnter();
 			console.log(`
-Desde a infância, vocês são como irmãos!\n
-Você ${eas(0)} o quando vocês estavam na pré-escola, desde os 6 anos de idade\n
+Desde a infância, somos como irmãos!\n
+Eu ${oas(1)} conheci quando estavamos na pré-escola, desde os 6 anos de idade\n
 ${personagensSecundarios[0]} é magr${oas(0)} e pard${oas(0)}\n
 e na infância, el${eas(0)} era uma criança bem esquisitinha...\n\n
 Mas hoje, com seus cabelos cacheados na altura dos ombros, e um rosto simétrico\n
 Que inevitavelmente realçam seus olhos castanhos "folha-seca"\n
 ${personagensSecundarios[0]} se muito tornou atraente\n
-Embora você jamais admitiria isso!\n\n
-Você ainda vê ${personagensSecundarios[0]} como aquela criancinha desengonçada que brincava com você...
+Embora eu jamais admitiria isso!\n\n
+Ainda vejo ${personagensSecundarios[0]} como aquela criancinha desengonçada que brincava comigo...
 			`);
 			pressEnter();
 			console.log(`
@@ -1346,7 +1346,7 @@ e um sorriso maroto\n\n
 Então, ${personagensSecundarios[0]} acena para Lily na fila do Burguer King\n\n
 		${personagensSecundarios[0]}\n
 	Ih, Alá a Lily... Tinha me perdido dela quando fui no Super Mercado comprar Refrigerante e Doritos\n
-	Hey, Você não quer vir assistir o filme com a gnt?
+	Hey, Você não quer vir assistir o filme com a gnt? Hoje eu pago!
 			`);
 			do{
 				cinema = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
@@ -1361,7 +1361,9 @@ Então, ${personagensSecundarios[0]} acena para Lily na fila do Burguer King\n\n
 			console.log();
 			console.log(`
 		\n${personagemPrincipal.nome}
+	\nO QUE? VOCÊ VAI PAGAR MINHA ENTRADA????????
 	\nE você acha que precisa de perguntar????
+	\nDeve achar q eu sou doida de recusar uma mamata dessa?
 	\nÉ lógico que quero ir!\n
 			`);
 			pressEnter();
@@ -1381,10 +1383,11 @@ Então, ${personagensSecundarios[0]} acena para Lily na fila do Burguer King\n\n
 	\nIh alá, esse rolê tá mó com cara de date, nem rola ficar de vela kkkkkkkk\n
 		\n${personagensSecundarios[0]}
 	\nVocê que tá pegando viagem, nada a ver isso ai...
-	\nEla é minha amiga, a gente se aproximou por causa de uns animes que a gnt assiste na aula de português...
+	\nEla é minha amiga, a gente se aproximou por causa de uns animes que a gnt assiste...
 	\nMas ta tudo bem, depois a gente se vê então\n
-\n
-
+\nObservei ${personagensSecundarios[1]} indo até Lily
+\nCreio que foi melhor não ter ido à aquela sessão...
+\nPode estar acontecendo algo entre ${personagensSecundarios[1]} e Lily e prefiro não atrapalhar
 				`);
 				
 			}
@@ -1409,7 +1412,7 @@ Então, ${personagensSecundarios[0]} acena para Lily na fila do Burguer King\n\n
 			pressEnter();
 			do{
 				console.log(`
-Comprar o lanche de ${personagensSecundarios[1]}?
+\n Ajudar ${personagensSecundarios[1]} a comprar o lanche?
 				`)
 				lanche = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
 				if(lanche != 's' && lanche != 'n'){
@@ -1420,17 +1423,33 @@ Comprar o lanche de ${personagensSecundarios[1]}?
 			if(lanche==='s'){
 			console.log();
 			console.log(`
-				Texto 3
+		\n${personagemPrincipal.nome}
+	\nEu não vou comprar nada pra você kkkkk 
+	\nSe você quiser fura fila aqui comigo e compra!\n
+\nAs outras pessoas da fila não gostaram NADA dessa atitude, e eu conseguia ouvir murmurinhos das pessoas atras de mim
+\nMas não liguei
+\n${personagensSecundarios[1]} e eu ficamos conversando enquanto aguardávamos nossa vez\n
+\n  Acabou que naquele dia passamos todo o intervalo juntos jogando conversa fora...
+		
 			`);
 			pressEnter();
 			}else{
 				console.log();
 				console.log(`
-			\n${personagemPrincipal.nome}
-		\nEu não! Você se quiser que entre na fila!!! Se quisesse comprar sua ficha rapido corresse para cá!\n
-	Imediatamente ${personagensSecundarios[1]} fecha o semblante e suas 
+		\n${personagemPrincipal.nome}
+	\nEu não! Você se quiser que entre na fila!!! Se quisesse comprar sua ficha rapido corresse para cá!\n
+\nImediatamente ${personagensSecundarios[1]} fecha o semblante e suas palpebras parecem tremer de raiva
+\nEu assisto orgulhos${oap()} ${personagensSecundarios[1]} caminhar até o fim daquela fila gigantesca...
 				`);
 				pressEnter();
+				console.log();
+				console.log(`
+\nSoube que naquele dia ${personagensSecundarios[1]} chega atrasad${oas(1)} na aula de filosofia
+\nCom a boca meio suja de catupiry
+\nE o professor compara o filósofo Diógenes à el${eas(1)}...
+				`);
+				pressEnter();
+
 			};
 		}
 		else if (dia===2){
@@ -1561,7 +1580,7 @@ Comprar o lanche de ${personagensSecundarios[1]}?
 	}
 }
 
-function Personagem1(mes,dia){
+function personagem1(mes,dia){
 
 	if(mes===1){
 		if(dia===1){
@@ -1745,7 +1764,7 @@ function Personagem1(mes,dia){
 	}
 }
 
-function Personagem2(mes,dia){
+function personagem2(mes,dia){
 
 	if(mes===1){
 		if(dia===1){
@@ -1929,7 +1948,7 @@ function Personagem2(mes,dia){
 	}
 }
 
-function Personagem3(mes,dia){
+function personagem3(mes,dia){
 
 	if(mes===1){
 		if(dia===1){
@@ -2113,7 +2132,7 @@ function Personagem3(mes,dia){
 	}
 }
 
-function Personagem4(mes,dia){
+function personagem4(mes,dia){
 
 	if(mes===1){
 		if(dia===1){
@@ -2297,7 +2316,7 @@ function Personagem4(mes,dia){
 	}
 }
 
-function Personagem5(mes,dia){
+function personagem5(mes,dia){
 
 	if(mes===1){
 		if(dia===1){
@@ -2481,7 +2500,7 @@ function Personagem5(mes,dia){
 	}
 }
 
-function Personagem6(mes,dia){
+function personagem6(mes,dia){
 
 	if(mes===1){
 		if(dia===1){
