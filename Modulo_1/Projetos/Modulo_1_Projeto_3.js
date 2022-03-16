@@ -120,10 +120,10 @@
 		console.clear();
 		let h100000 = `Hoje é dia 01 de Agosto de 2021`;
 		let h100001 = `As férias de julho acabaram e eu voltei do sítio dos seus avós\n Onde eles fizeram uma grande festa para meu aniversário!`;
-		let h100002 = `Acabo de completar 18 anos, e estou terminando o Ensino médio.`;
-		let h100003 = `Vou começar a arruma as coisas para voltar às aulas... \n Contra minha vontade, como sempre...`;
+		let h100002 = `Meus pais me ajudaram a alugar um Kitnet próximo ao centro da cidade\n Para assim eu gastar menos com condução\nE também me dar minha liberdade...\nAcabo de completar 18 anos, e estou terminando o Ensino médio.`;
+		let h100003 = `Tenho tanta coisa para fazer nessa kitnet\nE amanhã voltam as aulas...\nVou começar a arruma as coisas para a escola... \n Contra minha vontade, como sempre...\n\nMas agora tenho "responsabilidades de adulto" kkkk`;
 		let h100004 = `Já que você jamais foi ${oap()} primeir${oap()} da turma...\n mas também nunca fiquei para trás!`;
-		let h100005 = `Este semestre decidí fazer diferente\nvou encontrar uma forma de fazer estes últimos meses inesquecíveis`;
+		let h100005 = `Este semestre decidí fazer diferente\nvou encontrar uma forma de fazer estes últimos meses inesquecíveis\nAproveitar o máximo que puder!!!`;
 
 		//História para js
 		console.log();
@@ -923,12 +923,14 @@ function scoreTotal(data){
 		personagemPrincipal.conhecimento++;
 		personagemPrincipal.popularidade++;
 		personagemPrincipal.atributosFisicos++;
+		console.log(`Ganhou conhecimento, popularidade e Atributos físicos`)
 		disposicao--;
 	}
 
 	function aVisual(){
 		console.log(`\nNada melhor que se sentir bel${oap()}\nParei para cuidar do meu visual`);
 		personagemPrincipal.beleza+=3;
+		console.log('Ganhou 3 de beleza')
 		disposicao--;
 	}
 
@@ -941,11 +943,13 @@ function scoreTotal(data){
 		if (disposicao > 100) {
 			disposicao = 100;
 		}
+		console.log(`Recuperou 7 de disposição`)
 	}
 
 	function aEstudar(){
 		console.log(`\nConhecimento é poder!\nEstudei intensamente`);
 		personagemPrincipal.conhecimento+=3;
+		console.log('Ganhou 3 de conhecimento')
 		disposicao-=2;
 	}
 
@@ -1094,6 +1098,7 @@ function scoreTotal(data){
 			}
 		}while(aShopping!='n')
 		pressEnter();
+		console.log(`Ganhou 3 de popularidade`)
 	}
 
 	function aArtes(){
@@ -1101,6 +1106,7 @@ function scoreTotal(data){
 		personagemPrincipal.artes+=3;
 		personagemPrincipal.conhecimento++;
 		disposicao--;
+		console.log(`Ganhou 3 de Artes e culturas\n		e algum conhecimento`)
 	}
 
 	function aExercicios(){
@@ -1109,6 +1115,7 @@ function scoreTotal(data){
 		personagemPrincipal.beleza++;
 		personagemPrincipal.popularidade++
 		disposicao--;
+		console.log(`Ganhou 3 de Atributos Físicos\nAumentou sua beleza e popularidade`)
 	}
 
 	function aFreela(){
@@ -1116,6 +1123,7 @@ function scoreTotal(data){
 		dinheiro+=50;
 		personagemPrincipal.sorte++;
 		disposicao-=2;
+		Console.log(`Recebeu R$50,00 pelo seu trabalho`)
 	}
 
 	function exausto() {
@@ -1522,20 +1530,58 @@ function personagem0(mes,dia){
 				pressEnter();
 				console.clear()
 				console.log(`
+\nNos sentamos na escadaria da entrada, com nossas xícaras de chá
+\nA noite está estrelada e a temperatura amena, algumas nuvens dançam em suas nuances disformes
 \n		${personagensSecundarios[0]}
 \n	Estava fazendo caminhada aqui na avenida, e aproveitei para passar na sua casa.
 \n	Estudamos juntos, mas é tão dificil de te encontrar na escola\n
+\n		${personagemPrincipal.nome}
+\n	Ah, não é nada... Eu sempre estou lá com todo mundo, só vir conversar comigo ue
+\n	Somos amigos à tanto tempo... Você não precisa mais de cerimônias\n
+\n		${personagensSecundarios[0]}
+\n	Eu sinto falta de quando éramos mais próximos...
+\n	Você voltava da aula comigo lá pelo bairro de cima,
+\n	Nós vinhamos brincando e conversando\n
 				`)
 				pressEnter();
 				console.clear()
 				console.log(`
-\n		
+\n		${personagensSecundarios[0]}
+\n	${personagemPrincipal.nome}... Tem um tempo que eu queria te dizer uma coisa...\n
+\n${personagensSecundarios[0]} se aproxima do meu peito e apoia a cabeça
+\n		${personagensSecundarios[0]}
+\n	Sinto sua falta... da forma que éramos unidos... E como nada nos separava...
+\nEl${eas(0)} se deita em meu colo, e aponta para o céu...\n
 				`)
 				pressEnter();
 				console.clear()
 				console.log(`
-\n		
+\n		${personagensSecundarios[0]}
+\nLembra que nós costumávamos olhar as estrelas?
+\nE ficavamos olhando as formas das nuvens...
+
 				`)
+				pressEnter();
+				console.clear()
+				console.log(`
+\n				**Som de mensagem recebida**
+\n		${personagensSecundarios[0]}
+\n	Aff, é o meu pai...
+\n	Ele disse que é para eu ir para casa agora!\n
+\n${personagensSecundarios[0]} leva a xícara para a sala, e volta bem rapidamente
+\nEl${eas(0)} se precipita para me dar um beijo no rosto, mas não percebo e viro as costas
+\n		${personagensSecundarios[0]}
+\n	NOSSA SEM EDUCAÇÃO! Eu ia te dar um beijo no rosto e você virou as costas!!!!
+\n	nem quero mais também...\n
+\nCaio na risada, e acompanho-n${oas(0)} até a esquina
+\nLá, el${eas(0)} acaba se despedindo de mim e me dando um beijo
+				`)			
+				pressEnter();
+				console.clear()
+				console.log(`
+\nValeu a pena no fim das contas atender a porta
+\nMe esqueci de dizer à ${personagensSecundarios[0]} que o sentimento é recíproco
+				`)			
 				pressEnter();
 			}
 			else{
