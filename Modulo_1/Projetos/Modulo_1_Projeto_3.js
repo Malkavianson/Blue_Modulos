@@ -1345,7 +1345,7 @@ function personagem0(mes,dia){
 \nEntão, ${personagensSecundarios[0]} acena para Lily na fila do Burguer King
 \n		${personagensSecundarios[0]}
 \n	Ih, Alá a Lily... Tinha me perdido dela quando fui no Super Mercado comprar Refrigerante e Doritos
-\n	Hey, Você não quer vir assistir o filme com a gnt? Hoje eu pago!\n
+\n	Hey, Você não quer vir assistir o filme com a gente? Hoje eu pago!\n
 			`);
 			do{
 				cinema = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
@@ -1363,18 +1363,16 @@ function personagem0(mes,dia){
 \n	O QUE? VOCÊ VAI PAGAR MINHA ENTRADA????????
 \n	E você acha que precisa de perguntar????
 \n	Deve achar q eu sou doida de recusar uma mamata dessa?
-\nÉ lógico que quero ir!\n
+\n	É lógico que quero ir!\n
 			`);
 			pressEnter();
 			console.clear();
 			console.log();
 			console.log(`
-\n		${personagensSecundarios[0]} sentou ao meu lado durante o filme...
-\n	Foi um ótimo filme. Nós 3 demos muitas risadas e foi bem divertido!
-\n	É estranho, mas parece que ${personagensSecundarios[0]} está cada dia mais bonit${oas(0)}!\n
+\n${personagensSecundarios[0]} sentou ao meu lado durante o filme...
+\nFoi um ótimo filme. Nós 3 demos muitas risadas e foi bem divertido!
+\nÉ estranho, mas parece que ${personagensSecundarios[0]} está cada dia mais bonit${oas(0)}!\n
 			`);
-			pressEnter();
-				
 			}
 			else{
 				console.log(`
@@ -1446,7 +1444,7 @@ function personagem0(mes,dia){
 				console.log(`
 \nSoube que naquele dia ${personagensSecundarios[0]} chega atrasad${oas(0)} na aula de filosofia
 \nCom a boca meio suja de catupiry
-\nE o professor compara o filósofo Diógenes à el${eas(0)}...
+\nE o professor compara o filósofo Diógenes (Cachorro Louco) à el${eas(0)} quando entra na sala...
 				`);
 				pressEnter();
 
