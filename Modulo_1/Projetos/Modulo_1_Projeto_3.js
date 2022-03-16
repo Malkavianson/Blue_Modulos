@@ -1454,14 +1454,78 @@ function personagem0(mes,dia){
 			console.clear();
 			console.log();
 			console.log(`
-				Texto 1
+\nHoje estou me sentindo mais cansado que o normal, acho que ficarei em casa...
 			`);
 			pressEnter();
 			console.log();
 			console.log(`
-				Texto 2
+\n				**din-don**
 			`);
 			pressEnter();
+			console.log();
+			console.log(`
+\n				**din-don**
+\n				**din-don**
+			`);
+			pressEnter();
+			console.log();
+			console.log(`
+\nNossa, quem deve ser deve estar com pressa...
+			`);
+			pressEnter();
+			do{
+			console.log(` \n
+\n		${personagensSecundarios[0]}
+\n	${personagemPrincipal.nome.toUpperCase()}, você está em casa????
+\n Abre aí, sou eu!
+			`);
+				console.log(`
+\n Devo atender ${personagensSecundarios[0]}?
+				`)
+				pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
+				if(pergunta != 's' && pergunta != 'n'){
+					prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
+				}
+			}while(pergunta != 's' && pergunta != 'n');
+			pressEnter();
+			if(pergunta==='s'){
+				console.clear()
+				console.log(`
+\n	// texto Positivo
+				`)
+				pressEnter();
+			}
+			else{
+				console.clear()
+				console.log(`
+\n				**din-don**
+\n				**din-don**
+\n	
+				`)			
+				pressEnter();
+				console.clear()
+				console.log(`
+\n				**din-don**
+\n				**din-don**
+\n	
+				`)			
+				pressEnter();
+				console.clear()
+				console.log(`
+\n		${personagensSecundarios[0]}
+\n	Aff...		${personagemPrincipal.nome} não está em casa...
+\n	Nem devia ter tentado... El${eap()} deve ter saido com os amigos...
+				`)			
+				pressEnter();
+				console.clear()
+				console.log(`
+\nOlho pela janela e parece que ${personagensSecundarios[0]} ficou bem decepcionad${oas[0]}
+\nEl${eas[0]} saiu cabisbaix${oas(0)} e bastante triste
+\nMas acredito que foi melhor assim...
+\nEstou precisando de um tempo para mim...	
+				`)			
+				pressEnter();
+			}
 			console.log(`
 				Texto 3
 			`);
