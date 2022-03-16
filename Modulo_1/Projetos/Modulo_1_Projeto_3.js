@@ -1228,24 +1228,20 @@ function personagem0(mes,dia){
 	if(mes===1){
 		if(dia===1){
 			console.clear();
-			console.log();
 			console.log(`
-Que dia lindo para ir a escola... Fim do ensino médio, as mesmas caras dos ultimos anos, ninguém aguenta mais isso kkkkkkk\n 
-Estamos no meio de uma pandemia e a escola resolve voltar às aulas presenciais\n 
-Que tédio...
+\nQue dia lindo para ir a escola... Fim do ensino médio, as mesmas caras dos ultimos anos, ninguém aguenta mais isso kkkkkkk
+\nEstamos no meio de uma pandemia e a escola resolve voltar às aulas presenciais
+\nQue tédio...
 			`);
 			pressEnter();
 			do{
 				console.clear();
-				console.log();
 				console.log(`
-			**Barulho de alguém tropeçando e cadernos caindo**\n
-Olho para trás e vê ${personagensSecundarios[0]} se recuperando e olhando para mim muito nervos${oas(0)}.\n
-\n\n
-		${personagensSecundarios[0]}\n
-	_VAI FICAR SÓ ME OLHANDO OU VAI AJUDAR? - El${eas(0)} diz irritadíssim${oas(0)}\n
-\n `);
-				console.log();
+\n			**Barulho de alguém tropeçando e cadernos caindo**
+\nOlho para trás e vejo ${personagensSecundarios[0]} se recuperando e olhando para mim muito nervos${oas(0)}.
+\n		${personagensSecundarios[0]}
+\n	_VAI FICAR SÓ ME OLHANDO OU VAI AJUDAR? - El${eas(0)} diz irritadíssim${oas(0)}\n
+`);
 				console.log(`Ajudar ${personagensSecundarios[0]} a se levantar?\n`);
 				ajudar = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
 				if(ajudar != 's' && ajudar != 'n'){
@@ -1256,52 +1252,52 @@ Olho para trás e vê ${personagensSecundarios[0]} se recuperando e olhando para
 			if(ajudar==='s'){
 				console.log();
 				console.log(`
-Começo a rir na cara del${eas(0)} mas me prontifico para ajudar ${personagensSecundarios[0]} a se recompor\n\n
-		${personagemPrincipal.nome}\n
-	Vem... Já te falei para prestar atenção no caminho!\n
+\nComeço a rir na cara del${eas(0)} mas me prontifico para ajudar ${personagensSecundarios[0]} a se recompor
+\n		${personagemPrincipal.nome}
+\n	Vem... Já te falei para prestar atenção no caminho!\n
 			`);
 			personagensSecundariospts[0]++
 			}else{
 				console.log();
 				console.log(`
-		${personagemPrincipal.nome}\n
-	Ah menin${oas(0)} oh! Você que dê seu jeito ai! Quem manda ser desajeitad${oas(0)} desse jeito?\n\n
-Você pega o fichário del${eas(0)} e começa a folhear\n\n
-		${personagensSecundarios[0]}\n
-	JÁ TE DISSE PARA PARAR DE MEXER NAS MINHAS COISAS ${personagemPrincipal.nome}!!!!!\n\n
-Você dá de ombros e continua folheando o caderno...
+\n		${personagemPrincipal.nome}
+\n	Ah menin${oas(0)} oh! Você que dê seu jeito ai! Quem manda ser desajeitad${oas(0)} desse jeito?\n
+\nPego o fichário del${eas(0)} e começa a folhear
+\n		${personagensSecundarios[0]}
+\n	JÁ TE DISSE PARA PARAR DE MEXER NAS MINHAS COISAS ${personagemPrincipal.nome}!!!!!\n
+\nVocê dá de ombros e continua folheando o caderno...
 				`);
 			}
 			pressEnter();
 			console.log(`
-			${personagensSecundarios[0]}\n
-	Tá animad${oap()} pro resto do ano kkkkkkk? Não aguento mais essa merda!\n
-	Vamos entrar pra aula pq como sempre estamos atrasados, o sinal já vai bater!\n
+\n		${personagensSecundarios[0]}
+\n	Tá animad${oap()} pro resto do ano kkkkkkk? Não aguento mais essa merda!
+\n	Vamos entrar pra aula pq como sempre estamos atrasados, o sinal já vai bater!\n
 			`);
 			pressEnter();
 			console.log(`
-Desde a infância, somos como irmãos!\n
-Eu ${oas(1)} conheci quando estavamos na pré-escola, desde os 6 anos de idade\n
-${personagensSecundarios[0]} é magr${oas(0)} e pard${oas(0)}\n
-e na infância, el${eas(0)} era uma criança bem esquisitinha...\n\n
-Mas hoje, com seus cabelos cacheados na altura dos ombros, e um rosto simétrico\n
-Que inevitavelmente realçam seus olhos castanhos "folha-seca"\n
-${personagensSecundarios[0]} se muito tornou atraente\n
-Embora eu jamais admitiria isso!\n\n
-Ainda vejo ${personagensSecundarios[0]} como aquela criancinha desengonçada que brincava comigo...
+\nDesde a infância, somos como irmãos!
+\nEu ${oas(0)} conheci quando estavamos na pré-escola, desde os 6 anos de idade
+\n${personagensSecundarios[0]} é magr${oas(0)} e pard${oas(0)}
+\ne na infância, el${eas(0)} era uma criança bem esquisitinha...
+\nMas hoje, com seus cabelos cacheados na altura dos ombros, e um rosto simétrico
+\nQue inevitavelmente realçam seus olhos castanhos "folha-seca"
+\n${personagensSecundarios[0]} se muito tornou atraente
+\n\nEmbora eu jamais admitiria isso!\n
+\nAinda vejo ${personagensSecundarios[0]} como aquela criancinha desengonçada que brincava comigo na infância...
 			`);
 			pressEnter();
 			console.log(`
-		${personagensSecundarios[0]}\n
-	Na hora do intervalo, se você não estiver ocupad${oap()}...\n
-	Vem comigo na vendinha da rua de cima comprar um lanche?\n\n
-		${personagemPrincipal.nome}\n
-	Nossa... Nem sei se vou conseguir ir com você...\n
-	Estou com as atividades do laboratório que tinha que ter feito nas férias todas atrasadas\n\n
-		${personagensSecundarios[0]}\n
-	Aff... Vc é tão devagar! Era só fazer o troço vey!\n
-	Vou te mandar o meu relatório no whatsapp para você tirar de exemplo\n
-	Copia mas não faz igual tá!
+\n		${personagensSecundarios[0]}
+\n	Na hora do intervalo, se você não estiver ocupad${oap()}...
+\n	Vem comigo na vendinha da rua de cima comprar um lanche?\n
+\n		${personagemPrincipal.nome}
+\n	Nossa... Nem sei se vou conseguir ir com você...
+\n	Estou com as atividades do laboratório que tinha que ter feito nas férias todas atrasadas\n
+\n		${personagensSecundarios[0]}
+\n	Aff... Vc é tão devagar! Era só fazer o troço vey!
+\n	Vou te mandar o meu relatório no whatsapp para você tirar de exemplo
+\n	Copia mas não faz igual tá!
 			`)
 		}
 
@@ -1309,44 +1305,47 @@ Ainda vejo ${personagensSecundarios[0]} como aquela criancinha desengonçada que
 			console.clear();
 			console.log();
 			console.log(`
-Passeando pelo Shopping Cidade, resolvo me sentar em uma mesa na praça de alimentação para tomar um sorvete\n\n
-Quando derrepente...
+\nPasseando pelo Shopping Cidade, resolvo me sentar em uma mesa na praça de alimentação para tomar um sorvete
+\nQuando derrepente...
 			`);
 			pressEnter();
 			console.log(`
-			*** PLAU ***\n
-Você sente como se o THOR te desse um tapa de duas mãos nos ombros\n
-E quando olha para trás, assustad${oas(0)}, vê ${personagensSecundarios[0]} com olhar descarado\n
-e um sorriso maroto\n\n
-		${personagensSecundarios[0]}\n
-	Ué, ta fazendo o que aqui menin${oap()}? Tem serviço não??? kkkkkkkk\n\n
-		${personagemPrincipal.nome}\n
-	AH Ó, não é da sua conta não! Vim encontrar uma pessoa!\n\n
-		${personagensSecundarios[0]}\n
-	Ah para! Pra cima de mim!!! Todo mundo sabe que vc não pega ninguém!\n\n
-		${personagemPrincipal.nome}\n
-	Ih! Vê se me erra!\n
-	E você? Veio fazer o que?\n\n
-		${personagensSecundarios[0]}\n
-	kkkkkkkkkkkkkkkk A verdade doi né?!\n
-	Eu vim com a Lily pra assistir Escape Room 2, mas ela é fraca e não aguenta um terrorzinho!\n
-	Então vamos assitir Esquadrão Suicida...\n\n
-		${personagemPrincipal.nome}\n
-	Sai dessa vida vey, vai ver outras coisas! Você só assiste terror!\n
-	Mó daora Esquadrão Suicida\n\n
-		${personagensSecundarios[0]}\n
-	O que eu posso fazer? Eu gosto é de emoção!\n
-		\n${personagemPrincipal.nome}
-	\nMas filme de herói tem emoção também!\n
-		\n${personagensSecundarios[0]}
-	\nAh, mas não é meu estilo...
+\n			*** PLAU ***
+\nSinto como se o THOR me desse um tapa de duas mãos nos ombros
+\nE quando olha para trás, assustad${oap()}, vejo ${personagensSecundarios[0]} com olhar descarado
+\ne um sorriso maroto
 			`);
 			pressEnter();
 			console.log(`
-Então, ${personagensSecundarios[0]} acena para Lily na fila do Burguer King\n\n
-		${personagensSecundarios[0]}\n
-	Ih, Alá a Lily... Tinha me perdido dela quando fui no Super Mercado comprar Refrigerante e Doritos\n
-	Hey, Você não quer vir assistir o filme com a gnt? Hoje eu pago!
+\n		${personagensSecundarios[0]}
+\n	Ué, ta fazendo o que aqui menin${oap()}? Tem serviço não??? kkkkkkkk\n
+\n		${personagemPrincipal.nome}
+\n	AH Ó, não é da sua conta não! Vim encontrar uma pessoa!\n
+\n		${personagensSecundarios[0]}
+\n	Ah para! Pra cima de mim!!! Todo mundo sabe que vc não pega ninguém!\n
+\n		${personagemPrincipal.nome}
+\n	Ih! Vê se me erra!
+\n	E você? Veio fazer o que?\n
+\n		${personagensSecundarios[0]}
+\n	kkkkkkkkkkkkkkkk A verdade doi né?!
+\n	Eu vim com a Lily pra assistir Escape Room 2, mas ela é fraca e não aguenta um terrorzinho!
+\n	Então vamos assitir Esquadrão Suicida...\n
+\n		${personagemPrincipal.nome}
+\n	Sai dessa vida vey, vai ver outras coisas! Você só assiste terror!
+\n	Mó daora Esquadrão Suicida\n
+\n		${personagensSecundarios[0]}
+\n	O que eu posso fazer? Eu gosto é de emoção!\n
+\n		${personagemPrincipal.nome}
+\n	Mas filme de herói tem emoção também!\n
+\n		${personagensSecundarios[0]}
+\n	Ah, mas não é meu estilo...\n
+			`);
+			pressEnter();
+			console.log(`
+\nEntão, ${personagensSecundarios[0]} acena para Lily na fila do Burguer King
+\n		${personagensSecundarios[0]}
+\n	Ih, Alá a Lily... Tinha me perdido dela quando fui no Super Mercado comprar Refrigerante e Doritos
+\n	Hey, Você não quer vir assistir o filme com a gnt? Hoje eu pago!\n
 			`);
 			do{
 				cinema = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
@@ -1360,34 +1359,37 @@ Então, ${personagensSecundarios[0]} acena para Lily na fila do Burguer King\n\n
 			console.clear();
 			console.log();
 			console.log(`
-		\n${personagemPrincipal.nome}
-	\nO QUE? VOCÊ VAI PAGAR MINHA ENTRADA????????
-	\nE você acha que precisa de perguntar????
-	\nDeve achar q eu sou doida de recusar uma mamata dessa?
-	\nÉ lógico que quero ir!\n
+\n		${personagemPrincipal.nome}
+\n	O QUE? VOCÊ VAI PAGAR MINHA ENTRADA????????
+\n	E você acha que precisa de perguntar????
+\n	Deve achar q eu sou doida de recusar uma mamata dessa?
+\nÉ lógico que quero ir!\n
 			`);
 			pressEnter();
 			console.clear();
 			console.log();
 			console.log(`
-\n${personagensSecundarios[1]} sentou ao meu lado durante o filme...
-\nFoi um ótimo filme. Nós 3 demos muitas risadas e foi bem divertido!
-\nÉ estranho, mas parece que ${personagensSecundarios[1]} está cada dia mais bonit${oas(1)}!
+\n		${personagensSecundarios[0]} sentou ao meu lado durante o filme...
+\n	Foi um ótimo filme. Nós 3 demos muitas risadas e foi bem divertido!
+\n	É estranho, mas parece que ${personagensSecundarios[0]} está cada dia mais bonit${oas(0)}!\n
 			`);
 			pressEnter();
 				
 			}
 			else{
 				console.log(`
-		\n${personagemPrincipal.nome}
-	\nIh alá, esse rolê tá mó com cara de date, nem rola ficar de vela kkkkkkkk\n
-		\n${personagensSecundarios[0]}
-	\nVocê que tá pegando viagem, nada a ver isso ai...
-	\nEla é minha amiga, a gente se aproximou por causa de uns animes que a gnt assiste...
-	\nMas ta tudo bem, depois a gente se vê então\n
-\nObservei ${personagensSecundarios[1]} indo até Lily
+\n		${personagemPrincipal.nome}
+\n	Ih alá, esse rolê tá mó com cara de date, nem rola ficar de vela kkkkkkkk\n
+\n		${personagensSecundarios[0]}
+\n	Você que tá pegando viagem, nada a ver isso ai...
+\n	Ela é minha amiga, a gente se aproximou por causa de uns animes que a gnt assiste...
+\n	Mas ta tudo bem, depois a gente se vê então\n
+				`);
+				pressEnter();
+			console.log(`
+\nObservei ${personagensSecundarios[0]} indo até Lily
 \nCreio que foi melhor não ter ido à aquela sessão...
-\nPode estar acontecendo algo entre ${personagensSecundarios[1]} e Lily e prefiro não atrapalhar
+\nPode estar acontecendo algo entre ${personagensSecundarios[0]} e Lily e prefiro não atrapalhar
 				`);
 				
 			}
@@ -1403,16 +1405,15 @@ Então, ${personagensSecundarios[0]} acena para Lily na fila do Burguer King\n\n
 \nQuem não corre acaba ficando o intervalo inteiro esperando para conseguir comprar alguma coisa...
 			`);
 			pressEnter();
-			console.log();
-			console.log(`
-		\n${personagensSecundarios[1]}
-	\nHEY ${personagemPrincipal.nome}!!!! Eu fiquei agarrad${oas(1)} na aula de geografia...
-	\nAproveita que você já está correndo na frente de todo mundo mesmo e compra a minha ficha para mim!
-			`);
-			pressEnter();
 			do{
+				console.log();
 				console.log(`
-\n Ajudar ${personagensSecundarios[1]} a comprar o lanche?
+\n		${personagensSecundarios[0]}
+\n	HEY ${personagemPrincipal.nome}!!!! Eu fiquei agarrad${oas(0)} na aula de geografia...
+\n	Aproveita que você já está correndo na frente de todo mundo mesmo e compra a minha ficha para mim!\n
+			`);
+				console.log(`
+\n Ajudar ${personagensSecundarios[0]} a comprar o lanche?
 				`)
 				lanche = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
 				if(lanche != 's' && lanche != 'n'){
@@ -1423,30 +1424,29 @@ Então, ${personagensSecundarios[0]} acena para Lily na fila do Burguer King\n\n
 			if(lanche==='s'){
 			console.log();
 			console.log(`
-		\n${personagemPrincipal.nome}
-	\nEu não vou comprar nada pra você kkkkk 
-	\nSe você quiser fura fila aqui comigo e compra!\n
+\n		${personagemPrincipal.nome}
+\n	Eu não vou comprar nada pra você kkkkk 
+\n	Se você quiser fura fila aqui comigo e compra!\n
 \nAs outras pessoas da fila não gostaram NADA dessa atitude, e eu conseguia ouvir murmurinhos das pessoas atras de mim
 \nMas não liguei
-\n${personagensSecundarios[1]} e eu ficamos conversando enquanto aguardávamos nossa vez\n
-\n  Acabou que naquele dia passamos todo o intervalo juntos jogando conversa fora...
-		
+\n${personagensSecundarios[0]} e eu ficamos conversando enquanto aguardávamos nossa vez\n
+\n Acabou que naquele dia passamos todo o intervalo juntos jogando conversa fora...
 			`);
 			pressEnter();
 			}else{
 				console.log();
 				console.log(`
-		\n${personagemPrincipal.nome}
-	\nEu não! Você se quiser que entre na fila!!! Se quisesse comprar sua ficha rapido corresse para cá!\n
-\nImediatamente ${personagensSecundarios[1]} fecha o semblante e suas palpebras parecem tremer de raiva
-\nEu assisto orgulhos${oap()} ${personagensSecundarios[1]} caminhar até o fim daquela fila gigantesca...
+\n		${personagemPrincipal.nome}
+\n	Eu não! Você se quiser que entre na fila!!! Se quisesse comprar sua ficha rapido corresse para cá!\n
+\nImediatamente ${personagensSecundarios[0]} fecha o semblante e suas palpebras parecem tremer de raiva
+\nEu assisto orgulhos${oap()} ${personagensSecundarios[0]} caminhar até o fim daquela fila gigantesca...
 				`);
 				pressEnter();
 				console.log();
 				console.log(`
-\nSoube que naquele dia ${personagensSecundarios[1]} chega atrasad${oas(1)} na aula de filosofia
+\nSoube que naquele dia ${personagensSecundarios[0]} chega atrasad${oas(0)} na aula de filosofia
 \nCom a boca meio suja de catupiry
-\nE o professor compara o filósofo Diógenes à el${eas(1)}...
+\nE o professor compara o filósofo Diógenes à el${eas(0)}...
 				`);
 				pressEnter();
 
