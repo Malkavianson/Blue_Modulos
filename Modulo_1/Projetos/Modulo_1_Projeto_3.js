@@ -1,5 +1,6 @@
 //Modulo
 	const prompt = require('prompt-sync')();
+	const colors = require('colors');
 
 //Variaveis importantes
 	let personagemPrincipal = {};
@@ -21,7 +22,6 @@
 	let garotos = ['Frederico', 'Davi', 'Otavio', 'Marcelo', 'Ricardo', 'Alexandre', 'Otto'];
 	let garotxs = ['Nivea', 'Sophia', 'Otavio', 'Alice', 'Ludmila', 'Alexandre', 'Otto'];
 	let personagensSecundarios = [];
-	let personagensSecundariospts = [0,0,0,0,0,0,0];
 	
 	// Variaveis das compras
 	var cx_choco = 0; // Para dar ao [0]
@@ -122,7 +122,7 @@
 		let h100001 = `As férias de julho acabaram e eu voltei do sítio dos seus avós\n Onde eles fizeram uma grande festa para meu aniversário!`;
 		let h100002 = `Acabo de completar 18 anos, e estou terminando o Ensino médio.`;
 		let h100003 = `Vou começar a arruma as coisas para voltar às aulas... \n Contra minha vontade, como sempre...`;
-		let h100004 = `Já que você jamais fui ${oap()} primeir${oap()} da turma...\n mas também nunca fiquei para trás!`;
+		let h100004 = `Já que você jamais foi ${oap()} primeir${oap()} da turma...\n mas também nunca fiquei para trás!`;
 		let h100005 = `Este semestre decidí fazer diferente\nvou encontrar uma forma de fazer estes últimos meses inesquecíveis`;
 
 		//História para js
@@ -248,16 +248,16 @@
 			personagemPrincipal.orientacaoSexual = 2;
 		}
 		console.clear();
-		console.log(`\nAgora vamos entender como acompanhar o dia:`);
+		console.log(`\nAgora vamos entender como acompanhar o dia:`.blue);
 		pressEnter();
-		console.log(`Estes são os atributos:`);
-		let dis = new status_('DISPOSIÇÃO: ', disposicao)
-		let blz = new status_('Beleza', personagemPrincipal.beleza);
-		let cnh = new status_('conhecimento', personagemPrincipal.conhecimento);
-		let pop = new status_("Popularidade", personagemPrincipal.popularidade);
-		let art = new status_("Gosto por Artes", personagemPrincipal.artes);
-		let atf = new status_("Atributos Físicos", personagemPrincipal.atributosFisicos);
-		let din = new status_("Dinheiro", dinheiro)
+		console.log(`Estes são os atributos:`.brightBlue);
+		let dis = new status_('DISPOSIÇÃO              ', disposicao)
+		let blz = new status_('Beleza                  ', personagemPrincipal.beleza);
+		let cnh = new status_('Conhecimento            ', personagemPrincipal.conhecimento);
+		let pop = new status_('Popularidade            ', personagemPrincipal.popularidade);
+		let art = new status_('Gosto por Artes         ', personagemPrincipal.artes);
+		let atf = new status_('Atributos Físicos       ', personagemPrincipal.atributosFisicos);
+		let din = new status_('Dinheiro                ', 'R$ '+dinheiro+',00')
 		console.table([dis, blz, cnh, pop, art, atf, din]);
 		console.log(`\nSe a DISPOSIÇÃO cair para 5, ficarei exaust${oap()} e descansarei durante o dia inteiro.`);
 		console.log(`
@@ -276,7 +276,7 @@
 			loopmes: for (let s = 0; s < 5; s++) {
 				console.log();
 				for (let d = 0; d < ds.length; d++) {
-					let data = ` Dia ${hoje} de ${ma[m]} de 2021 - ${ds[d]}`;
+					let data = ` Dia ${hoje} de ${ma[m]} de 2021 - ${ds[d]}`.blue;
 						hoje++;
 						//	Aqui vao entrar as atividades diárias
 						diario(data,hoje,m,d);
@@ -421,11 +421,11 @@
 			`)
 			pressEnter();
 			console.log(`
-	Você decido então ir até el${eas(1)}.\n
+	Eu decido ir até el${eas(1)}.\n
 	El${eas(1)} também estava me observando, com aquele seu jeito tímido e despistado de sempre... \n
 	Mas abre um lindo sorriso quando vê que vou em sua direção.\n
 	Me aproximo de ${personagensSecundarios[1]}, envolvo ${oas(1)} em meus braços, e sussurro em seu ouvido\n
-		${personagemPrincipal}\n
+		${personagemPrincipal.nome}\n
 	Amig${oas(1)}, posso te perguntar uma coisa?\n\n
 	Sinto a pele de ${personagensSecundarios[1]} arrepiar e vejo seu rosto enrubrecer\n
 		${personagensSecundarios[1]}
@@ -457,7 +457,7 @@
 	\n
 	Minhas energias recarregam nesse momento, agarro-n${oas(1)} num abraço e colocamos as alianças um no outro\n
 	E então nos deitamos para observar as estrelas...\n
-	Deitad${oap()}, viro de lado e vejo o perfil de ${personagensSecundarios(1)} sob a luz do luar...\n
+	Deitad${oap()}, viro de lado e vejo o perfil de ${personagensSecundarios[1]} sob a luz do luar...\n
 	Toco seus lábios com a ponta de meus dedos e aproximo meu rosto para dar-lhe um beijo\n\n
 		Sempre fomos um só, e o destino somente se encarregou de unír-nos.
 
@@ -717,35 +717,26 @@
 
 	function diario(data,hoje,m,d) {
 		console.clear();
-		console.log(`\nHoje é ${data}\n`);
-		let dis = new status_('DISPOSIÇÃO: ', disposicao)
-		let blz = new status_('Beleza', personagemPrincipal.beleza);
-		let cnh = new status_('conhecimento', personagemPrincipal.conhecimento);
-		let pop = new status_("Popularidade", personagemPrincipal.popularidade);
-		let art = new status_("Gosto por Artes", personagemPrincipal.artes);
-		let atf = new status_("Atributos Físicos", personagemPrincipal.atributosFisicos);
-		let din = new status_("Dinheiro R$", dinheiro+',00')
-		let statsBar = console.table([dis, blz, cnh, pop, art, atf, din]);
-		console.log();
 		if(hoje===15&&minasCap!=0){
-			console.log(`\n Hoje sai o resultado do MinasCap\n	Vou conferir o resultado pela TV...`)
+			console.log(`\n Hoje sai o resultado do MinasCap\n	Vou conferir o resultado pela TV...`.blue)
 			pressEnter();
 			for(i=0;i<minasCap;i++){
 				loto = (Math.floor(Math.random() * 300));
 				if(loto%3===0&&loto%4===0){
-					console.log('MEU DEUS o prêmio!! no bilhete', 1+i);
-					console.log(`Valor do prêmio: R$ 5000,00`)
+					console.log('MEU DEUS o prêmio!! No bilhete'.brightYellow, (Math.floor(Math.random() * 300000)));
+					console.log(`Valor do prêmio: R$ 5000,00`.yellow)
 					dinheiro+=5000;
 					break;
 				}else{
-					console.log('Infelizmente o bilhete', 1+b,'não foi sorteado...');
+					console.log('Infelizmente o bilhete', (Math.floor(Math.random() * 300000)),'não foi sorteado...');
 				}
+				minasCap=0
 			}
+			pressEnter();
+			console.log();
 		}
-		pressEnter();
-		console.log();
 		if (disposicao > 5) {
-			afazeresDia(statsBar,hoje,m,d);
+			afazeresDia(data,hoje,m,d);
 		} else {
 			exausto();
 		}
@@ -756,8 +747,9 @@
 	}
 
 //Seletor de rotina
-	function seletor(manha,tarde,noite,hoje,m,d){
-		console.clear();
+	function seletor(data,manha,tarde,noite,hoje,m,d){
+			console.clear();
+			scoreTotal(data);
 // Quadros especiais da manhã
 
 // Quadros especiais da manhã - end
@@ -839,10 +831,25 @@
 	}
 //Seletor de rotina - end
 
+// cabeçalho de pontos
+function scoreTotal(data){
+		console.clear();
+		console.log(`\nHoje é ${data}\n`.blue);
+		let dis = new status_('DISPOSIÇÃO              ', disposicao)
+		let blz = new status_('Beleza                  ', personagemPrincipal.beleza);
+		let cnh = new status_('Conhecimento            ', personagemPrincipal.conhecimento);
+		let pop = new status_('Popularidade            ', personagemPrincipal.popularidade);
+		let art = new status_('Gosto por Artes         ', personagemPrincipal.artes);
+		let atf = new status_('Atributos Físicos       ', personagemPrincipal.atributosFisicos);
+		let din = new status_('Dinheiro                ', 'R$ '+dinheiro+',00')
+		let statsBar = console.table([dis, blz, cnh, pop, art, atf, din]);
+		console.log();
+}
+// cabeçalho de pontos - end
 
 
 //Ações diárias
-	function afazeresDia(statsBar,hoje,m,d){
+	function afazeresDia(data,hoje,m,d){
 		function atvd(){
 			console.log(`Ações diárias:`);
 			console.log();
@@ -860,7 +867,7 @@
 		if(d===0||d===6){
 			do{
 				console.clear();
-				statsBar,
+				scoreTotal(data);
 				atvd();
 				manha = prompt(`De manhã eu vou `);
 				if(manha != '' && manha != 'v' && manha != 'd' && manha != 'e' && manha != 's' && manha != 'a' && manha != 'f' && manha != 't'){
@@ -874,11 +881,12 @@
 			};
 			manhaA = manha;
 		}else{
+			scoreTotal(data);
 			prompt(`De manhã eu vou para a escola!`);
 			manha = 'ipe'}
 		do{
 			console.clear();
-			statsBar,
+			scoreTotal(data);
 			atvd();
 			tarde = prompt(`De tarde eu vou `);
 			if(tarde != '' && tarde != 'v' && tarde != 'd' && tarde != 'e' && tarde != 's' && tarde != 'a' && tarde != 'f' && tarde != 't'){
@@ -893,7 +901,7 @@
 		tardeA = tarde;
 		do{
 			console.clear();
-			statsBar,
+			scoreTotal(data);
 			atvd();
 			noite = prompt(`De noite eu vou `);
 			if(noite != '' && noite != 'v' && noite != 'd' && noite != 'e' && noite != 's' && noite != 'a' && noite != 'f' && noite != 't'){
@@ -907,8 +915,7 @@
 		};
 		noiteA = noite;
 		
-		seletor(manha,tarde,noite,hoje,m,d);
-		pressEnter()
+		seletor(data,manha,tarde,noite,hoje,m,d);
 	}
 
 	function irParaAEscola() {
@@ -1125,8 +1132,6 @@
 	
 	tempo();
 	
-	console.log(`${personagemPrincipal.nome}`)
-	
 	histF();
 //Sequencia de execução
 
@@ -1141,6 +1146,7 @@
 			Bordão::
 				VOCÊ É TÃO DEVAGAR VEY!\n
 			Conexões
+				Lily - amiga de Infância
 			*/
 		// [1]
 			/*
@@ -1312,16 +1318,16 @@ Quando derrepente...
 Você sente como se o THOR te desse um tapa de duas mãos nos ombros\n
 E quando olha para trás, assustad${oas(0)}, vê ${personagensSecundarios[0]} com olhar descarado\n
 e um sorriso maroto\n\n
-		${personagensSecundarios(0)}\n
+		${personagensSecundarios[0]}\n
 	Ué, ta fazendo o que aqui menin${oap()}? Tem serviço não??? kkkkkkkk\n\n
 		${personagemPrincipal.nome}\n
 	AH Ó, não é da sua conta não! Vim encontrar uma pessoa!\n\n
-		${personagensSecundarios(0)}\n
+		${personagensSecundarios[0]}\n
 	Ah para! Pra cima de mim!!! Todo mundo sabe que vc não pega ninguém!\n\n
 		${personagemPrincipal.nome}\n
 	Ih! Vê se me erra!\n
 	E você? Veio fazer o que?\n\n
-		${personagensSecundarios(0)}\n
+		${personagensSecundarios[0]}\n
 	kkkkkkkkkkkkkkkk A verdade doi né?!\n
 	Eu vim com a Lily pra assistir Escape Room 2, mas ela é fraca e não aguenta um terrorzinho!\n
 	Então vamos assitir Esquadrão Suicida...\n\n
@@ -1347,13 +1353,29 @@ Então, ${personagensSecundarios[0]} acena para Lily na fila do Burguer King\n\n
 				if(cinema != 's' && cinema != 'n'){
 				prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
 			}
-			}while(cinema != 's' && cinema != 'n')
+			}while(cinema != 's' && cinema != 'n');
 			console.clear();
 			if(cinema==='s'){
 			
-			//cinema sim
+			console.clear();
+			console.log();
+			console.log(`
+		\n${personagemPrincipal.nome}
+	\nE você acha que precisa de perguntar????
+	\nÉ lógico que quero ir!\n
+			`);
+			pressEnter();
+			console.clear();
+			console.log();
+			console.log(`
+\n${personagensSecundarios[1]} sentou ao meu lado durante o filme...
+\nFoi um ótimo filme. Nós 3 demos muitas risadas e foi bem divertido!
+\nÉ estranho, mas parece que ${personagensSecundarios[1]} está cada dia mais bonit${oas(1)}!
+			`);
+			pressEnter();
 				
-			}else{
+			}
+			else{
 				console.log(`
 		\n${personagemPrincipal.nome}
 	\nIh alá, esse rolê tá mó com cara de date, nem rola ficar de vela kkkkkkkk\n
@@ -1366,16 +1388,6 @@ Então, ${personagensSecundarios[0]} acena para Lily na fila do Burguer King\n\n
 				`);
 				
 			}
-
-			pressEnter();
-			console.log();
-			console.log(`
-				Texto 2
-			`);
-			pressEnter();
-			console.log(`
-				Texto 3
-			`);
 			pressEnter();
 		}
 	}
@@ -1384,18 +1396,42 @@ Então, ${personagensSecundarios[0]} acena para Lily na fila do Burguer King\n\n
 			console.clear();
 			console.log();
 			console.log(`
-				Texto 1
+\nDepois da aula de Quimica, vou correndo até a fila da lanchonete.
+\nQuem não corre acaba ficando o intervalo inteiro esperando para conseguir comprar alguma coisa...
 			`);
 			pressEnter();
 			console.log();
 			console.log(`
-				Texto 2
+		\n${personagensSecundarios[1]}
+	\nHEY ${personagemPrincipal.nome}!!!! Eu fiquei agarrad${oas(1)} na aula de geografia...
+	\nAproveita que você já está correndo na frente de todo mundo mesmo e compra a minha ficha para mim!
 			`);
 			pressEnter();
+			do{
+				console.log(`
+Comprar o lanche de ${personagensSecundarios[1]}?
+				`)
+				lanche = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
+				if(lanche != 's' && lanche != 'n'){
+					prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
+				}
+			}while(lanche != 's' && lanche != 'n');
+			console.clear();
+			if(lanche==='s'){
+			console.log();
 			console.log(`
 				Texto 3
 			`);
 			pressEnter();
+			}else{
+				console.log();
+				console.log(`
+			\n${personagemPrincipal.nome}
+		\nEu não! Você se quiser que entre na fila!!! Se quisesse comprar sua ficha rapido corresse para cá!\n
+	Imediatamente ${personagensSecundarios[1]} fecha o semblante e suas 
+				`);
+				pressEnter();
+			};
 		}
 		else if (dia===2){
 			console.clear();
