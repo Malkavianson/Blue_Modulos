@@ -24,7 +24,7 @@ const esc = ['pedra', 'papel', 'tesoura'];
 	function init() {
 		do {
 			console.log();
-			console.log(`\nSeja bem vindo ao JOKENPO\n	REGRAS:\nVocê precisa primeiro escolher entre PEDRA PAPEL ou TESOURA\nO critério de VITÓRIA é:\n A tesoura corta o papel, mas quebra com a pedra;\n O papel embrulha a pedra, mas é cortado pela tesoura\n A pedra quebra a tesoura e é embrulhada pelo papel\n\nRodadas de empate não são contabilizadas\n		Quantas rodadas a partida terá? `.blue)
+			console.log(`\nSeja bem vindo ao JOKENPO\n	REGRAS:\nVocê precisa primeiro escolher entre PEDRA PAPEL ou TESOURA\nO critério de VITÓRIA é:\n A tesoura corta o papel, mas quebra com a pedra;\n O papel embrulha a pedra, mas é cortado pela tesoura\n A pedra quebra a tesoura e é embrulhada pelo papel\n\nRodadas de empate não são contabilizadas\n		Quantas rodadas a válidas a partida terá? `.blue)
 			rodada = prompt(`(lembre-se de selecionar um número impar de partidas:)`.brightBlue);
 			if ((isNaN(rodada)) === false && rodada > 0 && (rodada%2===0)===false) {
 				p1.vit = 0;
@@ -49,22 +49,17 @@ const esc = ['pedra', 'papel', 'tesoura'];
 			const p1e = esc.indexOf(p1.esc);
 			const p2e = esc.indexOf(p2.esc);
 
-			const pp1 = (p1e === 2 && p2e === 0);
-			const pp2 = (p2e === 2 && p1e === 0);
-			const p1p = (p1e === 0 && p2e === 2);
-			const p2p = (p2e === 0 && p1e === 2);
-
 			//verifica vitorioso
-			if ((p1e > p2e && (pp1 === false)) || (p1p === true)) {
+			if (p2e<p1e&&(p2e!=0&&p1e!=2)||(p2e===2&&p1e=== 0)){
 				console.log();
-				console.log("	Você venceu".brightGreen);
+				console.log(`\n\n\n	Você venceu\n`.brightGreen);
 				p1.vit++;
-			} else if ((p2e > p1e && (pp2 === false)) || (p2p === true)) {
+			} else if (p2e>p1e&&(p2e!=2&&p1e!=0)||(p2e===0&&p1e===2)){
 				console.log();
-				console.log("	Máquina Venceu".brightRed);
+				console.log(`\n\n\n	Máquina Venceu\n`.brightRed);
 				p2.vit++;
 			} else {
-				console.log(`\n 	EMPATE`)
+				console.log(`\n 	EMPATE\n\n\n`)
 				i--;
 				rodadaAtual--;
 			}
@@ -119,5 +114,5 @@ do{
 	resultadoFinal();
 
 	console.log(`\n\n\nJogar Novamente?`.brightYellow);
-	jn = prompt(`pressione [S] ou [N] `.yellow).toLowerCase;
+	jn = prompt(`pressione [S] ou [N] `.yellow).toLowerCase();
 } while (jn != 'n');
