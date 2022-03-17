@@ -15,8 +15,8 @@
 	var tardeA = '';
 	var noiteA = '';
 
-	let ds = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
-	let ma = ['Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+	let ds = ['Sexta', 'Sábado','Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta'];
+	let ma = ['Outubro', 'Novembro', 'Dezembro'];
 
 	let garotas = ['Nivea', 'Sophia', 'Rosa', 'Alice', 'Ludmila', 'Rebecca', 'Monica'];
 	let garotos = ['Frederico', 'Davi', 'Otavio', 'Marcelo', 'Ricardo', 'Alexandre', 'Otto'];
@@ -269,9 +269,9 @@
 
 	}
 	function tempo() {
-		let hoje = 1;
+		let hoje = 15;
 		let m31 = 1;
-		for (let m = 0; m < ma.length; m++) {
+		looptime: for (let m = 0; m < ma.length; m++) {
 			m31++;
 			loopmes: for (let s = 0; s < 5; s++) {
 				console.log();
@@ -281,8 +281,8 @@
 						//	Aqui vao entrar as atividades diárias
 						diario(data,hoje,m,d);
 					//
-					if (m === 4 && hoje === 18) {
-						break loopmes;
+					if (m === 2 && hoje === 18) {
+						break looptime;
 					} else if (m31 % 2 === 0) {
 						if (hoje === 32) {
 							hoje = 1;
@@ -741,9 +741,6 @@
 			exausto();
 		}
 		pressEnter()
-		console.log(`Fim do dia`);
-		console.log();
-		pressEnter();
 	}
 
 //Seletor de rotina
@@ -1123,15 +1120,17 @@ function scoreTotal(data){
 		dinheiro+=50;
 		personagemPrincipal.sorte++;
 		disposicao-=2;
-		Console.log(`Recebeu R$50,00 pelo seu trabalho`)
+		console.log(`Recebeu R$50,00 pelo seu trabalho`)
 	}
 
 	function exausto() {
 		console.log(`\nMe sento muito exaust${oap()} e vou tirar o dia para descansar!`);
 			disposicao += 15;
-			personagemPrincipal.conhecimento--;
-			personagemPrincipal.artes--;
-			personagemPrincipal.atributosFisicos--;
+			personagemPrincipal.conhecimento-=3;
+			personagemPrincipal.artes-=3;
+			personagemPrincipal.atributosFisicos-=3;
+			personagemPrincipal.popularidade-=3;
+			personagemPrincipal.sorte-=15
 	}
 //Ações diárias - end
 
