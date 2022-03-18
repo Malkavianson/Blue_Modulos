@@ -2125,7 +2125,7 @@ function personagem1(mes,dia){
 \n	Ai, eu quero um Latão bem gelado!...
 \n		${personagensSecundarios[1]}
 \n	Ei moç${oap()}, me vê o latão mais gelado que você tiver!
-\n__el${eas(1)} diz sem perceber que sou eu
+\n__el${eas(1)} diz sem perceber que sou eu___
 \n		${personagemPrincipal.nome}
 \n	
 				`);
