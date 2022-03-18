@@ -50,11 +50,11 @@ const esc = ['pedra', 'papel', 'tesoura'];
 			const p2e = esc.indexOf(p2.esc);
 
 			//verifica vitorioso
-			if (p2e<p1e&&(p2e!=0&&p1e!=2)||(p2e===2&&p1e=== 0)){
+			if ((p2e<p1e&&(p2e!=2&&p1e!=0))||(p2e===2&&p1e=== 0)){
 				console.log();
 				console.log(`\n\n\n	Você venceu\n`.brightGreen);
 				p1.vit++;
-			} else if (p2e>p1e&&(p2e!=2&&p1e!=0)||(p2e===0&&p1e===2)){
+			} else if ((p2e>p1e&&(p2e!=0&&p1e!=2))||(p2e===0&&p1e===2)){
 				console.log();
 				console.log(`\n\n\n	Máquina Venceu\n`.brightRed);
 				p2.vit++;
@@ -69,7 +69,7 @@ const esc = ['pedra', 'papel', 'tesoura'];
 			console.log(`\n\n	Placar atual: `.blue);
 			console.log(`	Você:    ${p1.vit}`.green);
 			console.log(`	Máquina: ${p2.vit}`.red);
-			console.log('\n\n\n	Quantidades de RODADAS:', rodada.brightBlue);
+			console.log('\n\n\n	Quantidades de RODADAS VÁLIDAS:', rodada.brightBlue);
 			console.log(`\n\n	Rodada Atual:`, `${rodadaAtual}`.blue);
 			console.log(`\n\n	Você escolheu: ${p1.esc}`.green);
 			console.log(`\n	Máquina escolheu:  ${p2.esc}`.red);
