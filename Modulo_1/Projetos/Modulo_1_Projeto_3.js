@@ -1140,12 +1140,153 @@ function scoreTotal(data){
 //Ações diárias - end
 
 //Sequencia de execução
-	personagemPrincipal = hist1();
-	
+	personagemPrincipal = hist1();	
 	// tempo();
-	personagem1(1,1)
-	histF();
+	// histF();
 //Sequencia de execução
+
+//Teste das historias
+pressEnter();
+	console.log(personagensSecundarios[0]);
+pressEnter();
+	console.log(`mes: 1 / dia: 1`);
+pressEnter();
+	personagem0(1,1)
+pressEnter();
+	console.log(`mes: 1 / dia: 2`);
+pressEnter();
+	personagem0(1,2)
+pressEnter();
+	console.log(`mes: 2 / dia: 1`);
+pressEnter();
+	personagem0(2,1)
+pressEnter();
+	console.log(`mes: 2 / dia: 2`);
+pressEnter();
+	personagem0(2,2)
+pressEnter();
+
+pressEnter();
+	console.log(personagensSecundarios[1]);
+pressEnter()
+	console.log(`mes: 1 / dia: 1`);
+pressEnter();
+	personagem1(1,1)
+pressEnter();
+	console.log(`mes: 1 / dia: 2`);
+pressEnter();
+	personagem1(1,2)
+pressEnter();
+	console.log(`mes: 2 / dia: 1`);
+pressEnter();
+	personagem1(2,1)
+pressEnter();
+	console.log(`mes: 2 / dia: 2`);
+pressEnter();
+	personagem1(2,2)
+pressEnter();
+
+pressEnter();
+	console.log(personagensSecundarios[2]);
+pressEnter()
+	console.log(`mes: 1 / dia: 1`);
+pressEnter();
+	personagem2(1,1)
+pressEnter();
+	console.log(`mes: 1 / dia: 2`);
+pressEnter();
+	personagem2(1,2)
+pressEnter();
+	console.log(`mes: 2 / dia: 1`);
+pressEnter();
+	personagem2(2,1)
+pressEnter();
+	console.log(`mes: 2 / dia: 2`);
+pressEnter();
+	personagem2(2,2)
+pressEnter();
+
+pressEnter();
+	console.log(personagensSecundarios[3]);
+pressEnter()
+	console.log(`mes: 1 / dia: 1`);
+pressEnter();
+	personagem3(1,1)
+pressEnter();
+	console.log(`mes: 1 / dia: 2`);
+pressEnter();
+	personagem3(1,2)
+pressEnter();
+	console.log(`mes: 2 / dia: 1`);
+pressEnter();
+	personagem3(2,1)
+pressEnter();
+	console.log(`mes: 2 / dia: 2`);
+pressEnter();
+	personagem3(2,2)
+pressEnter();
+
+pressEnter();
+	console.log(personagensSecundarios[4]);
+pressEnter()
+	console.log(`mes: 1 / dia: 1`);
+pressEnter();
+	personagem4(1,1)
+pressEnter();
+	console.log(`mes: 1 / dia: 2`);
+pressEnter();
+	personagem4(1,2)
+pressEnter();
+	console.log(`mes: 2 / dia: 1`);
+pressEnter();
+	personagem4(2,1)
+pressEnter();
+	console.log(`mes: 2 / dia: 2`);
+pressEnter();
+	personagem4(2,2)
+pressEnter();
+
+pressEnter();
+	console.log(personagensSecundarios[5]);
+pressEnter()
+	console.log(`mes: 1 / dia: 1`);
+pressEnter();
+	personagem5(1,1)
+pressEnter();
+	console.log(`mes: 1 / dia: 2`);
+pressEnter();
+	personagem5(1,2)
+pressEnter();
+	console.log(`mes: 2 / dia: 1`);
+pressEnter();
+	personagem5(2,1)
+pressEnter();
+	console.log(`mes: 2 / dia: 2`);
+pressEnter();
+	personagem5(2,2)
+pressEnter();
+
+pressEnter();
+	console.log(personagensSecundarios[6]);
+pressEnter()
+	console.log(`mes: 1 / dia: 1`);
+pressEnter();
+	personagem6(1,1)
+pressEnter();
+	console.log(`mes: 1 / dia: 2`);
+pressEnter();
+	personagem6(1,2)
+pressEnter();
+	console.log(`mes: 2 / dia: 1`);
+pressEnter();
+	personagem6(2,1)
+pressEnter();
+	console.log(`mes: 2 / dia: 2`);
+pressEnter();
+	personagem6(2,2)
+pressEnter();
+// Teste das historias-end
+
 
 // Escopo dos personagens
 		// [0]
@@ -1292,6 +1433,9 @@ function personagem0(mes,dia){
 \nEu ${oas(0)} conheci quando estavamos na pré-escola, desde os 6 anos de idade
 \n${personagensSecundarios[0]} é magr${oas(0)} e pard${oas(0)}
 \ne na infância, el${eas(0)} era uma criança bem esquisitinha...
+			`);
+			pressEnter();
+			console.log(`
 \nMas hoje, com seus cabelos cacheados na altura dos ombros, e um rosto simétrico
 \nQue inevitavelmente realçam seus olhos castanhos "folha-seca"
 \n${personagensSecundarios[0]} se muito tornou atraente
@@ -1306,6 +1450,9 @@ function personagem0(mes,dia){
 \n		${personagemPrincipal.nome}
 \n	Nossa... Nem sei se vou conseguir ir com você...
 \n	Estou com as atividades do laboratório que tinha que ter feito nas férias todas atrasadas\n
+			`);
+			pressEnter();
+			console.log(`
 \n		${personagensSecundarios[0]}
 \n	Aff... Vc é tão devagar! Era só fazer o troço vey!
 \n	Vou te mandar o meu relatório no whatsapp para você tirar de exemplo
@@ -1334,20 +1481,32 @@ function personagem0(mes,dia){
 \n	Ué, ta fazendo o que aqui menin${oap()}? Tem serviço não??? kkkkkkkk\n
 \n		${personagemPrincipal.nome}
 \n	AH Ó, não é da sua conta não! Vim encontrar uma pessoa!\n
+			`);
+			pressEnter();
+			console.log(`
 \n		${personagensSecundarios[0]}
 \n	Ah para! Pra cima de mim!!! Todo mundo sabe que vc não pega ninguém!\n
 \n		${personagemPrincipal.nome}
 \n	Ih! Vê se me erra!
 \n	E você? Veio fazer o que?\n
+			`);
+			pressEnter();
+			console.log(`
 \n		${personagensSecundarios[0]}
 \n	kkkkkkkkkkkkkkkk A verdade doi né?!
 \n	Eu vim com a Lily pra assistir Escape Room 2, mas ela é fraca e não aguenta um terrorzinho!
 \n	Então vamos assitir Esquadrão Suicida...\n
+			`);
+			pressEnter();
+			console.log(`
 \n		${personagemPrincipal.nome}
 \n	Sai dessa vida vey, vai ver outras coisas! Você só assiste terror!
 \n	Mó daora Esquadrão Suicida\n
 \n		${personagensSecundarios[0]}
 \n	O que eu posso fazer? Eu gosto é de emoção!\n
+			`);
+			pressEnter();
+			console.log(`
 \n		${personagemPrincipal.nome}
 \n	Mas filme de herói tem emoção também!\n
 \n		${personagensSecundarios[0]}
@@ -1406,6 +1565,7 @@ function personagem0(mes,dia){
 			pressEnter();
 		}
 	}
+
 	else if(mes===2){
 		if(dia===1){
 			personagensSecundariospts[0]++
@@ -1437,8 +1597,12 @@ function personagem0(mes,dia){
 			console.log(`
 \n		${personagemPrincipal.nome}
 \n	Eu não vou comprar nada pra você kkkkk 
-\n	Se você quiser fura fila aqui comigo e compra!\n
-\nAs outras pessoas da fila não gostaram NADA dessa atitude, e eu conseguia ouvir murmurinhos das pessoas atras de mim
+\n	Se você quiser, fura fila aqui comigo e compra!\n
+			`);
+			pressEnter();
+			console.log(`
+\nAs outras pessoas da fila não gostaram NADA dessa atitude
+\n e eu conseguia ouvir murmurinhos das pessoas atras de mim
 \nMas não liguei
 \n${personagensSecundarios[0]} e eu ficamos conversando enquanto aguardávamos nossa vez\n
 \n Acabou que naquele dia passamos todo o intervalo juntos jogando conversa fora...
@@ -1463,6 +1627,7 @@ function personagem0(mes,dia){
 
 			};
 		}
+
 		else if (dia===2){
 			personagensSecundariospts[0]++
 			console.clear();
@@ -1513,9 +1678,12 @@ function personagem0(mes,dia){
 				pressEnter();
 				console.clear()
 				console.log(`
-\nEu abro a porta e ${personagensSecundarios[0]} me cumprimenta com um calosoro abraço
-\nEu retribuo o abraço, meio cansad${oap()} e sonolento
+\nEu abro a porta e ${personagensSecundarios[0]} me cumprimenta com um caloroso abraço
+\nEu retribuo o abraço, meio cansad${oap()} e sonolent${oap()}
 \n${personagensSecundarios[0]} percebe e me pergunta
+			`);
+			pressEnter();
+			console.log(`
 \n		${personagensSecundarios[0]}
 \n	Tá se sentindo bem?? Você parece bem esgotad${oap()} hoje...\n
 \n 		${personagemPrincipal.nome}
@@ -1528,6 +1696,9 @@ function personagem0(mes,dia){
 \n	Acabei de fazer um chá, você aceita uma xícara?\n
 \n		${personagensSecundarios[0]}
 \n	Sim, por favor. De quê é o chá?\n
+			`);
+			pressEnter();
+			console.log(`
 \n		${personagemPrincipal.nome}
 \n	Eu gosto de chá verde, mas tem outros se quiser\n
 \n		${personagensSecundarios[0]}
@@ -1541,9 +1712,15 @@ function personagem0(mes,dia){
 \n		${personagensSecundarios[0]}
 \n	Estava fazendo caminhada aqui na avenida, e aproveitei para passar na sua casa.
 \n	Estudamos juntos, mas é tão dificil de te encontrar na escola\n
+			`);
+			pressEnter();
+			console.log(`
 \n		${personagemPrincipal.nome}
 \n	Ah, não é nada... Eu sempre estou lá com todo mundo, só vir conversar comigo ue
 \n	Somos amigos à tanto tempo... Você não precisa mais de cerimônias\n
+			`);
+			pressEnter();
+			console.log(`
 \n		${personagensSecundarios[0]}
 \n	Eu sinto falta de quando éramos mais próximos...
 \n	Você voltava da aula comigo lá pelo bairro de cima,
@@ -1574,11 +1751,17 @@ function personagem0(mes,dia){
 \n		${personagensSecundarios[0]}
 \n	Aff, é o meu pai...
 \n	Ele disse que é para eu ir para casa agora!\n
+			`);
+			pressEnter();
+			console.log(`
 \n${personagensSecundarios[0]} leva a xícara para a sala, e volta bem rapidamente
 \nEl${eas(0)} se precipita para me dar um beijo no rosto, mas não percebo e viro as costas
 \n		${personagensSecundarios[0]}
 \n	NOSSA SEM EDUCAÇÃO! Eu ia te dar um beijo no rosto e você virou as costas!!!!
 \n	nem quero mais também...\n
+			`);
+			pressEnter();
+			console.log(`
 \nCaio na risada, e acompanho-n${oas(0)} até a esquina
 \nLá, el${eas(0)} acaba se despedindo de mim e me dando um beijo
 				`)			
@@ -1639,11 +1822,14 @@ function personagem1(mes,dia){
 			console.log(`
 \n		(Alguém distante)
 \n	${personagensSecundarios[1]}, vc pegou seu cartaz????\n
+			`);
+			pressEnter();
+			console.log(`
 \n		**A Pessoa imediatamente ao meu lado responde com um grito**
 \n	SIIIIIIIIM! EU PEGUEI O MEU E MAIS 4 EM BRANCO, VOCÊS PRECISAM DE ALGUM AI?\n
 \nEu não esperava por aquele grito, logo ao meu lado...
 \nEntão nesse instante eu dou um pulo de susto
-\nAcabei pisando em falso em umm buraco na calçada e indo ao chão
+\nAcabei pisando em falso em um buraco na calçada e indo ao chão
 			`)
 			pressEnter();
 			do{
@@ -1652,8 +1838,14 @@ function personagem1(mes,dia){
 \nA doce expressão no rosto del${eas(1)} torna-se hipnótica ao olhar para mim...
 \nOs seus olhos azuis cristalinos parecem pedir desculpas
 \n e sua expressão anseia por querer me auxiliar
+			`);
+			pressEnter();
+			console.log(`
 \nO brilho de seus cabelos longos e loiros, reluzem ao sol enquanto estende sua mão
 \n para ajudar-me a levantar
+			`);
+			pressEnter();
+			console.log(`
 \n		${personagensSecundarios[1]}
 \n	Oi, meu nome é ${personagensSecundarios[1]}, você está bem?
 \n	Me desculpe, parece que te assustei, deixe-me lhe ajudar a levantar...\n
@@ -1673,21 +1865,34 @@ function personagem1(mes,dia){
 \n		${personagemPrincipal.nome}
 \n	Nossa... Muito Obrigad${oap()}, eu acabei virando o pé quando me assustei kkkkk
 \n	 mas acho que estou bem! Não precisa se preocupar...\n
+			`);
+			pressEnter();
+			console.log(`
 \n		${personagensSecundarios[1]}
 \n	Muito pelo contrário, devo me preocupar sim! Foi culpa minha... Fui eu quem te assustou!\n
 \n${personagensSecundarios[1]} com um rápido movimento me deita novamente no chão!
 \nEl${eas(1)} parece já estar habituado com isso, pela velocidade e facilidade que fez isso
+			`);
+			pressEnter();
+			console.log(`
 \nQuando percebi já estava sentad${oap()} no chão, sem o tênis
 \nEnquanto ${personagensSecundarios[1]} passava algum tipo de pomada natural
 \n que el${eas(1)} tirou da mochila, em meu tornozelo... 
 			`);
 			pressEnter();
 			console.log(`
-\nO aroma de erva-doce, hortelã e arnica pairam no ar, e sinto uma leve refrescância na região do meu tornozelo...
+\nO aroma de erva-doce, hortelã e arnica pairam no ar
+\n e sinto uma leve refrescância na região do meu tornozelo...
 \nA pouca dor que sentia, desapareceu completamente
 \nE ${personagensSecundarios[1]} começa a massagear meu pé...
+			`);
+			pressEnter();
+			console.log(`
 \n		${personagemPrincipal.nome}
 \n	O que é isso? Você é alguma espécie de brux${oas(1)} que faz poções mágicas?\n
+			`);
+			pressEnter();
+			console.log(`
 \n		${personagensSecundarios[1]}
 \n	Isso se chama Unguento, não é bruxaria kkkkkk
 \n	É uma receita da minha avó
@@ -1697,16 +1902,22 @@ function personagem1(mes,dia){
 			`)
 			pressEnter();
 			console.log(`
-		${personagemPrincipal.nome}
-\n	Manifestação? Então vocês não vão para a aula?
+\n		${personagemPrincipal.nome}
+\n	Manifestação? Então vocês não vão para a aula?\n
+			`);
+			pressEnter();
+			console.log(`
 \n		${personagensSecundarios[1]}
 \n	Não, estávamos nos preparando para ir à uma manifestação
 \n	 em prol de leis mais duras quanto à emissão de gases do efeito estufa aqui na nossa cidade!
+			`);
+			pressEnter();
+			console.log(`
 \n	O sistema de ensino atual nos prepara para lidar com o mercado, mas não ensina coisas importantes
 \n	 por exemplo, como os nossos hábitos de consumo contribuem para a degradação de nosso meio ambiente!
 \n	Eles comentam né...
-\n	Mas não mostram para os alunos o quão essa pauta é importante
-\n	 e como devemos nos organizar para mudar isso o mais rápido possível!
+\n	Mas não mostram para os alunos o quão importante é essa pauta 
+\n	 e como todos devemos nos organizar para mudar isso o mais rápido possível!
 			`)
 			pressEnter();
 			console.log(`
@@ -1714,6 +1925,9 @@ function personagem1(mes,dia){
 \n	Questões extremamente importantes que jamais são tratados pelas pessoas, como por exemplo...
 \n	O Centro de Resiliência de Estocolmo indica 9 áreas de segurança que precisamos respeitar
 \n	 para conservar nosso ecossistema!
+			`);
+			pressEnter();
+			console.log(`
 \n	Desses 9, 2 já estão em zona de alto risco, como a integridade da nossa biosfera em geral
 \n	 e mais 2 estão n zona de risco crescente!
 \n	E como a população continua desinformada, e ainda têm catalisadores de desinformação
@@ -1727,22 +1941,35 @@ function personagem1(mes,dia){
 \nMas me encanto pela paixão que flui nas palavras que el${eas(1)} fala!
 \nA forma como el${eas(1)} entende os detalhes, o brilho no olhar ao vislumbrar essa utopia
 \nOnde, pelo que eu entendi, as pessoas e a natureza voltarão à ser um...
+			`);
+			pressEnter();
+			console.log(`
 \n		${personagemPrincipal.nome}
-\n	Nossa... Muito bonito isso, de verdade! Me fez repensar muito das minhas atitudes quanto à preservar o planeta!
+\n	Nossa... Muito bonito isso, de verdade!
+\n Me fez repensar muito das minhas atitudes quanto à preservar o planeta!
 \n	Me sinto até um pouco envergonhad${oap()} por não ter nenhum conteúdo sobre esse assunto!
 \n	Jamais havia parado para pensar sobre isso...\n
+			`);
+			pressEnter();
+			console.log(`
 \n		${personagensSecundarios[1]}
 \n	Ah, mas eu não culpo você! O sistema atrapalha essas informações chegarem nas pessoas
 \n	Não é vantagem para as grandes corporações...
 \n	Pronto, parece que diminuiu o inchaço, mais uma vez, me perdoe por isso...
+			`);
+			pressEnter();
+			console.log(`
 \nAssim que termino de calçar o tênis
 \nEl${eas(1)} me estende a mão novamente e me ajuda a levantar
 			`);
 			pressEnter();
 			console.log(`
 \nO pequeno impulso que ${personagensSecundarios[1]} fez para eu levantar
-\n	 acaba sendo um pouco mais forte do que esperávamos
+\n é um pouco mais forte do que esperávamos
 \nE nossos corpos acabam se tocando.
+			`);
+			pressEnter();
+			console.log(`
 \nSinto seu perfume inusual,
 \nEra algo que parecia algum tipo de flor silvestre
 \n ou esses cheiros que sentimos quando vamos em bosques ou parques de flores
@@ -1754,6 +1981,9 @@ function personagem1(mes,dia){
 \n	Ops... Parece que te puxei mais forte que deveria
 \n		${personagemPrincipal.nome}
 \n	Ah, sem problemas kkk  __ digo afastando um pouco meu corpo
+			`);
+			pressEnter();
+			console.log(`
 \n		${personagensSecundarios[1]}
 \n	Haha O.O' Eu só me esqueci de perguntar seu nome
 \nQue indelicadeza a minha, praticamente abracei a pessoa e nem disse meu nome!!!!
@@ -1763,6 +1993,9 @@ function personagem1(mes,dia){
 \n		${personagemPrincipal.nome}
 \n	Nossa... Também me esqueci de falar!
 \n	Meu nome é ${personagemPrincipal.nome}, e o seu?\n
+			`);
+			pressEnter();
+			console.log(`
 \n		${personagensSecundarios[1]}
 \n	O meu eu ja tinha falado kkkk mas é ${personagensSecundarios[1]}
 \n	Muito prazer em conhecê-l${oap()} ${personagemPrincipal.nome} hihi
@@ -1774,13 +2007,22 @@ function personagem1(mes,dia){
 \nNOSSA MEU DEUS! EU NÃO ESTOU BEM!!
 \nEl${eas(1)} já tinha me falado o nome e eu perguntei de novo!!!
 \nNossa eu fiquei fora de órbita
+			`)
+			pressEnter();
+			console.log(`
 \n		${personagemPrincipal.nome}
 \nHAHA __riso meio desesperado__ Me desculpa ter perguntado seu nome duas vezes ${personagensSecundarios[1]}
 \nÉ por quê eu sou meio maluc${oap()}
+			`);
+			pressEnter();
+			console.log(`
 \n		${personagensSecundarios[1]}
 \n	Já percebi que vc é muito maluc${oap()}
 \n	Colocou até a meia do avesso...
 \n	kkkkkkkkkkkkkkkkkkkkkkkkkkkkk\n
+			`);
+			pressEnter();
+			console.log(`
 \nO tom é de deboche, mas a entonação e a carinha é tão fofa que nem tem como se irritar!
 \nRapidamente eu me sento para consertar minha meia
 \n e uma amiga de ${personagensSecundarios[1]} aparece com pincéis atômicos e cartolinas que não serão mais usadas
@@ -1790,13 +2032,22 @@ function personagem1(mes,dia){
 \nO porteiro começa a mexer no cadeado para fechar o portão de entrada...
 \n		${personagemPrincipal.nome}
 \n	O portão já vai fechar, você realmente não vai para a aula?\n
+			`);
+			pressEnter();
+			console.log(`
 \n		${personagensSecundarios[1]}
 \n	Eu não tenho nada para aprender nesse lugar!
 \n	O mundo precisa que as pessoas entendam que ele está doente, e se eu for para a escola
 \n	Quem levará essa mensagem para eles?\n
+			`);
+			pressEnter();
+			console.log(`
 \nO raciocínio é muito bom, mas eu tenho prova de física e não posso me dar ao luxo de perder esses pontos...
 \n		${personagemPrincipal.nome}
 \n	Então te vejo depois? Quando podemos nos encontrar novamente?
+			`);
+			pressEnter();
+			console.log(`
 \n		${personagensSecundarios[1]}
 \n	Siga o sol que você irá me encontrar...
 \nEl${eas(1)} diz isso enquanto é praticamente arrastad${oas(1)} por uma multidão de hippies com seus colares de pedra
@@ -1809,17 +2060,29 @@ function personagem1(mes,dia){
 \n	Não! Muito Obrigad${oap()}!!
 \n	Melhor do que ajudar alguém no chão, seria evitar de gritar no ouvido das pessoas.
 \n	Ajuda para mim seria o seu silêncio...\n
+			`);
+			pressEnter();
+			console.log(`
 \n		${personagensSecundarios[1]}
 \n	Nossa... Mil perdões __El${eas(1)} recolhe sua mão e enfia nos bolsos__
 \n	Não foi por mal, foi só que...\n
+			`);
+			pressEnter();
+			console.log(`
 \n		${personagemPrincipal.nome}
 \n	Só que nada... Nem precisa de ficar se justificando demais não!\n
 \nLevanto e limpo minha calça, ${personagensSecundarios[1]} se afasta lentamente
 \nAparentemente muito envengonhad${oas(1)}
+			`);
+			pressEnter();
+			console.log(`
 \n		${personagensSecundarios[1]}
 \n	Mais uma vez peço desculpas... Posso ao menos saber seu nome?\n
 \n		${personagemPrincipal.nome}
 \n	Meu nome é ${personagemPrincipal.nome}\n
+			`);
+			pressEnter();
+			console.log(`
 \n 		${personagensSecundarios[1]}
 \n	Mais uma vez peço desculpas ${personagemPrincipal.nome}, não quis incomodar você...
 \n	 tenha uma boa aula...\n
@@ -1831,17 +2094,40 @@ function personagem1(mes,dia){
 			}
 			pressEnter();
 		}
+
 		else if(dia===2){
 			personagensSecundariospts[1]++
 			console.clear();
 			console.log(`
-\n		//texto introdução
+\nHoje a noite está ótima para pegar um freela...
+\nAlguém postou nos status do whatsapp uma vaga 
+\n sobre uma boate do centro da cidade precisaria de gente para ajudar no balcão...
 			`);
+			pressEnter();
+			console.log(`
+\nChegando lá, o pessoal da boate foi super simpático e me ensinou a fazer o trabalho.
+\nConsistia de entregar as cervejas e preparar os destilados mais simples
+\nE os coquetéis eu direcionava para outra pessoa.
+			`);
+			personagemPrincipal.popularidade++;
 			pressEnter();
 			do{
 				console.clear();
 				console.log(`
-\n		//Texto introdução
+\nJá era em torno de 23:00
+\nEnquanto abria uma lata de cerveja para servir um cliente
+\n vejo ${personagens[1]} descendo as escadarías da entrada e entrando no salão.
+\nEl${eas(1)} está cobert${oas(1)} de pó colorido e tinta neon
+\n e vem diretamente para o balcão
+\n			**Alguém que acompanha ${personagensSecundarios[1]}**
+\n	Estou morrendo de sede, o que você vai pedir?
+\n		${personagensSecundarios[1]}
+\n	Ai, eu quero um Latão bem gelado!...
+\n		${personagensSecundarios[1]}
+\n	Ei moç${oap()}, me vê o latão mais gelado que você tiver!
+\n__el${eas(1)} diz sem perceber que sou eu
+\n		${personagemPrincipal.nome}
+\n	
 				`);
 				console.log(`
 \n		//Pergunta				
@@ -1870,6 +2156,7 @@ function personagem1(mes,dia){
 			pressEnter();
 		}
 	}
+
 	else if(mes===2){
 		if(dia===1){
 			personagensSecundariospts[1]++
@@ -1909,840 +2196,856 @@ function personagem1(mes,dia){
 			`);
 			pressEnter();
 		}
-		// else if (dia===2){
-			// personagensSecundariospts[1]++
-			// console.clear();
-			// console.log(`
-// \n		//texto introdução
-			// `);
-			// pressEnter();
-			// do{
-				// console.clear();
-				// console.log(`
-// \n		//Texto introdução
-				// `);
-				// console.log(`
-// \n		//Pergunta				
-				// `);
-				// pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
-				// if(pergunta != 's' && pergunta != 'n'){
-					// prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
-				// }
-			// }while(pergunta != 's' && pergunta != 'n')
-			// console.clear();
-			// if(pergunta==='s'){
-				// console.log();
-				// console.log(`
-// \n		//Texto positivo 1
-			// `);
-			// }else{
-				// console.log();
-				// console.log(`
-// \n		//texto negativo 1
-				// `);
-			// }
-			// pressEnter();
-			// console.log(`
-// \n	//texto final
-			// `);
-			// pressEnter();
-		// }
+
+		else if (dia===2){
+			personagensSecundariospts[1]++
+			console.clear();
+			console.log(`
+\n		//texto introdução
+			`);
+			pressEnter();
+			do{
+				console.clear();
+				console.log(`
+\n		//Texto introdução
+				`);
+				console.log(`
+\n		//Pergunta				
+				`);
+				pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
+				if(pergunta != 's' && pergunta != 'n'){
+					prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
+				}
+			}while(pergunta != 's' && pergunta != 'n')
+			console.clear();
+			if(pergunta==='s'){
+				console.log();
+				console.log(`
+\n		//Texto positivo 1
+			`);
+			}else{
+				console.log();
+				console.log(`
+\n		//texto negativo 1
+				`);
+			}
+			pressEnter();
+			console.log(`
+\n	//texto final
+			`);
+			pressEnter();
+		}
 	}
 };
 
-// function personagem2(mes,dia){
-	// if(mes===1){
-		// if(dia===1){
-			// personagensSecundariospts[2]++
-			// console.clear();
-			// console.log(`
-// \n		//texto introdução
-			// `);
-			// pressEnter();
-			// do{
-				// console.clear();
-				// console.log(`
-// \n		//Texto introdução
-				// `);
-				// console.log(`
-// \n		//Pergunta				
-				// `);
-				// pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
-				// if(pergunta != 's' && pergunta != 'n'){
-					// prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
-				// }
-			// }while(pergunta != 's' && pergunta != 'n')
-			// console.clear();
-			// if(pergunta==='s'){
-				// console.log();
-				// console.log(`
-// \n		//Texto positivo 1
-			// `);
-			// }else{
-				// console.log();
-				// console.log(`
-// \n		//texto negativo 1
-				// `);
-			// }
-			// pressEnter();
-			// console.log(`
-// \n	//texto final
-			// `);
-			// pressEnter();
-		// }
-		// else if(dia===2){
-			// personagensSecundariospts[2]++
-			// console.clear();
-			// console.log(`
-// \n		//texto introdução
-			// `);
-			// pressEnter();
-			// do{
-				// console.clear();
-				// console.log(`
-// \n		//Texto introdução
-				// `);
-				// console.log(`
-// \n		//Pergunta				
-				// `);
-				// pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
-				// if(pergunta != 's' && pergunta != 'n'){
-					// prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
-				// }
-			// }while(pergunta != 's' && pergunta != 'n')
-			// console.clear();
-			// if(pergunta==='s'){
-				// console.log();
-				// console.log(`
-// \n		//Texto positivo 1
-			// `);
-			// }else{
-				// console.log();
-				// console.log(`
-// \n		//texto negativo 1
-				// `);
-			// }
-			// pressEnter();
-			// console.log(`
-// \n	//texto final
-			// `);
-			// pressEnter();
-		// }
-	// }
-	// else if(mes===2){
-		// if(dia===1){
-			// personagensSecundariospts[2]++
-			// console.clear();
-			// console.log(`
-// \n		//texto introdução
-			// `);
-			// pressEnter();
-			// do{
-				// console.clear();
-				// console.log(`
-// \n		//Texto introdução
-				// `);
-				// console.log(`
-// \n		//Pergunta				
-				// `);
-				// pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
-				// if(pergunta != 's' && pergunta != 'n'){
-					// prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
-				// }
-			// }while(pergunta != 's' && pergunta != 'n')
-			// console.clear();
-			// if(pergunta==='s'){
-				// console.log();
-				// console.log(`
-// \n		//Texto positivo 1
-			// `);
-			// }else{
-				// console.log();
-				// console.log(`
-// \n		//texto negativo 1
-				// `);
-			// }
-			// pressEnter();
-			// console.log(`
-// \n	//texto final
-			// `);
-			// pressEnter();
-		// };
-		// else if (dia===2){
-			// personagensSecundariospts[2]++
-			// console.clear();
-			// console.log(`
-// \n		//texto introdução
-			// `);
-			// pressEnter();
-			// do{
-				// console.clear();
-				// console.log(`
-// \n		//Texto introdução
-				// `);
-				// console.log(`
-// \n		//Pergunta				
-				// `);
-				// pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
-				// if(pergunta != 's' && pergunta != 'n'){
-					// prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
-				// }
-			// }while(pergunta != 's' && pergunta != 'n')
-			// console.clear();
-			// if(pergunta==='s'){
-				// console.log();
-				// console.log(`
-// \n		//Texto positivo 1
-			// `);
-			// }else{
-				// console.log();
-				// console.log(`
-// \n		//texto negativo 1
-				// `);
-			// }
-			// pressEnter();
-			// console.log(`
-// \n	//texto final
-			// `);
-			// pressEnter();
-		// }
-	// }
-// };
+function personagem2(mes,dia){
+	if(mes===1){
+		if(dia===1){
+			personagensSecundariospts[2]++
+			console.clear();
+			console.log(`
+\n		//texto introdução
+			`);
+			pressEnter();
+			do{
+				console.clear();
+				console.log(`
+\n		//Texto introdução
+				`);
+				console.log(`
+\n		//Pergunta				
+				`);
+				pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
+				if(pergunta != 's' && pergunta != 'n'){
+					prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
+				}
+			}while(pergunta != 's' && pergunta != 'n')
+			console.clear();
+			if(pergunta==='s'){
+				console.log();
+				console.log(`
+\n		//Texto positivo 1
+			`);
+			}else{
+				console.log();
+				console.log(`
+\n		//texto negativo 1
+				`);
+			}
+			pressEnter();
+			console.log(`
+\n	//texto final
+			`);
+			pressEnter();
+		}
 
-// function personagem3(mes,dia){
-	// if(mes===1){
-		// if(dia===1){
-			// personagensSecundariospts[3]++
-			// console.clear();
-			// console.log(`
-// \n		//texto introdução
-			// `);
-			// pressEnter();
-			// do{
-				// console.clear();
-				// console.log(`
-// \n		//Texto introdução
-				// `);
-				// console.log(`
-// \n		//Pergunta				
-				// `);
-				// pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
-				// if(pergunta != 's' && pergunta != 'n'){
-					// prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
-				// }
-			// }while(pergunta != 's' && pergunta != 'n')
-			// console.clear();
-			// if(pergunta==='s'){
-				// console.log();
-				// console.log(`
-// \n		//Texto positivo 1
-			// `);
-			// }else{
-				// console.log();
-				// console.log(`
-// \n		//texto negativo 1
-				// `);
-			// }
-			// pressEnter();
-			// console.log(`
-// \n	//texto final
-			// `);
-			// pressEnter();
-		// }
-		// else if(dia===2){
-			// personagensSecundariospts[3]++
-			// console.clear();
-			// console.log(`
-// \n		//texto introdução
-			// `);
-			// pressEnter();
-			// do{
-				// console.clear();
-				// console.log(`
-// \n		//Texto introdução
-				// `);
-				// console.log(`
-// \n		//Pergunta				
-				// `);
-				// pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
-				// if(pergunta != 's' && pergunta != 'n'){
-					// prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
-				// }
-			// }while(pergunta != 's' && pergunta != 'n')
-			// console.clear();
-			// if(pergunta==='s'){
-				// console.log();
-				// console.log(`
-// \n		//Texto positivo 1
-			// `);
-			// }else{
-				// console.log();
-				// console.log(`
-// \n		//texto negativo 1
-				// `);
-			// }
-			// pressEnter();
-			// console.log(`
-// \n	//texto final
-			// `);
-			// pressEnter();
-		// }
-	// }
-	// else if(mes===2){
-		// if(dia===1){
-			// personagensSecundariospts[3]++
-			// console.clear();
-			// console.log(`
-// \n		//texto introdução
-			// `);
-			// pressEnter();
-			// do{
-				// console.clear();
-				// console.log(`
-// \n		//Texto introdução
-				// `);
-				// console.log(`
-// \n		//Pergunta				
-				// `);
-				// pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
-				// if(pergunta != 's' && pergunta != 'n'){
-					// prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
-				// }
-			// }while(pergunta != 's' && pergunta != 'n')
-			// console.clear();
-			// if(pergunta==='s'){
-				// console.log();
-				// console.log(`
-// \n		//Texto positivo 1
-			// `);
-			// }else{
-				// console.log();
-				// console.log(`
-// \n		//texto negativo 1
-				// `);
-			// }
-			// pressEnter();
-			// console.log(`
-// \n	//texto final
-			// `);
-			// pressEnter();
-		// };
-		// else if (dia===2){
-			// personagensSecundariospts[3]++
-			// console.clear();
-			// console.log(`
-// \n		//texto introdução
-			// `);
-			// pressEnter();
-			// do{
-				// console.clear();
-				// console.log(`
-// \n		//Texto introdução
-				// `);
-				// console.log(`
-// \n		//Pergunta				
-				// `);
-				// pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
-				// if(pergunta != 's' && pergunta != 'n'){
-					// prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
-				// }
-			// }while(pergunta != 's' && pergunta != 'n')
-			// console.clear();
-			// if(pergunta==='s'){
-				// console.log();
-				// console.log(`
-// \n		//Texto positivo 1
-			// `);
-			// }else{
-				// console.log();
-				// console.log(`
-// \n		//texto negativo 1
-				// `);
-			// }
-			// pressEnter();
-			// console.log(`
-// \n	//texto final
-			// `);
-			// pressEnter();
-		// }
-	// }
-// };
+		else if(dia===2){
+			personagensSecundariospts[2]++
+			console.clear();
+			console.log(`
+\n		//texto introdução
+			`);
+			pressEnter();
+			do{
+				console.clear();
+				console.log(`
+\n		//Texto introdução
+				`);
+				console.log(`
+\n		//Pergunta				
+				`);
+				pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
+				if(pergunta != 's' && pergunta != 'n'){
+					prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
+				}
+			}while(pergunta != 's' && pergunta != 'n')
+			console.clear();
+			if(pergunta==='s'){
+				console.log();
+				console.log(`
+\n		//Texto positivo 1
+			`);
+			}else{
+				console.log();
+				console.log(`
+\n		//texto negativo 1
+				`);
+			}
+			pressEnter();
+			console.log(`
+\n	//texto final
+			`);
+			pressEnter();
+		}
+	}
 
-// function personagem4(mes,dia){
-	// if(mes===1){
-		// if(dia===1){
-			// personagensSecundariospts[4]++
-			// console.clear();
-			// console.log(`
-// \n		//texto introdução
-			// `);
-			// pressEnter();
-			// do{
-				// console.clear();
-				// console.log(`
-// \n		//Texto introdução
-				// `);
-				// console.log(`
-// \n		//Pergunta				
-				// `);
-				// pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
-				// if(pergunta != 's' && pergunta != 'n'){
-					// prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
-				// }
-			// }while(pergunta != 's' && pergunta != 'n')
-			// console.clear();
-			// if(pergunta==='s'){
-				// console.log();
-				// console.log(`
-// \n		//Texto positivo 1
-			// `);
-			// }else{
-				// console.log();
-				// console.log(`
-// \n		//texto negativo 1
-				// `);
-			// }
-			// pressEnter();
-			// console.log(`
-// \n	//texto final
-			// `);
-			// pressEnter();
-		// }
-		// else if(dia===2){
-			// personagensSecundariospts[4]++
-			// console.clear();
-			// console.log(`
-// \n		//texto introdução
-			// `);
-			// pressEnter();
-			// do{
-				// console.clear();
-				// console.log(`
-// \n		//Texto introdução
-				// `);
-				// console.log(`
-// \n		//Pergunta				
-				// `);
-				// pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
-				// if(pergunta != 's' && pergunta != 'n'){
-					// prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
-				// }
-			// }while(pergunta != 's' && pergunta != 'n')
-			// console.clear();
-			// if(pergunta==='s'){
-				// console.log();
-				// console.log(`
-// \n		//Texto positivo 1
-			// `);
-			// }else{
-				// console.log();
-				// console.log(`
-// \n		//texto negativo 1
-				// `);
-			// }
-			// pressEnter();
-			// console.log(`
-// \n	//texto final
-			// `);
-			// pressEnter();
-		// }
-	// }
-	// else if(mes===2){
-		// if(dia===1){
-			// personagensSecundariospts[4]++
-			// console.clear();
-			// console.log(`
-// \n		//texto introdução
-			// `);
-			// pressEnter();
-			// do{
-				// console.clear();
-				// console.log(`
-// \n		//Texto introdução
-				// `);
-				// console.log(`
-// \n		//Pergunta				
-				// `);
-				// pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
-				// if(pergunta != 's' && pergunta != 'n'){
-					// prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
-				// }
-			// }while(pergunta != 's' && pergunta != 'n')
-			// console.clear();
-			// if(pergunta==='s'){
-				// console.log();
-				// console.log(`
-// \n		//Texto positivo 1
-			// `);
-			// }else{
-				// console.log();
-				// console.log(`
-// \n		//texto negativo 1
-				// `);
-			// }
-			// pressEnter();
-			// console.log(`
-// \n	//texto final
-			// `);
-			// pressEnter();
-		// };
-		// else if (dia===2){
-			// personagensSecundariospts[4]++
-			// console.clear();
-			// console.log(`
-// \n		//texto introdução
-			// `);
-			// pressEnter();
-			// do{
-				// console.clear();
-				// console.log(`
-// \n		//Texto introdução
-				// `);
-				// console.log(`
-// \n		//Pergunta				
-				// `);
-				// pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
-				// if(pergunta != 's' && pergunta != 'n'){
-					// prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
-				// }
-			// }while(pergunta != 's' && pergunta != 'n')
-			// console.clear();
-			// if(pergunta==='s'){
-				// console.log();
-				// console.log(`
-// \n		//Texto positivo 1
-			// `);
-			// }else{
-				// console.log();
-				// console.log(`
-// \n		//texto negativo 1
-				// `);
-			// }
-			// pressEnter();
-			// console.log(`
-// \n	//texto final
-			// `);
-			// pressEnter();
-		// }
-	// }
-// };
+	else if(mes===2){
+		if(dia===1){
+			personagensSecundariospts[2]++
+			console.clear();
+			console.log(`
+\n		//texto introdução
+			`);
+			pressEnter();
+			do{
+				console.clear();
+				console.log(`
+\n		//Texto introdução
+				`);
+				console.log(`
+\n		//Pergunta				
+				`);
+				pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
+				if(pergunta != 's' && pergunta != 'n'){
+					prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
+				}
+			}while(pergunta != 's' && pergunta != 'n')
+			console.clear();
+			if(pergunta==='s'){
+				console.log();
+				console.log(`
+\n		//Texto positivo 1
+			`);
+			}else{
+				console.log();
+				console.log(`
+\n		//texto negativo 1
+				`);
+			}
+			pressEnter();
+			console.log(`
+\n	//texto final
+			`);
+			pressEnter();
+		}
 
-// function personagem5(mes,dia){
-	// if(mes===1){
-		// if(dia===1){
-			// personagensSecundariospts[5]++
-			// console.clear();
-			// console.log(`
-// \n		//texto introdução
-			// `);
-			// pressEnter();
-			// do{
-				// console.clear();
-				// console.log(`
-// \n		//Texto introdução
-				// `);
-				// console.log(`
-// \n		//Pergunta				
-				// `);
-				// pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
-				// if(pergunta != 's' && pergunta != 'n'){
-					// prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
-				// }
-			// }while(pergunta != 's' && pergunta != 'n')
-			// console.clear();
-			// if(pergunta==='s'){
-				// console.log();
-				// console.log(`
-// \n		//Texto positivo 1
-			// `);
-			// }else{
-				// console.log();
-				// console.log(`
-// \n		//texto negativo 1
-				// `);
-			// }
-			// pressEnter();
-			// console.log(`
-// \n	//texto final
-			// `);
-			// pressEnter();
-		// }
-		// else if(dia===2){
-			// personagensSecundariospts[5]++
-			// console.clear();
-			// console.log(`
-// \n		//texto introdução
-			// `);
-			// pressEnter();
-			// do{
-				// console.clear();
-				// console.log(`
-// \n		//Texto introdução
-				// `);
-				// console.log(`
-// \n		//Pergunta				
-				// `);
-				// pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
-				// if(pergunta != 's' && pergunta != 'n'){
-					// prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
-				// }
-			// }while(pergunta != 's' && pergunta != 'n')
-			// console.clear();
-			// if(pergunta==='s'){
-				// console.log();
-				// console.log(`
-// \n		//Texto positivo 1
-			// `);
-			// }else{
-				// console.log();
-				// console.log(`
-// \n		//texto negativo 1
-				// `);
-			// }
-			// pressEnter();
-			// console.log(`
-// \n	//texto final
-			// `);
-			// pressEnter();
-		// }
-	// }
-	// else if(mes===2){
-		// if(dia===1){
-			// personagensSecundariospts[5]++
-			// console.clear();
-			// console.log(`
-// \n		//texto introdução
-			// `);
-			// pressEnter();
-			// do{
-				// console.clear();
-				// console.log(`
-// \n		//Texto introdução
-				// `);
-				// console.log(`
-// \n		//Pergunta				
-				// `);
-				// pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
-				// if(pergunta != 's' && pergunta != 'n'){
-					// prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
-				// }
-			// }while(pergunta != 's' && pergunta != 'n')
-			// console.clear();
-			// if(pergunta==='s'){
-				// console.log();
-				// console.log(`
-// \n		//Texto positivo 1
-			// `);
-			// }else{
-				// console.log();
-				// console.log(`
-// \n		//texto negativo 1
-				// `);
-			// }
-			// pressEnter();
-			// console.log(`
-// \n	//texto final
-			// `);
-			// pressEnter();
-		// };
-		// else if (dia===2){
-			// personagensSecundariospts[5]++
-			// console.clear();
-			// console.log(`
-// \n		//texto introdução
-			// `);
-			// pressEnter();
-			// do{
-				// console.clear();
-				// console.log(`
-// \n		//Texto introdução
-				// `);
-				// console.log(`
-// \n		//Pergunta				
-				// `);
-				// pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
-				// if(pergunta != 's' && pergunta != 'n'){
-					// prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
-				// }
-			// }while(pergunta != 's' && pergunta != 'n')
-			// console.clear();
-			// if(pergunta==='s'){
-				// console.log();
-				// console.log(`
-// \n		//Texto positivo 1
-			// `);
-			// }else{
-				// console.log();
-				// console.log(`
-// \n		//texto negativo 1
-				// `);
-			// }
-			// pressEnter();
-			// console.log(`
-// \n	//texto final
-			// `);
-			// pressEnter();
-		// }
-	// }
-// };
+		else if (dia===2){
+			personagensSecundariospts[2]++
+			console.clear();
+			console.log(`
+\n		//texto introdução
+			`);
+			pressEnter();
+			do{
+				console.clear();
+				console.log(`
+\n		//Texto introdução
+				`);
+				console.log(`
+\n		//Pergunta				
+				`);
+				pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
+				if(pergunta != 's' && pergunta != 'n'){
+					prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
+				}
+			}while(pergunta != 's' && pergunta != 'n')
+			console.clear();
+			if(pergunta==='s'){
+				console.log();
+				console.log(`
+\n		//Texto positivo 1
+			`);
+			}else{
+				console.log();
+				console.log(`
+\n		//texto negativo 1
+				`);
+			}
+			pressEnter();
+			console.log(`
+\n	//texto final
+			`);
+			pressEnter();
+		}
+	}
+};
 
-// function personagem6(mes,dia){
-	// if(mes===1){
-		// if(dia===1){
-			// personagensSecundariospts[6]++
-			// console.clear();
-			// console.log(`
-// \n		//texto introdução
-			// `);
-			// pressEnter();
-			// do{
-				// console.clear();
-				// console.log(`
-// \n		//Texto introdução
-				// `);
-				// console.log(`
-// \n		//Pergunta				
-				// `);
-				// pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
-				// if(pergunta != 's' && pergunta != 'n'){
-					// prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
-				// }
-			// }while(pergunta != 's' && pergunta != 'n')
-			// console.clear();
-			// if(pergunta==='s'){
-				// console.log();
-				// console.log(`
-// \n		//Texto positivo 1
-			// `);
-			// }else{
-				// console.log();
-				// console.log(`
-// \n		//texto negativo 1
-				// `);
-			// }
-			// pressEnter();
-			// console.log(`
-// \n	//texto final
-			// `);
-			// pressEnter();
-		// }
-		// else if(dia===2){
-			// personagensSecundariospts[6]++
-			// console.clear();
-			// console.log(`
-// \n		//texto introdução
-			// `);
-			// pressEnter();
-			// do{
-				// console.clear();
-				// console.log(`
-// \n		//Texto introdução
-				// `);
-				// console.log(`
-// \n		//Pergunta				
-				// `);
-				// pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
-				// if(pergunta != 's' && pergunta != 'n'){
-					// prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
-				// }
-			// }while(pergunta != 's' && pergunta != 'n')
-			// console.clear();
-			// if(pergunta==='s'){
-				// console.log();
-				// console.log(`
-// \n		//Texto positivo 1
-			// `);
-			// }else{
-				// console.log();
-				// console.log(`
-// \n		//texto negativo 1
-				// `);
-			// }
-			// pressEnter();
-			// console.log(`
-// \n	//texto final
-			// `);
-			// pressEnter();
-		// }
-	// }
-	// else if(mes===2){
-		// if(dia===1){
-			// personagensSecundariospts[6]++
-			// console.clear();
-			// console.log(`
-// \n		//texto introdução
-			// `);
-			// pressEnter();
-			// do{
-				// console.clear();
-				// console.log(`
-// \n		//Texto introdução
-				// `);
-				// console.log(`
-// \n		//Pergunta				
-				// `);
-				// pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
-				// if(pergunta != 's' && pergunta != 'n'){
-					// prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
-				// }
-			// }while(pergunta != 's' && pergunta != 'n')
-			// console.clear();
-			// if(pergunta==='s'){
-				// console.log();
-				// console.log(`
-// \n		//Texto positivo 1
-			// `);
-			// }else{
-				// console.log();
-				// console.log(`
-// \n		//texto negativo 1
-				// `);
-			// }
-			// pressEnter();
-			// console.log(`
-// \n	//texto final
-			// `);
-			// pressEnter();
-		// };
-		// else if (dia===2){
-			// personagensSecundariospts[6]++
-			// console.clear();
-			// console.log(`
-// \n		//texto introdução
-			// `);
-			// pressEnter();
-			// do{
-				// console.clear();
-				// console.log(`
-// \n		//Texto introdução
-				// `);
-				// console.log(`
-// \n		//Pergunta				
-				// `);
-				// pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
-				// if(pergunta != 's' && pergunta != 'n'){
-					// prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
-				// }
-			// }while(pergunta != 's' && pergunta != 'n')
-			// console.clear();
-			// if(pergunta==='s'){
-				// console.log();
-				// console.log(`
-// \n		//Texto positivo 1
-			// `);
-			// }else{
-				// console.log();
-				// console.log(`
-// \n		//texto negativo 1
-				// `);
-			// }
-			// pressEnter();
-			// console.log(`
-// \n	//texto final
-			// `);
-			// pressEnter();
-		// }
-	// }
-// };
+function personagem3(mes,dia){
+	if(mes===1){
+		if(dia===1){
+			personagensSecundariospts[3]++
+			console.clear();
+			console.log(`
+\n		//texto introdução
+			`);
+			pressEnter();
+			do{
+				console.clear();
+				console.log(`
+\n		//Texto introdução
+				`);
+				console.log(`
+\n		//Pergunta				
+				`);
+				pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
+				if(pergunta != 's' && pergunta != 'n'){
+					prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
+				}
+			}while(pergunta != 's' && pergunta != 'n')
+			console.clear();
+			if(pergunta==='s'){
+				console.log();
+				console.log(`
+\n		//Texto positivo 1
+			`);
+			}else{
+				console.log();
+				console.log(`
+\n		//texto negativo 1
+				`);
+			}
+			pressEnter();
+			console.log(`
+\n	//texto final
+			`);
+			pressEnter();
+		}
+
+		else if(dia===2){
+			personagensSecundariospts[3]++
+			console.clear();
+			console.log(`
+\n		//texto introdução
+			`);
+			pressEnter();
+			do{
+				console.clear();
+				console.log(`
+\n		//Texto introdução
+				`);
+				console.log(`
+\n		//Pergunta				
+				`);
+				pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
+				if(pergunta != 's' && pergunta != 'n'){
+					prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
+				}
+			}while(pergunta != 's' && pergunta != 'n')
+			console.clear();
+			if(pergunta==='s'){
+				console.log();
+				console.log(`
+\n		//Texto positivo 1
+			`);
+			}else{
+				console.log();
+				console.log(`
+\n		//texto negativo 1
+				`);
+			}
+			pressEnter();
+			console.log(`
+\n	//texto final
+			`);
+			pressEnter();
+		}
+	}
+
+	else if(mes===2){
+		if(dia===1){
+			personagensSecundariospts[3]++
+			console.clear();
+			console.log(`
+\n		//texto introdução
+			`);
+			pressEnter();
+			do{
+				console.clear();
+				console.log(`
+\n		//Texto introdução
+				`);
+				console.log(`
+\n		//Pergunta				
+				`);
+				pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
+				if(pergunta != 's' && pergunta != 'n'){
+					prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
+				}
+			}while(pergunta != 's' && pergunta != 'n')
+			console.clear();
+			if(pergunta==='s'){
+				console.log();
+				console.log(`
+\n		//Texto positivo 1
+			`);
+			}else{
+				console.log();
+				console.log(`
+\n		//texto negativo 1
+				`);
+			}
+			pressEnter();
+			console.log(`
+\n	//texto final
+			`);
+			pressEnter();
+		}
+
+		else if (dia===2){
+			personagensSecundariospts[3]++
+			console.clear();
+			console.log(`
+\n		//texto introdução
+			`);
+			pressEnter();
+			do{
+				console.clear();
+				console.log(`
+\n		//Texto introdução
+				`);
+				console.log(`
+\n		//Pergunta				
+				`);
+				pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
+				if(pergunta != 's' && pergunta != 'n'){
+					prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
+				}
+			}while(pergunta != 's' && pergunta != 'n')
+			console.clear();
+			if(pergunta==='s'){
+				console.log();
+				console.log(`
+\n		//Texto positivo 1
+			`);
+			}else{
+				console.log();
+				console.log(`
+\n		//texto negativo 1
+				`);
+			}
+			pressEnter();
+			console.log(`
+\n	//texto final
+			`);
+			pressEnter();
+		}
+	}
+};
+
+function personagem4(mes,dia){
+	if(mes===1){
+		if(dia===1){
+			personagensSecundariospts[4]++
+			console.clear();
+			console.log(`
+\n		//texto introdução
+			`);
+			pressEnter();
+			do{
+				console.clear();
+				console.log(`
+\n		//Texto introdução
+				`);
+				console.log(`
+\n		//Pergunta				
+				`);
+				pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
+				if(pergunta != 's' && pergunta != 'n'){
+					prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
+				}
+			}while(pergunta != 's' && pergunta != 'n')
+			console.clear();
+			if(pergunta==='s'){
+				console.log();
+				console.log(`
+\n		//Texto positivo 1
+			`);
+			}else{
+				console.log();
+				console.log(`
+\n		//texto negativo 1
+				`);
+			}
+			pressEnter();
+			console.log(`
+\n	//texto final
+			`);
+			pressEnter();
+		}
+
+		else if(dia===2){
+			personagensSecundariospts[4]++
+			console.clear();
+			console.log(`
+\n		//texto introdução
+			`);
+			pressEnter();
+			do{
+				console.clear();
+				console.log(`
+\n		//Texto introdução
+				`);
+				console.log(`
+\n		//Pergunta				
+				`);
+				pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
+				if(pergunta != 's' && pergunta != 'n'){
+					prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
+				}
+			}while(pergunta != 's' && pergunta != 'n')
+			console.clear();
+			if(pergunta==='s'){
+				console.log();
+				console.log(`
+\n		//Texto positivo 1
+			`);
+			}else{
+				console.log();
+				console.log(`
+\n		//texto negativo 1
+				`);
+			}
+			pressEnter();
+			console.log(`
+\n	//texto final
+			`);
+			pressEnter();
+		}
+	}
+
+	else if(mes===2){
+		if(dia===1){
+			personagensSecundariospts[4]++
+			console.clear();
+			console.log(`
+\n		//texto introdução
+			`);
+			pressEnter();
+			do{
+				console.clear();
+				console.log(`
+\n		//Texto introdução
+				`);
+				console.log(`
+\n		//Pergunta				
+				`);
+				pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
+				if(pergunta != 's' && pergunta != 'n'){
+					prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
+				}
+			}while(pergunta != 's' && pergunta != 'n')
+			console.clear();
+			if(pergunta==='s'){
+				console.log();
+				console.log(`
+\n		//Texto positivo 1
+			`);
+			}else{
+				console.log();
+				console.log(`
+\n		//texto negativo 1
+				`);
+			}
+			pressEnter();
+			console.log(`
+\n	//texto final
+			`);
+			pressEnter();
+		}
+
+		else if (dia===2){
+			personagensSecundariospts[4]++
+			console.clear();
+			console.log(`
+\n		//texto introdução
+			`);
+			pressEnter();
+			do{
+				console.clear();
+				console.log(`
+\n		//Texto introdução
+				`);
+				console.log(`
+\n		//Pergunta				
+				`);
+				pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
+				if(pergunta != 's' && pergunta != 'n'){
+					prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
+				}
+			}while(pergunta != 's' && pergunta != 'n')
+			console.clear();
+			if(pergunta==='s'){
+				console.log();
+				console.log(`
+\n		//Texto positivo 1
+			`);
+			}else{
+				console.log();
+				console.log(`
+\n		//texto negativo 1
+				`);
+			}
+			pressEnter();
+			console.log(`
+\n	//texto final
+			`);
+			pressEnter();
+		}
+	}
+};
+
+function personagem5(mes,dia){
+	if(mes===1){
+		if(dia===1){
+			personagensSecundariospts[5]++
+			console.clear();
+			console.log(`
+\n		//texto introdução
+			`);
+			pressEnter();
+			do{
+				console.clear();
+				console.log(`
+\n		//Texto introdução
+				`);
+				console.log(`
+\n		//Pergunta				
+				`);
+				pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
+				if(pergunta != 's' && pergunta != 'n'){
+					prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
+				}
+			}while(pergunta != 's' && pergunta != 'n')
+			console.clear();
+			if(pergunta==='s'){
+				console.log();
+				console.log(`
+\n		//Texto positivo 1
+			`);
+			}else{
+				console.log();
+				console.log(`
+\n		//texto negativo 1
+				`);
+			}
+			pressEnter();
+			console.log(`
+\n	//texto final
+			`);
+			pressEnter();
+		}
+
+		else if(dia===2){
+			personagensSecundariospts[5]++
+			console.clear();
+			console.log(`
+\n		//texto introdução
+			`);
+			pressEnter();
+			do{
+				console.clear();
+				console.log(`
+\n		//Texto introdução
+				`);
+				console.log(`
+\n		//Pergunta				
+				`);
+				pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
+				if(pergunta != 's' && pergunta != 'n'){
+					prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
+				}
+			}while(pergunta != 's' && pergunta != 'n')
+			console.clear();
+			if(pergunta==='s'){
+				console.log();
+				console.log(`
+\n		//Texto positivo 1
+			`);
+			}else{
+				console.log();
+				console.log(`
+\n		//texto negativo 1
+				`);
+			}
+			pressEnter();
+			console.log(`
+\n	//texto final
+			`);
+			pressEnter();
+		}
+	}
+
+	else if(mes===2){
+		if(dia===1){
+			personagensSecundariospts[5]++
+			console.clear();
+			console.log(`
+\n		//texto introdução
+			`);
+			pressEnter();
+			do{
+				console.clear();
+				console.log(`
+\n		//Texto introdução
+				`);
+				console.log(`
+\n		//Pergunta				
+				`);
+				pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
+				if(pergunta != 's' && pergunta != 'n'){
+					prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
+				}
+			}while(pergunta != 's' && pergunta != 'n')
+			console.clear();
+			if(pergunta==='s'){
+				console.log();
+				console.log(`
+\n		//Texto positivo 1
+			`);
+			}else{
+				console.log();
+				console.log(`
+\n		//texto negativo 1
+				`);
+			}
+			pressEnter();
+			console.log(`
+\n	//texto final
+			`);
+			pressEnter();
+		}
+
+		else if (dia===2){
+			personagensSecundariospts[5]++
+			console.clear();
+			console.log(`
+\n		//texto introdução
+			`);
+			pressEnter();
+			do{
+				console.clear();
+				console.log(`
+\n		//Texto introdução
+				`);
+				console.log(`
+\n		//Pergunta				
+				`);
+				pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
+				if(pergunta != 's' && pergunta != 'n'){
+					prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
+				}
+			}while(pergunta != 's' && pergunta != 'n')
+			console.clear();
+			if(pergunta==='s'){
+				console.log();
+				console.log(`
+\n		//Texto positivo 1
+			`);
+			}else{
+				console.log();
+				console.log(`
+\n		//texto negativo 1
+				`);
+			}
+			pressEnter();
+			console.log(`
+\n	//texto final
+			`);
+			pressEnter();
+		}
+	}
+};
+
+function personagem6(mes,dia){
+	if(mes===1){
+		if(dia===1){
+			personagensSecundariospts[6]++
+			console.clear();
+			console.log(`
+\n		//texto introdução
+			`);
+			pressEnter();
+			do{
+				console.clear();
+				console.log(`
+\n		//Texto introdução
+				`);
+				console.log(`
+\n		//Pergunta				
+				`);
+				pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
+				if(pergunta != 's' && pergunta != 'n'){
+					prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
+				}
+			}while(pergunta != 's' && pergunta != 'n')
+			console.clear();
+			if(pergunta==='s'){
+				console.log();
+				console.log(`
+\n		//Texto positivo 1
+			`);
+			}else{
+				console.log();
+				console.log(`
+\n		//texto negativo 1
+				`);
+			}
+			pressEnter();
+			console.log(`
+\n	//texto final
+			`);
+			pressEnter();
+		}
+
+		else if(dia===2){
+			personagensSecundariospts[6]++
+			console.clear();
+			console.log(`
+\n		//texto introdução
+			`);
+			pressEnter();
+			do{
+				console.clear();
+				console.log(`
+\n		//Texto introdução
+				`);
+				console.log(`
+\n		//Pergunta				
+				`);
+				pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
+				if(pergunta != 's' && pergunta != 'n'){
+					prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
+				}
+			}while(pergunta != 's' && pergunta != 'n')
+			console.clear();
+			if(pergunta==='s'){
+				console.log();
+				console.log(`
+\n		//Texto positivo 1
+			`);
+			}else{
+				console.log();
+				console.log(`
+\n		//texto negativo 1
+				`);
+			}
+			pressEnter();
+			console.log(`
+\n	//texto final
+			`);
+			pressEnter();
+		}
+	}
+
+	else if(mes===2){
+		if(dia===1){
+			personagensSecundariospts[6]++
+			console.clear();
+			console.log(`
+\n		//texto introdução
+			`);
+			pressEnter();
+			do{
+				console.clear();
+				console.log(`
+\n		//Texto introdução
+				`);
+				console.log(`
+\n		//Pergunta				
+				`);
+				pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
+				if(pergunta != 's' && pergunta != 'n'){
+					prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
+				}
+			}while(pergunta != 's' && pergunta != 'n')
+			console.clear();
+			if(pergunta==='s'){
+				console.log();
+				console.log(`
+\n		//Texto positivo 1
+			`);
+			}else{
+				console.log();
+				console.log(`
+\n		//texto negativo 1
+				`);
+			}
+			pressEnter();
+			console.log(`
+\n	//texto final
+			`);
+			pressEnter();
+		}
+
+		else if (dia===2){
+			personagensSecundariospts[6]++
+			console.clear();
+			console.log(`
+\n		//texto introdução
+			`);
+			pressEnter();
+			do{
+				console.clear();
+				console.log(`
+\n		//Texto introdução
+				`);
+				console.log(`
+\n		//Pergunta				
+				`);
+				pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
+				if(pergunta != 's' && pergunta != 'n'){
+					prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
+				}
+			}while(pergunta != 's' && pergunta != 'n')
+			console.clear();
+			if(pergunta==='s'){
+				console.log();
+				console.log(`
+\n		//Texto positivo 1
+			`);
+			}else{
+				console.log();
+				console.log(`
+\n		//texto negativo 1
+				`);
+			}
+			pressEnter();
+			console.log(`
+\n	//texto final
+			`);
+			pressEnter();
+		}
+	}
+};
 
 // Cenas dos Personagens - end
