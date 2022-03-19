@@ -1,9 +1,13 @@
 //Modulo
 	const prompt = require('prompt-sync')();
 	const colors = require('colors');
+	const fs = require('fs');
 
 //Variaveis importantes
+	let ng = 's';
+	let init = [];
 	let personagemPrincipal = {};
+	let time = {};
 	let dinheiro = 0;
 	let disposicao = 100;
 
@@ -78,6 +82,8 @@
 
 //Inicio da História
 	function hist1() {
+	//Definir time
+		time = {hoje: 17, m:  0, s:  0, d:  0};
 	//Seleção de sexo do personagem
 		while (personagemPrincipal.identidadeGenero != 0 && personagemPrincipal.identidadeGenero != 1) {
 			console.log();
@@ -172,12 +178,12 @@
 			nome: personagemPrincipal.nome,
 			identidadeGenero: ask_ig.toLowerCase(),
 			orientacaoSexual: ask_os.toLowerCase(),
-			beleza: 180,
-			conhecimento: 180,
-			popularidade: 180,
-			artes: 180,
-			atributosFisicos: 180,
-			sorte: 180,
+			beleza: 18,
+			conhecimento: 18,
+			popularidade: 18,
+			artes: 18,
+			atributosFisicos: 18,
+			sorte: 18,
 		};
 		let inteligente = {
 			nome: personagemPrincipal.nome,
@@ -267,17 +273,17 @@
 	\n Caso eu vá fazer as mesmas coisas de ontem, basta dar um enter\n
 		`)
 		pressEnter();
-		return 	personagemPrincipal;
+		return 	[personagemPrincipal,time,personagensSecundarios];
 
 	}
 	function tempo() {
-		let hoje = 17;
+		let hoje = time.hoje;
 		let m31 = 1;
-		looptime: for (let m = 0; m < ma.length; m++) {
+		looptime: for (let m = time.m; m < ma.length; m++) {
 			m31++;
-			loopmes: for (let s = 0; s < 5; s++) {
+			loopmes: for (let s = time.s; s < 5; s++) {
 				console.log();
-				for (let d = 0; d < ds.length; d++) {
+				for (let d = time.d; d < ds.length; d++) {
 					let data = ` Dia ${hoje} de ${ma[m]} de 2021 - ${ds[d]}`.blue;
 						hoje++;
 						//	Aqui vao entrar as atividades diárias
@@ -1140,8 +1146,50 @@ function scoreTotal(data){
 //Ações diárias - end
 
 //Sequencia de execução
-	personagemPrincipal = hist1();	
-	// tempo();
+
+	do{
+		ng = prompt (`Deseja carregar um novo jogo? [s] ou [n]`).toLowerCase();
+	}while(ng!='s'&&ng!='n');
+	
+	init = jogo();
+
+	function jogo() { 
+		if(ng==='n'){	
+			return hist1();
+		} else {
+			// time = {
+				// hoje: 13,
+				// m: 1,
+				// s: 2,
+				// d: 6,
+			// };
+			// personagemPrincipal = {
+				// nome: 'Alexandre',
+				// identidadeGenero: 'r',
+				// orientacaoSexual: 'b',
+				// beleza: 180,
+				// conhecimento: 180,
+				// popularidade: 180,
+				// artes: 180,
+				// atributosFisicos: 180,
+				// sorte: 180,
+			// };
+			// personagensSecundarios = ['Nivea', 'Sophia', 'Otavio', 'Alice', 'Ludmila', 'Alexandre', 'Otto'];
+			// personagensSecundariospts = [3,3,3,3,3,3,3]
+							/*carregar JSON*/
+			// console.log(`\nPersonagem Carregado: ${personagemPrincipal.nome}\n\n Affairs:\n ${personagensSecundarios}`);
+			// return [personagemPrincipal,time,personagensSecundarios,personagensSecundariospts]
+		} 
+	}
+
+		
+	personagemPrincipal = init[0];
+	time = init[1]
+	personagensSecundarios = init[2]
+	personagensSecundariospts = init[3];
+
+	tempo();
+	
 	// histF();
 //Sequencia de execução
 
