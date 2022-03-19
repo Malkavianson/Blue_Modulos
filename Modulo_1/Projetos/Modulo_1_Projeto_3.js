@@ -1178,7 +1178,9 @@ function scoreTotal(data){
 			// personagensSecundariospts = [3,3,3,3,3,3,3]
 							/*carregar JSON*/
 			// console.log(`\nPersonagem Carregado: ${personagemPrincipal.nome}\n\n Affairs:\n ${personagensSecundarios}`);
-			// return [personagemPrincipal,time,personagensSecundarios,personagensSecundariospts]
+			// pressEnter();
+			// return [personagemPrincipal,time,personagensSecundarios,personagensSecundariospts]		
+			console.log(`Em Consrução!`)
 		} 
 	}
 
