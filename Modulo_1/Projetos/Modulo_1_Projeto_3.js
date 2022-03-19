@@ -130,7 +130,7 @@
 		let h100001 = `As férias de julho acabaram e eu voltei do sítio dos seus avós\n Onde eles fizeram uma grande festa para meu aniversário!`;
 		let h100002 = `Meus pais me ajudaram a alugar um Kitnet próximo ao centro da cidade\n Para assim eu gastar menos com condução\nE também me dar minha liberdade...\nAcabo de completar 18 anos, e estou terminando o Ensino médio.`;
 		let h100003 = `Tenho tanta coisa para fazer nessa kitnet\nE amanhã voltam as aulas...\nVou começar a arruma as coisas para a escola... \n Contra minha vontade, como sempre...\n\nMas agora tenho "responsabilidades de adulto" kkkk`;
-		let h100004 = `Já que você jamais foi ${oap()} primeir${oap()} da turma...\n mas também nunca fiquei para trás!`;
+		let h100004 = `Já que jamais fui ${oap()} primeir${oap()} da turma...\n mas também nunca fiquei para trás!`;
 		let h100005 = `Este semestre decidí fazer diferente\nvou encontrar uma forma de fazer estes últimos meses inesquecíveis\nAproveitar o máximo que puder!!!`;
 
 		//História para js
@@ -271,11 +271,12 @@
 		console.log(`
 	\nTodos os dias tenho que decidir o que vou fazer...
 	\n Caso eu vá fazer as mesmas coisas de ontem, basta dar um enter\n
+	\n  e todas as noites eu tenho a opção de salvar meu progresso! Basta escrever " save " no seletor de atividades da noite.
 		`)
 		pressEnter();
-		return 	[personagemPrincipal,time,personagensSecundarios];
-
+		return [personagemPrincipal,time,personagensSecundarios,personagensSecundariospts,dinheiro,disposicao];
 	}
+
 	function tempo() {
 		let hoje = time.hoje;
 		let m31 = 1;
@@ -287,7 +288,7 @@
 					let data = ` Dia ${hoje} de ${ma[m]} de 2021 - ${ds[d]}`.blue;
 						hoje++;
 						//	Aqui vao entrar as atividades diárias
-						diario(data,hoje,m,d);
+						diario(data,hoje,m,s,d);
 					//
 					if (m === 2 && hoje === 18) {
 						break looptime;
@@ -723,7 +724,7 @@ E também...\n
 			this.Nivel = vlr;
 		}
 
-	function diario(data,hoje,m,d) {
+	function diario(data,hoje,m,s,d) {
 		console.clear();
 //Alvorada
 		if(hoje===15&&minasCap!=0){
@@ -746,7 +747,7 @@ E também...\n
 		}
 // Dia
 		if (disposicao > 5) {
-			afazeresDia(data,hoje,m,d);
+			afazeresDia(data,hoje,m,s,d);
 		} else {
 			exausto();
 		}
@@ -857,7 +858,7 @@ function scoreTotal(data){
 
 
 //Ações diárias
-	function afazeresDia(data,hoje,m,d){
+	function afazeresDia(data,hoje,m,s,d){
 		function atvd(){
 			console.log(`Ações diárias:`);
 			console.log();
@@ -877,6 +878,7 @@ function scoreTotal(data){
 				console.clear();
 				scoreTotal(data);
 				atvd();
+				console.log(`Escreva sua atividade ou pressione ENTER para repetir as atitudes de ontem`);
 				manha = prompt(`De manhã eu vou `);
 				if(manha != '' && manha != 'v' && manha != 'd' && manha != 'e' && manha != 's' && manha != 'a' && manha != 'f' && manha != 't'){
 					console.log();
@@ -896,6 +898,7 @@ function scoreTotal(data){
 			console.clear();
 			scoreTotal(data);
 			atvd();
+			console.log(`Escreva sua atividade ou pressione ENTER para repetir as atitudes de ontem`);
 			tarde = prompt(`De tarde eu vou `);
 			if(tarde != '' && tarde != 'v' && tarde != 'd' && tarde != 'e' && tarde != 's' && tarde != 'a' && tarde != 'f' && tarde != 't'){
 				console.log();
@@ -911,10 +914,14 @@ function scoreTotal(data){
 			console.clear();
 			scoreTotal(data);
 			atvd();
+			console.log(`(Para salvar o jogo, escreva [save])`);
 			noite = prompt(`De noite eu vou `);
-			if(noite != '' && noite != 'v' && noite != 'd' && noite != 'e' && noite != 's' && noite != 'a' && noite != 'f' && noite != 't'){
+			if (noite === 'save'){
+					saveGame(hoje,m,s,d);
+				}
+				else if(noite != '' && noite != 'v' && noite != 'd' && noite != 'e' && noite != 's' && noite != 'a' && noite != 'f' && noite != 't'){
 				console.log();
-				console.log(`Digite somente a letra dentro dos colchetes\nOu pressione ENTER para repetir a atividade de ontem`);
+				console.log(`Digite somente a letra dentro dos colchetes\nEscreva [save] para salvar o jogo\nOu pressione ENTER para repetir a atividade de ontem`);
 				pressEnter();
 			}
 		}while(noite != '' && noite != 'v' && noite != 'd' && noite != 'e' && noite != 's' && noite != 'a' && noite != 'f' && noite != 't');
@@ -925,6 +932,42 @@ function scoreTotal(data){
 		
 		seletor(data,manha,tarde,noite,hoje,m,d);
 	}
+
+function saveGame(hoje,m,s,d){
+	//Variaveis à serem salvas:
+		// hoje 						'let'
+		// m 							'let'
+		// s 							'let'
+		// d 							'let'
+		// personagemPrincipal			'obj'
+		// dinheiro						'let'
+		// disposicao					'let'
+		// personagensSecundarios		'arr'
+		// personagensSecundariospts	'arr'
+	console.clear();
+	console.log(`	Salvando dados de ${personagemPrincipal.nome}... `);
+	const save = {
+					pp:  personagemPrincipal,
+					dn:  dinheiro,
+					dp:  disposicao,
+					ps:  personagensSecundarios,
+					psp: personagensSecundariospts,
+					hj:  hoje,
+					ms:  m,
+					sm:  s,
+					ds:  d,
+				};
+	const saveJSON = JSON.stringify(save);
+	fs.writeFileSync('./saveGame.json', saveJSON, erro => {
+		if (erro) {
+			console.log('Erro ao salvar:', erro);
+		} else {
+			console.log('	Jogo salvo com sucesso!');
+		};
+	});
+	console.log(`	dados de ${personagemPrincipal.nome} salvos!\n  prossiga para selecionar sua atividade noturna!`)
+	pressEnter();
+};
 
 	function irParaAEscola() {
 		console.log(`Você foi para a escola!`)
@@ -1146,53 +1189,65 @@ function scoreTotal(data){
 //Ações diárias - end
 
 //Sequencia de execução
-
+	console.clear();
+	console.log(`\n\n		A d o l e D a t e s`.rainbow.bold);
+	console.log(`\n	O Florescer do coração`.brightMagenta.underline);
+	pressEnter();
 	do{
-		ng = prompt (`Deseja carregar um novo jogo? [s] ou [n]`).toLowerCase();
+		ng = prompt (`Deseja iniciar um novo jogo? [s] ou [n]`).toLowerCase();
 	}while(ng!='s'&&ng!='n');
 	
 	init = jogo();
 
 	function jogo() { 
-		if(ng==='n'){	
+		if(ng==='s'){	
 			return hist1();
 		} else {
-			// time = {
-				// hoje: 13,
-				// m: 1,
-				// s: 2,
-				// d: 6,
-			// };
-			// personagemPrincipal = {
-				// nome: 'Alexandre',
-				// identidadeGenero: 'r',
-				// orientacaoSexual: 'b',
-				// beleza: 180,
-				// conhecimento: 180,
-				// popularidade: 180,
-				// artes: 180,
-				// atributosFisicos: 180,
-				// sorte: 180,
-			// };
-			// personagensSecundarios = ['Nivea', 'Sophia', 'Otavio', 'Alice', 'Ludmila', 'Alexandre', 'Otto'];
-			// personagensSecundariospts = [3,3,3,3,3,3,3]
-							/*carregar JSON*/
-			// console.log(`\nPersonagem Carregado: ${personagemPrincipal.nome}\n\n Affairs:\n ${personagensSecundarios}`);
-			// pressEnter();
-			// return [personagemPrincipal,time,personagensSecundarios,personagensSecundariospts]		
-			console.log(`Em Consrução!`)
+			console.log(`Carregando jogo... `);
+			
+			const loaded = fs.readFileSync("./saveGame.json");
+			const load = JSON.parse(loaded);
+			time = {
+				hoje: load.hj,
+				m: load.ms,
+				s: load.sm,
+				d: load.ds,
+			};
+			personagemPrincipal = {
+				nome: load.pp.nome,
+				identidadeGenero: load.pp.identidadeGenero,
+				orientacaoSexual: load.pp.orientacaoSexual,
+				beleza: load.pp.beleza,
+				conhecimento: load.pp.conhecimento,
+				popularidade: load.pp.popularidade,
+				artes: load.pp.artes,
+				atributosFisicos: load.pp.atributosFisicos,
+				sorte: load.pp.sorte,
+			};
+			disposicao = load.dp;
+			dinheiro = load.dn;
+			personagensSecundarios = load.ps;
+			personagensSecundariospts = load.psp;
+							// /*carregar JSON*/
+			pressEnter();
+			console.log(`\nPersonagem Carregado: ${personagemPrincipal.nome}\n\n Affairs:\n ${personagensSecundarios}`);
+			pressEnter();
+			return [personagemPrincipal,time,personagensSecundarios,personagensSecundariospts,dinheiro,disposicao];
 		} 
 	}
 
 		
 	personagemPrincipal = init[0];
-	time = init[1]
-	personagensSecundarios = init[2]
+	time = init[1];
+	personagensSecundarios = init[2];
 	personagensSecundariospts = init[3];
-
+	dinheiro = init[4];
+	disposicao = init[5];
+	
 	tempo();
 	
-	// histF();
+	histF();
+
 //Sequencia de execução
 
 //Teste das historias
