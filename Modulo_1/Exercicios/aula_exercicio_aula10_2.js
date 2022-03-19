@@ -1,8 +1,12 @@
-// Peça ao usuário para digitar vários nomes (a quantidade deve ser escolhida por ele). 
-// Exiba na tela todos os nomes digitados, porém de maneira invertida 
-	// (do último para o primeiro) 
-// apresente também o maior e o menor nome 
-	// (caso haja empate, deve mostrar todos).
+// Faça um "jogo da velha" criando uma matriz em duas dimensões 
+// (Você deve criar um array com 3 arrays de 3 elementos cada dentro).
+ // O programa deve pedir as coordenadas 
+ // (linha e coluna) 
+ // alternadamente para 2 jogares 
+ // e marcar X ou O em cada caso. 
+ // Caso um jogador vença, 
+ // ele deve interromper o programa 
+ // e anunciar o vencedor.
 
 const prompt = require('prompt-sync')();
 
