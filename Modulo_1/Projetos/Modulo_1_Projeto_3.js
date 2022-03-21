@@ -112,7 +112,7 @@
 				console.log('Voce precisa responder [h] ou [g] ou [b]');
 			}
 		}
-		let h100006 = `\n	Agora nos diga com qual desses tipos você deseja ter?`;
+		let h100006 = `\n	Agora nos diga com qual desses tipos você deseja ser?`;
 		let ask_tp = "";
 		while (ask_tp != 'n' && ask_tp != 'i' && ask_tp != 'e' && ask_tp != 'a' && ask_tp != 'f') {
 			console.log(h100006);
@@ -129,7 +129,7 @@
 		let h100000 = `Hoje é dia 17 de Outubro de 2021`;
 		let h100001 = `As férias de julho acabaram e eu voltei do sítio dos seus avós\n Onde eles fizeram uma grande festa para meu aniversário!`;
 		let h100002 = `Meus pais me ajudaram a alugar um Kitnet próximo ao centro da cidade\n Para assim eu gastar menos com condução\nE também me dar minha liberdade...\nAcabo de completar 18 anos, e estou terminando o Ensino médio.`;
-		let h100003 = `Tenho tanta coisa para fazer nessa kitnet\nE amanhã voltam as aulas...\nVou começar a arruma as coisas para a escola... \n Contra minha vontade, como sempre...\n\nMas agora tenho "responsabilidades de adulto" kkkk`;
+		let h100003 = `Tenho tanta coisa para fazer nessa kitnet\nE amanhã voltam as aulas...\nVou começar a arrumar as coisas para a escola... \n Contra minha vontade, como sempre...\n\nMas agora tenho "responsabilidades de adulto" kkkk`;
 		let h100004 = `Já que jamais fui ${oap()} primeir${oap()} da turma...\n mas também nunca fiquei para trás!`;
 		let h100005 = `Este semestre decidí fazer diferente\nvou encontrar uma forma de fazer estes últimos meses inesquecíveis\nAproveitar o máximo que puder!!!`;
 
@@ -385,13 +385,22 @@
 	\nO jeito Agressivo e imperativo de ${personagensSecundarios[0]} me fascinam, e decido me declarar.\n
 	Envio uma mensagem para el${eas(0)} e peço para me encontrar no Shopping Cidade\n
 	Quando ${personagensSecundarios[0]} chega, vamos ao Burguer King e procuramos uma mesa vaga\n
+		`);
+			pressEnter();
+			console.log(`
 		${personagemPrincipal.nome}\n
 	Eu nem sei como eu falo isso sabe\n
 	Eu sei que somos amigos à muitos anos, e que nossa amizade é valiosa...\n
+		`);
+			pressEnter();
+			console.log(`
 	Mas eu só consigo ser feliz quando estou ao seu lado...\n\n
 	Após falar sobre meu amor, ${personagensSecundarios[0]} me encara de uma forma estranha...\n
 	Pelo olhar de ${personagensSecundarios[0]} estou com medo de receber um SOCO\n
 	Mas parece que na verdade el${eas(1)} está em lágrimas...\n\n
+		`);
+			pressEnter();
+			console.log(`
 	Com muita alegria, ${personagensSecundarios[0]} grita: \n
 	\n
 		${personagensSecundarios[0]}
@@ -402,6 +411,9 @@
 			console.log(`
 	Decidimos contar aos amigos sobre a nossa decisão\n
 	\n
+		`);
+			pressEnter();
+			console.log(`
 	E a reação deles é basicamente um únissono\n
 		"aaaaawwwnnnnnnn <3 <3".\n
 	\n
@@ -412,7 +424,10 @@
 	O nosso namoro resume em assistir animes e filmes de terror todos os dias na casa de ${personagensSecundarios[0]}\n 
 	Meio que nos tornamos um lindo casal de comercial de margarina.\n
 	Brincadeiras à parte...\n
-	Ensinei ${personagensSecundarios[0]} a ser um pouco mais doce\n e\n
+		`);
+			pressEnter();
+			console.log(`
+	Ensinei ${personagensSecundarios[0]} a ser um pouco mais doce\n
 	${personagensSecundarios[0]} me ensinou como quebrar a cara de alguém! kkkkkkkk \n
 	\n
 	Nós nos completamos...\n
@@ -1194,7 +1209,7 @@ function saveGame(hoje,m,s,d){
 	console.log(`\n	O Florescer do coração`.brightMagenta.underline);
 	pressEnter();
 	do{
-		ng = prompt (`Deseja iniciar um novo jogo? [s] ou [n]`).toLowerCase();
+		ng = prompt (`		Deseja iniciar um novo jogo? [s] ou [n]`).toLowerCase();
 	}while(ng!='s'&&ng!='n');
 	
 	init = jogo();
@@ -1521,6 +1536,9 @@ function personagem0(mes,dia){
 \n		${personagemPrincipal.nome}
 \n	Ah menin${oas(0)} oh! Você que dê seu jeito ai! Quem manda ser desajeitad${oas(0)} desse jeito?\n
 \nPego o fichário del${eas(0)} e começa a folhear
+			`);
+			pressEnter();
+			console.log(`
 \n		${personagensSecundarios[0]}
 \n	JÁ TE DISSE PARA PARAR DE MEXER NAS MINHAS COISAS ${personagemPrincipal.nome}!!!!!\n
 \nVocê dá de ombros e continua folheando o caderno...
@@ -1536,6 +1554,9 @@ function personagem0(mes,dia){
 			console.log(`
 \nDesde a infância, somos como irmãos!
 \nEu ${oas(0)} conheci quando estavamos na pré-escola, desde os 6 anos de idade
+			`);
+			pressEnter();
+			console.log(`
 \n${personagensSecundarios[0]} é magr${oas(0)} e pard${oas(0)}
 \ne na infância, el${eas(0)} era uma criança bem esquisitinha...
 			`);
@@ -1543,7 +1564,10 @@ function personagem0(mes,dia){
 			console.log(`
 \nMas hoje, com seus cabelos cacheados na altura dos ombros, e um rosto simétrico
 \nQue inevitavelmente realçam seus olhos castanhos "folha-seca"
-\n${personagensSecundarios[0]} se muito tornou atraente
+			`);
+			pressEnter();
+			console.log(`
+\n${personagensSecundarios[0]} se tornou muito atraente
 \n\nEmbora eu jamais admitiria isso!\n
 \nAinda vejo ${personagensSecundarios[0]} como aquela criancinha desengonçada que brincava comigo na infância...
 			`);
@@ -1638,7 +1662,7 @@ function personagem0(mes,dia){
 \n		${personagemPrincipal.nome}
 \n	O QUE? VOCÊ VAI PAGAR MINHA ENTRADA????????
 \n	E você acha que precisa de perguntar????
-\n	Deve achar q eu sou doida de recusar uma mamata dessa?
+\n	Deve achar q eu sou doid${oap()} de recusar uma mamata dessa?
 \n	É lógico que quero ir!\n
 			`);
 			pressEnter();
@@ -1807,7 +1831,7 @@ function personagem0(mes,dia){
 \n		${personagemPrincipal.nome}
 \n	Eu gosto de chá verde, mas tem outros se quiser\n
 \n		${personagensSecundarios[0]}
-\n	Ah, obrigada, adoro chá verde!\n
+\n	Ah, obrigad${oas(0)}, adoro chá verde!\n
 				`)
 				pressEnter();
 				console.clear()
