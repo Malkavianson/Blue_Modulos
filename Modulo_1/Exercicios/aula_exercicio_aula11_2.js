@@ -12,7 +12,7 @@ function longDate(e) {
 	m = parseInt(e.substr(3,2));
 	y = parseInt(e.substr(6));
 
-	if((d>0&&d<32)&&(m>0&&m<12)&&(!isNaN(y))){
+	if((d>0&&d<32)&&(m>0&&m<13)&&(!isNaN(y))){
 		let dt = new Date(`${m}/${d}/${y}`);
 		dt = dt.toLocaleString([], { year: 'numeric', month: 'long', day: 'numeric' });
 		return dt
