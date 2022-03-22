@@ -447,13 +447,25 @@ Sempre ví isso, mas nunca percebi o quanto isso me faz bem!\n
 			console.log(`
 Eu decido ir até el${eas(1)}.\n
 El${eas(1)} também estava me observando, com aquele seu jeito tímido e despistado de sempre... \n
+		`);
+			pressEnter();
+			console.log(`
 Mas abre um lindo sorriso quando vê que vou em sua direção.\n
 Me aproximo de ${personagensSecundarios[1]}, envolvo ${oas(1)} em meus braços, e sussurro em seu ouvido\n
+		`);
+			pressEnter();
+			console.log(`
 		${personagemPrincipal.nome}\n
 	Amig${oas(1)}, posso te perguntar uma coisa?\n\n
 	Sinto a pele de ${personagensSecundarios[1]} arrepiar e vejo seu rosto enrubescer\n
+		`);
+			pressEnter();
+			console.log(`
 		${personagensSecundarios[1]}
 	Claro meu anjo, pode me dizer o que quiser sempre que quiser...\n\n
+		`);
+			pressEnter();
+			console.log(`
 		${personagemPrincipal.nome}
 	${personagensSecundarios[1]} você deseja unir nossas almas pela ETERNIDADE?
 			`);
@@ -464,26 +476,47 @@ Me aproximo de ${personagensSecundarios[1]}, envolvo ${oas(1)} em meus braços, 
 				console.log(`
 ${personagensSecundarios[1]} rompe em lágrimas, me abraça e me traz junto ao corpo, de uma maneira que sinto nossos espíritos se tocarem\n
 Aquela reação me deixa perplex${oas(1)} e consigo sentir meus olhos marejados.\n
+		`);
+			pressEnter();
+			console.log(`
 Sinto que agora somos definitivamente um só.\n
 				`);
 				pressEnter();
 				console.log(`
 Resolvemos comemorar visitando a Gruta de Maquiné, 120KM ao norte da cidade\n 
 Passamos o dia coletando pedrinhas e talhando um par de alianças, além de um par de colares e alguns filtros dos sonhos.\n
+		`);
+			pressEnter();
+			console.log(`
 À meia-noite, sob a luz da lua...\n
 				`);
 				pressEnter();
 				console.log(`
 \n		${personagensSecundarios[1]}\n
 \n	Eu te amo... e desde que te conheci esperei por esse momento...
+		`);
+			pressEnter();
+			console.log(`
 \nMinhas energias se recarregam, agarro-n${oas(1)} num abraço e colocamos as alianças
 \nE então nos deitamos para observar as estrelas...
+		`);
+			pressEnter();
+			console.log(`
 \nDeitad${oap()}, viro de lado e vejo o perfil de ${personagensSecundarios[1]} sob a luz do luar...
 \nToco seus lábios com a ponta de meus dedos e acaricio levemente sua boca...
+		`);
+			pressEnter();
+			console.log(`
 \n el${eas(1)} sorri enquanto passo o dedo pela silhueta de seus lábios
 \n me aproximo e lhe dou um beijo...	  
+		`);
+			pressEnter();
+			console.log(`
 \n		Estivemos sempre procurando um ao outro
 \n			E não viamos que estávamos ali
+		`);
+			pressEnter();
+			console.log(`
 \n			 Mas o destino somente se encarregou de nos unir...
 				`);
 				pressEnter();
@@ -492,9 +525,15 @@ Passamos o dia coletando pedrinhas e talhando um par de alianças, além de um p
 				console.log();
 				console.log(`
 ${personagensSecundarios[1]} me olha estupefat${oas(1)} e se afasta com um pulo\n
+		`);
+			pressEnter();
+			console.log(`
 		${personagensSecundarios[1]}
 	Você está lélé da cuca ${personagemPrincipal.nome}??????????\n
 Me sinto um pouco envergonh${oap(1)} e ${personagensSecundarios[1]} percebe...\n
+		`);
+			pressEnter();
+			console.log(`
 \n
 ${personagensSecundarios[1]} carinhosamente olha para mim, me abraça e diz\n
 		${personagensSecundarios[1]}
@@ -504,14 +543,23 @@ ${personagensSecundarios[1]} carinhosamente olha para mim, me abraça e diz\n
 			console.log(`
 Nós então nos abraçamos e decidemos manter a amizade para toda a vida.\n
 Pessoalmente, estou chatead${oap()}... Mas algo dentro de mim já esperava essa resposta...\n
+		`);
+			pressEnter();
+			console.log(`
 \n
 Eu tenho outras coisas em mente e ter alguém ao lado pode ser inconveniente\n
 Já que descobrir o mundo é o que desejo...\n
+		`);
+			pressEnter();
+			console.log(`
 E também...\n
 			`);
 			pressEnter();
 			console.log(`
 	Estar solteiro não significa necessáriamente estar disponível.\n
+		`);
+			pressEnter();
+			console.log(`
 	As vezes é necessário colocar uma placa de "NÃO PERTURBE" no coração.\n
 	\n
 	Agora é foco no futuro, e aproveitar todas as oportunidades que surgirem...
