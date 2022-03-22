@@ -1635,6 +1635,9 @@ function personagem0(mes,dia){
 \n		${personagensSecundarios[0]}
 \n	Na hora do intervalo, se você não estiver ocupad${oap()}...
 \n	Vem comigo na vendinha da rua de cima comprar um lanche?\n
+			`);
+			pressEnter();
+			console.log(`
 \n		${personagemPrincipal.nome}
 \n	Nossa... Nem sei se vou conseguir ir com você...
 \n	Estou com as atividades do laboratório que tinha que ter feito nas férias todas atrasadas\n
@@ -1792,6 +1795,9 @@ function personagem0(mes,dia){
 \nAs outras pessoas da fila não gostaram NADA dessa atitude
 \n e eu conseguia ouvir murmurinhos das pessoas atras de mim
 \nMas não liguei
+			`);
+			pressEnter();
+			console.log(`
 \n${personagensSecundarios[0]} e eu ficamos conversando enquanto aguardávamos nossa vez\n
 \n Acabou que naquele dia passamos todo o intervalo juntos jogando conversa fora...
 			`);
