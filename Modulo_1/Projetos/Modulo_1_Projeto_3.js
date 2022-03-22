@@ -1259,32 +1259,32 @@ function saveGame(hoje,m,s,d){
 	dinheiro = init[4];
 	disposicao = init[5];
 	
-	tempo();
+	// tempo();
 	
-	histF();
+	// histF();
 
 //Sequencia de execução
 
 //Teste das historias
-pressEnter();
-	console.log(personagensSecundarios[0]);
-pressEnter();
-	console.log(`mes: 1 / dia: 1`);
-pressEnter();
-	personagem0(1,1)
-pressEnter();
-	console.log(`mes: 1 / dia: 2`);
-pressEnter();
-	personagem0(1,2)
-pressEnter();
-	console.log(`mes: 2 / dia: 1`);
-pressEnter();
-	personagem0(2,1)
-pressEnter();
-	console.log(`mes: 2 / dia: 2`);
-pressEnter();
-	personagem0(2,2)
-pressEnter();
+// pressEnter();
+	// console.log(personagensSecundarios[0]);
+// pressEnter();
+	// console.log(`mes: 1 / dia: 1`);
+// pressEnter();
+	// personagem0(1,1)
+// pressEnter();
+	// console.log(`mes: 1 / dia: 2`);
+// pressEnter();
+	// personagem0(1,2)
+// pressEnter();
+	// console.log(`mes: 2 / dia: 1`);
+// pressEnter();
+	// personagem0(2,1)
+// pressEnter();
+	// console.log(`mes: 2 / dia: 2`);
+// pressEnter();
+	// personagem0(2,2)
+// pressEnter();
 
 pressEnter();
 	console.log(personagensSecundarios[1]);
@@ -1297,6 +1297,7 @@ pressEnter();
 pressEnter();
 	personagem1(1,2)
 pressEnter();
+/*
 	console.log(`mes: 2 / dia: 1`);
 pressEnter();
 	personagem1(2,1)
@@ -1405,6 +1406,7 @@ pressEnter();
 pressEnter();
 	personagem6(2,2)
 pressEnter();
+*/
 // Teste das historias-end
 
 
@@ -2005,8 +2007,8 @@ function personagem1(mes,dia){
 			pressEnter();
 			console.log(`
 \nQuando percebi já estava sentad${oap()} no chão, sem o tênis
-\nEnquanto ${personagensSecundarios[1]} passava algum tipo de pomada natural
-\n que el${eas(1)} tirou da mochila, em meu tornozelo... 
+\nEnquanto ${personagensSecundarios[1]} passava em meu tornozelo
+\nalgum tipo de pomada natural que el${eas(1)} tirou da mochila
 			`);
 			pressEnter();
 			console.log(`
@@ -2075,7 +2077,7 @@ function personagem1(mes,dia){
 			console.log(`
 \n		${personagemPrincipal.nome}
 \n	Nossa... Muito bonito isso, de verdade!
-\n Me fez repensar muito das minhas atitudes quanto à preservar o planeta!
+\n	Me fez repensar muito das minhas atitudes quanto à preservar o planeta!
 \n	Me sinto até um pouco envergonhad${oap()} por não ter nenhum conteúdo sobre esse assunto!
 \n	Jamais havia parado para pensar sobre isso...\n
 			`);
@@ -2118,7 +2120,7 @@ function personagem1(mes,dia){
 \nQue indelicadeza a minha, praticamente abracei a pessoa e nem disse meu nome!!!!
 			`);
 			pressEnter();
-			console.log(`)
+			console.log(`
 \n		${personagemPrincipal.nome}
 \n	Nossa... Também me esqueci de falar!
 \n	Meu nome é ${personagemPrincipal.nome}, e o seu?\n
@@ -2171,7 +2173,8 @@ function personagem1(mes,dia){
 			`);
 			pressEnter();
 			console.log(`
-\nO raciocínio é muito bom, mas eu tenho prova de física e não posso me dar ao luxo de perder esses pontos...
+\nO raciocínio é muito bom
+\n mas eu tenho prova de física e não posso me dar ao luxo de perder esses pontos...
 \n		${personagemPrincipal.nome}
 \n	Então te vejo depois? Quando podemos nos encontrar novamente?
 			`);
@@ -2245,21 +2248,99 @@ function personagem1(mes,dia){
 				console.log(`
 \nJá era em torno de 23:00
 \nEnquanto abria uma lata de cerveja para servir um cliente
-\n vejo ${personagens[1]} descendo as escadarías da entrada e entrando no salão.
+			`);
+			pressEnter();
+			console.log(`
+\n vejo ${personagensSecundarios[1]} descendo as escadarías da entrada e entrando no salão.
 \nEl${eas(1)} está cobert${oas(1)} de pó colorido e tinta neon
 \n e vem diretamente para o balcão
+			`);
+			pressEnter();
+			console.log(`
 \n			**Alguém que acompanha ${personagensSecundarios[1]}**
 \n	Estou morrendo de sede, o que você vai pedir?
+			`);
+			pressEnter();
+			console.log(`
 \n		${personagensSecundarios[1]}
 \n	Ai, eu quero um Latão bem gelado!...
+			`);
+			pressEnter();
+			console.log(`
 \n		${personagensSecundarios[1]}
 \n	Ei moç${oap()}, me vê o latão mais gelado que você tiver!
 \n__el${eas(1)} diz sem perceber que sou eu___
+			`);
+			pressEnter();
+			console.log(`
 \n		${personagemPrincipal.nome}
-\n	
+\n	É pra já chefia! Descendo um combustível pra esse opala! 
+\n digo em tom de deboche
+			`);
+			pressEnter();
+			console.log(`
+\nReconheço que foi um pouco exagerado, mas queria quebrar o clima sem dizer:
+\nOi, sou eu! Do pé machucado! Lembra?
+			`);
+			pressEnter();
+			console.log(`
+\nQuem acompanhava ${personagensSecundarios[1]} me olhou meio '????'
+\nComo se pensasse "Nossa filh${oap()} você se esforça bastante pelo seu trabalho!"
+\n e derrepente começo a me sentir sem jeito...
+			`);
+			pressEnter();
+			console.log(`
+\nEntão ${personagensSecundarios[1]} olha para mim lentamente enquanto pega a bebida no balcão
+\nAs luzes da boate iluminam a tinta de seu rosto em um neon reluzente
+\n e o azul de seus olhos realçam com a claridade do bar
+\nFazendo o sorriso descontraído de ${personagensSecundarios[1]} 
+\ntrazer meu conforto novamente
+			`);
+			pressEnter();
+			console.log(`
+\n		${personagensSecundarios[1]}
+\n	Opala é a avó kkkkkkkkkkkkk
+\n	Que delícia encontrar você por aqui amig${oap()}${oap()}${oap()}${oap()}${oap()}!
+\n	Se eu soubesse que você trabalhava aqui, viria cá todos os dias!
+			`);
+			pressEnter();
+			console.log(`
+\n__a pessoa que acompanha ${personagensSecundarios[1]} parece estar desconfortável
+\n			e lhe diz__
+\n	${personagensSecundarios[1]} eu vou pra pista, zero paciencia pra ficar no bar! Vamos?
+			`);
+			pressEnter();
+			console.log(`
+\n		${personagensSecundarios[1]}
+\n	Ai, eu estou cansad${oas(1)}...
+\n	Pulei muito, preciso de fazer reparação de danos!
+\n	Vou ficar aqui um pouco conversando com ${oap()} ${personagemPrincipal.nome}
+			`);
+			pressEnter();
+			console.log(`
+\n			**Amig${oap()}**
+\n	Ai, mas ${oap()} menin${oap()} está trabalhando! Você vai atrapalhar!
+\n	Vamos lá pra pista ficar com o resto do pessoal!
+			`);
+			pressEnter();
+			console.log(`
+\nEu já havia notado o dono do bar me olhando
+\n e eu já havia deixado de atender umas 2 pessoas durante essa conversa!
+\nEmbora consiga fazer o trabalho e conversar com ${personagensSecundarios[1]}
+\nPode ser que o dono do bar não goste muito da ideia...
 				`);
+				pressEnter();
 				console.log(`
-\n		//Pergunta				
+\nParte de mim concorda com ${oap()} amig${oap()} de ${personagensSecundarios[1]}
+\nMas por outro lado, isso é só um freela... De toda forma ele vai me pagar!
+\nTalvez eu só não consiga pegar freelas nesse bar mais.
+			`);
+			pressEnter();
+			console.log(`
+\n		${personagensSecundarios[1]}
+\n	Verdade! Não tinha pensado nisso...
+\n	Vai atrapalhar seu trabalho ${personagemPrincipal.nome}?
+\n\nContinuar conversando com ${personagensSecundarios[1]}?
 				`);
 				pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
 				if(pergunta != 's' && pergunta != 'n'){
@@ -2275,17 +2356,36 @@ function personagem1(mes,dia){
 			}else{
 				console.log();
 				console.log(`
-\n		//texto negativo 1
+\n		${personagemPrincipal.nome}
+\n	Pois é ${personagensSecundarios[1]}, acho que seu amig${oap()} está certo...
+\n	O Dono do bar pode não gostar se eu parar para conversar...
+			`);
+			pressEnter();
+			console.log(`
+\n 	E não quero atrapalhar sua noite com seus amigos!
+\n	Mas vamos combinar assim... Na escola a gente se fala
+			`);
+			pressEnter();
+			console.log(`
+\n${personagensSecundarios[1]} parece compreender a situação perfeitamente
+\n e sorrí para mim pegando sua bebida e se levantando...
+			`);
+			pressEnter();
+			console.log(`
+\n		${personagensSecundarios[1]}
+\n	Tudo bem então! Mas olha, a noite toda vou comprar com você!
+\n	Quero ajudar em sua comissão!
+			`);
+			pressEnter();
+			console.log(`
+\nSorrio de volta e começo a atender outro cliente
+\n e ${personagensSecundarios[1]} entra na multidão em direção à seus amigos...
 				`);
 			}
 			pressEnter();
-			console.log(`
-\n	//texto final
-			`);
-			pressEnter();
 		}
 	}
-
+/*
 	else if(mes===2){
 		if(dia===1){
 			personagensSecundariospts[1]++
@@ -2364,9 +2464,9 @@ function personagem1(mes,dia){
 			`);
 			pressEnter();
 		}
-	}
+	}*/
 };
-
+/*
 function personagem2(mes,dia){
 	if(mes===1){
 		if(dia===1){
@@ -3176,5 +3276,13 @@ function personagem6(mes,dia){
 		}
 	}
 };
-
+*/
 // Cenas dos Personagens - end
+	console.clear();
+	console.log(`\nVocê finalizou o
+\n		A d o l e D a t e s`.rainbow.bold);
+	console.log(`\n	O Florescer do coração`.brightMagenta.underline);
+	console.log(`
+\ncriado e produzido por @MalkavianSon
+	`.bold)
+	pressEnter();
