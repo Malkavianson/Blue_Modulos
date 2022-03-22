@@ -27,9 +27,18 @@ function longDate(e) {
 		sf = 'th';
 	}
 	
-	return [d,sf,mtxt,y]
+	if((d>0&&d<32)&&(m>0&&m<12)&&(!isNaN(y))){
+		return [d,sf,mtxt,y]	
+	}else{
+		return	null
+	}
+	
+	
 }
 
 let ld = longDate(entry);
-
-console.log(`${ld[2]} ${ld[0]}${ld[1]}, ${ld[3]}`);
+if(ld!=null){
+	console.log(`${ld[2]} ${ld[0]}${ld[1]}, ${ld[3]}`);
+}else{
+	console.log(ld)
+}

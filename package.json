@@ -1,0 +1,19 @@
+{
+  "name": "blue_modules_atv",
+  "version": "0.0.1",
+  "description": "'Exercícios e projetos do curso Blue'",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Malkavianson/Blue_Modulos.git"
+  },
+  "author": "MalkaviansSon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Malkavianson/Blue_Modulos/issues"
+  },
+  "homepage": "https://github.com/Malkavianson/Blue_Modulos#readme"
+}

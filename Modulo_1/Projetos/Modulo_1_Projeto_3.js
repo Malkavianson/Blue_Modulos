@@ -357,6 +357,9 @@
 	Acho que para mim, relacionamentos são como pesca esportiva...\n
 	Eu jogo a vara na água, pega o peixe que quero\n
 	e no fim, devolvo para o mar!\n
+			`);
+			pressEnter();
+			console.log(`
 	Eu sei que sou jovem e tenho um longo caminho pela frente,\n
 	e nesse caminho vários vinhos irão aparecer\n
 	e eu desejo provar cada um deles...
@@ -365,9 +368,15 @@
 			console.log(`
 	Hoje, tenho aspirações e vontades que\n
 	talvez...\n
+			`);
+			pressEnter();
+			console.log(`
 	Ter alguém ao meu lado pode se tornar um inconveniente\n
 	Já que descobrir o mundo é o que eu desejo...\n
 	E também,\n
+			`);
+			pressEnter();
+			console.log(`
 	Estar solteiro não significa necessáriamente estar disponível.\n
 	As vezes é necessário colocar uma placa de "NÃO PERTURBE" no coração.\n
 	\n
@@ -377,7 +386,7 @@
 		}
 	}
 
-	function namorar(namor) {;
+	function namorar(namor) {
 		if (namor === personagensSecundarios[0]) {
 			console.log();
 			pressEnter();
@@ -432,7 +441,7 @@
 	\n
 	Nós nos completamos...\n
 		E nós sabemos disso...
-	`);
+		`);
 		} 
 		else if (namor === personagensSecundarios[1]) {
 			console.log();
@@ -566,7 +575,7 @@ E também...\n
 			`);
 			}
 		} 
-		else if (namor === personagensSecundarios[2]) {
+/*		else if (namor === personagensSecundarios[2]) {
 			console.log();
 			pressEnter();
 			console.log(`
@@ -776,7 +785,7 @@ E também...\n
 				`);
 			}
 		};
-
+*/
 	};
 //fim da História - end
 
