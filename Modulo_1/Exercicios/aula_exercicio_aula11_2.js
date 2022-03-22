@@ -1,7 +1,10 @@
 const prompt = require('prompt-sync')();
 
 do{
-	entry = prompt(`enter date (dd/mm/aaaa): `);
+	entry = prompt(`enter date (dd/mm/yyyy): `);
+	if((entry[2]!='/')&&(entry[5]!='/')&&(entry.length!=10)){
+		console.log(`entre com o formato dd/mm/yyyy`)
+	}
 }while((entry[2]!='/')&&(entry[5]!='/')&&(entry.length!=10));
 
 function longDate(e) {
