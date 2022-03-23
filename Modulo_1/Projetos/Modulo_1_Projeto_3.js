@@ -22,9 +22,9 @@
 	let ds = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta','Sexta', 'Sábado'];
 	let ma = ['Outubro', 'Novembro', 'Dezembro'];
 
-	let garotas = ['Nivea', 'Sophia', 'Rosa', 'Alice', 'Ludmila', 'Rebecca', 'Monica'];
-	let garotos = ['Frederico', 'Davi', 'Otavio', 'Marcelo', 'Ricardo', 'Alexandre', 'Otto'];
-	let garotxs = ['Nivea', 'Sophia', 'Otavio', 'Alice', 'Ludmila', 'Alexandre', 'Otto'];
+	let garotas = ['Nivea', 'Sophia'/*, 'Rosa', 'Alice', 'Ludmila', 'Rebecca', 'Monica'*/];
+	let garotos = ['Frederico', 'Davi'/*, 'Otavio', 'Marcelo', 'Ricardo', 'Alexandre', 'Otto'*/];
+	let garotxs = ['Nivea', 'Sophia'/*, 'Otavio', 'Alice', 'Ludmila', 'Alexandre', 'Otto'*/];
 	let personagensSecundarios = [];
 	let personagensSecundariospts = [0,0,0,0,0,0,0]
 
@@ -41,28 +41,28 @@
 //Variaveis importantes - end
 
 //Pronomes de sujeito
-	function oas(i) {
+	const oas = (i) => {
 		if (garotas.includes(personagensSecundarios[i])) {
 			return 'a';
 		} else if (garotos.includes(personagensSecundarios[i])) {
 			return 'o';
 		};
 	};
-	function eas(i) {
+	const eas = (i) => {
 		if (garotas.includes(personagensSecundarios[i])) {
 			return 'a';
 		} else if (garotos.includes(personagensSecundarios[i])) {
 			return 'e';
 		};
 	};
-	function oap() {
+	const oap = () => {
 		if (personagemPrincipal.identidadeGenero===1) {
 			return 'a';
 		} else if (personagemPrincipal.identidadeGenero===0) {
 			return 'o';
 		};
 	};
-	function eap() {
+	const eap = () => {
 		if (personagemPrincipal.identidadeGenero===1) {
 			return 'a';
 		} else if (personagemPrincipal.identidadeGenero===1) {
@@ -72,7 +72,7 @@
 //Pronomes de sujeito - end
 
 //PressEnterFunction
-	function pressEnter(){ 
+	const pressEnter = () => { 
 		console.log();
 		prompt(`pressione ENTER para continuar`); 
 		console.clear();
