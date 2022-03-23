@@ -271,7 +271,8 @@
 		console.log(`
 	\nTodos os dias tenho que decidir o que vou fazer...
 	\n Caso eu vá fazer as mesmas coisas de ontem, basta dar um enter\n
-	\n  e todas as noites eu tenho a opção de salvar meu progresso! Basta escrever " save " no seletor de atividades da noite.
+	\n  e todas as noites eu tenho a opção de salvar meu progresso!
+	Basta escrever " save " no seletor de atividades da noite.
 		`)
 		pressEnter();
 		return [personagemPrincipal,time,personagensSecundarios,personagensSecundariospts,dinheiro,disposicao];
@@ -315,7 +316,7 @@
 		let hf001 = `Fim do ano letivo`;
 		let hf002 = `Agora é hora de decidir o meu futuro`;
 		let hf003 = `As aulas terminaram e vou começar preparar para entrar na faculdade`
-			let hf004 = `	Mas antes, preciso decidir se quero continuar solteiro, ou se vou começar um romance....`;
+		let hf004 = `Mas antes, preciso decidir se quero continuar solteiro\n ou se vou começar um romance....`;
 		console.log(hf001);
 		pressEnter();
 		console.log(hf002);
@@ -337,7 +338,7 @@
 			do {
 				console.clear();
 				console.log(`Acho que vou namorar...`);
-				console.log(personagensSecundarios[0], personagensSecundarios[1], personagensSecundarios[2], personagensSecundarios[3], personagensSecundarios[4], personagensSecundarios[5], personagensSecundarios[6]);
+				console.log(personagensSecundarios);
 				namor = prompt('escolha: ').toLowerCase();
 				namor = namor[0].toUpperCase() + namor.substr(1);
 			} while ((personagensSecundarios.includes(namor)) === false)
@@ -391,9 +392,9 @@
 			console.log();
 			pressEnter();
 			console.log(`
-	\nO jeito Agressivo e imperativo de ${personagensSecundarios[0]} me fascinam, e decido me declarar.\n
-	Envio uma mensagem para el${eas(0)} e peço para me encontrar no Shopping Cidade\n
-	Quando ${personagensSecundarios[0]} chega, vamos ao Burguer King e procuramos uma mesa vaga\n
+\nO jeito Agressivo e imperativo de ${personagensSecundarios[0]} me fascinam, e decido me declarar.\n
+Envio uma mensagem para el${eas(0)} e peço para me encontrar no Shopping Cidade\n
+Quando ${personagensSecundarios[0]} chega, vamos ao Burguer King e procuramos uma mesa vaga\n
 		`);
 			pressEnter();
 			console.log(`
@@ -403,42 +404,46 @@
 		`);
 			pressEnter();
 			console.log(`
-	Mas eu só consigo ser feliz quando estou ao seu lado...\n\n
-	Após falar sobre meu amor, ${personagensSecundarios[0]} me encara de uma forma estranha...\n
-	Pelo olhar de ${personagensSecundarios[0]} estou com medo de receber um SOCO\n
-	Mas parece que na verdade el${eas(1)} está em lágrimas...\n\n
+	Mas eu só consigo ser feliz quando estou ao seu lado...
 		`);
 			pressEnter();
 			console.log(`
-	Com muita alegria, ${personagensSecundarios[0]} grita: \n
+Após falar sobre meu amor, ${personagensSecundarios[0]} me encara de uma forma estranha...\n
+Pelo olhar de ${personagensSecundarios[0]} estou com medo de receber um SOCO\n
+Mas parece que na verdade el${eas(1)} está em lágrimas...\n\n
+		`);
+			pressEnter();
+			console.log(`
+Com muita alegria, ${personagensSecundarios[0]} grita: \n
 	\n
 		${personagensSecundarios[0]}
-	"SIIIIIIIIIIIIIIIIIIIIIIM VEELHOOOO, AAAAAAAAAAA QUE ÓÓÓÓÓÓDIOOOOOOOO, \n
+	"SIIIIIIIIIIIIIIIIIIIIIIM, AAAAAAAAAAA QUE ÓÓÓÓÓÓDIOOOOOOOO, \n
 	VOCÊ É TÃO DEVAGAR VEY! DESDE OS 6 ANOS EU ESPERO POR ESSE MOMENTO! <3 <3 <3"
 		`);
 			pressEnter();
 			console.log(`
-	Decidimos contar aos amigos sobre a nossa decisão\n
+Decidimos contar aos amigos sobre a nossa decisão\n
 	\n
 		`);
 			pressEnter();
 			console.log(`
-	E a reação deles é basicamente um únissono\n
+E a reação deles é basicamente um únissono\n
 		"aaaaawwwnnnnnnn <3 <3".\n
 	\n
-	Parece que todos já sabiam sobre os sentimentos de ${personagensSecundarios[0]} ninguém me falou.
+Parece que todos já sabiam sobre os sentimentos de ${personagensSecundarios[0]} mas ninguém me falou.
 		`);
 			pressEnter();
 			console.log(`
-	O nosso namoro resume em assistir animes e filmes de terror todos os dias na casa de ${personagensSecundarios[0]}\n 
-	Meio que nos tornamos um lindo casal de comercial de margarina.\n
-	Brincadeiras à parte...\n
+O nosso namoro resume em assistir animes e filmes de terror\n
+todos os dias na casa de ${personagensSecundarios[0]}\n 
+Meio que nos tornamos um lindo casal de comercial de margarina.\n
+Brincadeiras à parte...\n
 		`);
 			pressEnter();
 			console.log(`
-	Ensinei ${personagensSecundarios[0]} a ser um pouco mais doce\n
-	${personagensSecundarios[0]} me ensinou como quebrar a cara de alguém! kkkkkkkk \n
-	\n
+Ensinei ${personagensSecundarios[0]} a ser um pouco mais doce\n
+${personagensSecundarios[0]} me ensinou como quebrar a cara de alguém! kkkkkkkk \n
+\n
 	Nós nos completamos...\n
 		E nós sabemos disso...
 		`);
@@ -1276,35 +1281,40 @@ function saveGame(hoje,m,s,d){
 			return hist1();
 		} else {
 			console.log(`Carregando jogo... `);
-			
-			const loaded = fs.readFileSync("./saveGame.json");
-			const load = JSON.parse(loaded);
-			time = {
-				hoje: load.hj,
-				m: load.ms,
-				s: load.sm,
-				d: load.ds,
-			};
-			personagemPrincipal = {
-				nome: load.pp.nome,
-				identidadeGenero: load.pp.identidadeGenero,
-				orientacaoSexual: load.pp.orientacaoSexual,
-				beleza: load.pp.beleza,
-				conhecimento: load.pp.conhecimento,
-				popularidade: load.pp.popularidade,
-				artes: load.pp.artes,
-				atributosFisicos: load.pp.atributosFisicos,
-				sorte: load.pp.sorte,
-			};
-			disposicao = load.dp;
-			dinheiro = load.dn;
-			personagensSecundarios = load.ps;
-			personagensSecundariospts = load.psp;
-							// /*carregar JSON*/
-			pressEnter();
-			console.log(`\nPersonagem Carregado: ${personagemPrincipal.nome}\n\n Affairs:\n ${personagensSecundarios}`);
-			pressEnter();
-			return [personagemPrincipal,time,personagensSecundarios,personagensSecundariospts,dinheiro,disposicao];
+			try{
+				const loaded = fs.readFileSync("./saveGame.json");
+				const load = JSON.parse(loaded);
+				time = {
+					hoje: load.hj,
+					m: load.ms,
+					s: load.sm,
+					d: load.ds,
+				};
+				personagemPrincipal = {
+					nome: load.pp.nome,
+					identidadeGenero: load.pp.identidadeGenero,
+					orientacaoSexual: load.pp.orientacaoSexual,
+					beleza: load.pp.beleza,
+					conhecimento: load.pp.conhecimento,
+					popularidade: load.pp.popularidade,
+					artes: load.pp.artes,
+					atributosFisicos: load.pp.atributosFisicos,
+					sorte: load.pp.sorte,
+				};
+				disposicao = load.dp;
+				dinheiro = load.dn;
+				personagensSecundarios = load.ps;
+				personagensSecundariospts = load.psp;
+								// /*carregar JSON*/
+				pressEnter();
+				console.log(`\nPersonagem Carregado: ${personagemPrincipal.nome}\n\n Affairs:\n ${personagensSecundarios}`);
+				pressEnter();
+				return [personagemPrincipal,time,personagensSecundarios,personagensSecundariospts,dinheiro,disposicao];
+			}catch{
+				console.log(`Jogo salvo não encontrado, iniciando novo jogo!`);
+				pressEnter();
+				jogo();
+			}
 		} 
 	}
 
@@ -2315,6 +2325,9 @@ function personagem1(mes,dia){
 			pressEnter();
 			console.log(`
 \n vejo ${personagensSecundarios[1]} descendo as escadarías da entrada e entrando no salão.
+			`);
+			pressEnter();
+			console.log(`
 \nEl${eas(1)} está cobert${oas(1)} de pó colorido e tinta neon
 \n e vem diretamente para o balcão
 			`);
@@ -2368,8 +2381,8 @@ function personagem1(mes,dia){
 			`);
 			pressEnter();
 			console.log(`
-\n__a pessoa que acompanha ${personagensSecundarios[1]} parece estar desconfortável
-\n			e lhe diz__
+\na pessoa que acompanha ${personagensSecundarios[1]} parece estar desconfortável
+\n		e lhe diz
 \n	${personagensSecundarios[1]} eu vou pra pista, zero paciencia pra ficar no bar! Vamos?
 			`);
 			pressEnter();
@@ -2389,14 +2402,26 @@ function personagem1(mes,dia){
 			console.log(`
 \nEu já havia notado o dono do bar me olhando
 \n e eu já havia deixado de atender umas 2 pessoas durante essa conversa!
+			`);
+			pressEnter();
+			console.log(`
 \nEmbora consiga fazer o trabalho e conversar com ${personagensSecundarios[1]}
 \nPode ser que o dono do bar não goste muito da ideia...
 				`);
 				pressEnter();
 				console.log(`
 \nParte de mim concorda com ${oap()} amig${oap()} de ${personagensSecundarios[1]}
-\nMas por outro lado, isso é só um freela... De toda forma ele vai me pagar!
+\n mas também...
+			`);
+			pressEnter();
+			console.log(`
+\nPor outro lado...
+			`);
+			pressEnter();
+			console.log(`
+\n Isso é só um freela... De toda forma ele vai me pagar!
 \nTalvez eu só não consiga pegar freelas nesse bar mais.
+\nOu até mesmo consiga...
 			`);
 			pressEnter();
 			console.log(`
@@ -2414,7 +2439,45 @@ function personagem1(mes,dia){
 			if(pergunta==='s'){
 				console.log();
 				console.log(`
-\n		//Texto positivo 1
+\n		${personagemPrincipal.nome}
+\n	Ah, que isso?
+\n	Isso aqui é um bar gente!
+\n	Nós trabalhamos conversando
+			`);
+			pressEnter();
+			console.log(`
+\nAproximo de ${personagensSecundarios[1]} e digo:
+\n		Qualquer coisa eu falo para ele que estava te ajudando com problemas do coração!
+			`);
+			pressEnter();
+			console.log(`
+\n${personagensSecundarios[1]} olha para mim e rí
+\nE percebo ${oap()} amig${oap()} del${eas(1)} franzir a testa
+			`);
+			pressEnter();
+			console.log(`
+\n		${personagensSecundarios[1]}
+\n	Então tá certo, vou ficar por aqui mesmo!
+\n	Estou mort${oas(1)} de cansaço...
+\nEl${eas(1)} diz enquanto abaixa a cabeça no balcão
+\nO grupo chama ${oap()} amig${oap()} de ${personagensSecundarios[1]}
+\nE el${eap()} entra na multidão...
+\n		${personagensSecundarios[1]}
+\n	Mas agora sério!
+\n	Eu não sabia que você trabalhava aqui!
+\n		${personagemPrincipal.nome}
+\n
+\n
+\n
+\n
+\n
+\n
+\n
+\n
+\n
+\n
+\n
+\n
 			`);
 			}else{
 				console.log();
