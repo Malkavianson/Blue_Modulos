@@ -1318,30 +1318,30 @@ function saveGame(hoje,m,s,d){
 	
 	// tempo();
 	
-	// histF();
+	histF();
 
 //Sequencia de execução
 
 //Teste das historias
-// pressEnter();
-	// console.log(personagensSecundarios[0]);
-// pressEnter();
-	// console.log(`mes: 1 / dia: 1`);
-// pressEnter();
-	// personagem0(1,1)
-// pressEnter();
-	// console.log(`mes: 1 / dia: 2`);
-// pressEnter();
-	// personagem0(1,2)
-// pressEnter();
-	// console.log(`mes: 2 / dia: 1`);
-// pressEnter();
-	// personagem0(2,1)
-// pressEnter();
-	// console.log(`mes: 2 / dia: 2`);
-// pressEnter();
-	// personagem0(2,2)
-// pressEnter();
+pressEnter();
+	console.log(personagensSecundarios[0]);
+pressEnter();
+	console.log(`mes: 1 / dia: 1`);
+pressEnter();
+	personagem0(1,1)
+pressEnter();
+	console.log(`mes: 1 / dia: 2`);
+pressEnter();
+	personagem0(1,2)
+pressEnter();
+	console.log(`mes: 2 / dia: 1`);
+pressEnter();
+	personagem0(2,1)
+pressEnter();
+	console.log(`mes: 2 / dia: 2`);
+pressEnter();
+	personagem0(2,2)
+pressEnter();
 
 pressEnter();
 	console.log(personagensSecundarios[1]);
