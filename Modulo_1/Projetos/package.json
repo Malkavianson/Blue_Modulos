@@ -1,0 +1,20 @@
+{
+  "name": "projetos_modulo1",
+  "version": "1.0.0",
+  "description": "Projetos do módulo 1 - blue",
+  "main": "\"\"",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "colors": "^1.4.0",
+	"prompt-sync": "^4.1.6",
+	"fs": "^0.0.1-security"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Malkavianson/Blue_Modulos/tree/main/Modulo_1/Projetos"
+  },
+  "author": "malkavianson",
+  "license": "ISC"
+}
