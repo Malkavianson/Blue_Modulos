@@ -488,7 +488,11 @@ Me aproximo de ${personagensSecundarios[1]}, envolvo ${oas(1)} em meus braços, 
 			if(testf1){
 				console.log();
 				console.log(`
-${personagensSecundarios[1]} rompe em lágrimas, me abraça e me traz junto ao corpo, de uma maneira que sinto nossos espíritos se tocarem\n
+${personagensSecundarios[1]} rompe em lágrimas, abraça e me traz junto ao corpo
+\n de uma maneira que sinto nossos espíritos se tocarem\n
+				`);
+				pressEnter();
+				console.log(`
 Aquela reação me deixa perplex${oas(1)} e consigo sentir meus olhos marejados.\n
 		`);
 			pressEnter();
@@ -497,8 +501,13 @@ Sinto que agora somos definitivamente um só.\n
 				`);
 				pressEnter();
 				console.log(`
-Resolvemos comemorar visitando a Gruta de Maquiné, 120KM ao norte da cidade\n 
-Passamos o dia coletando pedrinhas e talhando um par de alianças, além de um par de colares e alguns filtros dos sonhos.\n
+Resolvemos comemorar visitando a Gruta de Maquiné
+\n 120KM ao norte da cidade\n 
+				`);
+				pressEnter();
+				console.log(`
+Passamos o dia coletando pedrinhas e talhando um par de alianças
+\n além de um par de colares e alguns filtros dos sonhos.\n
 		`);
 			pressEnter();
 			console.log(`
@@ -1267,7 +1276,7 @@ function saveGame(hoje,m,s,d){
 
 //Sequencia de execução
 	console.clear();
-	console.log(`\n\n		A d o l e D a t e s`.rainbow.bold);
+	console.log(`\n\n		A d o l e D a t e s`.brightMagenta.bold);
 	console.log(`\n	O Florescer do coração`.brightMagenta.underline);
 	pressEnter();
 	do{
@@ -1326,13 +1335,15 @@ function saveGame(hoje,m,s,d){
 	dinheiro = init[4];
 	disposicao = init[5];
 	
-	// tempo();
+	tempo();
 	
 	histF();
 
 //Sequencia de execução
 
 //Teste das historias
+pressEnter();
+	console.log(`Inicio dos testes das historias`)
 pressEnter();
 	console.log(personagensSecundarios[0]);
 pressEnter();
@@ -1572,7 +1583,12 @@ function personagem0(mes,dia){
 			personagensSecundariospts[0]++
 			console.clear();
 			console.log(`
-\nQue dia lindo para ir a escola... Fim do ensino médio, as mesmas caras dos ultimos anos, ninguém aguenta mais isso kkkkkkk
+\nQue dia lindo para ir a escola...
+\nFim do ensino médio, as mesmas caras dos ultimos anos
+			`);
+			pressEnter();
+			console.log(`
+\n ninguém aguenta mais isso kkkkkkk
 \nEstamos no meio de uma pandemia e a escola resolve voltar às aulas presenciais
 \nQue tédio...
 			`);
@@ -1582,6 +1598,9 @@ function personagem0(mes,dia){
 				console.log(`
 \n			**Barulho de alguém tropeçando e cadernos caindo**
 \nOlho para trás e vejo ${personagensSecundarios[0]} se recuperando e olhando para mim muito nervos${oas(0)}.
+			`);
+			pressEnter();
+			console.log(`
 \n		${personagensSecundarios[0]}
 \n	_VAI FICAR SÓ ME OLHANDO OU VAI AJUDAR? - El${eas(0)} diz irritadíssim${oas(0)}\n
 `);
@@ -1596,6 +1615,9 @@ function personagem0(mes,dia){
 				console.log();
 				console.log(`
 \nComeço a rir na cara del${eas(0)} mas me prontifico para ajudar ${personagensSecundarios[0]} a se recompor
+			`);
+			pressEnter();
+			console.log(`
 \n		${personagemPrincipal.nome}
 \n	Vem... Já te falei para prestar atenção no caminho!\n
 			`);
@@ -3406,7 +3428,7 @@ function personagem6(mes,dia){
 // Cenas dos Personagens - end
 	console.clear();
 	console.log(`\nVocê finalizou o
-\n		A d o l e D a t e s`.rainbow.bold);
+\n		A d o l e D a t e s`.brightMagenta.bold);
 	console.log(`\n	O Florescer do coração`.brightMagenta.underline);
 	console.log(`
 \ncriado e produzido por @MalkavianSon
