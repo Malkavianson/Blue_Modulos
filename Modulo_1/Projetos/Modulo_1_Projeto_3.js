@@ -22,9 +22,9 @@
 	let ds = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta','Sexta', 'Sábado'];
 	let ma = ['Outubro', 'Novembro', 'Dezembro'];
 
-	let garotas = ['Nivea', 'Sophia'/*, 'Rosa', 'Alice', 'Ludmila', 'Rebecca', 'Monica'*/];
-	let garotos = ['Frederico', 'Davi'/*, 'Otavio', 'Marcelo', 'Ricardo', 'Alexandre', 'Otto'*/];
-	let garotxs = ['Nivea', 'Sophia'/*, 'Otavio', 'Alice', 'Ludmila', 'Alexandre', 'Otto'*/];
+	let garotas = ['Nivea', 'Sophia', 'Rosa'/*, 'Alice', 'Ludmila', 'Rebecca', 'Monica'*/];
+	let garotos = ['Frederico', 'Davi', 'Otavio'/*, 'Marcelo', 'Ricardo', 'Alexandre', 'Otto'*/];
+	let garotxs = ['Nivea', 'Sophia', 'Otavio'/*, 'Alice', 'Ludmila', 'Alexandre', 'Otto'*/];
 	let personagensSecundarios = [];
 	let personagensSecundariospts = [0,0,0,0,0,0,0]
 
@@ -1334,51 +1334,53 @@ function saveGame(hoje,m,s,d){
 	personagensSecundariospts = init[3];
 	dinheiro = init[4];
 	disposicao = init[5];
-	
-	tempo();
-	
-	histF();
+
+	console.log(`Modo de teste ativado!\npersonagem secundário 1 sem requisitos mínimos para namorar\n Mantenha seus status acima de 50 para namorar o personagem 2\n ou acima de 100 na área específica de cada personagem`)
+	// pressEnter()
+	// tempo();
+
+	// histF();
 
 //Sequencia de execução
 
 //Teste das historias
-pressEnter();
-	console.log(`Inicio dos testes das historias`)
-pressEnter();
-	console.log(personagensSecundarios[0]);
-pressEnter();
-	console.log(`mes: 1 / dia: 1`);
-pressEnter();
-	personagem0(1,1)
-pressEnter();
-	console.log(`mes: 1 / dia: 2`);
-pressEnter();
-	personagem0(1,2)
-pressEnter();
-	console.log(`mes: 2 / dia: 1`);
-pressEnter();
-	personagem0(2,1)
-pressEnter();
-	console.log(`mes: 2 / dia: 2`);
-pressEnter();
-	personagem0(2,2)
-pressEnter();
+// pressEnter();
+	// console.log(`Inicio dos testes das historias`)
+// pressEnter();
+	// console.log(personagensSecundarios[0]);
+// pressEnter();
+	// console.log(`mes: 1 / dia: 1`);
+// pressEnter();
+	// personagem0(1,1)
+// pressEnter();
+	// console.log(`mes: 1 / dia: 2`);
+// pressEnter();
+	// personagem0(1,2)
+// pressEnter();
+	// console.log(`mes: 2 / dia: 1`);
+// pressEnter();
+	// personagem0(2,1)
+// pressEnter();
+	// console.log(`mes: 2 / dia: 2`);
+// pressEnter();
+	// personagem0(2,2)
+// pressEnter();
 
-pressEnter();
-	console.log(personagensSecundarios[1]);
-pressEnter()
-	console.log(`mes: 1 / dia: 1`);
-pressEnter();
-	personagem1(1,1)
-pressEnter();
-	console.log(`mes: 1 / dia: 2`);
-pressEnter();
-	personagem1(1,2)
-pressEnter();
-/*
-	console.log(`mes: 2 / dia: 1`);
-pressEnter();
+// pressEnter();
+	// console.log(personagensSecundarios[1]);
+// pressEnter()
+	// console.log(`mes: 1 / dia: 1`);
+// pressEnter();
+	// personagem1(1,1)
+// pressEnter();
+	// console.log(`mes: 1 / dia: 2`);
+// pressEnter();
+	// personagem1(1,2)
+// pressEnter();
+	// console.log(`mes: 2 / dia: 1`);
+// pressEnter();
 	personagem1(2,1)
+/*
 pressEnter();
 	console.log(`mes: 2 / dia: 2`);
 pressEnter();
@@ -1513,7 +1515,32 @@ pressEnter();
 			Conexões:
 			
 			*/
-		// [2] 
+		// [2]
+			/*
+			Artes > 100
+			Cis
+			Pard - Castanho escuro -  |cacheado|  - Olhos Castanhos - Atletico
+			Comportamento - Tímid Otaku introvertid 		
+			Personalidade - 
+			Bordão:
+				Anatano gasuki desu ${personagemPrincipal.nome} senpai <3
+			Conexões
+				Michelle
+			
+			*/
+		// [3]
+			/*
+			Conhecimento > 100	
+			Cis
+			Branc - Ruiv - Olhos Verder - Magr
+			Comportamento - CDF
+			Personalidade - Orgulhos - Militante
+			Bordão:
+				
+			Conexões
+				
+			*/
+		// [4] 
 			/*
 					Time de basquete regional
 			Atributos Fisicos > 100
@@ -1526,37 +1553,13 @@ pressEnter();
 			Conexões
 			
 			*/
-		// [3]
-			/*
-			Artes > 100
-			Cis
-			Pard - Castanho escuro -  |cacheado|  - Olhos Castanhos - Atletico
-			Comportamento - Tímid Otaku introvertid 		
-			Personalidade - 
-			Bordão:
-				Anatano gasuki desu ${personagemPrincipal.nome} senpai <3
-			Conexões
-			
-			*/
-		// [4] 
+		// [5] 
 			/*
 			Popularidade > 100
 			Trans
 			Pard - Preto - Pintado de Azul - Olhos Castanhos Claros - Esbelt
 			Comportamento - tiktoker	
 			Personalidade - Fofoqueir e barraqueir 
-			Bordão:
-				
-			Conexões
-				
-			*/
-		// [5]
-			/*
-			Conhecimento > 100	
-			Cis
-			Branc - Ruiv - Olhos Verder - Magr
-			Comportamento - CDF
-			Personalidade - Orgulhos - Militante
 			Bordão:
 				
 			Conexões
@@ -2469,37 +2472,177 @@ function personagem1(mes,dia){
 			pressEnter();
 			console.log(`
 \nAproximo de ${personagensSecundarios[1]} e digo:
-\n		Qualquer coisa eu falo para ele que estava te ajudando com problemas do coração!
+\n		Qualquer coisa eu falo para ele que estava te ajudando
+\n		 com problemas do coração
 			`);
 			pressEnter();
 			console.log(`
 \n${personagensSecundarios[1]} olha para mim e rí
-\nE percebo ${oap()} amig${oap()} del${eas(1)} franzir a testa
+\nE percebo ${oap()} amig${oap()} del${eas(1)} fazer uma cara de "ranço"
 			`);
 			pressEnter();
 			console.log(`
 \n		${personagensSecundarios[1]}
 \n	Então tá certo, vou ficar por aqui mesmo!
 \n	Estou mort${oas(1)} de cansaço...
-\nEl${eas(1)} diz enquanto abaixa a cabeça no balcão
+\			`);
+			pressEnter();
+			console.log(`
+\n${personagensSecundarios[1]} diz enquanto abaixa a cabeça no balcão
 \nO grupo chama ${oap()} amig${oap()} de ${personagensSecundarios[1]}
 \nE el${eap()} entra na multidão...
+			`);
+			pressEnter();
+			console.log(`
 \n		${personagensSecundarios[1]}
 \n	Mas agora sério!
 \n	Eu não sabia que você trabalhava aqui!
+			`);
+			pressEnter();
+			console.log(`
 \n		${personagemPrincipal.nome}
-\n
-\n
-\n
-\n
-\n
-\n
-\n
-\n
-\n
-\n
-\n
-\n
+\n	É... Eu pego uns freelas aqui de vez em quando 
+\n	Mas me explica essa ideia aí...
+\n	Eu não sabia que você era maior de idade
+			`);
+			pressEnter();
+			console.log(`
+\n		${personagensSecundarios[1]}
+\n	Ah, eu faço aniversário no inicio do ano
+\n	Eu to no terceiro por quê repeti o ano passado
+			`);
+			pressEnter();
+			console.log(`
+\n	minha família viajou para a Índia em agosto
+\n	e eu acabei perdendo o ano letivo
+			`);
+			pressEnter();
+			console.log(`
+\n		${personagemPrincipal.nome}
+\n	Ah, mas que legal! Você foi pra Índia!
+\n	lá é outra cultura, outra forma de pensar!
+			`);
+			pressEnter();
+			console.log(`
+\n		${personagensSecundarios[1]}
+\n	Sim! Meu pai é teólogo e minha mãe é antropóloga
+\n	e eles estão escrevendo um artigo sobre o Hinduísmo 
+			`);
+			pressEnter();
+			console.log(`
+\n	e como os seus preceitos espirituais refletem
+\n	na estrutura social daquele povo
+			`);
+			pressEnter();
+			console.log(`
+\n		${personagemPrincipal.nome}
+\n	Nossa, muito legal isso!
+			`);
+			pressEnter();
+			console.log(`
+\nNunca parei para pensar nessas coisas
+\nÀs vezes parece que ${personagensSecundarios[1]} vive em outro mundo...
+			`);
+			pressEnter();
+			console.log(`
+\nAs experiências que el${eas(1)} já passou
+\nSua forma exótica de pensar
+			`);
+			pressEnter();
+			console.log(`
+\nFicamos conversando toda a noite
+\nEm meus intervalos ia para a pista com el${eas(1)}
+\nQue no fim das contas não voltou para o grupo que chegou
+			`);
+			pressEnter();
+			console.log(`
+\n${personagensSecundarios[1]} ficou na boate até a hora que fechou
+\nDemos muitas risadas e conheci um pouco mais sobre el${eas(1)}
+			`);
+			pressEnter();
+			console.log(`
+\nJá era madrugada quando saímos e el${eas(1)} me pergunta:
+			`);
+			pressEnter();
+			console.log(`
+\n		${personagensSecundarios[1]}
+\n	Agora você vai para onde? Acho que tenho um after Party para ir
+\n	Vamos comigo?
+			`);
+			pressEnter();
+			console.log(`
+\n		${personagemPrincipal.nome}
+\n	Bem, estou mort${oap()}... e se vc me der trela
+\n	Vamos ficar para sempre no after do after do after
+\n	E amanhã tenho que acordar cedo
+			`);
+			pressEnter();
+			console.log(`
+\nPelo que conheci de ${personagensSecundarios[1]}, se eu for no ritmo del${eas(1)}
+\n Todos os dias eu tenho festa kkkkkkkk
+			`);
+			pressEnter();
+			console.log(`
+\n		${personagensSecundarios[1]}
+\n	Eu entendo, sem problemas
+\n	Você deve estar cansad${oap()} também!
+			`);
+			pressEnter();
+			console.log(`
+\n	Foi uma ótima noite hoje, devemos nos encontrar mais vezes.
+			`);
+			pressEnter();
+			console.log(`
+\n	Ah, dia 04/12 de manhã vai acontecer um eclipse Solar
+			`.brightMagenta);
+			pressEnter();
+			console.log(`
+\n	Combinei com alguns amigos para assistir lá da praça do Papa
+\n	Se quiser ir é só aparecer por lá!
+			`);
+			pressEnter();
+			console.log(`
+\n	Acho que agora vou lá para a casa do Pierri
+\n	É para os lados da escola, você mora por lá não é mesmo?
+\n	Se quiser eu posso te deixar lá de carro
+			`);
+			pressEnter();
+			console.log(`
+\n		${personagemPrincipal.nome}
+\n	Nossa, se não for te atrapalhar em nada
+\n	Para mim será ótimo
+\n	Vou poder descansar mais rápido
+			`);
+			pressEnter();
+			console.log(`
+\n${personagensSecundarios[1]} me deixou bem na porta da minha casa
+\nFiquei tentad${oap()} à convidá-l${oas(1)} para entrar e tomar uma xícara de chá
+\nMas acho que está muito cedo para isso, acabamos de nos aproximar
+			`);
+			pressEnter();
+			console.log(`
+\n		${personagensSecundarios[1]}
+\n	A noite foi melhor do que eu estava esperando
+\n	Muito Obrigad${oas(1)}
+			`);
+			pressEnter();
+			console.log(`
+\n${personagensSecundarios[1]} diz enquanto me observa abrir o portão
+			`);
+			pressEnter();
+			console.log(`
+\n		${personagemPrincipal.nome}
+\n	Muito Obrigad${oap()} pela sua companhia, o tempo passou e eu nem percebo
+\n	Quando estou com você
+			`);
+			pressEnter();
+			console.log(`
+\nVejo o rosto de ${personagensSecundarios[1]} corar e el${eas(1)} abrir um sorriso
+\nA Janela se fecha e o carro começa a se movimentar
+			`);
+			pressEnter();
+			console.log(`
+\nAcho que foi uma ótima ideia ter pego esse freela hoje!
 			`);
 			}else{
 				console.log();
@@ -2533,47 +2676,304 @@ function personagem1(mes,dia){
 			pressEnter();
 		}
 	}
-/*
+
 	else if(mes===2){
 		if(dia===1){
 			personagensSecundariospts[1]++
 			console.clear();
 			console.log(`
-\n		//texto introdução
+		${personagemPrincipal.nome}
+\n	Acho que vou embora com ${personagensSecundarios[1]}
+\n	Tudo bem para você ${personagensSecundarios[2]}?
 			`);
-			pressEnter();
-			do{
-				console.clear();
-				console.log(`
-\n		//Texto introdução
-				`);
-				console.log(`
-\n		//Pergunta				
-				`);
-				pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
-				if(pergunta != 's' && pergunta != 'n'){
-					prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
-				}
-			}while(pergunta != 's' && pergunta != 'n')
-			console.clear();
-			if(pergunta==='s'){
-				console.log();
-				console.log(`
-\n		//Texto positivo 1
-			`);
-			}else{
-				console.log();
-				console.log(`
-\n		//texto negativo 1
-				`);
-			}
 			pressEnter();
 			console.log(`
-\n	//texto final
+\n${personagensSecundarios[2]} parece ter ficado um pouco chatead${oas(2)} 
+\n com minha decisão
+			`);
+			pressEnter();
+			console.log(`
+\nMas el${eas(2)} precisa entender que eu não tinha como ir embora com ambos...
+			`);
+			pressEnter();
+			console.log(`
+\n		${personagensSecundarios[2]}
+\n	Tudo bem ${personagemPrincipal.nome}, Vou esperar a Michelle...
+\n	Acho que ela está sem sombrinha também...
+			`);
+			pressEnter();
+			console.log(`
+\nEnquanto ${personagensSecundarios[2]} se despede
+\nA expressão de ${personagensSecundarios[1]} se torna radiante 
+			`);
+			pressEnter();
+			console.log(`
+\nRapidamente el${eas(1)} vem para o meu lado
+\n e me coloca debaixo de sua sombrinha
+			`);
+			pressEnter();
+			console.log(`
+\n		${personagensSecundarios[1]}
+\n	Olha, como eu disse... Hoje eu estou sem carro
+\n	Mas como sua casa é aqui pertinho, eu posso te acompanhar até lá!
+\n	Fica bem pertinho de mim para não se molhar, taokey?
+			`);
+			pressEnter();
+			console.log(`
+\n${personagensSecundarios[1]} diz isto enquanto me puxa pela cintura
+\n me protegendo daquela chuva
+\nSeu perfume hoje parece diferente do outro dia...
+			`);
+			pressEnter();
+			console.log(`
+\nE digo impulsivamente:
+\n	Que perfume gostoso! O.O
+			`);
+			pressEnter();
+			console.log(`
+\nO rosto de ${personagensSecundarios[1]} fica vermelho NA HORA!
+			`);
+			pressEnter();
+			console.log(`
+\n		${personagensSecundarios[1]}
+\n	Ai... Obrigad${oas(1)}, eu fiz essa essência com Gerânio, Lima
+\n	 e algumas fatias de maçã
+			`);
+			pressEnter();
+			console.log(`
+\n	Hoje de manhã eu fiz meus exercícios na praça antes da aula
+\n	 então levei essa colônia para passar após o banho no vestiário da escola
+			`);
+			pressEnter();
+			console.log(`
+\n	O Gerânio tem propriedades antissépticas e anti-inflamatórias
+\n	 que ajudam a musculatura a regenerar
+			`);
+			pressEnter();
+			console.log(`
+\n	Fico feliz que você tenha gostado
+			`);
+			pressEnter();
+			console.log(`
+\nPercebi que ${personagensSecundarios[1]} é aquele tipo de pessoa
+\n que sabe um pouco de tudo.
+			`);
+			pressEnter();
+			console.log(`
+\nParece que para se relacionar com el${eas(1)}
+\n talvez seja necessário dominar um pouco de todos os temas!
+			`);
+			pressEnter();
+			console.log(`
+\n		${personagemPrincipal.nome}
+\n	Uau, queria entender assim de perfumes '-'
+\n	Eu só uso Velvet Bergamot da Dolce & Gabbana
+\nDigo tod${oap()} pompos${oap()}
+			`);
+			pressEnter();
+			console.log(`
+\nMas percebo a expressão de ${personagensSecundarios[1]}
+\nE não parece das melhores
+			`);
+			pressEnter();
+			console.log(`
+\n		${personagensSecundarios[1]}
+\n	Sério que você gasta R$2000,00 em um perfume???
+			`);
+			pressEnter();
+			console.log(`
+\n		${personagemPrincipal.nome}
+\n	Ah... Eu prefiro deixar a parede sem reboco
+\n	Mas não abro mão do meu perfume
+\n	Não dá para ficar sem
+			`);
+			pressEnter();
+			console.log(`
+\n${personagensSecundarios[1]} rí de forma sarcástica e diz:
+\n	Nossa... Toma cuidado viu, o consumismo é uma doença
+\n	Dá para fazer perfumes maravilhosos de forma natural!
+			`);
+			pressEnter();
+			console.log(`
+\n	O imperialismo ocidental tira de você o conhecimento sobre isso
+\n	E no lugar te ensina economia doméstica
+\n	 para te ensinar a lidar com a pobreza
+			`);
+			pressEnter();
+			console.log(`
+\nA chuva começa a ficar mais forte, e como estamos descendo a rua 
+\nO canal d'água que se formou se torna mais espesso que a sola de meus tenis
+			`);
+			pressEnter();
+			console.log(`
+\nVejo uma marquise pouco a frente e aponto dizendo:
+\n 	Vamos parar ali um pouco, a chuva está aumentando
+			`);
+			pressEnter();
+			console.log(`
+\nImediatamente aceleramos até lá, e el${eas(1)} fecha a sombrinha
+			`);
+			pressEnter();
+			console.log(`
+\n		${personagensSecundarios[1]}
+\n	Olha, sobre o que eu disse...
+\n	Tá tudo bem, eu não te culpo
+\n	Aposto que você não sabia disso kkkkk
+\n	Eu tinha um tio que era bastante consumista...
+			`);
+			pressEnter();
+			console.log(`
+\n		${personagemPrincipal.nome}
+\n	Entendo, bem diferente de você né?
+			`);
+			pressEnter();
+			console.log(`
+\n		${personagensSecundarios[1]}
+\n	Diferente do meu pai na realidade
+\n	Por isso meu pai deixou todo o dinheiro da empresa para ele 
+			`);
+			pressEnter();
+			console.log(`
+\n	Contrário ao meu tio, meu pai preferiu viajar o mundo
+\n	e conhecer outras culturas
+			`);
+			pressEnter();
+			console.log(`
+\n 	Enquanto meu tio preferiu amar o seu dinheiro
+\n 	E só viveu dentro de seu próprio mundo...
+\n	Com o tempo a corretora o consumiu, e ele só sabia trabalhar
+			`);
+			pressEnter();
+			console.log(`
+\n	Meu pai o alertou bastante sobre os riscos de viver para comprar 
+\n	 e comprar para viver
+			`);
+			pressEnter();
+			console.log(`
+\n	Mas meu tio só se importava com seu trabalho, e consequentemente 
+\n	 com os lucros
+			`);
+			pressEnter();
+			console.log(`
+\n	Meio que ele se tornou um Workaholic sabe, e com os anos se tornou depressivo
+\n	Ele passou a beber, e desde que me lembro ele ja bebia bastante
+			`);
+			pressEnter();
+			console.log(`
+\n	Acabou desenvolvendo uma doença no fígado 
+\n	E quando nós descobrimos, ja era tarde...
+			`);
+			pressEnter();
+			console.log(`
+\n		${personagemPrincipal.nome}
+\n	Eu sinto muito pelo seu tio...
+			`);
+			pressEnter();
+			console.log(`
+\n		${personagensSecundarios[1]}
+\n	Tudo bem, eu tinha 12 anos quando aconteceu, e só o via no natal
+\n	Que às vezes ele ia na casa da minha avó
+			`);
+			pressEnter();
+			console.log(`
+\n	Como eu disse, ele trabalhava muito... Não tinha tempo para família
+			`);
+			pressEnter();
+			console.log(`
+\n		${personagemPrincipal.nome}
+\n	Sabe... Minha mãe também viveu um longo período depressiva
+			`);
+			pressEnter();
+			console.log(`
+\n	Meu pai percebeu logo, e eles procuraram ajuda profissional
+\n	Eles foram ao posto de saúde mesmo, o SUS forneceu todo o auxílio
+\n	E encaminhou para os profissionais competentes
+			`);
+			pressEnter();
+			console.log(`
+\n	Com alguns anos de tratamento, minha mãe se recuperou
+			`);
+			pressEnter();
+			console.log(`
+\n 	Eu também me lembro pouco
+\n	Era bem nov${oap()}
+			`);
+			pressEnter();
+			console.log(`
+\n 	Mas meus pais contam que sem o tratamento ideial, seria impossível
+\n	Que ambos convivessem
+			`);
+			pressEnter();
+			console.log(`
+\n		${personagensSecundarios[1]}
+\n	No Brasil, o tema é muito mal visto
+\n 	E ainda existem muitas pessoas que fogem de tratamento para esse tipo de condição
+			`);
+			pressEnter();
+			console.log(`
+\n	Pois o censo comum que "só doido faz terapia" ainda é muito forte
+\n	Mas parece que com o passar dos anos, esse pensamento está caindo por terra!
+			`);
+			pressEnter();
+			console.log(`
+\n	Até mesmo nossa legislação já vem mudando, e reconhece a necessidade de combater 
+\n	 a Psicofobia, que no fim das contas não passa de outra forma de preconceito
+			`);
+			pressEnter();
+			console.log(`
+\n	Muito bobo no fim das contas
+			`);
+			pressEnter();
+			console.log(`
+\n	Depressão, Borderline, Bipolaridade, TDAH, ansiedade e etc são doenças REAIS
+\n	Que tiram tantas vidas quanto o Câncer, a AIDS ou a Diabetes!
+			`);
+			pressEnter();
+			console.log(`
+\nA chuva diminiu e nem percebemos, quando dei por mim, já havia acabado
+			`);
+			pressEnter();
+			console.log(`
+\n		${personagemPrincipal.nome}
+\n	Olha! A chuva já passou, tenho que correr! Tenho que resolver algumas coisas à tarde!
+			`);
+			pressEnter();
+			console.log(`
+\n		${personagensSecundarios[1]}
+\n	Sim, vamos lá! Nem ví o tempo passar
+\n	É muito prazeroso conversar com você!
+			`);
+			pressEnter();
+			console.log(`
+\nContinuamos o caminho até a próxima esquina, que era o meio do caminho entre 
+\n o Ponto de ônibus que ${personagensSecundarios[1]} vai esperar para ir embora
+\n e o quarteirão da minha casa
+			`);
+			pressEnter();
+			console.log(`
+\n		${personagemPrincipal.nome}
+\n	Aqui está ótimo para mim, muito obrigad${oap()} pela companhia...
+			`);
+			pressEnter();
+			console.log(`
+\n		${personagensSecundarios[1]}
+\n	Que nada, foi um prazer para mim... Vou lá para o ponto, o ônibus não deve demorar!
+			`);
+			pressEnter();
+			console.log(`
+\n	Ah, não se esqueça que dia 04 de Dezembro  de manhã vamos sair
+\n	 para ver o eclipse Solar lá na praça do Papa!
+\n${personagensSecundarios[1]} diz isso e começa a correr em direção ao ponto de ônibus
+			`);
+			pressEnter();
+			console.log(`
+\n
+\nDevo me lembrar que no dia 04/12 vou SAIR de MANHÃ
+\nNo fim das contas, foi muito interessante voltar com ${personagensSecundarios[1]}
 			`);
 			pressEnter();
 		}
-
+/*
 		else if (dia===2){
 			personagensSecundariospts[1]++
 			console.clear();
@@ -2612,8 +3012,10 @@ function personagem1(mes,dia){
 			`);
 			pressEnter();
 		}
-	}*/
+*/
+	};
 };
+
 /*
 function personagem2(mes,dia){
 	if(mes===1){
