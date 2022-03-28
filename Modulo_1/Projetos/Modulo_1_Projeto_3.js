@@ -287,10 +287,9 @@
 				console.log();
 				for (let d = time.d; d < ds.length; d++) {
 					let data = ` Dia ${hoje} de ${ma[m]} de 2021 - ${ds[d]}`.blue;
-						hoje++;
-						//	Aqui vao entrar as atividades diárias
-						diario(data,hoje,m,s,d);
-					//
+					//	Aqui vao entrar as atividades diárias
+					diario(data,hoje,m,s,d);
+					hoje++;
 					if (m === 2 && hoje === 18) {
 						break looptime;
 					} else if (m31 % 2 === 0) {
@@ -846,7 +845,7 @@ E também...\n
 			console.clear();
 			scoreTotal(data);
 // Quadros especiais da manhã
-
+			especialAulaManha(manha,hoje,m)
 // Quadros especiais da manhã - end
 			if('ipe'===manha){
 				console.log(`			Manhã:`);
@@ -1336,50 +1335,50 @@ function saveGame(hoje,m,s,d){
 	disposicao = init[5];
 
 	console.log(`Modo de teste ativado!\npersonagem secundário 1 sem requisitos mínimos para namorar\n Mantenha seus status acima de 50 para namorar o personagem 2\n ou acima de 100 na área específica de cada personagem`)
-	// pressEnter()
-	// tempo();
+	pressEnter()
+	tempo();
 
-	// histF();
+	histF();
 
 //Sequencia de execução
 
 //Teste das historias
-pressEnter();
-	console.log(`Inicio dos testes das historias`)
-pressEnter();
-	console.log(personagensSecundarios[0]);
-pressEnter();
-	console.log(`mes: 1 / dia: 1`);
-pressEnter();
-	personagem0(1,1)
-pressEnter();
-	console.log(`mes: 1 / dia: 2`);
-pressEnter();
-	personagem0(1,2)
-pressEnter();
-	console.log(`mes: 2 / dia: 1`);
-pressEnter();
-	personagem0(2,1)
-pressEnter();
-	console.log(`mes: 2 / dia: 2`);
-pressEnter();
-	personagem0(2,2)
-pressEnter();
+// pressEnter();
+	// console.log(`Inicio dos testes das historias`)
+// pressEnter();
+	// console.log(personagensSecundarios[0]);
+// pressEnter();
+	// console.log(`mes: 1 / dia: 1`);
+// pressEnter();
+	// personagem0(1,1)
+// pressEnter();
+	// console.log(`mes: 1 / dia: 2`);
+// pressEnter();
+	// personagem0(1,2)
+// pressEnter();
+	// console.log(`mes: 2 / dia: 1`);
+// pressEnter();
+	// personagem0(2,1)
+// pressEnter();
+	// console.log(`mes: 2 / dia: 2`);
+// pressEnter();
+	// personagem0(2,2)
+// pressEnter();
 
-pressEnter();
-	console.log(personagensSecundarios[1]);
-pressEnter()
-	console.log(`mes: 1 / dia: 1`);
-pressEnter();
-	personagem1(1,1)
-pressEnter();
-	console.log(`mes: 1 / dia: 2`);
-pressEnter();
-	personagem1(1,2)
-pressEnter();
-	console.log(`mes: 2 / dia: 1`);
-pressEnter();
-	personagem1(2,1)
+// pressEnter();
+	// console.log(personagensSecundarios[1]);
+// pressEnter()
+	// console.log(`mes: 1 / dia: 1`);
+// pressEnter();
+	// personagem1(1,1)
+// pressEnter();
+	// console.log(`mes: 1 / dia: 2`);
+// pressEnter();
+	// personagem1(1,2)
+// pressEnter();
+	// console.log(`mes: 2 / dia: 1`);
+// pressEnter();
+	// personagem1(2,1)
 /*
 pressEnter();
 	console.log(`mes: 2 / dia: 2`);
@@ -1580,6 +1579,34 @@ pressEnter();
  // Escopo dos personagens - end
 
 // Cenas dos Personagens:
+
+function especialAulaManha(manha,hoje,m){
+	if(hoje===18&&m===0){
+		personagem0(1,1);
+		pressEnter();
+	}
+	else if(hoje===20&&m===0){
+		personagem1(1,1)
+	}
+	else if(hoje===22&&m===0){
+		personagem2(1,1)
+	}
+	else if(hoje===2&&m===1){
+		personagem0(2,1);
+		pressEnter();
+	}
+	else if(hoje===19&&m===1){
+		//dia da chuva
+		irEmbora = +prompt(`Testar/ 1 para ${personagensSecundarios[1]} | 2 para ${personagensSecundarios[2]}`)
+		if(irEmbora===1){
+			personagem1(2,1)
+		}else{
+			//ir embora com personagem2
+			personagem2(2,1)
+		}
+	}
+}
+
 function personagem0(mes,dia){
 	if(mes===1){
 		if(dia===1){
@@ -3019,7 +3046,6 @@ function personagem1(mes,dia){
 	};
 };
 
-/*
 function personagem2(mes,dia){
 	if(mes===1){
 		if(dia===1){
@@ -3182,6 +3208,7 @@ function personagem2(mes,dia){
 	}
 };
 
+/*
 function personagem3(mes,dia){
 	if(mes===1){
 		if(dia===1){
