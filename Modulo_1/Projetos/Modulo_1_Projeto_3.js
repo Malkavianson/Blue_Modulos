@@ -1344,41 +1344,41 @@ function saveGame(hoje,m,s,d){
 //Sequencia de execução
 
 //Teste das historias
-// pressEnter();
-	// console.log(`Inicio dos testes das historias`)
-// pressEnter();
-	// console.log(personagensSecundarios[0]);
-// pressEnter();
-	// console.log(`mes: 1 / dia: 1`);
-// pressEnter();
-	// personagem0(1,1)
-// pressEnter();
-	// console.log(`mes: 1 / dia: 2`);
-// pressEnter();
-	// personagem0(1,2)
-// pressEnter();
-	// console.log(`mes: 2 / dia: 1`);
-// pressEnter();
-	// personagem0(2,1)
-// pressEnter();
-	// console.log(`mes: 2 / dia: 2`);
-// pressEnter();
-	// personagem0(2,2)
-// pressEnter();
+pressEnter();
+	console.log(`Inicio dos testes das historias`)
+pressEnter();
+	console.log(personagensSecundarios[0]);
+pressEnter();
+	console.log(`mes: 1 / dia: 1`);
+pressEnter();
+	personagem0(1,1)
+pressEnter();
+	console.log(`mes: 1 / dia: 2`);
+pressEnter();
+	personagem0(1,2)
+pressEnter();
+	console.log(`mes: 2 / dia: 1`);
+pressEnter();
+	personagem0(2,1)
+pressEnter();
+	console.log(`mes: 2 / dia: 2`);
+pressEnter();
+	personagem0(2,2)
+pressEnter();
 
-// pressEnter();
-	// console.log(personagensSecundarios[1]);
-// pressEnter()
-	// console.log(`mes: 1 / dia: 1`);
-// pressEnter();
-	// personagem1(1,1)
-// pressEnter();
-	// console.log(`mes: 1 / dia: 2`);
-// pressEnter();
-	// personagem1(1,2)
-// pressEnter();
-	// console.log(`mes: 2 / dia: 1`);
-// pressEnter();
+pressEnter();
+	console.log(personagensSecundarios[1]);
+pressEnter()
+	console.log(`mes: 1 / dia: 1`);
+pressEnter();
+	personagem1(1,1)
+pressEnter();
+	console.log(`mes: 1 / dia: 2`);
+pressEnter();
+	personagem1(1,2)
+pressEnter();
+	console.log(`mes: 2 / dia: 1`);
+pressEnter();
 	personagem1(2,1)
 /*
 pressEnter();
@@ -1596,13 +1596,13 @@ function personagem0(mes,dia){
 \nQue tédio...
 			`);
 			pressEnter();
-			do{
-				console.clear();
-				console.log(`
+			console.log(`
 \n			**Barulho de alguém tropeçando e cadernos caindo**
 \nOlho para trás e vejo ${personagensSecundarios[0]} se recuperando e olhando para mim muito nervos${oas(0)}.
 			`);
 			pressEnter();
+			do{
+				console.clear();
 			console.log(`
 \n		${personagensSecundarios[0]}
 \n	_VAI FICAR SÓ ME OLHANDO OU VAI AJUDAR? - El${eas(0)} diz irritadíssim${oas(0)}\n
@@ -1739,13 +1739,14 @@ function personagem0(mes,dia){
 \n	Ah, mas não é meu estilo...\n
 			`);
 			pressEnter();
+			do{
+			console.clear();
 			console.log(`
 \nEntão, ${personagensSecundarios[0]} acena para Lily na fila do Burguer King
 \n		${personagensSecundarios[0]}
 \n	Ih, Alá a Lily... Tinha me perdido dela quando fui no Super Mercado comprar Refrigerante e Doritos
 \n	Hey, Você não quer vir assistir o filme com a gente? Hoje eu pago!\n
 			`);
-			do{
 				pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
 				if(pergunta != 's' && pergunta != 'n'){
 				prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
@@ -1797,12 +1798,13 @@ function personagem0(mes,dia){
 			personagensSecundariospts[0]++
 			console.clear();
 			console.log();
+			pressEnter();
+			do{
+			console.clear();
 			console.log(`
 \nDepois da aula de Quimica, vou correndo até a fila da lanchonete.
 \nQuem não corre acaba ficando o intervalo inteiro esperando para conseguir comprar alguma coisa...
 			`);
-			pressEnter();
-			do{
 				console.log();
 				console.log(`
 \n		${personagensSecundarios[0]}
@@ -1882,6 +1884,7 @@ function personagem0(mes,dia){
 			`);
 			pressEnter();
 			do{
+			console.clear();
 			console.log(` \n
 \n		${personagensSecundarios[0]}
 \n	${personagemPrincipal.nome.toUpperCase()}, você está em casa????
@@ -2061,9 +2064,7 @@ function personagem1(mes,dia){
 \nAcabei pisando em falso em um buraco na calçada e indo ao chão
 			`)
 			pressEnter();
-			do{
-				console.clear();
-				console.log(`
+			console.log(`
 \nA doce expressão no rosto del${eas(1)} torna-se hipnótica ao olhar para mim...
 \nOs seus olhos azuis cristalinos parecem pedir desculpas
 \n e sua expressão anseia por querer me auxiliar
@@ -2074,7 +2075,9 @@ function personagem1(mes,dia){
 \n para ajudar-me a levantar
 			`);
 			pressEnter();
-			console.log(`
+			do{
+				console.clear();
+				console.log(`
 \n		${personagensSecundarios[1]}
 \n	Oi, meu nome é ${personagensSecundarios[1]}, você está bem?
 \n	Me desculpe, parece que te assustei, deixe-me lhe ajudar a levantar...\n
@@ -2341,9 +2344,7 @@ function personagem1(mes,dia){
 			`);
 			personagemPrincipal.popularidade++;
 			pressEnter();
-			do{
-				console.clear();
-				console.log(`
+			console.log(`
 \nJá era em torno de 23:00
 \nEnquanto abria uma lata de cerveja para servir um cliente
 			`);
@@ -2449,7 +2450,9 @@ function personagem1(mes,dia){
 \nOu até mesmo consiga...
 			`);
 			pressEnter();
-			console.log(`
+			do{
+				console.clear();
+				console.log(`
 \n		${personagensSecundarios[1]}
 \n	Verdade! Não tinha pensado nisso...
 \n	Vai atrapalhar seu trabalho ${personagemPrincipal.nome}?
