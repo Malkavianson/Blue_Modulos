@@ -349,8 +349,6 @@ function hist1() {
     };
 
     pressEnter();
-    console.log('Personagem', personagemPrincipal)
-    pressEnter();
     return [personagemPrincipal, time, personagensSecundarios, dinheiro, disposicao];
 }
 
@@ -861,11 +859,21 @@ function tempo() {
                     break looptime;
                 } else if (m31 % 2 === 0) {
                     if (hoje === 32) {
+						if(d===6){
+							time.d = 0
+						}else{
+							time.d = d+1;
+						}
                         hoje = 1;
                         break loopmes;
                     };
                 } else {
                     if (hoje === 31) {
+						if(d===6){
+							time.d = 0
+						}else{
+							time.d = d+1;
+						}
                         hoje = 1;
                         break loopmes;
                     };
@@ -1372,9 +1380,9 @@ function especial(manha, tarde, noite, hoje, m) {
     } else if (hoje === 22 && m === 0) {
         pressEnter();
         personagem2(1, 1)
-    } else if (tarde === 's' && m === 0 && personagensSecundariosPts[0] === 0) {
+    } else if (hoje > 18 && tarde === 's' && m === 0 && personagensSecundariosPts[0] === 0) {
         personagem0(1, 2);
-    } else if (noite === 't' && m === 0 && personagensSecundariosPts[1] === 0) {
+    } else if (hoje > 19 && noite === 't' && m === 0 && personagensSecundariosPts[1] === 0) {
         personagem1(1, 2);
     }
     // else if (periodo q vai acontecer === o que vai acontecer && m === 0 && personagensSecundariosPts[2] === 0){
@@ -1383,7 +1391,8 @@ function especial(manha, tarde, noite, hoje, m) {
     else if (hoje === 2 && m === 1) {
         pressEnter();
         personagem0(2, 1);
-    } else if (hoje === 19 && m === 1) {
+    }
+	else if (hoje === 19 && m === 1) {
         pressEnter();
         console.log(`
 \nHoje o tempo está chuvoso!
@@ -1467,9 +1476,11 @@ function especial(manha, tarde, noite, hoje, m) {
             pressEnter();
             personagem2(2, 1)
         }
-    } else if (noite === 'd' && m === 2 && personagensSecundariosPts[0] === 1) {
+    }
+	else if (hoje > 2 && noite === 'd' && m === 2 && personagensSecundariosPts[0] === 1) {
         personagem0(2, 2);
-    } else if (manha === 's' && hoje === 4 && m === 2 && personagensSecundariosPts[1] === 1) {
+    }
+	else if (hoje > 19 && manha === 's' && hoje === 4 && m === 2 && personagensSecundariosPts[1] === 1) {
         personagem1(2, 2);
     }
     // else if (periodo q vai acontecer === o que vai acontecer && m === 2 && personagensSecundariosPts[2] === 1){
@@ -1586,7 +1597,8 @@ function personagem0(mes, dia) {
             console.clear();
             console.log();
             console.log(`
-\nPasseando pelo Shopping Cidade, resolvo me sentar em uma mesa na praça de alimentação para tomar um sorvete
+\nPasseando pelo Shopping Cidade
+\nresolvo me sentar em uma mesa na praça de alimentação para tomar um sorvete
 \nQuando derrepente...
 			`);
             pressEnter();
@@ -1639,7 +1651,8 @@ function personagem0(mes, dia) {
                 console.log(`
 \nEntão, ${personagensSecundarios[0]} acena para Lily na fila do Burguer King
 \n		${personagensSecundarios[0]}
-\n	Ih, Alá a Lily... Tinha me perdido dela quando fui no Super Mercado comprar Refrigerante e Doritos
+\n	Ih, Alá a Lily... Tinha me perdido dela quando fui no Super Mercado
+\n comprar Refrigerante e Doritos
 \n	Hey, Você não quer vir assistir o filme com a gente? Hoje eu pago!\n
 			`);
                 pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
@@ -2032,8 +2045,16 @@ function personagem1(mes, dia) {
 			`);
                 pressEnter();
                 console.log(`
-\n	O sistema de ensino atual nos prepara para lidar com o mercado, mas não ensina coisas importantes
-\n	 por exemplo, como os nossos hábitos de consumo contribuem para a degradação de nosso meio ambiente!
+\n	O sistema de ensino atual nos prepara para lidar com o mercado
+\n	 mas não ensina coisas importantes
+			`);
+                pressEnter();
+                console.log(`
+\n	 por exemplo, como os nossos hábitos de consumo
+\n	 contribuem para a degradação de nosso meio ambiente!
+			`);
+                pressEnter();
+                console.log(`
 \n	Eles comentam né...
 \n	Mas não mostram para os alunos o quão importante é essa pauta 
 \n	 e como todos devemos nos organizar para mudar isso o mais rápido possível!
@@ -2049,8 +2070,15 @@ function personagem1(mes, dia) {
                 console.log(`
 \n	Desses 9, 2 já estão em zona de alto risco, como a integridade da nossa biosfera em geral
 \n	 e mais 2 estão n zona de risco crescente!
+			`);
+                pressEnter();
+                console.log(`
 \n	E como a população continua desinformada, e ainda têm catalisadores de desinformação
-\n	 como crenças religiosas que negam a ciência, que intensificam a repulsa das pessoas para esses temas
+\n	 como crenças religiosas que negam a ciência,
+\n	 que intensificam a repulsa das pessoas para esses temas
+			`);
+                pressEnter();
+                console.log(`
 \n	Nossa causa, que deveria ser um uníssono entre as pessoas do planeta, acaba perdendo força
 \n	E as pessoas se recusam a entender que isso é para o bem de TODOS e das próximas gerações também!
 			`)
