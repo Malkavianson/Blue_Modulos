@@ -32,7 +32,7 @@ function f4(par){
 	
 	return new Promise((resolve, reject) => {
 		console.log(par);
-		console.log(`this is the end`)
+		console.log(`this is in the end`)
 	});
 }
 
