@@ -1387,7 +1387,15 @@ function especial(manha,tarde,noite,hoje,m) {
         pressEnter();
         personagem2(1, 1)
     } 
-	else if (tarde==='s' && m === 0 && personagens)
+	else if (tarde==='s' && m === 0 && personagensSecundariosPts[0] === 0){
+		personagem0(1,2);
+	}
+	else if (noite==='t' && m === 0 && personagensSecundariosPts[1] === 0){
+		personagem1(1,2);
+	}
+	// else if (periodo q vai acontecer === o que vai acontecer && m === 0 && personagensSecundariosPts[2] === 0){
+		// personagem2(1,2);
+	// }
 	else if (hoje === 2  && m === 1) {
         pressEnter();
         personagem0(2, 1);
@@ -1477,6 +1485,16 @@ function especial(manha,tarde,noite,hoje,m) {
             personagem2(2, 1)
         }
     }
+	else if (noite==='d' && m === 2 && personagensSecundariosPts[0] === 1){
+		personagem0(2,2);
+	}
+	else if (manha==='s' && hoje === 4 && m === 2 && personagensSecundariosPts[1] === 1){
+		personagem1(2,2);
+	}
+	// else if (periodo q vai acontecer === o que vai acontecer && m === 2 && personagensSecundariosPts[2] === 1){
+		// personagem2(2,2);
+	// }
+
 }
 
 //especialManha/tarde/noite
