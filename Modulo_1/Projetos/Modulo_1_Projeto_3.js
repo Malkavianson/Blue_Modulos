@@ -29,7 +29,7 @@ let personagensSecundarios = [];
 let personagensSecundariosPts = [0, 0, 0 /*,0,0,0,0*/]
 
 // Variaveis das compras
-	//DECIDIR O QUE FAZER DOS ITENS!
+//DECIDIR O QUE FAZER DOS ITENS!
 var cx_choco = 0; // Para dar ao [0]
 var camisa_unicornio = 0; //para dar ao [6]
 var livro = 0; //para dar ao [5]
@@ -278,8 +278,8 @@ function hist1() {
 	Basta escrever " save " no seletor de atividades da noite.
 		`)
     pressEnter();
-	
-	personagemPrincipal.irParaAEscola = function () {
+
+    personagemPrincipal.irParaAEscola = function () {
         console.log(`Você foi para a escola!`)
         this.conhecimento++;
         this.popularidade++;
@@ -336,22 +336,20 @@ function hist1() {
         this.popularidade -= 3;
         this.sorte -= 15
     };
-	personagemPrincipal.aDescansar = function() {
-    if (disposicao < 100) {
-        console.log(`\nNinguém é de ferro\nVou descansar um pouco`);
-        disposicao += 7;
-        personagemPrincipal.sorte += 5;
-    }
-    if (disposicao > 100) {
-        disposicao = 100;
-    }
-    console.log(`Recuperou 7 de disposição`)
-	};
+    personagemPrincipal.aDescansar = function () {
+        if (disposicao < 100) {
+            console.log(`\nNinguém é de ferro\nVou descansar um pouco`);
+            disposicao += 7;
+            personagemPrincipal.sorte += 5;
+        }
+        if (disposicao > 100) {
+            disposicao = 100;
+        }
+        console.log(`Recuperou 7 de disposição`)
+    };
 
-
-	
     pressEnter();
-    console.log('Personagem',personagemPrincipal)
+    console.log('Personagem', personagemPrincipal)
     pressEnter();
     return [personagemPrincipal, time, personagensSecundarios, dinheiro, disposicao];
 }
@@ -847,7 +845,7 @@ E também...\n
 //Tempo
 function tempo() {
     pressEnter()
-    console.log('Personagem',personagemPrincipal)
+    console.log('Personagem', personagemPrincipal)
     let hoje = time.hoje;
     let m31 = 1;
     looptime: for (let m = time.m; m < ma.length; m++) {
@@ -921,6 +919,7 @@ function diario(data, hoje, m, s, d) {
 function seletor(data, manha, tarde, noite, hoje, m, d) {
     console.clear();
     scoreTotal(data);
+	especial(manha, tarde, noite, hoje, m)
     if ('ipe' === manha) {
         console.log(`			Manhã:`);
         personagemPrincipal.irParaAEscola();
@@ -947,7 +946,6 @@ function seletor(data, manha, tarde, noite, hoje, m, d) {
         personagemPrincipal.aFreela()
     }
     // Quadros especiais da manhã
-    especial(manha, hoje, m)
     // Quadros especiais da manhã - end
 
     if ('v' === tarde) {
@@ -973,7 +971,6 @@ function seletor(data, manha, tarde, noite, hoje, m, d) {
         personagemPrincipal.aFreela()
     }
     // Quadros especiais da tarde
-
     // Quadros especiais da tarde - end
 
     if ('v' === noite) {
@@ -999,7 +996,6 @@ function seletor(data, manha, tarde, noite, hoje, m, d) {
         personagemPrincipal.aFreela()
     }
     // Quadros especiais da noite
-
     // Quadros especiais da noite - end
 }
 //Seletor de rotina - end
@@ -1009,7 +1005,7 @@ function scoreTotal(data) {
     console.clear();
     console.log(`\nHoje é ${data}\n`.blue);
     let dis = new status_('DISPOSIÇÃO              ', disposicao)
-    let blz = new status_('Beleza                  ', personagemPrincipal.beleza);
+        let blz = new status_('Beleza                  ', personagemPrincipal.beleza);
     let cnh = new status_('Conhecimento            ', personagemPrincipal.conhecimento);
     let pop = new status_('Popularidade            ', personagemPrincipal.popularidade);
     let art = new status_('Gosto por Artes         ', personagemPrincipal.artes);
@@ -1210,8 +1206,8 @@ function aCidade() {
                             console.clear();
                             console.log(`\n Acho que vou comprar uma caixa de chocolates...`);
                             cx_choco++;
-							disposicao += 15;
-							personagemPrincipal.atributosFisicos -= 5;
+                            disposicao += 15;
+                            personagemPrincipal.atributosFisicos -= 5;
                             dinheiro -= 15;
                             pressEnter()
                         } else {
@@ -1234,7 +1230,7 @@ function aCidade() {
                             console.clear();
                             console.log(`\nAdorei essa camisa de unicórnio, darei para alguém especial`);
                             camisa_unicornio++;
-							personagemPrincipal.visual += 10;
+                            personagemPrincipal.visual += 10;
                             dinheiro -= 150;
                             pressEnter();
                         } else {
@@ -1299,9 +1295,9 @@ function aCidade() {
                             if (dinheiro >= 50) {
                                 console.log(`\nEsse lindo colar de miçangas me interessou, o vendedor disse que ele tem poderes mágicos...`)
                                 colar_micanga++
-								personagemPrincipal.artes += 5;
+                                personagemPrincipal.artes += 5;
                                 aShoppingMisterio = 'v';
-                                    dinheiro -= 100;
+                                dinheiro -= 100;
                                 pressEnter();
                             } else {
                                 console.log(`\nVocê não tem dinheiro suficiente...`);
@@ -1374,33 +1370,28 @@ endGame();
 //Sequencia de execução
 
 // Cenas dos Personagens:
-function especial(manha,tarde,noite,hoje,m) {
+function especial(manha, tarde, noite, hoje, m) {
     if (hoje === 18 && m === 0) {
         pressEnter();
         personagem0(1, 1);
-    } 
-	else if (hoje === 20 && m === 0) {
+    } else if (hoje === 20 && m === 0) {
         pressEnter();
         personagem1(1, 1)
-    } 
-	else if (hoje === 22 && m === 0) {
+    } else if (hoje === 22 && m === 0) {
         pressEnter();
         personagem2(1, 1)
-    } 
-	else if (tarde==='s' && m === 0 && personagensSecundariosPts[0] === 0){
-		personagem0(1,2);
-	}
-	else if (noite==='t' && m === 0 && personagensSecundariosPts[1] === 0){
-		personagem1(1,2);
-	}
-	// else if (periodo q vai acontecer === o que vai acontecer && m === 0 && personagensSecundariosPts[2] === 0){
-		// personagem2(1,2);
-	// }
-	else if (hoje === 2  && m === 1) {
+    } else if (tarde === 's' && m === 0 && personagensSecundariosPts[0] === 0) {
+        personagem0(1, 2);
+    } else if (noite === 't' && m === 0 && personagensSecundariosPts[1] === 0) {
+        personagem1(1, 2);
+    }
+    // else if (periodo q vai acontecer === o que vai acontecer && m === 0 && personagensSecundariosPts[2] === 0){
+    // personagem2(1,2);
+    // }
+    else if (hoje === 2 && m === 1) {
         pressEnter();
         personagem0(2, 1);
-    } 
-	else if (hoje === 19 && m === 1) {
+    } else if (hoje === 19 && m === 1) {
         pressEnter();
         console.log(`
 \nHoje o tempo está chuvoso!
@@ -1484,20 +1475,16 @@ function especial(manha,tarde,noite,hoje,m) {
             pressEnter();
             personagem2(2, 1)
         }
+    } else if (noite === 'd' && m === 2 && personagensSecundariosPts[0] === 1) {
+        personagem0(2, 2);
+    } else if (manha === 's' && hoje === 4 && m === 2 && personagensSecundariosPts[1] === 1) {
+        personagem1(2, 2);
     }
-	else if (noite==='d' && m === 2 && personagensSecundariosPts[0] === 1){
-		personagem0(2,2);
-	}
-	else if (manha==='s' && hoje === 4 && m === 2 && personagensSecundariosPts[1] === 1){
-		personagem1(2,2);
-	}
-	// else if (periodo q vai acontecer === o que vai acontecer && m === 2 && personagensSecundariosPts[2] === 1){
-		// personagem2(2,2);
-	// }
+    // else if (periodo q vai acontecer === o que vai acontecer && m === 2 && personagensSecundariosPts[2] === 1){
+    // personagem2(2,2);
+    // }
 
 }
-
-//especialManha/tarde/noite
 
 function personagem0(mes, dia) {
     if (mes === 1) {
