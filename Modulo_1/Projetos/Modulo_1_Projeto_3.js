@@ -945,9 +945,6 @@ function seletor(data, manha, tarde, noite, hoje, m, d) {
         console.log(`			Manhã:`);
         personagemPrincipal.aFreela()
     }
-    // Quadros especiais da manhã
-    // Quadros especiais da manhã - end
-
     if ('v' === tarde) {
         console.log(`			Tarde:`);
         personagemPrincipal.aVisual()
@@ -970,9 +967,6 @@ function seletor(data, manha, tarde, noite, hoje, m, d) {
         console.log(`			Tarde:`);
         personagemPrincipal.aFreela()
     }
-    // Quadros especiais da tarde
-    // Quadros especiais da tarde - end
-
     if ('v' === noite) {
         console.log(`			Noite:`);
         personagemPrincipal.aVisual()
@@ -995,8 +989,6 @@ function seletor(data, manha, tarde, noite, hoje, m, d) {
         console.log(`			Noite:`);
         personagemPrincipal.aFreela()
     }
-    // Quadros especiais da noite
-    // Quadros especiais da noite - end
 }
 //Seletor de rotina - end
 
