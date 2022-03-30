@@ -69,9 +69,7 @@ const eap = () => {
         return 'e';
     };
 };
-//Pronomes de sujeito - end
 
-//PressEnterFunction
 const pressEnter = () => {
     console.log();
     prompt(`pressione ENTER para continuar`);
@@ -859,21 +857,21 @@ function tempo() {
                     break looptime;
                 } else if (m31 % 2 === 0) {
                     if (hoje === 32) {
-						if(d===6){
-							time.d = 0
-						}else{
-							time.d = d+1;
-						}
+                        if (d === 6) {
+                            time.d = 0
+                        } else {
+                            time.d = d + 1;
+                        }
                         hoje = 1;
                         break loopmes;
                     };
                 } else {
                     if (hoje === 31) {
-						if(d===6){
-							time.d = 0
-						}else{
-							time.d = d+1;
-						}
+                        if (d === 6) {
+                            time.d = 0
+                        } else {
+                            time.d = d + 1;
+                        }
                         hoje = 1;
                         break loopmes;
                     };
@@ -885,7 +883,7 @@ function tempo() {
 //Tempo - end
 
 // Engine
-// Quando bater 140pts aparecer um Deus ( ! )
+// Quando bater 140pts aparecer um Deus ( ? )
 
 function status_(attr, vlr) {
     this.Status = attr;
@@ -927,7 +925,7 @@ function diario(data, hoje, m, s, d) {
 function seletor(data, manha, tarde, noite, hoje, m, d) {
     console.clear();
     scoreTotal(data);
-	especial(manha, tarde, noite, hoje, m)
+    especial(manha, tarde, noite, hoje, m)
     if ('ipe' === manha) {
         console.log(`			Manhã:`);
         personagemPrincipal.irParaAEscola();
@@ -1391,8 +1389,7 @@ function especial(manha, tarde, noite, hoje, m) {
     else if (hoje === 2 && m === 1) {
         pressEnter();
         personagem0(2, 1);
-    }
-	else if (hoje === 19 && m === 1) {
+    } else if (hoje === 19 && m === 1) {
         pressEnter();
         console.log(`
 \nHoje o tempo está chuvoso!
@@ -1476,11 +1473,9 @@ function especial(manha, tarde, noite, hoje, m) {
             pressEnter();
             personagem2(2, 1)
         }
-    }
-	else if (hoje > 2 && noite === 'd' && m === 2 && personagensSecundariosPts[0] === 1) {
+    } else if (hoje > 2 && noite === 'd' && m === 2 && personagensSecundariosPts[0] === 1) {
         personagem0(2, 2);
-    }
-	else if (hoje > 19 && manha === 's' && hoje === 4 && m === 2 && personagensSecundariosPts[1] === 1) {
+    } else if (hoje > 19 && manha === 's' && hoje === 4 && m === 2 && personagensSecundariosPts[1] === 1) {
         personagem1(2, 2);
     }
     // else if (periodo q vai acontecer === o que vai acontecer && m === 2 && personagensSecundariosPts[2] === 1){
@@ -2889,7 +2884,17 @@ function personagem1(mes, dia) {
             personagensSecundariosPts[1]++
             console.clear();
             console.log(`
-        \n		//texto introdução
+\nAcordo super animad${oap()}, hoje vou me encontrar com ${personagensSecundarios[1]}
+\nAcho que o eclipse acontece umas 09:00 horas da manha
+\nMas quero chegar lá bem cedinho
+\nE encontrar um bom lugar no gramado para estender o pano
+\nA Praça do Papa é um ponto turístico da cidade
+\nÉ localizada no ponto mais alto da cidade, e dá costas para uma linda vista da Serra
+\nÉ também a zona nobre da cidade, então a segurança é muito boa!
+\nTem bastante verde e é um espaço bem grande, A àrea é em torno de 2 quadras
+\nE ela sempre está cheia de crianças e famílias de toda parte da cidade durante o dia 
+\nA noite costuma ser o ponto de encontro de alguns casais
+\n e de jovens-adultos que vêm em grupo para beber alguma coisa e conversar
         `);
             pressEnter();
             do {
@@ -2931,16 +2936,16 @@ function personagem2(mes, dia) {
         if (dia === 1) {
             console.clear();
             console.log(`
-\n		//texto introdução
+\n		//texto introdução outubro historia 1
 			`);
             pressEnter();
             do {
                 console.clear();
                 console.log(`
-\n		//Texto introdução
+\n		//Texto introdução outubro historia 1
 				`);
                 console.log(`
-\n		//Pergunta				
+\n		//Pergunta outubro historia 1
 				`);
                 pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
                 if (pergunta != 's' && pergunta != 'n') {
@@ -2951,33 +2956,33 @@ function personagem2(mes, dia) {
             if (pergunta === 's') {
                 console.log();
                 console.log(`
-\n		//Texto positivo 1
+\n		//Texto positivo 1 outubro historia 1
 			`);
             } else {
                 console.log();
                 console.log(`
-\n		//texto negativo 1
+\n		//texto negativo 1 outubro historia 1
 				`);
             }
             pressEnter();
             console.log(`
-\n	//texto final
+\n	//texto final outubro historia 1
 			`);
             pressEnter();
         } else if (dia === 2) {
             personagensSecundariosPts[2]++
             console.clear();
             console.log(`
-\n		//texto introdução
+\n		//texto introdução outubro historia 2
 			`);
             pressEnter();
             do {
                 console.clear();
                 console.log(`
-\n		//Texto introdução
+\n		//Texto introdução outubro historia 2
 				`);
                 console.log(`
-\n		//Pergunta				
+\n		//Pergunta outubro historia 2
 				`);
                 pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
                 if (pergunta != 's' && pergunta != 'n') {
@@ -2988,17 +2993,17 @@ function personagem2(mes, dia) {
             if (pergunta === 's') {
                 console.log();
                 console.log(`
-\n		//Texto positivo 1
+\n		//Texto positivo 1 outubro historia 2
 			`);
             } else {
                 console.log();
                 console.log(`
-\n		//texto negativo 1
+\n		//texto negativo 1 outubro historia 2
 				`);
             }
             pressEnter();
             console.log(`
-\n	//texto final
+\n	//texto final outubro historia 2
 			`);
             pressEnter();
         }
@@ -3006,16 +3011,16 @@ function personagem2(mes, dia) {
         if (dia === 1) {
             console.clear();
             console.log(`
-\n		//texto introdução
+\n		//texto introdução novembro historia 1
 			`);
             pressEnter();
             do {
                 console.clear();
                 console.log(`
-\n		//Texto introdução
+\n		//Texto introdução novembro historia 1
 				`);
                 console.log(`
-\n		//Pergunta				
+\n		//Pergunta novembro historia 1
 				`);
                 pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
                 if (pergunta != 's' && pergunta != 'n') {
@@ -3026,33 +3031,33 @@ function personagem2(mes, dia) {
             if (pergunta === 's') {
                 console.log();
                 console.log(`
-\n		//Texto positivo 1
+\n		//Texto positivo 1 novembro historia 1
 			`);
             } else {
                 console.log();
                 console.log(`
-\n		//texto negativo 1
+\n		//texto negativo 1 novembro historia 1
 				`);
             }
             pressEnter();
             console.log(`
-\n	//texto final
+\n	//texto final novembro historia 1
 			`);
             pressEnter();
         } else if (dia === 2) {
             personagensSecundariosPts[2]++
             console.clear();
             console.log(`
-\n		//texto introdução
+\n		//texto introdução novembro historia 2
 			`);
             pressEnter();
             do {
                 console.clear();
                 console.log(`
-\n		//Texto introdução
+\n		//Texto introdução novembro historia 2
 				`);
                 console.log(`
-\n		//Pergunta				
+\n		//Pergunta novembro historia 2
 				`);
                 pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
                 if (pergunta != 's' && pergunta != 'n') {
@@ -3063,17 +3068,17 @@ function personagem2(mes, dia) {
             if (pergunta === 's') {
                 console.log();
                 console.log(`
-\n		//Texto positivo 1
+\n		//Texto positivo 1 novembro historia 2
 			`);
             } else {
                 console.log();
                 console.log(`
-\n		//texto negativo 1
+\n		//texto negativo 1 novembro historia 2
 				`);
             }
             pressEnter();
             console.log(`
-\n	//texto final
+\n	//texto final novembro historia 2
 			`);
             pressEnter();
         }
