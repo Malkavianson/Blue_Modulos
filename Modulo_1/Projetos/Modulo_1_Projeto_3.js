@@ -14,7 +14,7 @@ let disposicao = 100;
 let op_id = ['homem', 'mulher'];
 let op_os = ['he', 'ho', 'bi'];
 
-let horario = ['Alvorada', 'Manhã', 'Tarde', 'Noite', 'hora de dormir'];
+// let horario = ['Alvorada', 'Manhã', 'Tarde', 'Noite', 'hora de dormir'];
 var manhaA = '';
 var tardeA = '';
 var noiteA = '';
@@ -275,77 +275,7 @@ function hist1() {
 	\n  e todas as noites eu tenho a opção de salvar meu progresso!
 	Basta escrever " save " no seletor de atividades da noite.
 		`)
-    pressEnter();
-
-    personagemPrincipal.irParaAEscola = function () {
-        console.log(`Você foi para a escola!`)
-        this.conhecimento++;
-        this.popularidade++;
-        this.atributosFisicos++;
-        console.log(`Ganhou conhecimento, popularidade e Atributos físicos`)
-        disposicao--;
-    };
-
-    personagemPrincipal.aVisual = function () {
-        console.log(`\nNada melhor que se sentir bel${oap()}\nParei para cuidar do meu visual`);
-        this.beleza += 3;
-        console.log('Ganhou 3 de beleza')
-        disposicao--;
-    };
-
-    personagemPrincipal.aEstudar = function () {
-        console.log(`\nConhecimento é poder!\nEstudei intensamente`);
-        this.conhecimento += 3;
-        console.log('Ganhou 3 de conhecimento')
-        disposicao -= 2;
-    };
-
-    personagemPrincipal.aArtes = function () {
-        console.log(`\nA arte liberta a alma e colore os pensamentos\nEstudei artes e culturas`);
-        this.artes += 3;
-        this.conhecimento++;
-        disposicao--;
-        console.log(`Ganhou 3 de Artes e culturas\n		e algum conhecimento`)
-    };
-
-    personagemPrincipal.aExercicios = function () {
-        console.log(`\nMens sana in corpore sano\nCuidar do corpo é essêncial!\nFui à academia me exercitar`);
-        this.atributosFisicos += 3;
-        this.beleza++;
-        this.popularidade++
-        disposicao--;
-        console.log(`Ganhou 3 de Atributos Físicos\nAumentou sua beleza e popularidade`)
-    };
-
-    personagemPrincipal.aFreela = function () {
-        console.log(`\nO trabalho dignifica!\nNada como um freela pra encher a carteira`);
-        dinheiro += 50;
-        this.sorte++;
-        disposicao -= 2;
-        console.log(`Recebeu R$50,00 pelo seu trabalho`)
-    };
-
-    personagemPrincipal.exausto = function () {
-        console.log(`\nMe sento muito exaust${oap()} e vou tirar o dia para descansar!`);
-        disposicao += 15;
-        this.conhecimento -= 3;
-        this.artes -= 3;
-        this.atributosFisicos -= 3;
-        this.popularidade -= 3;
-        this.sorte -= 15
-    };
-    personagemPrincipal.aDescansar = function () {
-        if (disposicao < 100) {
-            console.log(`\nNinguém é de ferro\nVou descansar um pouco`);
-            disposicao += 7;
-            personagemPrincipal.sorte += 5;
-        }
-        if (disposicao > 100) {
-            disposicao = 100;
-        }
-        console.log(`Recuperou 7 de disposição`)
-    };
-
+	addM();
     pressEnter();
     return [personagemPrincipal, time, personagensSecundarios, dinheiro, disposicao];
 }
@@ -839,7 +769,8 @@ E também...\n
 //História - end
 
 //Tempo
-function tempo() {
+function 
+tempo() {
     pressEnter()
     console.log('Personagem', personagemPrincipal)
     let hoje = time.hoje;
@@ -1028,21 +959,12 @@ function jogo() {
                 s: load.sm,
                 d: load.ds,
             };
-            personagemPrincipal = {
-                nome: load.pp.nome,
-                identidadeGenero: load.pp.identidadeGenero,
-                orientacaoSexual: load.pp.orientacaoSexual,
-                beleza: load.pp.beleza,
-                conhecimento: load.pp.conhecimento,
-                popularidade: load.pp.popularidade,
-                artes: load.pp.artes,
-                atributosFisicos: load.pp.atributosFisicos,
-                sorte: load.pp.sorte,
-            };
+			personagemPrincipal = load.pp;
             disposicao = load.dp;
             dinheiro = load.dn;
             personagensSecundarios = load.ps;
             personagensSecundariosPts = load.psp;
+			addM();
             // /*carregar JSON*/
             pressEnter();
             console.log(`\nPersonagem Carregado: ${personagemPrincipal.nome}\n\n Affairs:\n ${personagensSecundarios}`);
@@ -1144,7 +1066,7 @@ function saveGame(hoje, m, s, d) {
     // personagensSecundarios		'arr'
     // personagensSecundariosPts	'arr'
     console.clear();
-    console.log(`	Salvando dados de ${personagemPrincipal.nome}... `);
+    prompt(`	Salvando dados de ${personagemPrincipal.nome}... `);
     const save = {
         pp: personagemPrincipal,
         dn: dinheiro,
@@ -1167,6 +1089,78 @@ function saveGame(hoje, m, s, d) {
     console.log(`	dados de ${personagemPrincipal.nome} salvos!\n  prossiga para selecionar sua atividade noturna!`)
     pressEnter();
 };
+
+	function addM(){
+		personagemPrincipal.irParaAEscola = function () {
+			console.log(`Você foi para a escola!`)
+			this.conhecimento++;
+			this.popularidade++;
+			this.atributosFisicos++;
+			console.log(`Ganhou conhecimento, popularidade e Atributos físicos`);
+			disposicao--;
+		};
+
+		personagemPrincipal.aVisual = function () {
+			console.log(`\nNada melhor que se sentir bel${oap()}\nParei para cuidar do meu visual`);
+			this.beleza += 3;
+			console.log('Ganhou 3 de beleza')
+			disposicao--;
+		};
+
+		personagemPrincipal.aEstudar = function () {
+			console.log(`\nConhecimento é poder!\nEstudei intensamente`);
+			this.conhecimento += 3;
+			console.log('Ganhou 3 de conhecimento')
+			disposicao -= 2;
+		};
+
+		personagemPrincipal.aArtes = function () {
+			console.log(`\nA arte liberta a alma e colore os pensamentos\nEstudei artes e culturas`);
+			this.artes += 3;
+			this.conhecimento++;
+			disposicao--;
+			console.log(`Ganhou 3 de Artes e culturas\n		e algum conhecimento`)
+		};
+
+		personagemPrincipal.aExercicios = function () {
+			console.log(`\nMens sana in corpore sano\nCuidar do corpo é essêncial!\nFui à academia me exercitar`);
+			this.atributosFisicos += 3;
+			this.beleza++;
+			this.popularidade++
+			disposicao--;
+			console.log(`Ganhou 3 de Atributos Físicos\nAumentou sua beleza e popularidade`)
+		};
+
+		personagemPrincipal.aFreela = function () {
+			console.log(`\nO trabalho dignifica!\nNada como um freela pra encher a carteira`);
+			dinheiro += 50;
+			this.sorte++;
+			disposicao -= 2;
+			console.log(`Recebeu R$50,00 pelo seu trabalho`)
+		};
+
+		personagemPrincipal.exausto = function () {
+			console.log(`\nMe sento muito exaust${oap()} e vou tirar o dia para descansar!`);
+			disposicao += 15;
+			this.conhecimento -= 3;
+			this.artes -= 3;
+			this.atributosFisicos -= 3;
+			this.popularidade -= 3;
+			this.sorte -= 15
+		};
+
+		personagemPrincipal.aDescansar = function () {
+			if (disposicao < 100) {
+				console.log(`\nNinguém é de ferro\nVou descansar um pouco`);
+				disposicao += 7;
+				personagemPrincipal.sorte += 5;
+			}
+			if (disposicao > 100) {
+				disposicao = 100;
+			}
+			console.log(`Recuperou 7 de disposição`)
+		};
+	};
 
 function aCidade() {
     console.log(`\nNada melhor que ver um pouco de gente\n\nSaí um pouco pela cidade`);
@@ -1335,7 +1329,7 @@ function aCidade() {
 function endGame() {
     console.clear();
     console.log(`\nVocê finalizou o
-		\n		A d o l e D a t e s`.brightMagenta.bold);
+		\n		A d o l e D a t e s❤️`.brightMagenta.bold);
     console.log(`\n	O Florescer do coração`.brightMagenta.underline);
     console.log(`
 		\ncriado e produzido por @MalkavianSon
@@ -1344,10 +1338,12 @@ function endGame() {
     process.exit()
 }
 // Engine
+
 //Sequencia de execução
 console.clear();
-console.log(`\n\n		A d o l e D a t e s`.brightMagenta.bold);
+console.log(`\n\n		A d o l e D a t e s❤️`.brightMagenta.bold);
 console.log(`\n	O Florescer do coração`.brightMagenta.underline);
+console.log(`\n Recomendado manter o terminal em modo fullScreen`)
 pressEnter();
 do {
     ng = prompt(`		Deseja iniciar um novo jogo? [s] ou [n]`).toLowerCase();
@@ -1365,23 +1361,23 @@ tempo();
 histF();
 endGame();
 
-//Sequencia de execução
+//Sequencia de execução - fim
 
 // Cenas dos Personagens:
 function especial(manha, tarde, noite, hoje, m) {
     if (hoje === 18 && m === 0) {
         pressEnter();
-        personagem0(1, 1);
+        personagem0(1,1);
     } else if (hoje === 20 && m === 0) {
         pressEnter();
-        personagem1(1, 1)
+        personagem1(1,1)
     } else if (hoje === 22 && m === 0) {
         pressEnter();
-        personagem2(1, 1)
+        personagem2(1,1)
     } else if (hoje > 18 && tarde === 's' && m === 0 && personagensSecundariosPts[0] === 0) {
-        personagem0(1, 2);
+        personagem0(1,2);
     } else if (hoje > 19 && noite === 't' && m === 0 && personagensSecundariosPts[1] === 0) {
-        personagem1(1, 2);
+        personagem1(1,2);
     }
     // else if (periodo q vai acontecer === o que vai acontecer && m === 0 && personagensSecundariosPts[2] === 0){
     // personagem2(1,2);
@@ -2886,47 +2882,345 @@ function personagem1(mes, dia) {
             console.log(`
 \nAcordo super animad${oap()}, hoje vou me encontrar com ${personagensSecundarios[1]}
 \nAcho que o eclipse acontece umas 09:00 horas da manha
-\nMas quero chegar lá bem cedinho
-\nE encontrar um bom lugar no gramado para estender o pano
-\nA Praça do Papa é um ponto turístico da cidade
-\nÉ localizada no ponto mais alto da cidade, e dá costas para uma linda vista da Serra
-\nÉ também a zona nobre da cidade, então a segurança é muito boa!
-\nTem bastante verde e é um espaço bem grande, A àrea é em torno de 2 quadras
-\nE ela sempre está cheia de crianças e famílias de toda parte da cidade durante o dia 
-\nA noite costuma ser o ponto de encontro de alguns casais
-\n e de jovens-adultos que vêm em grupo para beber alguma coisa e conversar
-        `);
-            pressEnter();
-            do {
-                console.clear();
-                console.log(`
-        \n		//Texto introdução
-        `);
-                console.log(`
-        \n		//Pergunta
-        `);
-                pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
-                if (pergunta != 's' && pergunta != 'n') {
-                    prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
-                }
-            } while (pergunta != 's' && pergunta != 'n')
-            console.clear();
-            if (pergunta === 's') {
-                console.log();
-                console.log(`
-        \n		//Texto positivo 1
-        `);
-            } else {
-                console.log();
-                console.log(`
-        \n		//texto negativo 1
-        `);
-            }
+			`);
             pressEnter();
             console.log(`
-        \n	//texto final
-        `);
+\nMas quero chegar lá bem cedinho
+\nE encontrar um bom lugar no gramado para estender o pano
+			`);
             pressEnter();
+            console.log(`
+\nA Praça do Papa é um ponto turístico
+\nÉ localizada no ponto mais alto da cidade, e dá costas para uma linda vista da Serra
+\nÉ também a zona nobre da cidade, então a segurança é muito boa!
+			`);
+            pressEnter();
+            console.log(`
+\nTem bastante verde e é um espaço bem grande, A àrea é em torno de 2 quadras
+\nE ela sempre está cheia de crianças e famílias em toda parte da cidade durante o dia 
+			`);
+            pressEnter();
+            console.log(`
+\nA noite costuma ser o ponto de encontro de alguns casais
+\n e de jovens-adultos que vêm em grupo para beber alguma coisa e conversar
+			`);
+            pressEnter();
+            console.log(`
+\nComo hoje é sábado, o ônibus para lá estava bem vazio
+\n e meu perfume pairava pelo veículo de forma que todos me olhavam quando eu passava
+			`);
+            pressEnter();
+            console.log(`
+\nAssim que o ônibus chega à Praça do Papa
+\n de longe consigo ver ${personagensSecundarios[1]} em um trailler comprando um lanche
+\nEla logo me viu quando desci do veículo e veio até mim com uma amiga
+			`);
+            pressEnter();
+            console.log(`
+\nSuas roupas estão um pouco inusuais, e percebo que as roupas de sua amiga também
+\nSerá que eu precisava de ter vindo caracterizad${oap()} também?
+			`);
+            pressEnter();
+            console.log(`
+\n${personagensSecundarios[1]} está vestid${oas(1)} com uma bata clara
+\n e uma túnica vermelha sobre os ombros.
+\nComo se fosse uma roupa de camponês da idade média
+			`);
+            pressEnter();
+            console.log(`
+\nSua amiga está com uma roupa semelhante, mas com uma batina ao invés da Bata
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[1]}
+\n	Nossa, que legal! Você veio mesmo <3 <3 
+\nDisse el${eas(1)} animadíssim${oas(1)}
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagemPrincipal.nome}
+\n	Claro que eu vim, não perderia isso por nada!
+			`);
+            pressEnter();
+            console.log(`
+\n__Detalhe... Nunca parei para ver um eclipse '-'__
+			`);
+            pressEnter();
+            console.log(`
+\n	Mas acho que vim com a vestimenta inapropriada
+\n por quê vocês estão vestid${oas(1)} assim?
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[1]}
+\n	Ah não, que isso... Era pra vir com qualquer roupa mesmo
+\n	É por quê somos simpatizantes do movimento Pagão Asatru
+			`);
+            pressEnter();
+            console.log(`
+\n	Que é como um renascimento da antiga religião politeísta Nórdica
+\n	E para nós, os eclipses solares remetem à Ragnarök
+			`);
+            pressEnter();
+            console.log(`
+\nLogo pensei nos filmes do Thor 
+\nNão entendo nada do assunto além de ele ser irmão do Loki e ter um Martelo
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[1]}
+\n	Vamos lá ficar com o pessoal!
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[1]}
+\n	Vamos sim, vou só comprar um energético para mim no foodTruck ali
+\nCompro um Energético e logo após vamos para ao encontro do grupo 
+			`);
+            pressEnter();
+            console.log(`
+\nA praça ainda estava bem vazia mas já haviam algumas famílias fazendo piquenique
+\nCrianças andando de bicicleta e alguns jovens de outras tribos também
+			`);
+            pressEnter();
+            console.log(`
+\nEstendo uma toalha na grama e coloco minha mochila em cima
+\nE observo ${personagensSecundarios[1]} conversar com seus amigos
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[1]}
+\n	${personagemPrincipal.nome}, o eclipse deve começar lá para as 09:30
+			`);
+            pressEnter();
+            console.log(`
+\n	O pessoal vai fazer a leitura de alguns cantigos mas é só pelo ritual
+\n	A gnt já vai começar a beber!
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagemPrincipal.nome}
+\n	Mas qual a relação do Ragnarök ao eclipse?
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[1]}
+\n	Os nórdicos acreditavam que durante o Ragnarök
+\n	 grandes batalhas aconteceriam entre os deuses
+			`);
+            pressEnter();
+            console.log(`
+\n	 e a destruição do universo seria conduzida por Loki
+\n	 pelos filhos de Loki e pelo gigante de fogo chamado Surtur.
+			`);
+            pressEnter();
+            console.log(`
+\n	Os eventos do Ragnarök seriam antecedidos pelo fimbulvetr
+\n	 que é um longo ciclo de três invernos seguidos em que haveria terríveis geadas
+\n	 e no qual a violência e o caos seriam disseminados pelo mundo
+			`);
+            pressEnter();
+            console.log(`
+\n	Durante o caos do Ragnarök
+\n	 o sol e a lua, que são eternamente perseguidos pelos lobos Skoll e Hati
+\n	 seriam alcançados e devorados por outro lobo chamado Managarm.
+			`);
+            pressEnter();
+            console.log(`
+\n	Após isso, os filhos de Loki marchariam por sobre Midgard (mundo dos homens)
+\n	 e travariam batalha com os deuses.
+\n	Daí a ideia do Eclipse
+			`);
+            pressEnter();
+            console.log(`
+\nAlguém com um binóculo especial aponta para céu e grita
+\n	GEEEENTEEEEE, DEVE COMEÇAR DAQUI A POUCO, JÁ DÁ PARA VER A LUA APONTANDO!
+			`);
+            pressEnter();
+            console.log(`
+\n${personagensSecundarios[1]} olha rapidamente para o céu 
+\nE eu fico observando seu olhar animado buscando um feixe de escuridão no sol
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[1]}
+\n	Ai! Não devia ter olhado diretamente para o sol kkkkkkkk sou burr${oas(1)}
+\n	Logo logo o dia deve virar noite
+			`);
+            pressEnter();
+            console.log(`
+\nO dia virar noite? Eu tinha me esquecido desse detalhe '-'
+\nRealmente não me lembro de ter visto um eclipse total do sol
+			`);
+            pressEnter();
+            console.log(`
+\nNão percebi como a praça encheu bem rapido depois que cheguei 
+\nE ${personagensSecundarios[1]} está sentad${oas(1)} junto comigo
+\nEnquanto ouvimos seus amigos entoar um cântico, aparentemente nórdico
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[1]}
+\n	Ouça, a Camila está recitando uma profecia que diz sobre o Fim dos Tempos
+			`);
+            pressEnter();
+            console.log(`
+\n		Camila:
+\n	Irmãos lutarão♫
+	E matarão uns aos outros♪
+	Filhos das próprias irmãs♫
+	Pecarão juntos♪
+	Dias doentes entre os homens,♫
+	Em que pecados do sexo aumentarão♪
+	Uma era do machado, uma era da espada,♫
+	Escudos serão partidos♪
+	Uma era do vento, uma era do lobo,♫
+	Antes de o mundo cair morto♪
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[1]}
+\n	Não é lindo? <3 <3 
+\nDiz ${personagensSecundarios[1]} emocionad${oas(1)}
+			`);
+            pressEnter();
+            console.log(`
+\nPessoalmente... É bem um canto fúnebre mesmo!
+\nFaz parte da cultura e eu não critico... Só não é meu estilo
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagemPrincipal.nome}
+\n	É Bonito! Triste... Mas bonito
+\n		${personagensSecundarios[1]}
+\n	É uma canção que sobrevive à mais de 1000 anos
+			`);
+            pressEnter();
+            console.log(`
+\n	Mesmo depois da antropofagia que aconteceu na islandia no Sec XIV
+\n	E a religião nórdica ter sido marginalizada pela dominação cristã
+			`);
+            pressEnter();
+            console.log(`
+\n	Esta ainda é uma cultura que sobrevive
+\n	 e nos mostra que somos uma grande mistura de culturas e conhecimentos pelo mundo
+			`);
+            pressEnter();
+            console.log(`
+\nEm apenas 3 minutos o sol já está quase todo escondido, e já é possível ver estrelas
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[1]}
+\n	É incrível não é?
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagemPrincipal.nome}
+\n	O que exatamente você diz?
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[1]}
+\n	Como a natureza é perfeita... Estamos aqui, admirando um detalhe de um ciclo
+\n	De um corpo celeste que admiramos todos os dias 
+			`);
+            pressEnter();
+            console.log(`
+\n	E isso nos mostra como somos tão pequenos e frágeis
+\n	E nossa existência é tão pequena
+			`);
+            pressEnter();
+            console.log(`
+\n	Há mais de 1000 anos outras pessoas admiravam um acontecimento identico à este
+\n	E temiam pelas suas vidas
+			`);
+            pressEnter();
+            console.log(`
+\n	Pense quantas desculpas sinceras foram pedidas
+\n	Quantas lágrimas de arrependimento desceram dos olhos
+\n	Quantos abraços foram dados
+			`);
+            pressEnter();
+            console.log(`
+\n	Por isso o eclipse é tão importante para mim, me faz perceber como o fim do mundo
+\n	Pode acontecer para qualquer um à qualquer momento
+			`);
+            pressEnter();
+            console.log(`
+\n	E nós não devemos aguardar o apocalipse 
+\n	Para buscarmos o sentido da nossa felicidade
+			`);
+            pressEnter();
+            console.log(`
+\n	Ragnarök fala de renovo, do caos destruindo a ordem
+\n	E deixando um caminho livre para uma nova ordem
+			`);
+            pressEnter();
+            console.log(`
+\n	Nós deviamos aprender com isso
+\n	E aproveitar cada segundo, para que no fim... quando chegar a hora apocalipse pessoal
+\n	 possamos passar dessa vida para a próxima sem arrependimentos
+			`);
+            pressEnter();
+            console.log(`
+\nNesse instante, quando o sol estava completamente coberto pela lua
+\n${personagensSecundarios[1]} e eu nos entreolhamos
+			`);
+            pressEnter();
+            console.log(`
+\nEram 09:27 da manhã, mas o céu estava completamente estrelado
+\nOs olhos de ${personagensSecundarios[1]} estavam fixos nos meus 
+\nE nossas mãos se tocam
+			`);
+            pressEnter();
+            console.log(`
+\n		__Alguém no grupo dos nórdicos__
+\n	${personagensSecundarios[1].toUpperCase()}, VEM AQUI TIRAR UMA FOTO COM A GENTE!
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[1]}
+\n	A GENTE JÁ VAI!
+\n	Vamos lá tirar umas fotos com o pessoal e beber alguma coisa
+\n	Já que, teoricamente, pelos próximos 3 minutos, está de noite né kkkkk
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagemPrincipal.nome}
+\n	Ah, sim... Claro! Vamos lá tirar umas fotos
+			`);
+            pressEnter();
+            console.log(`
+\nNos reunimos com o pessoal, tiramos várias fotos
+\nA nuance das tonalidades nas nuvens ficaram lindas quando o sol voltou à aparecer
+\nUm tom laranja-Boreal tomou conta do ceu e nós registramos todos os detalhes possíveis
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[1]}
+\n	${personagemPrincipal.nome}, agora nós vamos almoçar na casa do Diogo
+\n	E de lá devemos ir pra uma Rave em um sítio até Domingo
+\n	Você quer ir com a gente?
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagemPrincipal.nome}
+\n	Ah, nem posso! Que pena... Até gostaria de ir
+\n	Mas eu tenho que fazer algumas coisas hoje ainda
+\n	E amanhã vou estar bem ocupado, você me perdoa?
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[1]}
+\n	Claro que perdoo, hoje foi maravilhoso! Fiquei muito feliz que você veio!
+\n	Te vejo na escola segunda-feira então!
+			`);
+            pressEnter();
+            console.log(`
+\n${personagensSecundarios[1]} e eu nos abraçamos e el${eas(1)} me dá um beijo no rosto!
+\nO Dia hoje foi gratificante! Fiquei muito feliz por ter escolhido vir até aqui!
+        `);
         };
     };
 };
@@ -2936,16 +3230,178 @@ function personagem2(mes, dia) {
         if (dia === 1) {
             console.clear();
             console.log(`
-\n		//texto introdução outubro historia 1
+\nCaminhando pela escola vejo várias tribos espalhadas em grupinhos
+\nAcho interessante como o pessoal do segundo ano é totalmente diferente do terceiro...
+			`);
+            pressEnter();
+            console.log(`
+\nO primeiro ano aqui no colégio é somente de tarde, e o segundo e o terceiro são de manhã
+\nEntão, quando nós passamos para o terceiro e a galera do primeiro passou para a manhã
+\nE a escola se diversificou bastante no quesito "tribos Urbanas"
+			`);
+            pressEnter();
+            console.log(`
+\nAntes tinha a galera do HipHop, os Nerds, os Esportistas e o resto...
+\nAgora a escola é super dividida entre Otakus, TikTokers, e-girls e e-boys
+\n Clubbers, Geeks, Veganos e vários tipos de galeras!
+			`);
+            pressEnter();
+            console.log(`
+\nEstou sentad${oap()} na escada que leva para o pátio
+\n enquanto surge grupo de alunos do 2º e dentre eles alguém cantando:
+			`);
+            pressEnter();
+            console.log(`
+\n		Yoru no tobari ga oritara aizuda♫
+\n		Sōtai shite mawaru kanjō-sen♪♪
+\n		Zaregoto nado wa haki sute ike to♫
+\n		Mada tomenaide mada tomenaide♪♪
+			`);
+            pressEnter();
+            console.log(`
+\nNão me movo na escada! Eles que me contornem!!!!
+\n e o grupo começa a descer as escadas no sentido do pátio
+			`);
+            pressEnter();
+            console.log(`
+\n${oas(2).toUpperCase()} minin${oas(2)} que estava cantando esbarra em minha perna
+\n		${personagemPrincipal.nome}
+\n	Ow! Presta atenção onde passa! Enxerga não menin${oas(2)}?
+\nDigo chei${oap()} de ódio
+			`);
+            pressEnter();
+            console.log(`
+\n		???????????
+\n	Oooneee?
+			`);
+            pressEnter();
+            console.log(`
+\nMe irrito com aquela situação
+\nEl${eas(2)} é daqueles tipos Otakus
+			`);
+            pressEnter();
+            console.log(`
+\n que vestem uma camisa de anime por baixo do uniforme
+\nE falam coisas que ninguém entende...
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagemPrincipal.nome}
+\n	Aaaaaah, para de ser esquisit${oas(2)} menin${oas(2)}
+\n	E por gentileza, para de gritar no meu ouvido!
+			`);
+            pressEnter();
+            console.log(`
+\nEl${eas(2)} para no degrau por à minha frente e
+\n se vira para mim com o dedo em frente à boca fazendo silêncio
+			`);
+            pressEnter();
+            console.log(`
+\n		???????????
+\n	(*°o°) Hihi ('°,°) Eu tenho que fazer silêncio an?
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagemPrincipal.nome}
+\n	Cara... Você é extremamente chat${oas(2)}!
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	Ããããn? Eu não sou chat${oas(2)}! Por quê você pensa isso???
+\n	Enfim... Meu nome é ${personagensSecundarios[2]}
+\nOcupando o outro lado da passagem, el${eas(2)} senta ao meu lado
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	Não entendi o motivo de me tratar mal!?
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagemPrincipal.nome}
+\n	Não te tratei mal... Só disse que você é chata!
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	E isso é tratar mal! __diz enquanto franze a testa
+\nAs pessoas começam a passar pelo espaço entre nós, e el${eas(2)} continua
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	Você não tem o direito de tratar as pessoas assim, sabia?
+\nAlguém descendo as escadas esbarra a perna
+\n nos livros que ${personagensSecundarios[2]} leva
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	Heey! Baka! Tenha cuidado!!!__Diz brava com sua voz doce e felpuda
+			`);
+            pressEnter();
+            console.log(`
+\nQuando tenta se levantar do degrau, outra pessoa descendo as escadas
+\n pisa na bandana da tribo da folha que está amarrada em seu macacão Jeans
+			`);
+            pressEnter();
+            console.log(`
+\nE ${personagensSecundarios[2]} cai de volta sentad${oas(2)} no mesmo lugar que estava
+\n		${personagensSecundarios[2]}
+\n	(╥﹏╥)Aaaaaaah ಥ_ಥ  Onee sama...__Juntando as mãos 
+\n	Será que você poderia pegar para mim? （っ＾▿＾）
+			`);
+            pressEnter();
+            console.log(`
+\nJá foi um desaforo tirar a minha paz, agora quer que EU pegue esses livros?
+\nQuem traz livros para o intervalo????
+\n		${personagemPrincipal.nome}
+\n	É sério isso??? Ah! Se vira!
+			`);
+            pressEnter();
+            console.log(`
+\nNeste momento ${personagensSecundarios[2]} se levanta com prontidão e diz
+\n		${personagensSecundarios[2]}
+\n	Me virar? (≖_≖ )\n	Me virar?? (｀_っ´)
+			`);
+            pressEnter();
+            console.log(`
+\n	Ah, entendi!__Diz isso enquanto se vira lentamente de lado para mim
+\n	Assim OneeChan?
+			`);
+            pressEnter();
+            console.log(`
+\nMinha raiva explode nesse momento! Acabei de vir de um maldito teste de física
+\nEstou cansad${oap()}, e essa criatura vem zoar com minha cara?
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagemPrincipal.nome}
+\n	Olha aqui, pra inicio... PARA DE ME CHAMAR DE ÔNE TCHAN
+\n	SEGUNDO, PARA POR FAVOR DE ME ESTRESSAR!!
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	Hihi, tudo bem... começamos mal
+\n	Antes de tudo, como posso te chamar?
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagemPrincipal.nome}
+\n	Meu nome é ${personagemPrincipal.nome}! __Digo de forma brava
 			`);
             pressEnter();
             do {
                 console.clear();
                 console.log(`
-\n		//Texto introdução outubro historia 1
+\n		${personagensSecundarios[2]}
+\n	Ok ${personagemPrincipal.nome}-senpai... Será que você poderia pelo menos
+\n	Me ajudar a recolher meus mangás?
 				`);
                 console.log(`
-\n		//Pergunta outubro historia 1
+\n		Ajudar ${personagensSecundarios[2]} à recolher os mangás?
 				`);
                 pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
                 if (pergunta != 's' && pergunta != 'n') {
@@ -2956,20 +3412,177 @@ function personagem2(mes, dia) {
             if (pergunta === 's') {
                 console.log();
                 console.log(`
-\n		//Texto positivo 1 outubro historia 1
+\n		${personagemPrincipal.nome}
+\n	Tudo bem, vamos começar novamente...
 			`);
-            } else {
+            pressEnter();
+            console.log(`
+\nDesço as escadas e ajudo ${personagensSecundarios[2]} à recolher seus mangás
+\nSão alguns volumes de Dr. Stone (pelo que diz na capa)
+			`);
+            pressEnter();
+            console.log(`
+\nCom a capa dura e uma pelicula plástica para proteger a edição
+\nDepois que recolhemos tudo, ${personagensSecundarios[2]} diz me agradecendo
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	Arigatou gozaimasu ${personagemPrincipal.nome}-senpai 
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagemPrincipal.nome}
+\n	Olha, primeira coisa é: Pare de me chamar de sem pai
+\n	Por quê eu tenho pai sim ta bom!
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	hihihihihihi Não estou te chamando de Sem Pai kkkkkk
+\n	Estou te chamando de Senpai! É diferente
+\n	Eu estou no segundo-ano... E você no terceiro, né?
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagemPrincipal.nome}
+\n	Bem... Sim...
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	Jaa... Senpai desu ne? :3 
+\n	kore kora yoroshiku ne 
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagemPrincipal.nome}
+\n	Olha lá você falando dificil de novo!
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	Hihi, me desculpe... é o Hábito
+\n	Eu disse: Então significa que você é meu veterano
+\n	Muito prazer em conhecê-lo
+			`);
+            pressEnter();
+            console.log(`
+\n	Senpai em Japonês remete ao superior na hierarquia escola
+\n	Você pode me chamar de Kōhai se quiser ^.^
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagemPrincipal.nome}
+\n	Não... Muito obrigado
+\n	Posso te chamar de ${personagensSecundarios[2]} mesmo... Mais simples
+			`);
+            pressEnter();
+            console.log(`
+\n${personagensSecundarios[2]} se aproxima de mim lentamente... 
+\nAté aquele momento não tinha notado o quão ${personagensSecundarios[2]} é tão bonit${oas(2)}
+			`);
+            pressEnter();
+            console.log(`
+\nEl${eas(2)} começa a passar a ponta dos dedos pelo meu braço e vai subindo e direção ao meu ombro
+\n		${personagensSecundarios[2]}
+\n	Se você quiser pode me chamar da forma que preferir... 
+\n	O importante para mim é você me chamar :3
+			`);
+            pressEnter();
+            console.log(`
+\nSinto meu rosto esquentar, ninguém jamais foi tão direto assim comigo!
+\n		${personagemPrincipal.nome}
+\n	Hey! O que você está querendo dizer com isso?
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	hihihihi Parece q ${oap()} senpai ficou envergonhad${oap()} hihihi
+\n	Olha seu rostinho vermelhinho hihihi (─‿‿─)__diz el${eas(2)} com um sorriso provocante
+			`);
+            pressEnter();
+            console.log(`
+\n	Vamos fazer assim ${personagemPrincipal.nome}-senpai
+\n	Agora eu vou correr para a reunião do grêmio e quem sabe nos encontramos outro dia
+			`);
+            pressEnter();
+            console.log(`
+\n	Pode ser?__Diz enquanto vira as costas em direção à sala do grêmio ao lado da Cantina
+\nQuem ess${eas(2)} menin${oas(2)} pensa que é para falar assim comigo?
+			`);
+            pressEnter();
+            console.log(`
+\nAlgo me diz que esse não é nosso ultimo encontro
+			`);
+            }
+			else {
                 console.log();
                 console.log(`
-\n		//texto negativo 1 outubro historia 1
+\n		${personagemPrincipal.nome}
+\n	Você está é rindo do meu cabelo, né? Não é possível!
+\n	Primeiro causa toda essa confusão
+\n	E agora quer me tirar da minha paz????
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	Gomen Gomen ${personagemPrincipal.nome}-senpai
+\n	Foi um erro ter pedido sua ajuda!
+\n	Você precisa lidar com todo essa raiva reprimida!
+			`);
+            pressEnter();
+            console.log(`
+\n${personagensSecundarios[2]} desce os degraus até o pátio e recolhe seus mangás
+\nE em seguida sobe as escadas novamente
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagemPrincipal.nome}
+\n	Nossa... Você não vai parar de me incomodar?
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	Ok ok, talvez você não tenha percebido, mas sua comunicação foi sim agressiva.
+			`);
+            pressEnter();
+            console.log(`
+\n	Recomendo como leitura o livro "Comunicação Não Violenta" para te ajudar a perceber
+\n	 e corrigir (se lhe interessar) esses comportamentos indesejados em ambiente social
+			`);
+            pressEnter();
+            console.log(`
+\n	Aqui na escola, nós do grêmio, temos um projeto que dá apoio psicológico para alunos
+\n	 que querem lidar com comportamentos como estes
+\n	 para que o bullying seja erradicado em nosso meio
+\nEl${eas(2)} me entrega um papelzinho escrito "Comunicacao Nao-violenta de Marshall Rosenberg"
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	É de coração, acredito que a culpa não é sua! E se você quiser, podemos ajudar a lidar...
+			`);
+            pressEnter();
+            console.log(`
+\nMe sinto um pouco envergonhad${oap()} com o contexto, mas não me arrependo!
+\nAcredito que estou no meu direito de ficar em paz sem deixar esse povo me perturbar
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagemPrincipal.nome}
+\n	Tá certo, vou ver se eu leio! Agora me deixa quiet${oap()} por gentileza????
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	Hai! Ta certo! Pelo menos dê uma oportunidade para a leitura, tudo bem?
+\n	Nos veremos novamente ${personagemPrincipal.nome}-senpai
 				`);
             }
             pressEnter();
-            console.log(`
-\n	//texto final outubro historia 1
-			`);
-            pressEnter();
-        } else if (dia === 2) {
+        }
+		else if (dia === 2) {
             personagensSecundariosPts[2]++
             console.clear();
             console.log(`
@@ -3007,7 +3620,8 @@ function personagem2(mes, dia) {
 			`);
             pressEnter();
         }
-    } else if (mes === 2) {
+    }
+	else if (mes === 2) {
         if (dia === 1) {
             console.clear();
             console.log(`
@@ -3044,7 +3658,8 @@ function personagem2(mes, dia) {
 \n	//texto final novembro historia 1
 			`);
             pressEnter();
-        } else if (dia === 2) {
+        }
+		else if (dia === 2) {
             personagensSecundariosPts[2]++
             console.clear();
             console.log(`
