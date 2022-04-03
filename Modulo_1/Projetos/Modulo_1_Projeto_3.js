@@ -1,7 +1,55 @@
-//Modulos
+//Modulos usados
 const prompt = require('prompt-sync')();
 const colors = require('colors');
 const fs = require('fs');
+console.clear();
+console.log(`Para os Devs: \nPode ser entediante\nMas você pode também simplesmente selecionar o setup inicial e pressionar enter até o fim...\nPessoalmente, não gostaria que fizesse isso\nSe um dia se interessar\nDê uma oportunidade!\nTenha um bom teste! `);
+prompt(``);
+console.clear()
+console.log(`Para os jogadores: \nO jogo não tem perdedor\nNós não 'PERDEMOS' na vida\nNós simplesmente não vivemos algum momento!\ne seguimos um dia após o outro...\nLEMBRE-SE sempre de estar disposto à aproveitar os momentos da vida\nE para isso, é necessário cuidar de sí.\n	Jogue com seu coração.`);
+prompt(``);
+console.clear()
+console.log(`Para os amantes de Light Novel: \nAdoledates fala de nosso dia à dia, você sabe o que quer fazer... \nA pergunta é: Você REALMENTE faria isso?\n Muitas vezes passamos por situações que testam nosso coração, e nos fazem pensar... \nMe orgulho de quem sou?`);
+prompt(``);
+console.clear()
+console.log(`Os amigos que você fará aqui te mostrarão que devemos abrir as portas\n para ares renovados refrescarem o ambiente...`);
+prompt(``);
+console.clear()
+console.log(`	Configure full screen para uma experiência completa `)
+prompt(``);
+console.clear()
+
+// Mapa de Funções
+	//Variáveis Importantes
+		// Variaveis das compras
+	
+	// Funções
+		//Pronomes de sujeito
+		//PressEnterFunction
+		//Historia
+			//hist1 	- Introdução e tutorial
+			//histF		- Finalização do game
+			//namorar 	- Seleção de final
+			
+		//Engine
+			//tempo 	- Função controladora da passagem do tempo
+			//jogo		- new game/load game
+			//status__ 	- Função construtora dos status do personagem
+			//scoreTotal- Painel placar dos pontos 
+			//diario	- Função responsável por administrar o dia
+			//seletor 	- Função condicional dos afazeres diários
+			// Afazeres diários
+				//afazeresDia	- chama função do afazer diário
+				//saveGame		- salva o jogo
+				//addM			- adiciona métodos no objeto (tentar transformar em classe!)
+				//aCidade		- sistema de compra de status do jogo (aperfeiçoar!)
+				//especial		- distribuição de acontecimentos da trama
+				
+		// endGame		- chama finalização do jogo
+		
+		// Sequencia de execução
+		
+		//Cenas dos personagens
 
 //Variaveis importantes
 let ng = 's';
@@ -14,7 +62,6 @@ let disposicao = 100;
 let op_id = ['homem', 'mulher'];
 let op_os = ['he', 'ho', 'bi'];
 
-// let horario = ['Alvorada', 'Manhã', 'Tarde', 'Noite', 'hora de dormir'];
 var manhaA = '';
 var tardeA = '';
 var noiteA = '';
@@ -22,14 +69,13 @@ var noiteA = '';
 let ds = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
 let ma = ['Outubro', 'Novembro', 'Dezembro'];
 
-let garotas = ['Nivea', 'Sophia', 'Rosa' /*, 'Alice', 'Ludmila', 'Rebecca', 'Monica'*/];
-let garotos = ['Frederico', 'Davi', 'Otavio' /*, 'Marcelo', 'Ricardo', 'Alexandre', 'Otto'*/];
-let garotxs = ['Nivea', 'Sophia', 'Otavio' /*, 'Alice', 'Ludmila', 'Alexandre', 'Otto'*/];
+let garotas = ['Nivea', 'Sophia', 'Luiza' /*, 'Alice', 'Ludmila', 'Rebecca', 'Monica'*/];
+let garotos = ['Leonardo', 'Davi', 'Lucas' /*, 'Marcelo', 'Ricardo', 'Alexandre', 'Otto'*/];
+let garotxs = ['Nivea', 'Sophia', 'Lucas' /*, 'Alice', 'Ludmila', 'Alexandre', 'Otto'*/];
 let personagensSecundarios = [];
 let personagensSecundariosPts = [0, 0, 0 /*,0,0,0,0*/]
 
 // Variaveis das compras
-//DECIDIR O QUE FAZER DOS ITENS!
 var cx_choco = 0; // Para dar ao [0]
 var camisa_unicornio = 0; //para dar ao [6]
 var livro = 0; //para dar ao [5]
@@ -358,6 +404,7 @@ function histF() {
 
 function namorar(namor) {
     if (namor === personagensSecundarios[0]) {
+        personagensSecundariosPts[0]++
         console.log();
         pressEnter();
         console.log(`
@@ -417,6 +464,7 @@ ${personagensSecundarios[0]} me ensinou como quebrar a cara de alguém! kkkkkkkk
 		E nós sabemos disso...
 		`);
     } else if (namor === personagensSecundarios[1]) {
+        personagensSecundariosPts[1]++
         console.log();
         pressEnter();
         console.log(`
@@ -556,6 +604,7 @@ E também...\n
 			`);
         }
     } else if (namor === personagensSecundarios[2]) {
+        personagensSecundariosPts[2]++
         console.log();
         pressEnter();
         console.log(`
@@ -596,211 +645,43 @@ E também...\n
     `);
         }
     }
-    /*    else if (namor === personagensSecundarios[3]) {
-    console.log();
-    pressEnter();
-    console.log(`
-    1 texto pedido de namoro personagem [3]
-    `);
-    pressEnter();
-    console.log(`
-    2 texto pedido de namoro personagem [3]
-    `);
-    pressEnter();
-    let testf1 = (	personagemPrincipal.artes >= 100 );
-    if(testf1){
-    console.log();
-    console.log(`
-    1 texto pedido de namoro personagem [3] aceito
-    `);
-    pressEnter();
-    console.log(`
-    2 texto pedido de namoro personagem [3] aceito
-    `);
-    pressEnter();
-    console.log(`
-    3  texto pedido de namoro personagem [3] aceito
-    `);
-    pressEnter();
-    }
-    else{
-    console.log();
-    console.log(`
-    1 texto pedido de namoro personagem [3] negado
-    `);
-    pressEnter();
-    console.log(`
-    2 texto pedido de namoro personagem [3] negado
-    `);
-    pressEnter();
-    console.log(`
-    3 texto pedido de namoro personagem [3] negado
-    `);
-    }
-    }
-    else if (namor === personagensSecundarios[4]) {
-    console.log();
-    pressEnter();
-    console.log(`
-    1 texto pedido de namoro personagem [4]
-    `);
-    pressEnter();
-    console.log(`
-    2 texto pedido de namoro personagem [4]
-    `);
-    pressEnter();
-    let testf1 = (	personagemPrincipal.popularidade >= 100 );
-    if(testf1){
-    console.log();
-    console.log(`
-    1 texto pedido de namoro personagem [4] aceito
-    `);
-    pressEnter();
-    console.log(`
-    2 texto pedido de namoro personagem [4] aceito
-    `);
-    pressEnter();
-    console.log(`
-    3 texto pedido de namoro personagem [4] aceito
-    `);
-    pressEnter();
-    }
-    else{
-    console.log();
-    console.log(`
-    1 texto pedido de namoro personagem [4] negado
-    `);
-    pressEnter();
-    console.log(`
-    2 texto pedido de namoro personagem [4] negado
-    `);
-    pressEnter();
-    console.log(`
-    3 texto pedido de namoro personagem [4] negado
-    `);
-    }
-    }
-    else if (namor === personagensSecundarios[5]) {
-    console.log();
-    pressEnter();
-    console.log(`
-    1 texto pedido de namoro personagem [5]
-    `);
-    pressEnter();
-    console.log(`
-    2 texto pedido de namoro personagem [5]
-    `);
-    pressEnter();
-    let testf1 = (	 personagemPrincipal.conhecimento >= 100 );
-    if(testf1){
-    console.log();
-    console.log(`
-    1 texto pedido de namoro personagem [5] aceito
-    `);
-    pressEnter();
-    console.log(`
-    2 texto pedido de namoro personagem [5] aceito
-    `);
-    pressEnter();
-    console.log(`
-    3 texto pedido de namoro personagem [5] aceito
-    `);
-    pressEnter();
-    }
-    else{
-    console.log();
-    console.log(`
-    1 texto pedido de namoro personagem [5] negado
-    `);
-    pressEnter();
-    console.log(`
-    2 texto pedido de namoro personagem [5] negado
-    `);
-    pressEnter();
-    console.log(`
-    3 texto pedido de namoro personagem [5] negado
-    `);
-    }
-    }
-    else if (namor === personagensSecundarios[6]) {
-    console.log();
-    pressEnter();
-    console.log(`
-    1 texto pedido de namoro personagem [6]
-    `);
-    pressEnter();
-    console.log(`
-    2 texto pedido de namoro personagem [6]
-    `);
-    pressEnter();
-    let testf1 = (	personagemPrincipal.beleza >= 100 );
-    if(testf1){
-    console.log();
-    console.log(`
-    1 texto pedido de namoro personagem [6] aceito
-    `);
-    pressEnter();
-    console.log(`
-    2 texto pedido de namoro personagem [6] aceito
-    `);
-    pressEnter();
-    console.log(`
-    3 texto pedido de namoro personagem [6] aceito
-    `);
-    pressEnter();
-    }
-    else{
-    console.log();
-    console.log(`
-    1 texto pedido de namoro personagem [6] negado
-    `);
-    pressEnter();
-    console.log(`
-    2 texto pedido de namoro personagem [6] negado
-    `);
-    pressEnter();
-    console.log(`
-    3 texto pedido de namoro personagem [6] negado
-    `);
-    }
-    };
-     */
 };
 //História - end
 
+// Engine
+	// Quando bater 140pts aparecer um Deus ( ? ) //Implementar!
 //Tempo
-function 
-tempo() {
-    pressEnter()
-    console.log('Personagem', personagemPrincipal)
+function tempo() {
     let hoje = time.hoje;
     let m31 = 1;
     looptime: for (let m = time.m; m < ma.length; m++) {
-        m31++;
+		m31++;
         loopmes: for (let s = time.s; s < 5; s++) {
-            console.log();
             for (let d = time.d; d < ds.length; d++) {
                 let data = ` Dia ${hoje} de ${ma[m]} de 2021 - ${ds[d]}`.blue;
-                //	Aqui vao entrar as atividades diárias
                 diario(data, hoje, m, s, d);
                 hoje++;
                 if (m === 2 && hoje === 18) {
                     break looptime;
-                } else if (m31 % 2 === 0) {
+                }
+				else if (m31 % 2 === 0) {
                     if (hoje === 32) {
                         if (d === 6) {
                             time.d = 0
-                        } else {
+                        }
+						else {
                             time.d = d + 1;
                         }
                         hoje = 1;
                         break loopmes;
                     };
-                } else {
+                }
+				else {
                     if (hoje === 31) {
                         if (d === 6) {
                             time.d = 0
-                        } else {
+                        }
+						else {
                             time.d = d + 1;
                         }
                         hoje = 1;
@@ -808,17 +689,61 @@ tempo() {
                     };
                 };
             };
+			time.d=0;
         };
     };
 };
 //Tempo - end
 
-// Engine
-// Quando bater 140pts aparecer um Deus ( ? )
+function jogo() {
+    if (ng === 's') {
+        return hist1();
+    } else {
+        console.log(`Carregando jogo... `);
+        try {
+            const loaded = fs.readFileSync("./saveGame.json");
+            const load = JSON.parse(loaded);
+            time = {
+                hoje: load.hj,
+                m: load.ms,
+                s: load.sm,
+                d: load.ds,
+            };
+			personagemPrincipal = load.pp;
+            disposicao = load.dp;
+            dinheiro = load.dn;
+            personagensSecundarios = load.ps;
+            personagensSecundariosPts = load.psp;
+			addM();
+            // /*carregar JSON*/
+            pressEnter();
+            console.log(`\nPersonagem Carregado: ${personagemPrincipal.nome}\n\n Affairs:\n ${personagensSecundarios}`);
+            pressEnter();
+            return [personagemPrincipal, time, personagensSecundarios, personagensSecundariosPts, dinheiro, disposicao];
+        } catch {
+            console.log(`Jogo salvo não encontrado, iniciando novo jogo!`);
+            pressEnter();
+            jogo();
+        }
+    }
+}
 
 function status_(attr, vlr) {
     this.Status = attr;
     this.Nivel = vlr;
+}
+
+function scoreTotal(data) {
+    console.clear();
+    console.log(`\nHoje é ${data}\n`.blue);
+    let dis = new status_('DISPOSIÇÃO              ', disposicao)
+    let blz = new status_('Beleza                  ', personagemPrincipal.beleza);
+    let cnh = new status_('Conhecimento            ', personagemPrincipal.conhecimento);
+    let pop = new status_('Popularidade            ', personagemPrincipal.popularidade);
+    let art = new status_('Gosto por Artes         ', personagemPrincipal.artes);
+    let atf = new status_('Atributos Físicos       ', personagemPrincipal.atributosFisicos);
+    let din = new status_('Dinheiro                ', 'R$ ' + dinheiro + ',00')
+    let statsBar = console.table([dis, blz, cnh, pop, art, atf, din]);
 }
 
 function diario(data, hoje, m, s, d) {
@@ -852,7 +777,6 @@ function diario(data, hoje, m, s, d) {
     // Madrugada
 }
 
-//Seletor de rotina
 function seletor(data, manha, tarde, noite, hoje, m, d) {
     console.clear();
     scoreTotal(data);
@@ -927,58 +851,8 @@ function seletor(data, manha, tarde, noite, hoje, m, d) {
         personagemPrincipal.aFreela()
     }
 }
-//Seletor de rotina - end
 
-// cabeçalho de pontos
-function scoreTotal(data) {
-    console.clear();
-    console.log(`\nHoje é ${data}\n`.blue);
-    let dis = new status_('DISPOSIÇÃO              ', disposicao)
-        let blz = new status_('Beleza                  ', personagemPrincipal.beleza);
-    let cnh = new status_('Conhecimento            ', personagemPrincipal.conhecimento);
-    let pop = new status_('Popularidade            ', personagemPrincipal.popularidade);
-    let art = new status_('Gosto por Artes         ', personagemPrincipal.artes);
-    let atf = new status_('Atributos Físicos       ', personagemPrincipal.atributosFisicos);
-    let din = new status_('Dinheiro                ', 'R$ ' + dinheiro + ',00')
-        let statsBar = console.table([dis, blz, cnh, pop, art, atf, din]);
-    console.log();
-}
-// cabeçalho de pontos - end
-
-function jogo() {
-    if (ng === 's') {
-        return hist1();
-    } else {
-        console.log(`Carregando jogo... `);
-        try {
-            const loaded = fs.readFileSync("./saveGame.json");
-            const load = JSON.parse(loaded);
-            time = {
-                hoje: load.hj,
-                m: load.ms,
-                s: load.sm,
-                d: load.ds,
-            };
-			personagemPrincipal = load.pp;
-            disposicao = load.dp;
-            dinheiro = load.dn;
-            personagensSecundarios = load.ps;
-            personagensSecundariosPts = load.psp;
-			addM();
-            // /*carregar JSON*/
-            pressEnter();
-            console.log(`\nPersonagem Carregado: ${personagemPrincipal.nome}\n\n Affairs:\n ${personagensSecundarios}`);
-            pressEnter();
-            return [personagemPrincipal, time, personagensSecundarios, personagensSecundariosPts, dinheiro, disposicao];
-        } catch {
-            console.log(`Jogo salvo não encontrado, iniciando novo jogo!`);
-            pressEnter();
-            jogo();
-        }
-    }
-}
-
-//Ações diárias
+//Afazeres diários
 function afazeresDia(data, hoje, m, s, d) {
     function atvd() {
         console.log(`Ações diárias:`);
@@ -1090,7 +964,7 @@ function saveGame(hoje, m, s, d) {
     pressEnter();
 };
 
-	function addM(){
+function addM(){
 		personagemPrincipal.irParaAEscola = function () {
 			console.log(`Você foi para a escola!`)
 			this.conhecimento++;
@@ -1325,67 +1199,36 @@ function aCidade() {
     console.log(`Ganhou 3 de popularidade`)
 }
 
-//Ações diárias - end
-function endGame() {
-    console.clear();
-    console.log(`\nVocê finalizou o
-		\n		A d o l e D a t e s❤️`.brightMagenta.bold);
-    console.log(`\n	O Florescer do coração`.brightMagenta.underline);
-    console.log(`
-		\ncriado e produzido por @MalkavianSon
-			`.bold)
-    pressEnter();
-    process.exit()
-}
-// Engine
-
-//Sequencia de execução
-console.clear();
-console.log(`\n\n		A d o l e D a t e s❤️`.brightMagenta.bold);
-console.log(`\n	O Florescer do coração`.brightMagenta.underline);
-console.log(`\n Recomendado manter o terminal em modo fullScreen`)
-pressEnter();
-do {
-    ng = prompt(`		Deseja iniciar um novo jogo? [s] ou [n]`).toLowerCase();
-} while (ng != 's' && ng != 'n');
-
-init = jogo();
-
-personagemPrincipal = init[0];
-time = init[1];
-personagensSecundarios = init[2];
-dinheiro = init[3];
-disposicao = init[4];
-
-tempo();
-histF();
-endGame();
-
-//Sequencia de execução - fim
-
-// Cenas dos Personagens:
 function especial(manha, tarde, noite, hoje, m) {
     if (hoje === 18 && m === 0) {
         pressEnter();
         personagem0(1,1);
-    } else if (hoje === 20 && m === 0) {
+    }
+	else if (hoje === 20 && m === 0) {
         pressEnter();
-        personagem1(1,1)
-    } else if (hoje === 22 && m === 0) {
+        personagem1(1,1);
+    }
+	else if (hoje === 22 && m === 0) {
         pressEnter();
-        personagem2(1,1)
-    } else if (hoje > 18 && tarde === 's' && m === 0 && personagensSecundariosPts[0] === 0) {
-        personagem0(1,2);
-    } else if (hoje > 19 && noite === 't' && m === 0 && personagensSecundariosPts[1] === 0) {
+        personagem2(1,1);
+    }
+	else if (hoje > 18 && tarde === 's' && m === 0 && personagensSecundariosPts[0] === 1) {
+         pressEnter();
+       personagem0(1,2);
+    }
+	else if (hoje > 20 && noite === 't' && m === 0 && personagensSecundariosPts[1] === 1) {
+        pressEnter();
         personagem1(1,2);
     }
-    // else if (periodo q vai acontecer === o que vai acontecer && m === 0 && personagensSecundariosPts[2] === 0){
-    // personagem2(1,2);
-    // }
+    else if (hoje > 22 && tarde === 'a' && m === 0 && personagensSecundariosPts[2] === 1){
+        pressEnter();
+		personagem2(1,2);
+    }
     else if (hoje === 2 && m === 1) {
         pressEnter();
-        personagem0(2, 1);
-    } else if (hoje === 19 && m === 1) {
+        personagem0(2,1);
+    }
+	else if (hoje === 19 && m === 1) {
         pressEnter();
         console.log(`
 \nHoje o tempo está chuvoso!
@@ -1457,7 +1300,7 @@ function especial(manha, tarde, noite, hoje, m) {
 			`);
             pergunta = prompt(` ${personagensSecundarios[1]} ou ${personagensSecundarios[2]}: `).toLowerCase();
             if (pergunta != personagensSecundarios[1].toLowerCase() && pergunta != personagensSecundarios[2].toLowerCase()) {
-                prompt(`\nVocê precisa digitar [ ${personagensSecundarios[1]} ] ou ${personagensSecundarios[2]}\n\npressione ENTER para continuar`)
+                prompt(`\nVocê precisa digitar [ ${personagensSecundarios[1]} ] ou [ ${personagensSecundarios[2]} ]\n\npressione ENTER para continuar`)
             }
         } while (pergunta != personagensSecundarios[1].toLowerCase() && pergunta != personagensSecundarios[2].toLowerCase())
         console.clear();
@@ -1469,20 +1312,67 @@ function especial(manha, tarde, noite, hoje, m) {
             pressEnter();
             personagem2(2, 1)
         }
-    } else if (hoje > 2 && noite === 'd' && m === 2 && personagensSecundariosPts[0] === 1) {
+    }
+	else if (hoje > 2 && noite === 'd' && m === 2 && personagensSecundariosPts[0] === 3) {
         personagem0(2, 2);
-    } else if (hoje > 19 && manha === 's' && hoje === 4 && m === 2 && personagensSecundariosPts[1] === 1) {
+    }
+	else if (manha === 's' && hoje === 4 && m === 2 && personagensSecundariosPts[1] === 3) {
         personagem1(2, 2);
     }
-    // else if (periodo q vai acontecer === o que vai acontecer && m === 2 && personagensSecundariosPts[2] === 1){
+    // else if (periodo q vai acontecer === o que vai acontecer && m === 2 && personagensSecundariosPts[2] === 3){
     // personagem2(2,2);
     // }
 
 }
 
+//Afazeres diários - end
+
+
+function endGame() {
+    console.clear();
+    console.log(`\nVocê finalizou o
+		\n		A d o l e D a t e s❤️`.brightMagenta.bold);
+    console.log(`\n	O Florescer do coração`.brightMagenta.underline);
+	let p1 = new status_(personagensSecundarios[0], `${personagensSecundariosPts[0]*20}%`)
+	let p2 = new status_(personagensSecundarios[1], `${personagensSecundariosPts[1]*20}%`)
+	let p3 = new status_(personagensSecundarios[2], `${personagensSecundariosPts[2]*20}%`)
+	console.table([p1,p2,p3])
+    console.log(`
+		\ncriado e produzido por @MalkavianSon
+			`.bold)
+    pressEnter();
+    process.exit()
+}
+// Engine
+
+//Sequencia de execução
+do {
+	console.clear();
+	console.log(`\n\n		A d o l e D a t e s❤️`.brightMagenta.bold);
+	console.log(`\n	O Florescer do coração`.brightMagenta.underline);
+    ng = prompt(`		Deseja iniciar um novo jogo? [s] ou [n]`).toLowerCase();
+} while (ng != 's' && ng != 'n');
+
+init = jogo();
+	personagemPrincipal = init[0];
+	time = init[1];
+	personagensSecundarios = init[2];
+	dinheiro = init[3];
+	disposicao = init[4];
+
+tempo();
+
+histF();
+
+endGame();
+
+//Sequencia de execução - fim
+
+// Cenas dos Personagens:
 function personagem0(mes, dia) {
     if (mes === 1) {
         if (dia === 1) {
+            personagensSecundariosPts[0]++
             console.clear();
             console.log(`
 \nQue dia lindo para ir a escola...
@@ -1583,7 +1473,8 @@ function personagem0(mes, dia) {
 \n	Vou te mandar o meu relatório no whatsapp para você tirar de exemplo
 \n	Copia mas não faz igual tá!
 			`)
-        } else if (dia === 2) {
+        }
+		else if (dia === 2) {
             personagensSecundariosPts[0]++
             console.clear();
             console.log();
@@ -1691,6 +1582,7 @@ function personagem0(mes, dia) {
         }
     } else if (mes === 2) {
         if (dia === 1) {
+            personagensSecundariosPts[0]++
             console.clear();
             console.log();
             pressEnter();
@@ -1752,7 +1644,8 @@ function personagem0(mes, dia) {
                 pressEnter();
 
             };
-        } else if (dia === 2) {
+        }
+		else if (dia === 2) {
             personagensSecundariosPts[0]++
             console.clear();
             console.log();
@@ -1935,6 +1828,7 @@ function personagem0(mes, dia) {
 function personagem1(mes, dia) {
     if (mes === 1) {
         if (dia === 1) {
+            personagensSecundariosPts[1]++
             console.clear();
             console.log(`
 \nHoje parece estar acontecendo algum tipo de manifestação aqui na porta da escola
@@ -2232,7 +2126,8 @@ function personagem1(mes, dia) {
 				`)
             }
             pressEnter();
-        } else if (dia === 2) {
+        }
+		else if (dia === 2) {
             personagensSecundariosPts[1]++
             console.clear();
             console.log(`
@@ -2582,8 +2477,10 @@ function personagem1(mes, dia) {
             }
             pressEnter();
         }
-    } else if (mes === 2) {
+    }
+	else if (mes === 2) {
         if (dia === 1) {
+            personagensSecundariosPts[1]++
             console.clear();
             console.log(`
 		${personagemPrincipal.nome}
@@ -2876,7 +2773,8 @@ function personagem1(mes, dia) {
 \nNo fim das contas, foi muito interessante voltar com ${personagensSecundarios[1]}
 			`);
             pressEnter();
-        } else if (dia === 2) {
+        } 
+		else if (dia === 2) {
             personagensSecundariosPts[1]++
             console.clear();
             console.log(`
@@ -3228,6 +3126,7 @@ function personagem1(mes, dia) {
 function personagem2(mes, dia) {
     if (mes === 1) {
         if (dia === 1) {
+            personagensSecundariosPts[2]++
             console.clear();
             console.log(`
 \nCaminhando pela escola vejo várias tribos espalhadas em grupinhos
@@ -3235,9 +3134,9 @@ function personagem2(mes, dia) {
 			`);
             pressEnter();
             console.log(`
-\nO primeiro ano aqui no colégio é somente de tarde, e o segundo e o terceiro são de manhã
+\nO primeiro ano aqui no colégio é somente à tarde, e o segundo e o terceiro são de manhã
 \nEntão, quando nós passamos para o terceiro e a galera do primeiro passou para a manhã
-\nE a escola se diversificou bastante no quesito "tribos Urbanas"
+\n a escola se diversificou bastante no quesito "tribos Urbanas"
 			`);
             pressEnter();
             console.log(`
@@ -3264,7 +3163,7 @@ function personagem2(mes, dia) {
 			`);
             pressEnter();
             console.log(`
-\n${oas(2).toUpperCase()} minin${oas(2)} que estava cantando esbarra em minha perna
+\n${oas(2).toUpperCase()} menin${oas(2)} que estava cantando esbarra em minha perna
 \n		${personagemPrincipal.nome}
 \n	Ow! Presta atenção onde passa! Enxerga não menin${oas(2)}?
 \nDigo chei${oap()} de ódio
@@ -3272,7 +3171,7 @@ function personagem2(mes, dia) {
             pressEnter();
             console.log(`
 \n		???????????
-\n	Oooneee?
+\n	Oni???
 			`);
             pressEnter();
             console.log(`
@@ -3338,7 +3237,7 @@ function personagem2(mes, dia) {
             pressEnter();
             console.log(`
 \n		${personagensSecundarios[2]}
-\n	Heey! Baka! Tenha cuidado!!!__Diz brava com sua voz doce e felpuda
+\n	Heey! Baka! Tenha cuidado!!!__Diz brav${oas[2]} com sua voz doce e felpuda
 			`);
             pressEnter();
             console.log(`
@@ -3422,7 +3321,7 @@ function personagem2(mes, dia) {
 			`);
             pressEnter();
             console.log(`
-\nCom a capa dura e uma pelicula plástica para proteger a edição
+\nCom a capa dura e uma película plástica para proteger a edição
 \nDepois que recolhemos tudo, ${personagensSecundarios[2]} diz me agradecendo
 			`);
             pressEnter();
@@ -3457,12 +3356,12 @@ function personagem2(mes, dia) {
             pressEnter();
             console.log(`
 \n		${personagemPrincipal.nome}
-\n	Olha lá você falando dificil de novo!
+\n	Olha lá você falando difícil de novo!
 			`);
             pressEnter();
             console.log(`
 \n		${personagensSecundarios[2]}
-\n	Hihi, me desculpe... é o Hábito
+\n	Hihi, me desculpe... é o hábito
 \n	Eu disse: Então significa que você é meu veterano
 \n	Muito prazer em conhecê-lo
 			`);
@@ -3480,7 +3379,7 @@ function personagem2(mes, dia) {
             pressEnter();
             console.log(`
 \n${personagensSecundarios[2]} se aproxima de mim lentamente... 
-\nAté aquele momento não tinha notado o quão ${personagensSecundarios[2]} é tão bonit${oas(2)}
+\nAté aquele momento não tinha notado o quanto ${personagensSecundarios[2]} é tão bonit${oas(2)}
 			`);
             pressEnter();
             console.log(`
@@ -3513,7 +3412,7 @@ function personagem2(mes, dia) {
 			`);
             pressEnter();
             console.log(`
-\nAlgo me diz que esse não é nosso ultimo encontro
+\nAlgo me diz que esse não é nosso último encontro
 			`);
             }
 			else {
@@ -3586,16 +3485,332 @@ function personagem2(mes, dia) {
             personagensSecundariosPts[2]++
             console.clear();
             console.log(`
-\n		//texto introdução outubro historia 2
+\nEssa tarde resolvi estudar um pouco de artes e culturas...
+\nTenho que entregar um projeto integrado que vale nota para história e artes
+\nOnde preciso explicar como os meios artísticos de um povo influenciaram sua cultura atual
+			`);
+            pressEnter();
+            console.log(`
+\nComo quero fazer algo diferente do resto da turma, e tenho certeza que todos irão buscar
+\n nos mesmos sites da internet, resolvi fazer diferente...
+			`);
+            pressEnter();
+            console.log(`
+\nVim até a Biblioteca Pública da cidade e vou procurar referências de coisas antigas
+\nO prédio-sede da Biblioteca Pública de Belo Horizonte fica localizado na Praça da Liberdade
+\nNa região central da cidade
+			`);
+            pressEnter();
+            console.log(`
+\nÉ um complexo predial com 3 anexos e tem mais de 500.000 exemplares físicos
+\n incluindo obras raras e representativas de autores nacionais e estrangeiros
+			`);
+            pressEnter();
+            console.log(`
+\nAlém de grande acervo digitalizado, coleção infantojuvenil
+\n jornais e revistas novos e antigos, audiolivros e acervo em braille.
+			`);
+            pressEnter();
+            console.log(`
+\nQuando eu era mais nov${oap()} costumava vir aqui com minha mãe
+\nA entrada é grátis, mas é necessário fazer uma carteirinha para levar algo para casa
+\nE acessar certas àreas do prédio
+			`);
+            pressEnter();
+            console.log(`
+\nComo eu não achei a minha antiga carteirinha, terei que fazer minha pesquisa aqui mesmo
+\n O que eu precisar de complementar, posso pegar na internet
+			`);
+            pressEnter();
+            console.log(`
+\nAntes de ir direto aos livros, resolvo passar em umas das salas de exposição
+			`);
+            pressEnter();
+            console.log(`
+\nA biblioteca sempre promove mostras e hoje está exposto um projeto
+\n do artísta plástico Mateus Moreira
+			`);
+            pressEnter();
+            console.log(`
+\nCom belas pinturas à óleo carregadas de sentimento
+\n e traços que remete à uma realidade estremecida
+\n que parecem retratar momentos da existência humana em uma tentativa de resistência 
+\n ao sentimento de violenta opressão
+			`);
+            pressEnter();
+            console.log(`
+\nAs 15 pinturas despertam um sentimento em comum: o de desolação.
+\n daí, o nome da exposição
+			`);
+            pressEnter();
+            console.log(`
+\nSimplesmente indescritível a sensação que aquela exposição me trouxe
+\nApós refletir um pouco sobre aquelas imagens, vou em direção aos livros
+\nComeçar as minhas pesquisas...
+			`);
+            pressEnter();
+            console.log(`
+\nEnquanto subo as escadas para acessar o segundo piso
+\n ouço ruídos de risadas vindo da direção das estantes sobre História e Antropologia 
+			`);
+            pressEnter();
+            console.log(`
+\n"Não é comum pessoas em uma biblioteca fazerem tanto barulho"__digo para mim mesmo
+\nAo me aproximar um pouco mais da seção o som de conversa se torna mais audível
+			`);
+            pressEnter();
+            console.log(`
+\nE identifico que vem justamente das mesas para estudo 
+\n que ficam atrás das estantes de Cultura Asiática
+			`);
+            pressEnter();
+            console.log(`
+\nAté ontem eu estava dividido entre fazer sobre as culturas Asteca e Chinesa
+			`);
+            pressEnter();
+            console.log(`
+\nNo caminho para cá, acabei pesquisando na internet um pouco sobre
+\n a forma como os chineses enfrentaram a pandemia e concluí que seria um bom tema
+\n pontuar como a cultura daquele povo influienciou esse comportamento
+			`);
+            pressEnter();
+            console.log(`
+\nNão vou mudar meu tema por causa de alguns bagunceiros ¬.¬
+			`);
+            pressEnter();
+            console.log(`
+\nAo chegar na seção de História da Ásia, ao retirar o primeiro livro da estante
+\n consigo ver do outro lado ${personagensSecundarios[2]} sentad${oas(2)} com 
+\n um garoto, aparentemente também otaku, e uma menina descaracterizada
+			`);
+            pressEnter();
+            console.log(`
+\n mas claramente uma otaku pelo jeito de conversar e gesticular
+			`);
+            pressEnter();
+            console.log(`
+\n "Vim para a biblioteca exatamente por pensar que não encontraria ninguém da escola
+Por quê el${eas(2)} estaria aqui????
+			`);
+            pressEnter();
+            console.log(`
+El${eas(2)} nem tem esse tipo de trabalho escolar ainda!
+Vou pegar meus livros e ir para o outro lado do hall..." __Penso sozinho...
+			`);
+            pressEnter();
+            console.log(`
+\n		voz feminina
+\n	Ah cara... deixa disso, vamos embora
+\n	A gente vai la pra Liba agora ficar com o pessoal no coreto
+			`);
+            pressEnter();
+            console.log(`
+\n		voz masculina
+\n	É ${personagensSecundarios[2]}... Vamos embora, estuda isso na internet
+			`);
+            pressEnter();
+            console.log(`
+\n	A única vantagem que eu vi aqui foi poder ler esses mangás do DBZ
+\n	Não tem nada aqui que a gente não consiga na internet
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	Pode até ser verdade Tom, mas eu gosto de pesquisar assim
+			`);
+            pressEnter();
+            console.log(`
+\n	Todo mundo sempre escreve textos basicamente iguais quando tiram algum conteúdo
+\n	 da internet, e meio que a gente fica preso no ctrl+c ctrl+v ao invés de realmente 
+\n	 estudar o conteúdo...
+			`);
+            pressEnter();
+            console.log(`
+\nOuço uma cadeira se arrastando e passos em direção à estante
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	Sério gente, vocês podem ir... Eu não vou ficar chatead${oas(2)} com vocês não!
+\n	Eu quero caprichar nesse trabalho do Instituto! Não quero reprovar esse curso
+			`);
+            pressEnter();
+            console.log(`
+\n"Nossa... o som da voz se aproximou
+tomara que o que el${eas(2)} precise esteja do outro lado"__ pensei...
+			`);
+            pressEnter();
+            console.log(`
+\n${personagensSecundarios[2]} dá de cara comigo do outro lado da estante:
+\n		${personagensSecundarios[2]}
+\n	Aaaah! Ohayou ${personagemPrincipal.nome}-Senpai
+\n	O que você faz por aqui??
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagemPrincipal.nome}
+\n	Hey, você está falando muito alto para quem está em uma biblioteca, não acha??
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	Nossa... Mas que mania você tem de me mandar ficar calad${oas(2)} hein!
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagemPrincipal.nome}
+\n	Ora, não é minha culpa se você sempre está falando alto!
+\n	Mas afinal, por quê você está aqui?
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	Eu que te pergunto, o que você está fazendo aqui?
+\n	Sempre venho à biblioteca e nunca vi você
+			`);
+            pressEnter();
+            console.log(`
+\nVerdade, ja tem um tempo que eu não venho à biblioteca\n
+\n mas não quero falar que vim fazer um trabalho com livros em pleno 2021.
+\n O que el${eas(2)} vai pensar?
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	Vim ver a exposição do Mateus Moreira__ minto
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	Ah, interessante （っ＾▿＾）! Muito legal! Eu vi ela no dia que ela chegou, tenho vindo toda semana
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagemPrincipal.nome}
+\n	É mesmo? E por quê você está vindo toda semana?
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	Eu faço um curso no instituto de Cultura Oriental ali no bairro Serra
+			`);
+            pressEnter();
+            console.log(`
+\n	Estou me preparando para fazer um intercâmbio.
+\n	Tenho que entregar um trabalho sobre a lenda da Amaterasu e Tsukuyomi na próxima semana
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagemPrincipal.nome}
+\n	E por quê você não pegou isso da internet?
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	Ah... na internet tudo é muito igual sabe... E eu meio que não entendo nada.
+\n	Tudo que tem lá é a mesma linguagem, a mesma forma de explicar
+			`);
+            pressEnter();
+            console.log(`
+\n	Quando venho à biblioteca, eu sinto a energia de estar estudando
+\n	 sem notificações... distrações... ou interrup[Alguém chama ao fundo]
+			`);
+            pressEnter();
+            console.log(`
+\n		voz feminina
+\n	Oooow, morreu ai? Tá demorando horrores!
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagemPrincipal.nome}
+\n	Essa é um ótimo exemplo!
+			`);
+            pressEnter();
+            console.log(`
+\n${personagensSecundarios[2]} me segura pelo braço e puxa na direção dos amigos del${eas(2)}
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	Olha quem eu encontrei aqui, ${personagemPrincipal.nome}-senpai ( ͡❛ ⏥ ͡❛)
+\n	Olha, esses são Tom-Chan e Hina-Nee-chan
+			`);
+            pressEnter();
+            console.log(`
+\n		Hina
+\n	Humm, ess${eas(2)} é ${oas(2)} ${personagensSecundarios[2]} que você falou??
+\n	 não sabia q era um Hajimete no dēto
+			`);
+            pressEnter();
+            console.log(`
+\n		Tom
+\n	Agora eu entendi o porquê de ${personagensSecundarios[2]} estar nos falando pra ir pra praça
+\n	Huuuummm...
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	Nada disso! Foi uma coincidência. O monster de vocês estava estragado, só pode!
+			`);
+            pressEnter();
+            console.log(`
+\nHina se levanta e vem em minha direção. Ela é magra e pouco mais alta que eu
+\nMe olha de cima abaixo e diz de forma sarcástica
+			`);
+            pressEnter();
+            console.log(`
+\n		Hina
+\n	Ah, então é você quem finalmente ganhou ${oas(2)} imouto?
+\n	Se fizer mal à el${eas(2)} eu vou te dar uns tapas!
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagemPrincipal.nome}
+\n	Eu heim, não sou namorado de ninguém não! Só vim ver a exposição!
+			`);
+            pressEnter();
+            console.log(`
+\n		Hina
+\n	Ah é... veio ver a exposição? Então o que está fazendo especificamente na seção oriental
+\n	 no dia que ${oas(2)} ${personagensSecundarios[2]} veio estudar?
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagemPrincipal.nome}
+\n	Não te devo explicação nenhuma menina!!!__digo de forma superior
+			`);
+            pressEnter();
+            console.log(`
+\n		Tom
+\n	Vamos então Hina, mais tarde a gente encontra ${personagensSecundarios[2]} lá no coreto (^.^ )
+\nE os dois pegam suas mochilas e colocam nas costas
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	Heim, não precisa de ir embora por causa disso não gente!
+			`);
+            pressEnter();
+            console.log(`
+\n		Tom
+\n	Ah claro ${personagensSecundarios[2]} hihihi entendemos bem
+\nE os dois saem rindo
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagemPrincipal.nome}
+\n	É... Eu acho que também já vou embora
 			`);
             pressEnter();
             do {
                 console.clear();
                 console.log(`
-\n		//Texto introdução outubro historia 2
+\n		${personagensSecundarios[2]}
+\n	Hey, senpai... Você acabou de chegar... 
+\n	Poderia pelo menos me contar o motivo verdadeiro por ter vindo para cá...
 				`);
                 console.log(`
-\n		//Pergunta outubro historia 2
+\n		Dizer o motivo verdadeiro? 
 				`);
                 pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
                 if (pergunta != 's' && pergunta != 'n') {
@@ -3606,23 +3821,243 @@ function personagem2(mes, dia) {
             if (pergunta === 's') {
                 console.log();
                 console.log(`
-\n		//Texto positivo 1 outubro historia 2
+\n		${personagemPrincipal.nome}
+\n	Tudo bem, você me pegou... ¬.¬ 
+\n	Eu também vim fazer uma pesquisa para o integrado de História
 			`);
-            } else {
-                console.log();
-                console.log(`
-\n		//texto negativo 1 outubro historia 2
-				`);
-            }
             pressEnter();
             console.log(`
-\n	//texto final outubro historia 2
+\n	E pensei sobre falar da China, por causa de todo esse contexto pandêmico
+\n	E quis surfar na onda...
 			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	Você não é daqueles que acha que a China inventou o vírus para dominar o mundo né?
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	NÃÃÃÃO! KKKKKKK Longe disso!
+			`);
+            pressEnter();
+            console.log(`
+\n	É mais pelo conceito atual mesmo, é um assunto em pauta e tudo mais
+\n	Mas aqui, vamos parar de conversar alto por gentileza? Estamos em uma biblioteca!
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	hihihi Vamos sim senpai
+\n	Anata no namai hanashi suki
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagemPrincipal.nome}
+\n	O que disse? Já te falei para não falar japonês comigo, que eu não entendo!
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	... éér... não foi nada demais
+			`);
+            pressEnter();
+            console.log(`
+\n	Só disse que gostaria de estudar historia com vc... (ɔ'°.°)ɔ 
+\n	E sobre o que você vai falar da China?
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagemPrincipal.nome}
+\n	Ah, eu estive conversando com ${oas(1)} ${personagensSecundarios[1]}, que é do 3º D
+			`);
+            pressEnter();
+            console.log(`
+\n	 ${eas(1)} el${eas(1)} me falou um pouco sobre o Confucionismo
+\n	 e como isso muda o pensamento deles
+\n	E eu dei uma pesquisada sobre isso no caminho para cá
+			`);
+            pressEnter();
+            console.log(`
+\n${personagensSecundarios[2]} dá de ombros e diz:
+\n	Ah, a China é legalzinha... Mas não gosto muito do 'conceito' deles
+\n	Se você quer falar sobre Artes, História e Religião, pode falar sobre o Japão
+			`);
+            pressEnter();
+            console.log(`
+\n	Além de ter o Budismo que é a 5ª maior religião do mundo
+\n	 e que inspirou a criação da animação The Midnight Gospel, da Netflix
+			`);
+            pressEnter();
+            console.log(`
+\n	Tem também o Xintoísmo que é uma religião com mais de 8000 anos de idade
+\n	 com uma riqueza de cultura que você pode usar no seu trabalho!
+			`);
+            pressEnter();
+            console.log(`
+\nMe interessei pela temática e começamos a fazer o trabalho juntos
+\nEnquanto ${personagensSecundarios[2]} pesquisava sobre os deuses japoneses
+\nEu procurava sobre a Arquitetura Japonesa e suas artes em seda
+			`);
+            pressEnter();
+            console.log(`
+\nFalei sobre o papel das Gueixas na escala social
+\n e até citei um livro de Arthur Golden chamado "Memórias de uma Gueixa"
+			`);
+            pressEnter();
+            console.log(`
+\nQue ilustra bem a situação social no período da Segunda Guerra mundial
+\nE todos os dramas relacionados à esta profissão na época.
+			`);
+            pressEnter();
+            console.log(`
+\n${personagensSecundarios[2]} me ajudou bastante
+\n el${eas(2)} parece entender muito sobre ARTES E CULTURAS! 
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	Senpai... você pode falar também sobre a migração do campo para a cidade
+\n	 e o êxodo rural para as cidades grandes como Tokyo, por exemplo
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagemPrincipal.nome}
+\n	O assunto é muito bom, mas acho que isso seria mais Geografia que História em si
+\n	 embora eu poderia linkar isso ao aumento do consumo dos serviços das casas de chá
+\n	 e o impacto na receita das cidades por causa desse turismo sexual no meio artístico!
+			`);
+            pressEnter();
+            console.log(`
+\n	Mas acho que vou parar por aqui mesmo! Já tem muito conteúdo no meu trabalho
+\n	Você me ajudou bastante ${personagensSecundarios[2]}!
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	Ah Senpai... Para! Eu não fiz nada... Só te ajudei com o tema
+\n	 a pesquisa foi você quem fez!
+\nJá era próximo das 16:00 e eu ainda tenho coisas para fazer
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagemPrincipal.nome}
+\n	Acho que vou embora, ainda tenho obrigações hoje
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	Ah, eu ia te chamar para ficar um pouco na Liba comigo... Se você não se importar
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagemPrincipal.nome}
+\n	Olha... Até posso ficar um pouco na praça, mas não posso demorar
+\n${personagensSecundarios[2]} explode de alegria e solta um gritinho
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagemPrincipal.nome}
+\n	shhhhhhhhhhh! Ainda estamos na biblioteca ${personagensSecundarios[2]}
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	Ai, me desculpa! É por que eu empolguei!
+			`);
+            pressEnter();
+            console.log(`
+\nFui para a Praça da Liberdade e ficamos lá até umas 18:00. Conheci alguns amigos de ${personagensSecundarios[2]}
+\n eles são bem alternativos e estilosos... Até que os otakus são legais!
+			`);
+            pressEnter();
+            console.log(`
+\nA gente bebeu alguns energéticos, e eu comprei uma bebida alcólica para mim
+\nOs amigos de ${personagensSecundarios[2]} insistiram bastante para eu comprar para eles... 
+\n mas todos eram menores de idade, então me recusei!
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagemPrincipal.nome}
+\n	${personagensSecundarios[2]}, acho que preciso ir agora...
+\n	 Já são 19:00 e eu ainda tenho coisas para fazer hoje
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	Ah senpai... mas já? aff..... Vou ficar aqui mais um pouco, que pena que você precisa ir!
+			`);
+            pressEnter();
+            console.log(`
+\n${personagensSecundarios[2]} esperou o ônibus junto comigo
+\n quando subi no veículo ${personagensSecundarios[2]} grita
+			`);
+            pressEnter();
+            console.log(`
+\n	${personagemPrincipal.nome}-senpai não fuja de mim na escola 
+\n	 fico muito feliz de quando você vem falar comigo
+\n	Jā ne! Watashi wa anata no ga suki ${personagemPrincipal.nome}-senpai
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagemPrincipal.nome}
+\n	Ala! Lá vem você falando em japonês denovo... O que você disse aí?
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	Eeer... nada demais... Só que eu desejo que você chegue bem em casa!
+			`);
+            pressEnter();
+            console.log(`
+\n${personagensSecundarios[2]} tampa o rosto com as mãos e corre em direção ao coreto
+\n olha para trás e grita
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	Mata ato de ${personagemPrincipal.nome}-senpai ('*-*)
+			`);
+            pressEnter();
+            console.log(`
+\nParece que estudar artes na biblioteca hoje foi uma boa opção
+\n acho que estou me aproximando de ${personagensSecundarios[2]} aos poucos
+			`);
+            }
+			else {
+                console.log();
+                console.log(`
+\n		${personagemPrincipal.nome}
+\n	Eu ja disse o motivo verdadeiro! Vim ver o mostra
+\n	Passei por aqui pois estava procurando um bebedouro no caminho para o anexo do teatro!
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	Ah sim, compreendo... O bebedouro fica mais para frente do hall à esquerda
+\n	Logo antes da rampa que leva para o teatro
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagemPrincipal.nome}
+\n	Entendi, obrigad${oap()}
+			`);
+            pressEnter();
+            console.log(`
+\nAcho melhor voltar em outro momento, que eu possa estudar sem ser interrompido.
+\nCompro alguma coisa para comer na praça da Savassi ou mesmo sento na praça
+			`);
+            pressEnter();
+            console.log(`
+\nE voltarei mais tarde para estudar, antes que a tarde acabe...
+				`);
+            }
             pressEnter();
         }
     }
 	else if (mes === 2) {
         if (dia === 1) {
+            personagensSecundariosPts[2]++
             console.clear();
             console.log(`
 \n		//texto introdução novembro historia 1
