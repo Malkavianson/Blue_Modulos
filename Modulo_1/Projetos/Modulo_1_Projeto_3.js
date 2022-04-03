@@ -15,7 +15,7 @@ console.clear()
 console.log(`Os amigos que você fará aqui te mostrarão que devemos abrir as portas\n para ares renovados refrescarem o ambiente...`);
 prompt(``);
 console.clear()
-console.log(`	Configure full screen para uma experiência completa `)
+console.log(`	Configure full screen para uma experiência aprimorada `)
 prompt(``);
 console.clear()
 
@@ -72,16 +72,19 @@ let ma = ['Outubro', 'Novembro', 'Dezembro'];
 let garotas = ['Nivea', 'Sophia', 'Luiza' /*, 'Alice', 'Ludmila', 'Rebecca', 'Monica'*/];
 let garotos = ['Leonardo', 'Davi', 'Lucas' /*, 'Marcelo', 'Ricardo', 'Alexandre', 'Otto'*/];
 let garotxs = ['Nivea', 'Sophia', 'Lucas' /*, 'Alice', 'Ludmila', 'Alexandre', 'Otto'*/];
+
+
+	//Lembrar de transformar personagensSecundarios em Objeto(!)
 let personagensSecundarios = [];
 let personagensSecundariosPts = [0, 0, 0 /*,0,0,0,0*/]
 
 // Variaveis das compras
-var cx_choco = 0; // Para dar ao [0]
-var camisa_unicornio = 0; //para dar ao [6]
-var livro = 0; //para dar ao [5]
-var colar_micanga = 0; //para dar ao [1]
-var minasCap = 0; //Random todo dia 15
-var pocaoDoAmor = 0; //aumentar Status Beleza e Popularidade
+var cx_choco = 0; 
+var camisa_unicornio = 0;
+var livro = 0;
+var colar_micanga = 0;
+var minasCap = 0;
+var pocaoDoAmor = 0;
 // Variaveis das compras - end
 
 //Variaveis importantes - end
@@ -1306,11 +1309,11 @@ function especial(manha, tarde, noite, hoje, m) {
         console.clear();
         if (pergunta === personagensSecundarios[1].toLowerCase()) {
             pressEnter();
-            personagem1(2, 1)
+            personagem1(2,1);
 
         } else {
             pressEnter();
-            personagem2(2, 1)
+            personagem2(2,1);
         }
     }
 	else if (hoje > 2 && noite === 'd' && m === 2 && personagensSecundariosPts[0] === 3) {
@@ -4060,37 +4063,319 @@ tomara que o que el${eas(2)} precise esteja do outro lado"__ pensei...
             personagensSecundariosPts[2]++
             console.clear();
             console.log(`
-\n		//texto introdução novembro historia 1
+\n		${personagemPrincipal.nome}
+\n	${personagensSecundarios[1]}, eu vou embora com ${oas(2)} ${personagensSecundarios[2]}
+\n	 El${eas(2)} meio que me chamou primeiro... Mesmo que em japonês kkkk
 			`);
-            pressEnter();
-            do {
-                console.clear();
-                console.log(`
-\n		//Texto introdução novembro historia 1
-				`);
-                console.log(`
-\n		//Pergunta novembro historia 1
-				`);
-                pergunta = prompt(`SIM[s] ou NÃO[n]`).toLowerCase();
-                if (pergunta != 's' && pergunta != 'n') {
-                    prompt(`\nVocê precisa digitar [s] ou [n]\n\npressione ENTER para continuar`)
-                }
-            } while (pergunta != 's' && pergunta != 'n')
-            console.clear();
-            if (pergunta === 's') {
-                console.log();
-                console.log(`
-\n		//Texto positivo 1 novembro historia 1
-			`);
-            } else {
-                console.log();
-                console.log(`
-\n		//texto negativo 1 novembro historia 1
-				`);
-            }
             pressEnter();
             console.log(`
-\n	//texto final novembro historia 1
+\n		${personagensSecundarios[1]}
+\n	Tudo bem ${personagemPrincipal.nome}, eu vou esperar o Giovanni
+\n	Acho que ele pega ônibus no mesmo ponto que eu
+			`);
+            pressEnter();
+            console.log(`
+\n${personagensSecundarios[1]} não parece ter ficado muito feliz com minha decisão
+\nEspero que el${eas(1)} compreenda
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	Arigatou gozaimasu ${personagemPrincipal.nome}-senpai <3 <3 
+\n	Fico muito agradecid${oas(2)} de você vir comigo
+			`);
+            pressEnter();
+            console.log(`
+\n${personagensSecundarios[1]} vira as costas e vai em direção à um grupo
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	Vamos então senpai? Antes que a chuva fique mais forte...
+\n	Se você quiser, pode ficar bem pertinho de mim para não se molhar
+			`);
+            pressEnter();
+            console.log(`
+\nO argumento del${eas(2)} é válido...
+\nA chuva não está forte mas já é suficiente para molhar meu uniforme
+			`);
+            pressEnter();
+            console.log(`
+\nE essa blusa branca do colégio fica transparente quando molha
+\n ... isso não é legal né kkkk
+			`);
+            pressEnter();
+            console.log(`
+\nMe aproximo de ${personagensSecundarios[2]} e nós praticamente nos abraçamos
+\nEl${eas(2)} parece um pouco envergonhad${oas(2)} com a situação
+\n mas passa seu braço sobre meu ombro
+			`);
+            pressEnter();
+            console.log(`
+\nLogo atrás vem um grupo de outros alunos, aparentemente do segundo ano
+\n vem em uma velocidade que nos ultrapassa com facilidade
+			`);
+            pressEnter();
+            console.log(`
+\nPorém ao passar por nós, ouço alguns burburinhos e risadas
+\nE um deles comenta enquanto os outros riem:
+\n	Boa noite Lulu
+\nE o grupo volta a andar rápido 
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagemPrincipal.nome}
+\n	São seus amigos?
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	Eles por acaso parecem meus amigos__diz ríspid${oas(2)}
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagemPrincipal.nome}
+\n	Não... Não foi isso que eu quis dizer... Eu perguntei se vc conhece eles ¬¬
+			`);
+            pressEnter();
+            console.log(`
+\n	Por quê você me tratou assim do nada? Você mesm${oas(2)} é quem me disse
+\n	 sobre tratar as pessoas mal sem motivo... (°-°')
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	Ai, me desculpa tá?
+\n	É por quê esses meninos ai me tiram do sério!
+\n	Me perdoa mesmo, de verdade
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagemPrincipal.nome}
+\n	Tá! Perdoo se você me contar o por quê você se irritou tanto.
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	Ah... Não gosto de falar nisso...
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagemPrincipal.nome}
+\n	Poxa... Pode me contar... 
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	Olha... eu te conto sim... 
+\n	Mas você precisa prometer não tocar mais no assunto senpai...
+			`);
+            pressEnter();
+            console.log(`
+\n	Promete?
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagemPrincipal.nome}
+\n	Tá bom... Prometo!
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	Olha, é por quê eu não gosto muito de falar sobre esse assunto...
+			`);
+            pressEnter();
+            console.log(`
+\n	Mas ano passado, quando eu tinha acabado de chegar na escola
+\n	Esses meninos aí me prenderam no banheiro masculino
+			`);
+            pressEnter();
+            console.log(`
+\nA expressão de ${personagensSecundarios[2]} muda junto com a chuva
+\nQue se torna mais forte e a água já começa a molhar nossos tenis
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	Nossa... a sombrinha não vai aguentar muito
+\n	Vamos esperar alí dentro daquela padaria?
+			`);
+            pressEnter();
+            console.log(`
+\nCorremos em direção à uma padaria que é 2 ruas da minha casa
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagemPrincipal.nome}
+\n	Nossa... Você está tod${oas(2)} molhad${oas(2)}
+\n	Deixe-me te ajudar a secar
+			`);
+            pressEnter();
+            console.log(`
+\nEl${eas(2)} percebe que sua blusa está começando a ficar transparente
+\n e sua expressão muda completamente!
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	NÃO!__grita__Digo... não, pode deixar... Eu tenho um moletom aqui na mochila
+\n	 sempre ando com um!
+			`);
+            pressEnter();
+            console.log(`
+\nE mais que depressa veste a peça
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	Sabe senpai...
+			`);
+            pressEnter();
+            console.log(`
+\n	As pessoas se esquecem que algumas palavras tem o poder de afetar as pessoas
+\n	Por isso eu te disse sobre tratar as pessoas sempre bem... 
+			`);
+            pressEnter();
+            console.log(`
+\n	Todos merecem ser tratados com o mesmo respeito, nada justifica o contrário!
+\n	Só por quê uma pessoa é diferente, não significa que ela precise sofrer por isso
+			`);
+            pressEnter();
+            console.log(`
+\n	Até por que, cada ser humano é único e é exatamente isso que trás a beleza
+\n	Nem os dedos das mãos são iguais... 
+			`);
+            pressEnter();
+            console.log(`
+\n	Por quê as pessoas tem tanta dificuldade de compreender o que é diferente?
+			`);
+            pressEnter();
+            console.log(`
+\n	Desde que me tornei presidente do Grêmio
+\n	 meu objetivo é acabar com o Bullying nessa escola, sabe!
+			`);
+            pressEnter();
+            console.log(`
+\n	Eu sofro pelo que sou, meus amigos sofrem pelo que são, e isso é cíclico!
+\n	Enquanto não fizermos alguma coisa, isso jamais vai parar...
+			`);
+            pressEnter();
+            console.log(`
+\nPercebo os olhos de ${personagensSecundarios[2]} se encherem de lágrimas
+\nTrago sua cabeça à meu ombro e lhe abraço...
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagemPrincipal.nome}
+\n	Não fique assim, isso é algo que passa... 
+\n	Uma hora todos viraremos adultos e tudo isso acabará
+			`);
+            pressEnter();
+            console.log(`
+\n${personagensSecundarios[2]} rompe em lágrimas e exclama:
+\n	NÃO! NÃO VAI!!! Todos os dias pessoas morrem por conta do preconceito
+\n	De pessoas que se acham no direito de fazer o que bem entenderem
+\n	Sem se importar com o sentimento dos outros
+			`);
+            pressEnter();
+            console.log(`
+\n	Não respeitam as opiniões, não respeitam as decisões, não respeitam a vida!
+\n	São comportamentos como estes, que nascem hoje na adolescencia
+			`);
+            pressEnter();
+            console.log(`
+\n	E tornam adultos intolerantes e cheios de suas próprias verdades!
+			`);
+            pressEnter();
+            console.log(`
+\n	Este sentimento de que a opinião própria é soberana à vida dos outros
+\n	 faz com que o jornal tenha notícias todos os dias Senpai!
+			`);
+            pressEnter();
+            console.log(`
+\n	Se não erradicarmos esse pensamento da nossa sociedade, isso jamais vai acabar!
+			`);
+            pressEnter();
+            console.log(`
+\nSeguro as mãos de ${personagensSecundarios[2]} e olho dentro de seus olhos:
+\nEl${eas(2)} ainda soluça de seu choro e seco suas lágrimas com meus dedos
+\n que estão entrelaçados com os seus
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagemPrincipal.nome}
+\n	Por isso precisamos de pessoas como você ${personagensSecundarios[2]}
+\n	Pessoas com bom coração, que intruem, ensinam e transformam pensamentos
+			`);
+            pressEnter();
+            console.log(`
+\n	Até pouco tempo atrás eu também não era empátic${oap()} com certas coisas
+\n	Mas você me mostrou que eu não precisava de ser assim...
+			`);
+            pressEnter();
+            console.log(`
+\n	Você me mostrou que eu posso mudar, e se eu posso mudar
+\n	 qualquer pessoa pode também!
+			`);
+            pressEnter();
+            console.log(`
+\nOs olhos de ${personagensSecundarios[2]} brilham e el${eas(2)} abre um largo sorriso
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	Eu sabia que você era perfeit${oas(2)} senpai (*o*)__diz me abraçando apertado
+\n	Olha... a chuva parece que acabou! Vou te acompanhar até em casa, pode ser?
+			`);
+            pressEnter();
+            console.log(`
+\nO tempo ainda estava nublado, mas a chuva parece ter acabado...
+\n${personagensSecundarios[2]} parece melhor depois de nossa conversa
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	Humpf... ainda bem que você escolheu voltar para casa comigo senpai...
+\n	Se não viesse você iria se arrepender!
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagemPrincipal.nome}
+\n	Ih ala! Tod${oas(2)} se achando kkkkkkk
+\n	E você ia fazer o quê?
+\n	Me chamar de Baka e botar meu nome no death note? kkkkkkkkkkkkkkkkkkkk
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	Huuum! ('¬_¬) Baka
+			`);
+            pressEnter();
+            console.log(`
+\nChegamos à porta de minha casa com poucos minutos
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	Hey Senpai
+\n	Anata no koto ga suki desu
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagemPrincipal.nome}
+\n	Lá vem você de novo com suas expressões em japonês
+\n	O que você disse ai agora??
+			`);
+            pressEnter();
+            console.log(`
+\n		${personagensSecundarios[2]}
+\n	hihihi, nada demais... Só que quero te ver novamente na escola
+\n	Fica bem Senpai, tchaaau (*-*´)
+			`);
+            pressEnter();
+            console.log(`
+\n${personagensSecundarios[2]} segue andando o sentido da rua
+\nAcho que fiz uma boa escolha em ter voltado com ${personagensSecundarios[2]}
 			`);
             pressEnter();
         }
