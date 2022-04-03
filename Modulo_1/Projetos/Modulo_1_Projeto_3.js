@@ -12,7 +12,7 @@ console.clear()
 console.log(`Para os amantes de Light Novel: \nAdoledates fala de nosso dia à dia, você sabe o que quer fazer... \nA pergunta é: Você REALMENTE faria isso?\n Muitas vezes passamos por situações que testam nosso coração, e nos fazem pensar... \nMe orgulho de quem sou?`);
 prompt(``);
 console.clear()
-console.log(`Os amigos que você fará aqui te mostrarão que devemos abrir as portas\n para ares renovados refrescarem o ambiente...`);
+console.log(`Os amigos que você fará aqui\nte mostrarão que devemos abrir as portas da mente\npara ares renovados refrescarem o nosso coração...`);
 prompt(``);
 console.clear()
 console.log(`	Configure full screen para uma experiência aprimorada `)
