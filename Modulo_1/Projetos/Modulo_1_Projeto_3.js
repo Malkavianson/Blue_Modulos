@@ -8,50 +8,50 @@ console.log(`\nPara os jogadores: \nO jogo não tem perdedor\nNós não 'PERDEMO
 console.log(`\nPara os amantes de Light Novel: \nAdoledates fala de nosso dia à dia, você sabe o que quer fazer... \nA pergunta é: Você REALMENTE faria isso?\n Muitas vezes passamos por situações que testam nosso coração, e nos fazem pensar... \nMe orgulho de quem sou?`);prompt(``);console.clear();
 console.log(`\nOs amigos que você fará aqui\nte mostrarão que devemos abrir as portas da mente\npara ares renovados refrescarem o nosso coração...\n`);prompt(``);console.clear();
 console.log(`	Configure full screen para uma experiência aprimorada `);prompt(``);console.clear();
-
-
-
-
-
-
-// (localizações aproximadas devido á alterações)
-
+//
+//		Adoledates, uma autoria de @MalkavianSon
+//			Esta é uma obra de ficção,
+//			qualquer semelhança com nomes,
+//			pessoas, fatos ou situações da vida real
+//			terá sido mera coincidência
+//			Embora a inteção seja ilustrar cenários 
+//			que ocorrem com milhares de pessoas pelo mundo todos os dias 
+//
+// (localizações aproximadas devido à possíveis alterações)
 //		Mapa de Funções
 //     linhas      	   item
-// {  56 - 90		Variáveis Importantes}
+// {  56 - 89		Variáveis Importantes}
 // {  81 - 88		Variaveis das compras}
 //
-// {  90 - 5067 	Funções}
-// {  92 -  130			Pronomes de sujeito}
-//	        128			aguardar => setTimeout
-//			129
-//	 130 -  136			pressEnter
+// {  92 - 1533 	Funções}
+// {  92 -  136			funções auxiliares}
 // { 137 -  831 		Historia}
-//	 138 - 	339				hist1   	- Introdução e tutorial
-//	 340 -  377				histF		- Finalização do game
-//	 378 -  419				betterAlone - final solteiro
-//	 420 -  831				namorar 	- Seleção de final
+//	 138 - 	339				hist1   			- Introdução e tutorial
+//	 340 -  377				histF				- Finalização do game
+//	 378 -  419				betterAlone 		- final solteiro
+//	 420 -  831				namorar 			- Seleção de final
 //
-// { 833 -  			Engine}
-//	 				tempo 	- Função controladora da passagem do tempo
-//	 				jogo		- new game/load game
-//	 				status__ 	- Função construtora dos status do personagem
-//	 				scoreTotal- Painel placar dos pontos
-//	 				diario	- Função responsável por administrar o dia
-//	 				seletor 	- Função condicional dos afazeres diários
-// {				Afazeres diários}
-//						afazeresDia	- chama função do afazer diário
-//						saveGame		- salva o jogo
-//	
-//						addM			- adiciona métodos no objeto (tentar transformar em classe!)
-//					aCidade		- sistema de compra de status do jogo (aperfeiçoar!)
-//					especial		- distribuição de acontecimentos da trama
+// { 833 - 1532 		Engine}
+//	 835 -  874				tempo 				- Função controladora da passagem do tempo
+//	 876 -  885				jogo				- new game/load game
+//	 886 -  890				status__ 			- Função construtora dos status do personagem
+//	 891 -  903				scoreTotal			- Painel placar dos pontos
+//	 904 -  934				diario				- Função responsável por administrar o dia
+//	 935 - 1009				seletor 			- Função condicional dos afazeres diários
+// {1010 - 1514				Afazeres diários}
+//	1011 - 1085					afazeresDia		- chama função do afazer diário
+//	1086 - 1112					saveGame		- salva o jogo
+//	1113 - 1138					loadGame		- carrega jogo salvo
+//	1140 - 1211					addM			- adiciona métodos no objeto (tentar transformar em classe!)
+//	1212 - 1374					aCidade			- sistema de compra de status do jogo (aperfeiçoar!)
+//	1375 - 1515					especial		- distribuição de acontecimentos da trama
 //
-//			endGame		- chama finalização do jogo
+//	1518 - 1533				endGame				- chama finalização do jogo
 //
-// Sequencia de execução
+// {1535 - 1557		Sequencia de execução}		- Sequencia de chamada das funções da engine
 //
-//Cenas dos personagens
+// {1559 - 5109		Cenas dos personagens}		- Funções das hisórias
+//
 
 //Variaveis importantes
 let ng = 's';
@@ -85,11 +85,11 @@ var livro = 0;
 var colar_micanga = 0;
 var minasCap = 0;
 var pocaoDoAmor = 0;
+var god = 0;
 // Variaveis das compras - end
-
 //Variaveis importantes - end
 
-//Pronomes de sujeito
+//Funções auxiliares
 const oas = (i) => {
 	if (garotas.includes(personagensSecundarios[i])) {
 		return 'a';
@@ -126,14 +126,14 @@ const lulu = (lulu) => {
 	}
 };
 
-// const aguarde = async (i,s) => { setTimeout( () => { i() }, s*1000 )};
+const aguarde = (ms) => { let s = new Date().getTime(); let e=0; while( (e-s) < ms ){ e = new Date().getTime();};};
 const pressEnter = () => {
 	console.log();
 	prompt(`pressione ENTER para continuar`);
 	console.clear();
 	console.log();
 };
-
+//Funções auxiliares - end
 // História
 function hist1() {
 	//Definir time
@@ -831,7 +831,6 @@ E também...\n
 //História - end
 
 // Engine
-// Quando bater 140pts aparecer um Deus ( ? ) //Implementar!
 //Tempo
 function tempo() {
 	let hoje = time.hoje;
@@ -866,6 +865,7 @@ function tempo() {
 						break loopmes;
 					};
 				};
+				godR();
 			};
 			time.d = 0;
 		};
@@ -1085,8 +1085,8 @@ function afazeresDia(data, hoje, m, s, d) {
 
 function saveGame(hoje, m, s, d) {
 	console.clear();
-	// console.log(`	Salvando dados de ${personagemPrincipal.nome}... `);
-	// aguarde(2);
+	console.log(`	Salvando dados de ${personagemPrincipal.nome}... `);
+	aguarde(800);
 	const save = {
 		pp: personagemPrincipal,
 		dn: dinheiro,
@@ -1126,6 +1126,7 @@ function loadGame() {
 		personagensSecundarios = load.ps;
 		personagensSecundariosPts = load.psp;
 		addM();
+		aguarde(1300);
 		console.log(`\nPersonagem Carregado: ${personagemPrincipal.nome}\n\n Affairs:\n ${personagensSecundarios}`);
 		pressEnter();
 		return [personagemPrincipal, time, personagensSecundarios, personagensSecundariosPts, dinheiro, disposicao];
@@ -5054,5 +5055,55 @@ tomara que o que el${eas(2)} precise esteja do outro lado"__ pensei...
 			pressEnter();
 		};
 	};
+};
+
+function godR(){
+	if(personagemPrincipal.sorte>70&&god===0){
+		r = Math.floor(Math.random() * 10);
+		if(r%3===0){
+			god++
+			pressEnter();
+			console.log(`
+\n		[voz]
+\n	${personagemPrincipal.nome}, sou Enki, Deus do trabalho!
+\n	 e eu sou não pude deixar de notar o quanto você está se esforçando...
+			`);
+			pressEnter();
+			console.log(`
+\n	Vou te retribuir por ter trabalhado tão duro!
+\n	Agora volte à seus sonhos...
+			`);
+			pressEnter();
+			console.log(`
+\n		${personagemPrincipal.nome}
+\n	Mas o que foi isso?
+			`);
+			pressEnter();
+			console.log(`
+\n	Estou me sentindo estranho
+\n	Acho que estou delirando
+			`);
+			pressEnter();
+			console.log(`
+\n	Vou... voltar... à... dormir...
+			`);
+			pressEnter();
+			console.log(`
+\n		zzz...
+			`);
+			pressEnter();
+			console.log(`
+\n		zzz...
+\n		zzz...
+			`);
+			pressEnter();
+			console.log(`
+\n		zzz...
+\n		zzz...
+\n		zzz...
+			`);
+		};
+	};
+	pressEnter();
 };
 // Cenas dos Personagens - end
