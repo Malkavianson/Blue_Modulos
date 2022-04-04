@@ -3,52 +3,54 @@ const prompt = require('prompt-sync')();
 const colors = require('colors');
 const fs = require('fs');
 console.clear();
-console.log(`\nPara os Devs: \nPode ser entediante\nMas você pode também simplesmente selecionar o setup inicial e pressionar enter até o fim...\n e só interagir nos pontos obrigatórios\n\nPessoalmente, não gostaria que fizesse isso\nSe um dia se interessar... Dê uma oportunidade!\n\n\nTenha um bom teste! `);
-prompt(``);
-console.clear()
-console.log(`\nPara os jogadores: \nO jogo não tem perdedor\nNós não 'PERDEMOS' NA VIDA\nNós simplesmente não vivemos algum momento!\ne seguimos um dia após o outro...\nLEMBRE-SE sempre de estar disposto à aproveitar os momentos da vida\nE para isso, é necessário cuidar de sí.\n	Jogue com seu coração.`);
-prompt(``);
-console.clear()
-console.log(`\nPara os amantes de Light Novel: \nAdoledates fala de nosso dia à dia, você sabe o que quer fazer... \nA pergunta é: Você REALMENTE faria isso?\n Muitas vezes passamos por situações que testam nosso coração, e nos fazem pensar... \nMe orgulho de quem sou?`);
-prompt(``);
-console.clear()
-console.log(`\nOs amigos que você fará aqui\nte mostrarão que devemos abrir as portas da mente\npara ares renovados refrescarem o nosso coração...\n`);
-prompt(``);
-console.clear()
-console.log(`	Configure full screen para uma experiência aprimorada `)
-prompt(``);
-console.clear()
+console.log(`\nPara os Devs: \nPode ser entediante\nMas você pode também simplesmente selecionar o setup inicial e pressionar enter até o fim...\n e só interagir nos pontos obrigatórios\n\nPessoalmente, não gostaria que fizesse isso\nSe um dia se interessar... Dê uma oportunidade!\n\n\nTenha um bom teste! `);prompt(``);console.clear();
+console.log(`\nPara os jogadores: \nO jogo não tem perdedor\nNós não 'PERDEMOS' NA VIDA\nNós simplesmente não vivemos algum momento!\ne seguimos um dia após o outro...\nLEMBRE-SE sempre de estar disposto à aproveitar os momentos da vida\nE para isso, é necessário cuidar de sí.\n	Jogue com seu coração.`);prompt(``);console.clear();
+console.log(`\nPara os amantes de Light Novel: \nAdoledates fala de nosso dia à dia, você sabe o que quer fazer... \nA pergunta é: Você REALMENTE faria isso?\n Muitas vezes passamos por situações que testam nosso coração, e nos fazem pensar... \nMe orgulho de quem sou?`);prompt(``);console.clear();
+console.log(`\nOs amigos que você fará aqui\nte mostrarão que devemos abrir as portas da mente\npara ares renovados refrescarem o nosso coração...\n`);prompt(``);console.clear();
+console.log(`	Configure full screen para uma experiência aprimorada `);prompt(``);console.clear();
 
-// Mapa de Funções
-//Variáveis Importantes
-// Variaveis das compras
 
-// Funções
-//Pronomes de sujeito
-//PressEnterFunction
-//Historia
-//hist1 	- Introdução e tutorial
-//histF		- Finalização do game
-//namorar 	- Seleção de final
 
-//Engine
-//tempo 	- Função controladora da passagem do tempo
-//jogo		- new game/load game
-//status__ 	- Função construtora dos status do personagem
-//scoreTotal- Painel placar dos pontos
-//diario	- Função responsável por administrar o dia
-//seletor 	- Função condicional dos afazeres diários
-// Afazeres diários
-//afazeresDia	- chama função do afazer diário
-//saveGame		- salva o jogo
-//addM			- adiciona métodos no objeto (tentar transformar em classe!)
-//aCidade		- sistema de compra de status do jogo (aperfeiçoar!)
-//especial		- distribuição de acontecimentos da trama
 
-// endGame		- chama finalização do jogo
 
+
+// (localizações aproximadas devido á alterações)
+
+//		Mapa de Funções
+//     linhas      	   item
+// {  56 - 90		Variáveis Importantes}
+// {  81 - 88		Variaveis das compras}
+//
+// {  90 - 5067 	Funções}
+// {  92 -  130			Pronomes de sujeito}
+//	        128			aguardar => setTimeout
+//			129
+//	 130 -  136			pressEnter
+// { 137 -  831 		Historia}
+//	 138 - 	339				hist1   	- Introdução e tutorial
+//	 340 -  377				histF		- Finalização do game
+//	 378 -  419				betterAlone - final solteiro
+//	 420 -  831				namorar 	- Seleção de final
+//
+// { 833 -  			Engine}
+//	 				tempo 	- Função controladora da passagem do tempo
+//	 				jogo		- new game/load game
+//	 				status__ 	- Função construtora dos status do personagem
+//	 				scoreTotal- Painel placar dos pontos
+//	 				diario	- Função responsável por administrar o dia
+//	 				seletor 	- Função condicional dos afazeres diários
+// {				Afazeres diários}
+//						afazeresDia	- chama função do afazer diário
+//						saveGame		- salva o jogo
+//	
+//						addM			- adiciona métodos no objeto (tentar transformar em classe!)
+//					aCidade		- sistema de compra de status do jogo (aperfeiçoar!)
+//					especial		- distribuição de acontecimentos da trama
+//
+//			endGame		- chama finalização do jogo
+//
 // Sequencia de execução
-
+//
 //Cenas dos personagens
 
 //Variaveis importantes
@@ -58,7 +60,6 @@ let personagemPrincipal = {};
 let time = {};
 let dinheiro = 0;
 let disposicao = 100;
-
 let op_id = ['homem', 'mulher'];
 let op_os = ['he', 'ho', 'bi'];
 
@@ -117,7 +118,6 @@ const eap = () => {
 		return 'e';
 	};
 };
-
 const lulu = (lulu) => {
 	if (lulu != 'Luiza') {
 		return 'Luiza'
@@ -126,13 +126,15 @@ const lulu = (lulu) => {
 	}
 };
 
+// function timeOut(s) {return new Promise(r => setTimeout(r, 1000*s));}
+// async function aguarde(s) { await timeOut(s); return };
+
 const pressEnter = () => {
 	console.log();
 	prompt(`pressione ENTER para continuar`);
 	console.clear();
 	console.log();
 };
-//PressEnterFunction - end
 
 // História
 function hist1() {
@@ -878,6 +880,7 @@ function jogo() {
 		return hist1();
 	} else {
 		console.log(`Carregando jogo... `);
+		// aguarde(3);
 		return loadGame();
 	}
 }
@@ -1094,7 +1097,8 @@ function saveGame(hoje, m, s, d) {
 	// personagensSecundarios		'arr'
 	// personagensSecundariosPts	'arr'
 	console.clear();
-	prompt(`	Salvando dados de ${personagemPrincipal.nome}... `);
+	// console.log(`	Salvando dados de ${personagemPrincipal.nome}... `);
+	// aguarde(2);
 	const save = {
 		pp: personagemPrincipal,
 		dn: dinheiro,
@@ -1134,7 +1138,6 @@ function loadGame() {
 		personagensSecundarios = load.ps;
 		personagensSecundariosPts = load.psp;
 		addM();
-		pressEnter();
 		console.log(`\nPersonagem Carregado: ${personagemPrincipal.nome}\n\n Affairs:\n ${personagensSecundarios}`);
 		pressEnter();
 		return [personagemPrincipal, time, personagensSecundarios, personagensSecundariosPts, dinheiro, disposicao];
@@ -1538,7 +1541,7 @@ function endGame() {
 	pressEnter();
 	process.exit();
 }
-// Engine
+// Engine - end
 
 //Sequencia de execução
 do {
@@ -1562,7 +1565,7 @@ histF();
 
 endGame();
 
-//Sequencia de execução - fim
+//Sequencia de execução - end
 
 // Cenas dos Personagens:
 function personagem0(mes, dia) {
