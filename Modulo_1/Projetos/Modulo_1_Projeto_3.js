@@ -3,10 +3,10 @@ const prompt = require('prompt-sync')();
 const colors = require('colors');
 const fs = require('fs');
 console.clear();
-console.log(`\nPara os Devs: \nPode ser entediante\nMas você pode também simplesmente selecionar o setup inicial e pressionar enter até o fim...\n e só interagir nos pontos obrigatórios\n\nPessoalmente, não gostaria que fizesse isso\nSe um dia se interessar... Dê uma oportunidade!\n\n\nTenha um bom teste! `);prompt(``);console.clear();
-console.log(`\nPara os jogadores: \nO jogo não tem perdedor\nNós não 'PERDEMOS' NA VIDA\nNós simplesmente não vivemos algum momento!\ne seguimos um dia após o outro...\nLEMBRE-SE sempre de estar disposto à aproveitar os momentos da vida\nE para isso, é necessário cuidar de sí.\n	Jogue com seu coração.`);prompt(``);console.clear();
-console.log(`\nPara os amantes de Light Novel: \nAdoledates fala de nosso dia à dia, você sabe o que quer fazer... \nA pergunta é: Você REALMENTE faria isso?\n Muitas vezes passamos por situações que testam nosso coração, e nos fazem pensar... \nMe orgulho de quem sou?`);prompt(``);console.clear();
-console.log(`\nOs amigos que você fará aqui\nte mostrarão que devemos abrir as portas da mente\npara ares renovados refrescarem o nosso coração...\n`);prompt(``);console.clear();
+console.log(`\nPara os Devs: \nPode ser entediante\nMas você pode também simplesmente selecionar o setup inicial e pressionar enter até o fim...\n e só interagir nos pontos obrigatórios\n\nPessoalmente, não gostaria que fizesse isso\nSe um dia se interessar... Dê uma oportunidade!\n\n\nTenha um bom teste! `);aguarde(100);prompt(``);console.clear();
+console.log(`\nPara os jogadores: \nO jogo não tem perdedor\nNós não 'PERDEMOS' NA VIDA\nNós simplesmente não vivemos algum momento!\ne seguimos um dia após o outro...\nLEMBRE-SE sempre de estar disposto à aproveitar os momentos da vida\nE para isso, é necessário cuidar de sí.\n	Jogue com seu coração.`);aguarde(100);prompt(``);console.clear();
+console.log(`\nPara os amantes de Light Novel: \nAdoledates fala de nosso dia à dia, você sabe o que quer fazer... \nA pergunta é: Você REALMENTE faria isso?\n Muitas vezes passamos por situações que testam nosso coração, e nos fazem pensar... \nMe orgulho de quem sou?`);aguarde(100);prompt(``);console.clear();
+console.log(`\nOs amigos que você fará aqui\nte mostrarão que devemos abrir as portas da mente\npara ares renovados refrescarem o nosso coração...\n`);aguarde(100);prompt(``);console.clear();
 console.log(`	Configure full screen para uma experiência aprimorada `);prompt(``);console.clear();
 //
 //		Adoledates, uma autoria de @MalkavianSon
@@ -20,37 +20,37 @@ console.log(`	Configure full screen para uma experiência aprimorada `);prompt(`
 // (localizações aproximadas devido à possíveis alterações)
 //		Mapa de Funções
 //     linhas      	   item
-// {  56 - 89		Variáveis Importantes}
+// {  56 - 90		Variáveis Importantes}
 // {  81 - 88		Variaveis das compras}
 //
 // {  92 - 1533 	Funções}
 // {  92 -  136			funções auxiliares}
 // { 137 -  831 		Historia}
 //	 138 - 	339				hist1   			- Introdução e tutorial
-//	 340 -  377				histF				- Finalização do game
-//	 378 -  419				betterAlone 		- final solteiro
-//	 420 -  831				namorar 			- Seleção de final
+//	 340 -  379				histF				- Finalização do game
+//	 380 -  419				betterAlone 		- final solteiro
+//	 422 -  831				namorar 			- Seleção de final
 //
-// { 833 - 1532 		Engine}
-//	 835 -  874				tempo 				- Função controladora da passagem do tempo
-//	 876 -  885				jogo				- new game/load game
-//	 886 -  890				status__ 			- Função construtora dos status do personagem
-//	 891 -  903				scoreTotal			- Painel placar dos pontos
-//	 904 -  934				diario				- Função responsável por administrar o dia
-//	 935 - 1009				seletor 			- Função condicional dos afazeres diários
-// {1010 - 1514				Afazeres diários}
-//	1011 - 1085					afazeresDia		- chama função do afazer diário
-//	1086 - 1112					saveGame		- salva o jogo
-//	1113 - 1138					loadGame		- carrega jogo salvo
-//	1140 - 1211					addM			- adiciona métodos no objeto (tentar transformar em classe!)
-//	1212 - 1374					aCidade			- sistema de compra de status do jogo (aperfeiçoar!)
-//	1375 - 1515					especial		- distribuição de acontecimentos da trama
+// { 835 - 1532 		Engine}
+//	 836 -  876				tempo 				- Função controladora da passagem do tempo
+//	 878 -  885				jogo				- new game/load game
+//	 887 -  890				status__ 			- Função construtora dos status do personagem
+//	 892 -  903				scoreTotal			- Painel placar dos pontos
+//	 905 -  934				diario				- Função responsável por administrar o dia
+//	 936 - 1009				seletor 			- Função condicional dos afazeres diários
+// {1011 - 1514				Afazeres diários}
+//	1012 - 1085					afazeresDia		- chama função do afazer diário
+//	1087 - 1112					saveGame		- salva o jogo
+//	1114 - 1138					loadGame		- carrega jogo salvo
+//	1141 - 1211					addM			- adiciona métodos no objeto (tentar transformar em classe!)
+//	1213 - 1374					aCidade			- sistema de compra de status do jogo (aperfeiçoar!)
+//	1376 - 1515					especial		- distribuição de acontecimentos da trama
 //
 //	1518 - 1533				endGame				- chama finalização do jogo
 //
 // {1535 - 1557		Sequencia de execução}		- Sequencia de chamada das funções da engine
 //
-// {1559 - 5109		Cenas dos personagens}		- Funções das hisórias
+// {1559 - 5115		Cenas dos personagens}		- Funções das hisórias
 //
 
 //Variaveis importantes
@@ -362,10 +362,12 @@ function histF() {
 	if (hf005.toLowerCase() === 'n') {
 		let namor = "";
 		do {
-			console.clear();
-			console.log(`Acho que vou namorar...`);
-			console.log(personagensSecundarios);
-			namor = prompt('escolha: ').toLowerCase();
+			do{
+				console.clear();
+				console.log(`Acho que vou namorar...`);
+				console.log(personagensSecundarios);
+				namor = prompt('escolha: ').toLowerCase();
+			}while(namor==='')
 			namor = namor[0].toUpperCase() + namor.substr(1);
 		} while ((personagensSecundarios.includes(namor)) === false)
 		console.clear();
@@ -874,11 +876,10 @@ function tempo() {
 //Tempo - end
 
 function jogo() {
-	if (ng === 's') {
+	if (ng === 'n') {
 		return hist1();
 	} else {
 		console.log(`Carregando jogo... `);
-		// return aguarde(loadGame,2);
 		return loadGame();
 	}
 }
@@ -1514,7 +1515,6 @@ function especial(manha, tarde, noite, hoje, m) {
 };
 //Afazeres diários - end
 
-
 function endGame() {
 	console.clear();
 	console.log(`\nVocê finalizou o
@@ -1533,12 +1533,12 @@ function endGame() {
 // Engine - end
 
 //Sequencia de execução
-do {
+
 	console.clear();
 	console.log(`\n\n		A d o l e D a t e s❤️`.brightMagenta.bold);
 	console.log(`\n	O Florescer do coração`.brightMagenta.underline);
-	ng = prompt(`		Deseja iniciar um novo jogo? [s] ou [n]`).toLowerCase();
-} while (ng != 's' && ng != 'n');
+	aguarde(500);
+do {ng = prompt(`		Deseja iniciar um novo jogo [n] ou carregar progresso [c]`).toLowerCase();} while (ng != 'n' && ng != 'c');
 
 init = jogo();
 personagemPrincipal = init[0];
@@ -5061,7 +5061,13 @@ function godR(){
 	if(personagemPrincipal.sorte>70&&god===0){
 		r = Math.floor(Math.random() * 10);
 		if(r%3===0){
-			god++
+			god++;
+			personagemPrincipal.beleza+=35;
+			personagemPrincipal.conhecimento+=35;
+			personagemPrincipal.popularidade+=35;
+			personagemPrincipal.artes+=35;
+			personagemPrincipal.atributosFisicos+=35;
+			dinheiro+=5000;
 			pressEnter();
 			console.log(`
 \n		[voz]
