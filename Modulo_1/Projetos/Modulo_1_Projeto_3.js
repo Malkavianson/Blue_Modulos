@@ -126,9 +126,7 @@ const lulu = (lulu) => {
 	}
 };
 
-// function timeOut(s) {return new Promise(r => setTimeout(r, 1000*s));}
-// async function aguarde(s) { await timeOut(s); return };
-
+// const aguarde = async (i,s) => { setTimeout( () => { i() }, s*1000 )};
 const pressEnter = () => {
 	console.log();
 	prompt(`pressione ENTER para continuar`);
@@ -880,7 +878,7 @@ function jogo() {
 		return hist1();
 	} else {
 		console.log(`Carregando jogo... `);
-		// aguarde(3);
+		// return aguarde(loadGame,2);
 		return loadGame();
 	}
 }
@@ -1086,16 +1084,6 @@ function afazeresDia(data, hoje, m, s, d) {
 }
 
 function saveGame(hoje, m, s, d) {
-	//Variaveis à serem salvas:
-	// hoje 						'let'
-	// m 							'let'
-	// s 							'let'
-	// d 							'let'
-	// personagemPrincipal			'obj'
-	// dinheiro						'let'
-	// disposicao					'let'
-	// personagensSecundarios		'arr'
-	// personagensSecundariosPts	'arr'
 	console.clear();
 	// console.log(`	Salvando dados de ${personagemPrincipal.nome}... `);
 	// aguarde(2);
@@ -1161,7 +1149,7 @@ function addM() {
 	personagemPrincipal.aVisual = function () {
 		console.log(`\nNada melhor que se sentir bel${oap()}\nParei para cuidar do meu visual`);
 		this.beleza += 2;
-		console.log('Ganhou 3 de beleza')
+		console.log('Ganhou 2 de beleza')
 		disposicao--;
 	};
 
@@ -1177,7 +1165,7 @@ function addM() {
 		this.artes += 2;
 		this.conhecimento++;
 		disposicao--;
-		console.log(`Ganhou 3 de Artes e culturas\n		e algum conhecimento`)
+		console.log(`Ganhou 2 de Artes e culturas\n		e algum conhecimento`)
 	};
 
 	personagemPrincipal.aExercicios = function () {
