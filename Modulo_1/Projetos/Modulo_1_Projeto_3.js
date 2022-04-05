@@ -1528,6 +1528,7 @@ function endGame() {
 		\ncriado e produzido por @MalkavianSon
 			`.bold)
 	pressEnter();
+	aguarde(1000);
 	process.exit();
 }
 // Engine - end
