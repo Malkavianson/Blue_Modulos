@@ -3,10 +3,10 @@ const prompt = require('prompt-sync')();
 const colors = require('colors');
 const fs = require('fs');
 console.clear();
-console.log(`\nPara os Devs: \nPode ser entediante\nMas você pode também simplesmente selecionar o setup inicial e pressionar enter até o fim...\n e só interagir nos pontos obrigatórios\n\nPessoalmente, não gostaria que fizesse isso\nSe um dia se interessar... Dê uma oportunidade!\n\n\nTenha um bom teste! `);aguarde(100);prompt(``);console.clear();
-console.log(`\nPara os jogadores: \nO jogo não tem perdedor\nNós não 'PERDEMOS' NA VIDA\nNós simplesmente não vivemos algum momento!\ne seguimos um dia após o outro...\nLEMBRE-SE sempre de estar disposto à aproveitar os momentos da vida\nE para isso, é necessário cuidar de sí.\n	Jogue com seu coração.`);aguarde(100);prompt(``);console.clear();
-console.log(`\nPara os amantes de Light Novel: \nAdoledates fala de nosso dia à dia, você sabe o que quer fazer... \nA pergunta é: Você REALMENTE faria isso?\n Muitas vezes passamos por situações que testam nosso coração, e nos fazem pensar... \nMe orgulho de quem sou?`);aguarde(100);prompt(``);console.clear();
-console.log(`\nOs amigos que você fará aqui\nte mostrarão que devemos abrir as portas da mente\npara ares renovados refrescarem o nosso coração...\n`);aguarde(100);prompt(``);console.clear();
+console.log(`\nPara os Devs: \nPode ser entediante\nMas você pode também simplesmente selecionar o setup inicial e pressionar enter até o fim...\n e só interagir nos pontos obrigatórios\n\nPessoalmente, não gostaria que fizesse isso\nSe um dia se interessar... Dê uma oportunidade!\n\n\nTenha um bom teste! `);prompt(``);console.clear();
+console.log(`\nPara os jogadores: \nO jogo não tem perdedor\nNós não 'PERDEMOS' NA VIDA\nNós simplesmente não vivemos algum momento!\ne seguimos um dia após o outro...\nLEMBRE-SE sempre de estar disposto à aproveitar os momentos da vida\nE para isso, é necessário cuidar de sí.\n	Jogue com seu coração.`);prompt(``);console.clear();
+console.log(`\nPara os amantes de Light Novel: \nAdoledates fala de nosso dia à dia, você sabe o que quer fazer... \nA pergunta é: Você REALMENTE faria isso?\n Muitas vezes passamos por situações que testam nosso coração, e nos fazem pensar... \nMe orgulho de quem sou?`);prompt(``);console.clear();
+console.log(`\nOs amigos que você fará aqui\nte mostrarão que devemos abrir as portas da mente\npara ares renovados refrescarem o nosso coração...\n`);prompt(``);console.clear();
 console.log(`	Configure full screen para uma experiência aprimorada `);prompt(``);console.clear();
 //
 //		Adoledates, uma autoria de @MalkavianSon
@@ -1527,8 +1527,8 @@ function endGame() {
 	console.log(`
 		\ncriado e produzido por @MalkavianSon
 			`.bold)
-	pressEnter();
 	aguarde(1000);
+	pressEnter();
 	process.exit();
 }
 // Engine - end
@@ -1538,8 +1538,8 @@ function endGame() {
 	console.clear();
 	console.log(`\n\n		A d o l e D a t e s❤️`.brightMagenta.bold);
 	console.log(`\n	O Florescer do coração`.brightMagenta.underline);
-	aguarde(500);
-do {ng = prompt(`		Deseja iniciar um novo jogo [n] ou carregar progresso [c]`).toLowerCase();} while (ng != 'n' && ng != 'c');
+	aguarde(2000);
+do {ng = prompt(`		Deseja iniciar um novo jogo [n] ou carregar progresso [c] `).toLowerCase();} while (ng != 'n' && ng != 'c');
 
 init = jogo();
 personagemPrincipal = init[0];
