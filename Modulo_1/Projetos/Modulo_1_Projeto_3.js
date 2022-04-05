@@ -1524,6 +1524,7 @@ function endGame() {
 	let p2 = new status_(personagensSecundarios[1], `${Math.round(personagemPrincipal.p1*12.5)}%`);
 	let p3 = new status_(personagensSecundarios[2], `${Math.round(personagemPrincipal.p2*10)}%`);
 	console.table([p1, p2, p3]);
+	console.log(`		esta pontuação corresponde ao desbloqueio de cenas de cada personagem\n		Não é possível chegar à 100% com uma única rodada\n		Uma vez que durante o jogo você escolheu entre cenários distintos\n		E assim como na vida real, não é possivel viver todos os momentos`); //salvar progresso geral (!)
 	console.log(`
 		\ncriado e produzido por @MalkavianSon
 			`.bold)
@@ -1538,7 +1539,7 @@ function endGame() {
 	console.clear();
 	console.log(`\n\n		A d o l e D a t e s❤️`.brightMagenta.bold);
 	console.log(`\n	O Florescer do coração`.brightMagenta.underline);
-	aguarde(2000);
+	aguarde(1500);
 do {ng = prompt(`		Deseja iniciar um novo jogo [n] ou carregar progresso [c] `).toLowerCase();} while (ng != 'n' && ng != 'c');
 
 init = jogo();
@@ -1604,7 +1605,8 @@ function personagem0(mes, dia) {
 \n		${personagemPrincipal.nome}
 \n	Vem... Já te falei para prestar atenção no caminho!\n
 			`);
-			} else {
+			}
+			else {
 				personagemPrincipal.p0++
 				console.log();
 				console.log(`
@@ -1665,7 +1667,8 @@ function personagem0(mes, dia) {
 \n	Vou te mandar o meu relatório no whatsapp para você tirar de exemplo
 \n	Copia mas não faz igual tá!
 			`)
-		} else if (dia === 2) {
+		}
+		else if (dia === 2) {
 			personagemPrincipal.p0++
 			personagensSecundariosPts[0]++
 			console.clear();
@@ -1754,7 +1757,8 @@ function personagem0(mes, dia) {
 \nFoi um ótimo filme. Nós 3 demos muitas risadas e foi bem divertido!
 \nÉ estranho, mas parece que ${personagensSecundarios[0]} está cada dia mais bonit${oas(0)}!\n
 			`);
-			} else {
+			}
+			else {
 				personagemPrincipal.p0++
 				console.log(`
 \n		${personagemPrincipal.nome}
@@ -1774,7 +1778,8 @@ function personagem0(mes, dia) {
 			}
 			pressEnter();
 		}
-	} else if (mes === 2) {
+	}
+	else if (mes === 2) {
 		if (dia === 1) {
 			personagemPrincipal.p0++
 			personagensSecundariosPts[0]++
@@ -1822,7 +1827,8 @@ function personagem0(mes, dia) {
 \n Acabou que naquele dia passamos todo o intervalo juntos jogando conversa fora...
 			`);
 				pressEnter();
-			} else {
+			}
+			else {
 				personagemPrincipal.p0++
 				console.log();
 				console.log(`
@@ -1841,7 +1847,8 @@ function personagem0(mes, dia) {
 				pressEnter();
 
 			};
-		} else if (dia === 2) {
+		} 
+		else if (dia === 2) {
 			personagemPrincipal.p0++
 			personagensSecundariosPts[0]++
 			console.clear();
@@ -1988,7 +1995,8 @@ function personagem0(mes, dia) {
 \nMe esqueci de dizer à ${personagensSecundarios[0]} que o sentimento é recíproco
 				`)
 				pressEnter();
-			} else {
+			}
+			else {
 				personagemPrincipal.p0++
 				console.clear()
 				console.log(`
@@ -2287,7 +2295,8 @@ function personagem1(mes, dia) {
 \nEl${eas(1)} diz isso enquanto é praticamente arrastad${oas(1)} por uma multidão de hippies com seus colares de pedra
 \n e anéis de côco... 
 			`)
-			} else {
+			} 
+			else {
 				personagemPrincipal.p1++;
 				console.log();
 				console.log(`
@@ -2328,7 +2337,8 @@ function personagem1(mes, dia) {
 				`)
 			}
 			pressEnter();
-		} else if (dia === 2) {
+		} 
+		else if (dia === 2) {
 			personagemPrincipal.p1++;
 			personagensSecundariosPts[1]++
 			console.clear();
@@ -2649,7 +2659,8 @@ function personagem1(mes, dia) {
 				console.log(`
 \nAcho que foi uma ótima ideia ter pego esse freela hoje!
 			`);
-			} else {
+			} 
+			else {
 				personagemPrincipal.p1++;
 				console.log();
 				console.log(`
@@ -2681,7 +2692,8 @@ function personagem1(mes, dia) {
 			}
 			pressEnter();
 		}
-	} else if (mes === 2) {
+	} 
+	else if (mes === 2) {
 		if (dia === 1) {
 			personagemPrincipal.p1++;
 			personagensSecundariosPts[1]++
@@ -2977,7 +2989,8 @@ function personagem1(mes, dia) {
 \nNo fim das contas, foi muito interessante voltar com ${personagensSecundarios[1]}
 			`);
 			pressEnter();
-		} else if (dia === 2) {
+		} 
+		else if (dia === 2) {
 			personagemPrincipal.p1++;
 			personagensSecundariosPts[1]++
 			console.clear();
@@ -3620,7 +3633,8 @@ function personagem2(mes, dia) {
 				console.log(`
 \nAlgo me diz que esse não é nosso último encontro
 			`);
-			} else {
+			} 
+			else {
 				personagemPrincipal.p2++;
 				console.log();
 				console.log(`
@@ -3686,7 +3700,8 @@ function personagem2(mes, dia) {
 				`);
 			}
 			pressEnter();
-		} else if (dia === 2) {
+		} 
+		else if (dia === 2) {
 			personagemPrincipal.p2++;
 			personagensSecundariosPts[2]++
 			console.clear();
@@ -4230,7 +4245,8 @@ tomara que o que el${eas(2)} precise esteja do outro lado"__ pensei...
 \nParece que estudar artes na biblioteca hoje foi uma boa opção
 \n acho que estou me aproximando de ${personagensSecundarios[2]} aos poucos
 			`);
-			} else {
+			} 
+			else {
 				personagemPrincipal.p2++;
 				console.log();
 				console.log(`
@@ -4261,7 +4277,8 @@ tomara que o que el${eas(2)} precise esteja do outro lado"__ pensei...
 			}
 			pressEnter();
 		}
-	} else if (mes === 2) {
+	}
+	else if (mes === 2) {
 		if (dia === 1) {
 			personagemPrincipal.p2++;
 			personagensSecundariosPts[2]++
@@ -4582,7 +4599,8 @@ tomara que o que el${eas(2)} precise esteja do outro lado"__ pensei...
 \nAcho que fiz uma boa escolha em ter voltado com ${personagensSecundarios[2]}
 			`);
 			pressEnter();
-		} else if (dia === 2) {
+		}
+		else if (dia === 2) {
 			console.clear();
 			console.log(`
 \nEssa manhã resolvi me exercitar um pouco
@@ -4946,7 +4964,8 @@ tomara que o que el${eas(2)} precise esteja do outro lado"__ pensei...
 				console.log(`
 \nHoje foi uma manhã muito satisfatória... O que será que o futuro me reserva?
 			`);
-			} else {
+			} 
+			else {
 				personagemPrincipal.p2++;
 				console.log();
 				console.log(`
