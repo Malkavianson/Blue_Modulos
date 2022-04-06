@@ -1,3 +1,9 @@
+// Aula 13 - exercício 1
+// Crie um objeto pessoa com os atributos: nome, idade, peso e altura.
+// Além disso ela deve ter os métodos: Envelhecer, engordar, emagrecer, crescer.
+// Por padrão, a cada ano que nossa pessoa envelhece até os 21 anos, ela deve crescer 0,5 cm. 
+// Crie um método bio que retorna uma string com todas as informações da pessoa.
+
 const prompt = require('prompt-sync')();
 
 	let ds = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'];
@@ -9,15 +15,70 @@ const prompt = require('prompt-sync')();
 // weigh
 // height
 
-	function Pessoa(n,i,p,a) {
-		this.nome 	= n;
-		this.idade	= i;
-		this.peso	= p;
-		this.altura = a;
-		this.vivo	= 1;
-		this.idadei	= i;
-		this.pesoi	= p;
-		this.alturai= a;
+	function Pessoa() {
+		
+		console.log(`entre [NOME]: `);
+		let n = prompt(`		`);
+
+		console.log(`entre [IDADE] (em anos) `);
+		let i = +prompt(`		`);
+
+		console.log(`entre [PESO] (em gramas) `);
+		let p = +prompt(`		`);
+
+		console.log(`entre [ALTURA] (em cm) `);
+		let a = +prompt(`		`);
+
+		Object.defineProperties(this,{
+			nome: {
+				enumerable: true,
+				value: n,
+				writable: false,
+				configurable: false,
+			},
+			idade: {
+				enumerable: true,
+				value: i,
+				writable: true,
+				configurable: true,
+			},
+			peso: {
+				enumerable: true,
+				value: p,
+				writable: true,
+				configurable: true,
+			},
+			altura: {
+				enumerable: true,
+				value: a,
+				writable: true,
+				configurable: true,
+			},
+			vivo: {
+				enumerable: true,
+				value: 1,
+				writable: true,
+				configurable: true,
+			},
+			idadei: {
+				enumerable: false,
+				value: i,
+				writable: false,
+				configurable: false,
+			},
+			pesoi: {
+				enumerable: false,
+				value: p,
+				writable: false,
+				configurable: false,
+			},
+			alturai: {
+				enumerable: false,
+				value: a,
+				writable: false,
+				configurable: false,
+			},
+		});
 	
 		this.envelhecer = function(){
 			this.idade++;
@@ -51,11 +112,11 @@ const prompt = require('prompt-sync')();
 				if(this.idade>121){
 					b = `Você morreu de causa natural, atingiu ${this.idade} anos\n e infelizmente seu corpo não suportou\n		Descanse em paz ${this.nome}`;
 				}else if(this.peso>636000){
-					b = `Você morreu por falha no coração por obesidade aos ${this.peso/1000}kg\n	Sua família sente que foi um alívio para você!`
+					b = `Você morreu aos ${this.idade} anos por falha no coração por obesidade com ${this.peso/1000}kg\n	Sua família sente que foi um alívio para você!`
 				}else if(this.idade>10&&this.peso<20000){
-					b = `Você morreu de desnutrição aos ${this.peso/1000}kgs \n	Sua família sente sua falta!`
+					b = `Você morreu de desnutrição aos ${this.idade} anos com ${this.peso/1000}kgs \n	Sua família sente sua falta!`
 				}else if(this.altura>272){
-					b = `Você morreu em um acidente em uma escada...\n Ao tropeçar em seu próprio cadarço, se desequilibrou e se feriu gravemente no pescoço\n	A natureza não foi em nada generosa com você`
+					b = `Você morreu em um acidente em uma escada aos ${this.idade} anos \n Ao tropeçar em seu próprio cadarço, se desequilibrou e se feriu gravemente no pescoço\n	A natureza não foi em nada generosa com você`
 				}
 				this.vivo = 0;
 			}else{
@@ -65,19 +126,8 @@ const prompt = require('prompt-sync')();
 		};
 	};
 
-console.log(`entre [NOME]: `);
-let n = prompt(`		`);
-
-console.log(`entre [IDADE] (em anos) `);
-let i = +prompt(`		`);
-
-console.log(`entre [PESO] (em gramas) `);
-let p = +prompt(`		`);
-
-console.log(`entre [ALTURA] (em cm) `);
-let a = +prompt(`		`);
 periodo = 0
-const p1 = new Pessoa(n,i,p,a);
+const p1 = new Pessoa();
 		
 
 
