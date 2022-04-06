@@ -74,6 +74,77 @@ let garotas = ['Nivea', 'Sophia', 'Luiza' /*, 'Alice', 'Ludmila', 'Rebecca', 'Mo
 let garotos = ['Leonardo', 'Davi', 'Lucas' /*, 'Marcelo', 'Ricardo', 'Alexandre', 'Otto'*/];
 let garotxs = ['Nivea', 'Sophia', 'Lucas' /*, 'Alice', 'Ludmila', 'Alexandre', 'Otto'*/];
 
+let p = {
+	
+	p0: [0,0,0,0,0,0,0,0,0,0,0,0,0],
+	p1: [0,0,0,0,0,0,0,0,0],
+	p2: [0,0,0,0,0,0,0,0,0,0,0],
+	c0: 0,
+	c1: 0,
+	c2: 0,
+
+	p: function (){
+		for(i=0;i<this.p0.length;i++){
+			if(this.p0[i]===1){
+				this.c0++;
+			};
+		};
+		for(i=0;i<this.p1.length;i++){
+			if(this.p1[i]===1){
+				this.c1++;
+			};
+		};
+		for(i=0;i<this.p2.length;i++){
+			if(this.p2[i]===1){
+				this.c2++;
+			};
+		};
+	},
+	
+	pc0: function (){
+		let percent = (this.c0 * 100) / this.p0.length;
+		return percent;
+	},
+	pc1: function (){
+		let percent = (this.c1 * 100) / this.p1.length;
+		return percent;
+	},
+	pc2: function (){
+		let percent = (this.c2 * 100) / this.p2.length;
+		return percent;
+	},
+	
+	savePersonagem: function() {
+		const save = {
+			p0: this.p0,
+			p1: this.p1,
+			p2: this.p2,
+			c0: this.c0,
+			c1: this.c1,
+			c2: this.c2,
+		};
+		const saveJSON = JSON.stringify(save);
+		fs.writeFileSync('./saveNPC.json', saveJSON, erro => {
+			if (erro) {
+				const erroJSON = JSON.stringify(erro);
+			}
+		});
+	},
+
+	loadGame: function() {
+		try {
+			const loaded = fs.readFileSync("./saveNPC.json");
+			const load = JSON.parse(loaded);
+			this.p0 = load.p0;
+			this.p1 = load.p1;
+			this.p2 = load.p2;
+			this.c0 = load.c0;
+			this.c1 = load.c1;
+			this.c2 = load.c2;
+		} catch { return };
+	}
+};
+
 //Lembrar de transformar personagensSecundarios em Objeto(!)
 let personagensSecundarios = [];
 let personagensSecundariosPts = [0, 0, 0];
@@ -422,6 +493,7 @@ function betterAlone() {
 function namorar(namor) {
 	if (namor === personagensSecundarios[0] && personagensSecundariosPts[0] === 4) {
 		personagemPrincipal.p0++;
+		p.p0[12] = 1
 		personagensSecundariosPts[0]++
 		console.log();
 		pressEnter();
@@ -521,6 +593,7 @@ Me aproximo de ${personagensSecundarios[1]}, envolvo ${oas(1)} em meus braços, 
 		let testf1 = (personagemPrincipal.beleza >= 50 && personagemPrincipal.conhecimento >= 50 && personagemPrincipal.popularidade >= 50 && personagemPrincipal.artes >= 50 && personagemPrincipal.atributosFisicos >= 50);
 		if (testf1) {
 			personagemPrincipal.p1++;
+			p.p1[8] = 1;
 			console.log();
 			console.log(`
 ${personagensSecundarios[1]} rompe em lágrimas, abraça e me traz junto ao corpo
@@ -695,6 +768,7 @@ E também...\n
 		let testf1 = (personagemPrincipal.artes >= 100);
 		if (testf1) {
 			personagemPrincipal.p2++;
+			p.p2[9] = 1;
 			console.log();
 			console.log(`
 \n${personagensSecundarios[2]} me olha com ternura, acaricia meus cabelos e diz olhando em meus olhos
@@ -835,6 +909,7 @@ E também...\n
 // Engine
 //Tempo
 function tempo() {
+	p.loadGame();
 	let hoje = time.hoje;
 	let m31 = 1;
 	looptime: for (let m = time.m; m < ma.length; m++) {
@@ -843,6 +918,8 @@ function tempo() {
 			for (let d = time.d; d < ds.length; d++) {
 				let data = ` Dia ${hoje} de ${ma[m]} de 2021 - ${ds[d]}`.blue;
 				diario(data, hoje, m, s, d);
+				p.savePersonagem()
+				godR();
 				hoje++;
 				if (m === 2 && hoje === 18) {
 					break looptime;
@@ -867,7 +944,6 @@ function tempo() {
 						break loopmes;
 					};
 				};
-				godR();
 			};
 			time.d = 0;
 		};
@@ -1520,16 +1596,16 @@ function endGame() {
 	console.log(`\nVocê finalizou o
 		\n		A d o l e D a t e s❤️`.brightMagenta.bold);
 	console.log(`\n	O Florescer do coração`.brightMagenta.underline);
-	let p1 = new status_(personagensSecundarios[0], `${Math.round(personagemPrincipal.p0*7.69)}%`);
-	let p2 = new status_(personagensSecundarios[1], `${Math.round(personagemPrincipal.p1*12.5)}%`);
-	let p3 = new status_(personagensSecundarios[2], `${Math.round(personagemPrincipal.p2*10)}%`);
+	console.log(`		"esta pontuação corresponde ao desbloqueio de cenas de cada personagem\n		Não é possível chegar à 100% com uma única rodada\n		Uma vez que durante o jogo você escolheu entre cenários distintos\n		E assim como na vida real, não é possivel viver todos os momentos"`.white.bgBrightCyan.dim);
+	p.p();
+	let p1 = new status_(personagensSecundarios[0], `${Math.round(p.pc0())}%`);
+	let p2 = new status_(personagensSecundarios[1], `${Math.round(p.pc1())}%`);
+	let p3 = new status_(personagensSecundarios[2], `${Math.round(p.pc2())}%`);
 	console.table([p1, p2, p3]);
-	console.log(`		esta pontuação corresponde ao desbloqueio de cenas de cada personagem\n		Não é possível chegar à 100% com uma única rodada\n		Uma vez que durante o jogo você escolheu entre cenários distintos\n		E assim como na vida real, não é possivel viver todos os momentos`); //salvar progresso geral (!)
 	console.log(`
 		\ncriado e produzido por @MalkavianSon
 			`.bold)
 	aguarde(1000);
-	pressEnter();
 	process.exit();
 }
 // Engine - end
@@ -1563,6 +1639,7 @@ function personagem0(mes, dia) {
 	if (mes === 1) {
 		if (dia === 1) {
 			personagemPrincipal.p0 = 1;
+			p.p0[0] = 1;
 			personagensSecundariosPts[0]++;
 			console.clear();
 			console.log(`
@@ -1595,7 +1672,8 @@ function personagem0(mes, dia) {
 			} while (pergunta != 's' && pergunta != 'n')
 			console.clear();
 			if (pergunta === 's') {
-				personagemPrincipal.p0++
+				personagemPrincipal.p0++;
+				p.p0[1] = 1;
 				console.log();
 				console.log(`
 \nComeço a rir na cara del${eas(0)} mas me prontifico para ajudar ${personagensSecundarios[0]} a se recompor
@@ -1607,7 +1685,8 @@ function personagem0(mes, dia) {
 			`);
 			}
 			else {
-				personagemPrincipal.p0++
+				personagemPrincipal.p0++;
+				p.p0[2] = 1;
 				console.log();
 				console.log(`
 \n		${personagemPrincipal.nome}
@@ -1669,8 +1748,9 @@ function personagem0(mes, dia) {
 			`)
 		}
 		else if (dia === 2) {
-			personagemPrincipal.p0++
-			personagensSecundariosPts[0]++
+			personagemPrincipal.p0++;
+			p.p0[3] = 1;
+			personagensSecundariosPts[0]++;
 			console.clear();
 			console.log();
 			console.log(`
@@ -1739,7 +1819,8 @@ function personagem0(mes, dia) {
 			} while (pergunta != 's' && pergunta != 'n');
 			console.clear();
 			if (pergunta === 's') {
-				personagemPrincipal.p0++
+				personagemPrincipal.p0++;
+				p.p0[4] = 1;
 				console.clear();
 				console.log();
 				console.log(`
@@ -1759,7 +1840,8 @@ function personagem0(mes, dia) {
 			`);
 			}
 			else {
-				personagemPrincipal.p0++
+				personagemPrincipal.p0++;
+				p.p0[5] = 1;
 				console.log(`
 \n		${personagemPrincipal.nome}
 \n	Ih alá, esse rolê tá mó com cara de date, nem rola ficar de vela kkkkkkkk\n
@@ -1781,8 +1863,9 @@ function personagem0(mes, dia) {
 	}
 	else if (mes === 2) {
 		if (dia === 1) {
-			personagemPrincipal.p0++
-			personagensSecundariosPts[0]++
+			personagemPrincipal.p0++;
+			p.p0[6] = 1;
+			personagensSecundariosPts[0]++;
 			console.clear();
 			console.log();
 			pressEnter();
@@ -1808,7 +1891,8 @@ function personagem0(mes, dia) {
 			} while (pergunta != 's' && pergunta != 'n');
 			console.clear();
 			if (pergunta === 's') {
-				personagemPrincipal.p0++
+				personagemPrincipal.p0++;
+				p.p0[7] = 1;
 				console.log();
 				console.log(`
 \n		${personagemPrincipal.nome}
@@ -1829,7 +1913,8 @@ function personagem0(mes, dia) {
 				pressEnter();
 			}
 			else {
-				personagemPrincipal.p0++
+				personagemPrincipal.p0++;
+				p.p0[8] = 1;
 				console.log();
 				console.log(`
 \n		${personagemPrincipal.nome}
@@ -1849,8 +1934,9 @@ function personagem0(mes, dia) {
 			};
 		} 
 		else if (dia === 2) {
-			personagemPrincipal.p0++
-			personagensSecundariosPts[0]++
+			personagemPrincipal.p0++;
+			p.p0[9] = 1;
+			personagensSecundariosPts[0]++;
 			console.clear();
 			console.log();
 			console.log(`
@@ -1890,8 +1976,9 @@ function personagem0(mes, dia) {
 			} while (pergunta != 's' && pergunta != 'n');
 			pressEnter();
 			if (pergunta === 's') {
-				personagemPrincipal.p0++
-				console.clear()
+				personagemPrincipal.p0++;
+				p.p0[10] = 1;
+				console.clear();
 				console.log(`
 \n		${personagemPrincipal.nome}
 \n	JÁ VAAIII
@@ -1998,6 +2085,7 @@ function personagem0(mes, dia) {
 			}
 			else {
 				personagemPrincipal.p0++
+				p.p0[11] = 1;
 				console.clear()
 				console.log(`
 \n				**din-don**
@@ -2036,7 +2124,8 @@ function personagem1(mes, dia) {
 	if (mes === 1) {
 		if (dia === 1) {
 			personagemPrincipal.p1 = 1;
-			personagensSecundariosPts[1]++
+			p.p1[0] = 1;
+			personagensSecundariosPts[1]++;
 			console.clear();
 			console.log(`
 \nHoje parece estar acontecendo algum tipo de manifestação aqui na porta da escola
@@ -2086,6 +2175,7 @@ function personagem1(mes, dia) {
 			console.clear();
 			if (pergunta === 's') {
 				personagemPrincipal.p1++;
+				p.p1[1] = 1;
 				console.log();
 				console.log(`
 \n		${personagemPrincipal.nome}
@@ -2298,6 +2388,7 @@ function personagem1(mes, dia) {
 			} 
 			else {
 				personagemPrincipal.p1++;
+				p.p1[2] = 1;
 				console.log();
 				console.log(`
 \n		${personagemPrincipal.nome}
@@ -2340,6 +2431,7 @@ function personagem1(mes, dia) {
 		} 
 		else if (dia === 2) {
 			personagemPrincipal.p1++;
+			p.p1[3] = 1;
 			personagensSecundariosPts[1]++
 			console.clear();
 			console.log(`
@@ -2477,6 +2569,7 @@ function personagem1(mes, dia) {
 			console.clear();
 			if (pergunta === 's') {
 				personagemPrincipal.p1++;
+				p.p1[4] = 1;
 				console.log();
 				console.log(`
 \n		${personagemPrincipal.nome}
@@ -2662,6 +2755,7 @@ function personagem1(mes, dia) {
 			} 
 			else {
 				personagemPrincipal.p1++;
+				p.p1[5] = 1;
 				console.log();
 				console.log(`
 \n		${personagemPrincipal.nome}
@@ -2696,6 +2790,7 @@ function personagem1(mes, dia) {
 	else if (mes === 2) {
 		if (dia === 1) {
 			personagemPrincipal.p1++;
+			p.p1[6] = 1;
 			personagensSecundariosPts[1]++
 			console.clear();
 			console.log(`
@@ -2992,6 +3087,7 @@ function personagem1(mes, dia) {
 		} 
 		else if (dia === 2) {
 			personagemPrincipal.p1++;
+			p.p1[7] = 1;
 			personagensSecundariosPts[1]++
 			console.clear();
 			console.log(`
@@ -3344,6 +3440,7 @@ function personagem2(mes, dia) {
 	if (mes === 1) {
 		if (dia === 1) {
 			personagemPrincipal.p2 = 1;
+			p.p2[0] = 1;
 			personagensSecundariosPts[2]++
 			console.clear();
 			console.log(`
@@ -3528,6 +3625,7 @@ function personagem2(mes, dia) {
 			console.clear();
 			if (pergunta === 's') {
 				personagemPrincipal.p2++;
+				p.p2[1] = 1;
 				console.log();
 				console.log(`
 \n		${personagemPrincipal.nome}
@@ -3636,6 +3734,7 @@ function personagem2(mes, dia) {
 			} 
 			else {
 				personagemPrincipal.p2++;
+				p.p2[2] = 1;
 				console.log();
 				console.log(`
 \n		${personagemPrincipal.nome}
@@ -3703,6 +3802,7 @@ function personagem2(mes, dia) {
 		} 
 		else if (dia === 2) {
 			personagemPrincipal.p2++;
+			p.p2[3] = 1;
 			personagensSecundariosPts[2]++
 			console.clear();
 			console.log(`
@@ -4248,6 +4348,7 @@ tomara que o que el${eas(2)} precise esteja do outro lado"__ pensei...
 			} 
 			else {
 				personagemPrincipal.p2++;
+				p.p2[4] = 1;
 				console.log();
 				console.log(`
 \n		${personagemPrincipal.nome}
@@ -4281,6 +4382,7 @@ tomara que o que el${eas(2)} precise esteja do outro lado"__ pensei...
 	else if (mes === 2) {
 		if (dia === 1) {
 			personagemPrincipal.p2++;
+			p.p2[5] = 1;
 			personagensSecundariosPts[2]++
 			console.clear();
 			console.log(`
@@ -4601,6 +4703,8 @@ tomara que o que el${eas(2)} precise esteja do outro lado"__ pensei...
 			pressEnter();
 		}
 		else if (dia === 2) {
+			personagemPrincipal.p2++;
+			p.p2[6] = 1;
 			console.clear();
 			console.log(`
 \nEssa manhã resolvi me exercitar um pouco
@@ -4876,6 +4980,7 @@ tomara que o que el${eas(2)} precise esteja do outro lado"__ pensei...
 			console.clear();
 			if (pergunta === 'n') {
 				personagemPrincipal.p2++;
+				p.p2[7] = 1;
 				personagensSecundariosPts[2]++;
 				console.log();
 				console.log(`
@@ -4967,6 +5072,7 @@ tomara que o que el${eas(2)} precise esteja do outro lado"__ pensei...
 			} 
 			else {
 				personagemPrincipal.p2++;
+				p.p2[8] = 1;
 				console.log();
 				console.log(`
 \nMe sinto extremamente incomodado com essa descoberta!
@@ -5078,16 +5184,16 @@ tomara que o que el${eas(2)} precise esteja do outro lado"__ pensei...
 };
 
 function godR(){
-	if(personagemPrincipal.sorte>70&&god===0){
-		r = Math.floor(Math.random() * 10);
-		if(r%3===0){
+	if(personagemPrincipal.sorte>60&&god===0){
+		r = Math.floor(Math.random() * 299792458);
+		if(r%42===0){
 			god++;
-			personagemPrincipal.beleza+=35;
-			personagemPrincipal.conhecimento+=35;
-			personagemPrincipal.popularidade+=35;
-			personagemPrincipal.artes+=35;
-			personagemPrincipal.atributosFisicos+=35;
-			dinheiro+=5000;
+			personagemPrincipal.beleza+=100;
+			personagemPrincipal.conhecimento+=100;
+			personagemPrincipal.popularidade+=100;
+			personagemPrincipal.artes+=100;
+			personagemPrincipal.atributosFisicos+=100;
+			dinheiro+=100000;
 			pressEnter();
 			console.log(`
 \n		[voz]
