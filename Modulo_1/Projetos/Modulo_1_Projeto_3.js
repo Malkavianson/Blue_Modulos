@@ -1210,7 +1210,6 @@ function loadGame() {
 	} catch {
 		console.log(`Jogo salvo não encontrado\n certifique-se que o arquivo saveGame.json se encontra na mesma pasta do jogo\n iniciando novo jogo!`);
 		pressEnter();
-		return jogo();
 	}
 }
 
