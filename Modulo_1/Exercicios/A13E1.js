@@ -2,7 +2,11 @@
 // Crie um objeto pessoa com os atributos: nome, idade, peso e altura.
 // Além disso ela deve ter os métodos: Envelhecer, engordar, emagrecer, crescer.
 // Por padrão, a cada ano que nossa pessoa envelhece até os 21 anos, ela deve crescer 0,5 cm. 
+		// (edit.: Pela lógica até os 10 anos ela precisa crescer em torno de 3cm/ano)
 // Crie um método bio que retorna uma string com todas as informações da pessoa.
+
+
+// (!) aleatoreidade baixa!
 
 const prompt = require('prompt-sync')();
 
@@ -17,17 +21,28 @@ const prompt = require('prompt-sync')();
 
 	function Pessoa() {
 		
+		this.random = function(num){
+			r = Math.round(Math.random() * num);
+			return r;
+		}
+		
+		
+		this.emg = 0;
+		this.eng = 0;
+		this.ntr = 0;
+		
+		
 		console.log(`entre [NOME]: `);
-		let n = prompt(`		`);
+		let n = /*prompt(`		`);*/'Ale'
 
 		console.log(`entre [IDADE] (em anos) `);
-		let i = +prompt(`		`);
+		let i = /*+prompt(`		`);*/0
 
 		console.log(`entre [PESO] (em gramas) `);
-		let p = +prompt(`		`);
+		let p = /*+prompt(`		`);*/1345
 
 		console.log(`entre [ALTURA] (em cm) `);
-		let a = +prompt(`		`);
+		let a = /*+prompt(`		`);*/40
 
 		Object.defineProperties(this,{
 			nome: {
@@ -85,50 +100,101 @@ const prompt = require('prompt-sync')();
 		};
 		
 		this.engordar = function(){
-			this.peso+=100;
+			if(this.idade<5){
+				r = this.random(2000);
+				this.peso+= (4500 + r) /365;
+			}else if(this.idade<11){
+				r = this.random(1000);
+				this.peso+= (2400 + r) /365;
+			}else if(this.idade<18){
+				r = this.random(2500);
+				this.peso+= (5000 + r) /365;
+			}else if(this.idade>60){
+				r = this.random(200);
+				this.peso-= (200 + r) / 365;
+			}
+			r = this.random(2500);
+			this.peso+= (5000 + r) /365;
 		};
 		
 		this.emagrecer = function(){
-			this.peso-=100;
+			if(this.idade<5){
+				r = this.random(2000);
+				this.peso+= (4500 + r) /365;
+			}else if(this.idade<11){
+				r = this.random(1000);
+				this.peso+= (2400 + r) /365;
+			}else if(this.idade<18){
+				r = this.random(2500);
+				this.peso+= (5000 + r) /365;
+			}else if(this.idade>60){
+				r = this.random(200);
+				this.peso-= (200 + r) / 365;
+			}
+			r = this.random(2500);
+			this.peso-= (5000 + r) /365;
 		};
 		
 		this.crescer = function(){
-			if (this.idade<22){
+			if(this.idade<9){
+				this.altura+=this.random(12)+3;
+			}else if(this.idade<15){
+				this.altura+=this.random(11)+5;
+			}else if (this.idade<22){
 				this.altura+=0.5;
 			};
 		};
 		
 		this.day = function(){
-			let p = Math.round(Math.random() * 3);
-			if(p===1){
+			let p = this.random(300000);
+			let g = (this.random(7))+2
+			do{ m = (this.random(7))+2}while(m===g)
+			if(p%g===0&&p%m!=0){
 				this.engordar();
-			}else if (p===2){
+				this.eng++
+			} else if (p%m===0&&p%g!=0){
 				this.emagrecer();
-			}
+				this.emg++
+			}else{
+				this.ntr++
+				if(this.idade<5){
+					r = this.random(1250);
+					this.peso+= (2250+r) /365
+				}else if(this.idade<11){
+					r = this.random(1250);
+					this.peso+= (2250+r) /365
+				}else if(this.idade<15){
+					r = this.random(2750);
+					this.peso+= (3500+r) /365
+				}else if(this.idade>60){
+					r = this.random(200);
+					this.peso-= r / 365;
+				};
+			};
 		};
 		
 		this.bio = function(){
-			if(this.idade>121||this.peso>636000||this.peso<20000||this.altura>272){
-				if(this.idade>121){
+			if(this.idade>119||this.peso>636000||this.peso<0){
+				if(this.idade>119){
 					b = `Você morreu de causa natural, atingiu ${this.idade} anos\n e infelizmente seu corpo não suportou\n		Descanse em paz ${this.nome}`;
 				}else if(this.peso>636000){
 					b = `Você morreu aos ${this.idade} anos por falha no coração por obesidade com ${this.peso/1000}kg\n	Sua família sente que foi um alívio para você!`
 				}else if(this.idade>10&&this.peso<20000){
 					b = `Você morreu de desnutrição aos ${this.idade} anos com ${this.peso/1000}kgs \n	Sua família sente sua falta!`
-				}else if(this.altura>272){
-					b = `Você morreu em um acidente em uma escada aos ${this.idade} anos \n Ao tropeçar em seu próprio cadarço, se desequilibrou e se feriu gravemente no pescoço\n	A natureza não foi em nada generosa com você`
 				}
 				this.vivo = 0;
 			}else{
-				b = `\n		Nome:	${this.nome}\n		Idade:	${this.idade}\n		Peso:	${this.peso/1000}kg\n		Altura:	${this.altura/100}`;
-			}
+				b = `\n		Nome:	${this.nome}\n		Idade:	${this.idade}\n		Peso:	${(this.peso/1000).toFixed(2)}kg\n		Altura:	${(this.altura/100).toFixed(2)}`;
+			};
 			return b;
 		};
 	};
 
 periodo = 0
 const p1 = new Pessoa();
-		
+const p2 = new Pessoa();
+const p3 = new Pessoa();
+const p4 = new Pessoa();
 
 
 function y(){
@@ -139,6 +205,9 @@ function y(){
 		loopmes: for (let s = 0; s < 5; s++) {
 			for (let d = 0; d < 7; d++) {
 				p1.day();
+				p2.day();
+				p3.day();
+				p4.day();
 				hoje++;
 				if (m > 12 && hoje > 30) {
 					break looptime;
@@ -181,12 +250,25 @@ function y(){
 
 
 do{
-periodo++;
 console.clear();
+periodo++;
 y();
 p1.envelhecer();
 p1.crescer();
 console.log(p1.bio());
-console.log(`	Você cresceu ${Math.round(p1.altura-p1.alturai)} cm e seu peso alterou ${Math.round((p1.peso-p1.pesoi)/1000)}kg em ${periodo} anos `)
+console.log(`	Seu peso alterou ${Math.round((p1.peso-p1.pesoi)/1000)}kg em ${periodo} anos\n engordar ${p1.eng}\n emagrecer ${p1.emg}\n neutro ${p1.ntr} `)
+p2.envelhecer();
+p2.crescer();
+console.log(p2.bio());
+console.log(`	Seu peso alterou ${Math.round((p2.peso-p2.pesoi)/1000)}kg em ${periodo} anos\n engordar ${p2.eng}\n emagrecer ${p2.emg}\n neutro ${p2.ntr} `)
+p3.envelhecer();
+p3.crescer();
+console.log(p3.bio());
+console.log(`	Seu peso alterou ${Math.round((p3.peso-p3.pesoi)/1000)}kg em ${periodo} anos\n engordar ${p3.eng}\n emagrecer ${p3.emg}\n neutro ${p3.ntr} `)
+p4.envelhecer();
+p4.crescer();
+console.log(p4.bio());
+console.log(`	Seu peso alterou ${Math.round((p4.peso-p4.pesoi)/1000)}kg em ${periodo} anos\n engordar ${p4.eng}\n emagrecer ${p4.emg}\n neutro ${p4.ntr}  `)
+// console.log(p1)
 prompt(``);
 }while(p1.vivo>0)
