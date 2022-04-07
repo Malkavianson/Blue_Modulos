@@ -33,16 +33,16 @@ const prompt = require('prompt-sync')();
 		
 		
 		console.log(`entre [NOME]: `);
-		let n = /*prompt(`		`);*/'Ale'
+		let n = /*'Ale'*/prompt(`		`);
 
 		console.log(`entre [IDADE] (em anos) `);
-		let i = /*+prompt(`		`);*/0
+		let i = /*0*/+prompt(`		`);
 
 		console.log(`entre [PESO] (em gramas) `);
-		let p = /*+prompt(`		`);*/1345
+		let p = /*1345*/+prompt(`		`);
 
 		console.log(`entre [ALTURA] (em cm) `);
-		let a = /*+prompt(`		`);*/40
+		let a = /*40*/+prompt(`		`);
 
 		Object.defineProperties(this,{
 			nome: {
@@ -192,9 +192,6 @@ const prompt = require('prompt-sync')();
 
 periodo = 0
 const p1 = new Pessoa();
-const p2 = new Pessoa();
-const p3 = new Pessoa();
-const p4 = new Pessoa();
 
 
 function y(){
@@ -205,9 +202,6 @@ function y(){
 		loopmes: for (let s = 0; s < 5; s++) {
 			for (let d = 0; d < 7; d++) {
 				p1.day();
-				p2.day();
-				p3.day();
-				p4.day();
 				hoje++;
 				if (m > 12 && hoje > 30) {
 					break looptime;
@@ -256,19 +250,7 @@ y();
 p1.envelhecer();
 p1.crescer();
 console.log(p1.bio());
-console.log(`	Seu peso alterou ${Math.round((p1.peso-p1.pesoi)/1000)}kg em ${periodo} anos\n engordar ${p1.eng}\n emagrecer ${p1.emg}\n neutro ${p1.ntr} `)
-p2.envelhecer();
-p2.crescer();
-console.log(p2.bio());
-console.log(`	Seu peso alterou ${Math.round((p2.peso-p2.pesoi)/1000)}kg em ${periodo} anos\n engordar ${p2.eng}\n emagrecer ${p2.emg}\n neutro ${p2.ntr} `)
-p3.envelhecer();
-p3.crescer();
-console.log(p3.bio());
-console.log(`	Seu peso alterou ${Math.round((p3.peso-p3.pesoi)/1000)}kg em ${periodo} anos\n engordar ${p3.eng}\n emagrecer ${p3.emg}\n neutro ${p3.ntr} `)
-p4.envelhecer();
-p4.crescer();
-console.log(p4.bio());
-console.log(`	Seu peso alterou ${Math.round((p4.peso-p4.pesoi)/1000)}kg em ${periodo} anos\n engordar ${p4.eng}\n emagrecer ${p4.emg}\n neutro ${p4.ntr}  `)
+console.log(`	Seu peso alterou ${Math.round((p1.peso-p1.pesoi)/1000)}kg em ${periodo} anos`)
 // console.log(p1)
 prompt(``);
 }while(p1.vivo>0)
