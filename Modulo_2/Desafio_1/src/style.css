@@ -45,6 +45,7 @@
 		margin: calc(var(--vw, 1vw) * 1) 0px;
 	}
 	input[type='checkbox']{
+		-webkit-appearance: auto;
 		width: calc(var(--vw, 1vw) * 3);
 		height: calc(var(--vw, 1vw) * 3);
 		border: solid 1px #E8E8E8;
@@ -217,6 +218,7 @@
 		margin: calc(var(--vh, 1vh) * 1) 0px;
 	}
 	input[type='checkbox']{
+		-webkit-appearance: radio;
 		width: calc(var(--vh, 1vh) * 3);
 		height: calc(var(--vh, 1vh) * 3);
 		border: solid 1px #E8E8E8;
