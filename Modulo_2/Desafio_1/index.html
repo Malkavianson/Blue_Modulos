@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+	<head>
+	
+		<title>Login Page</title>
+		
+		<meta charset='uft-8'>
+		<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+		<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+		
+		<!-- <link rel="icon" href='./'> -->
+		<link rel="stylesheet" href="./src/style.css">	
+		<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,300italic,300,100,100italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+		<!-- <script src='./scripts.js'></script> -->
+		<script type='text/javascript'>
+			let vh = window.innerHeight * 0.01;
+			document.documentElement.style.setProperty('--vh', `${vh}px`);
+			window.addEventListener('resize', function(){
+				let vh = window.innerHeight * 0.01;
+				document.documentElement.style.setProperty('--vh', `${vh}px`);
+			});
+		</script>
+	
+	</head>
+	
+	<body>
+		<main>
+			<section>
+				<div class='background'>
+					<div class='square'>
+						<div class='dot'><div></div><div></div><div></div></div>
+						<div class='menu'><div></div><div></div><div></div></div>
+						<div class='base'></div><div class='det1'></div><div class='det2'></div>
+						<div class='users'>
+							<div><img src='./src/img/user1.png'><img src='./src/img/user2.png'><img src='./src/img/user3.png'></div>
+							<div><img src='./src/img/user4.png'><img src='./src/img/user5.png'><img src='./src/img/user6.png'></div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section>
+				<div class='wb'>
+					<div>
+						<h2>Bem vindo de volta</h1>
+						<h1>Faça login na sua conta</h1>
+					</div>
+					<div>
+						<span>E-mail</span>
+						<input type='text' placeholder='your.email@anymail.com'>
+						<span>Senha</span>
+						<input type='text' placeholder='*****'>
+						<div style='display: flex; flex-direction: row; justify-content: space-between;align-items: flex-end;'>
+							<div>
+								<input type="checkbox" id="remember" name="remember" onclick='checked'>
+								<label for="remember">Lembre de mim</label>
+							</div>
+							<a href='./forgotpass.html' style='color:#2B6CB0'>Esqueceu sua senha?</a>
+						</div>
+						<div class='btn' style='background: #04C35C'>Entrar</div>
+						<div class='btn' style='background: #1A202C'><img style='transform: translate(calc(var(--vh,1vh) * -2), calc(var(--vh,1vh) * 0.3))' src='./src/img/googleIcon.png'>Ou faça login com o Google</div>
+					</div>
+					<div style='display: flex; flex-direction: row; justify-content: center;'>
+						<span>Não tem uma conta? <a style='color:#2B6CB0' href='./siginup.html'>Cadastre-se</a></span>
+					</div>
+				</div>
+			</section>
+		</main>
+	</body>
+	
+</html>
