@@ -20,6 +20,12 @@
 				let vh = window.innerHeight * 0.01;
 				document.documentElement.style.setProperty('--vh', `${vh}px`);
 			});
+			let vw = window.innerWidth * 0.01;
+			document.documentElement.style.setProperty('--vw', `${vw}px`);
+			window.addEventListener('resize', function(){
+				let vw = window.innerWidth * 0.01;
+				document.documentElement.style.setProperty('--vw', `${vw}px`);
+			});
 		</script>
 	
 	</head>
@@ -58,9 +64,9 @@
 							<a href='./forgotpass.html' style='color:#2B6CB0'>Esqueceu sua senha?</a>
 						</div>
 						<div class='btn' style='background: #04C35C'>Entrar</div>
-						<div class='btn' style='background: #1A202C'><img style='transform: translate(calc(var(--vh,1vh) * -2), calc(var(--vh,1vh) * 0.3))' src='./src/img/googleIcon.png'>Ou faça login com o Google</div>
+						<div class='btn' style='background: #1A202C'><img style='max-height: calc(var(--vh, 1vh) * 5);transform: translate(calc(var(--vh,1vh) * -2), calc(var(--vh,1vh) * 0.3))' src='./src/img/googleIcon.png'>Ou faça login com o Google</div>
 					</div>
-					<div style='display: flex; flex-direction: row; justify-content: center;'>
+					<div class='footer'>
 						<span>Não tem uma conta? <a style='color:#2B6CB0' href='./siginup.html'>Cadastre-se</a></span>
 					</div>
 				</div>
