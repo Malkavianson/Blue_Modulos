@@ -34,7 +34,7 @@
 		line-height: calc(var(--vw, 1vw) * 2.9925);
 		color: #1A202C;
 	}
-	input[type='text']{
+	.input{
 		width: calc(var(--vw, 1vw) * 60);
 		height: calc(var(--vw, 1vw) * 8);
 		border: solid 1px #E8E8E8;
@@ -206,7 +206,7 @@
 		line-height: calc(var(--vh, 1vh) * 2.9925);
 		color: #1A202C;
 	}
-	input[type='text']{
+	.input{
 		width: calc(var(--vh, 1vh) * 60);
 		height: calc(var(--vh, 1vh) * 8);
 		border: solid 1px #E8E8E8;
