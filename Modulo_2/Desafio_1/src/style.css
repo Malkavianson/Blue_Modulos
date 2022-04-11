@@ -218,7 +218,7 @@
 		margin: calc(var(--vh, 1vh) * 1) 0px;
 	}
 	input[type='checkbox']{
-		-webkit-appearance: radio;
+		-webkit-appearance: auto;
 		width: calc(var(--vh, 1vh) * 3);
 		height: calc(var(--vh, 1vh) * 3);
 		border: solid 1px #E8E8E8;
