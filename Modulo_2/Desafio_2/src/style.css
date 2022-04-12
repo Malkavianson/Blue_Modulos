@@ -2,51 +2,112 @@
 	margin:  			calc(var(--vh, 1vh) * 0);
 	padding: 			calc(var(--vh, 1vh) * 0);
 }
-section{
-	height: 			99.9%;
-	width: 				99.9%;
+@media (orientation: landscape) {
+	.first{
+		flex-direction: 	row;
+	}
+	.first>div{
+	height: 				100vh;
+	width: 					50vw;
+	}
+	.text{
+		height: 			25vh;
+		width: 				29vw;
+		flex-direction: 	column;
+	}
+	h1{
+		font-size: 			6vh;
+	}
+	p{
+		font-size: 			3.3vh;
+		line-height: 		5.5vh;
+	}
+	.botao{
+		width: 				inherit;	
+	}
+	.botao>button{
+		font-size: 			3vh;
+	}
 }
-section>div{
-	position: 			relative;
-	flex-direction: 	row;
-	align-items: 		center;
-    justify-content: 	center;
-	/* border: solid 1px; */
-	/* gap: 				calc(var(--vh, 1vh) * 10); */
+@media (orientation: portrait) {
+	.first{
+		flex-direction: 	column;
+		align-items: 		center;
+	}
+	.first>div{
+		height: 			50vh;
+		width: 				100vw;
+	}
+	.text{
+		height: 			50vh;
+		width: 				90vw;
+		flex-direction: 	row;
+		align-items: 		center;
+	}
+	h1{
+		font-size: 			6vw;
+	}
+	p{
+		font-size:			3.3vw;
+		line-height: 		5.5vw;
+	}
+	.botao{
+		width: 				fit-content;	
+	}
+	.botao>button{
+		font-size: 			3vw;
+	}
 }
-section>div>div{
-	position: relative;
-    height: calc(var(--vh, 1vh) * 99.7);
-    width: calc(var(--vh, 1vh) * 200);
-	border: solid 1px;
+
+h1{
+	font-family: 			'Merriweather', Georgia, serif;
+	font-style: 			normal;
+	font-weight: 			400;
+	color: 					#2B2B2B;
+}
+p{
+	font-family: 			'Lato', Georgia, sans-serif;
+	font-style: 			normal;
+	font-weight:			400;
+	color: 					#555555;	
 }
 img{
-	max-width: 90%
+	max-width: 				75%;
+	max-height: 			75%;
 }
 .first{
-	display: flex;
+	position: 				relative;
+	height: 				100vh;
+	width: 					100vw;
+	display: 				flex;
+	background:				#D7D4FF;
 }
-.text{
-	position: relative;
-	height: calc(var(--vh, 1vh) * 20);
-	width: calc(var(--vh, 1vh) * 50);
-	display: flex;
-	flex-direction: column;
+.first>div{
+	position:				relative;
+	display:				flex;
+	align-items: 			center;
+	justify-content: 		center;
 }
-.first>div(2){
-	height: calc(var(--vh, 1vh) * 20);
-	width: calc(var(--vh, 1vh) * 50);
+.first>div>div{
+	position:				relative;
+	display:				flex;
+	justify-content: 		center;
 }
-
-
-
-
-.second{
-	display: flex;
+.text>p{
+	width: 					31vw;
 }
-
-
-
-.third{
-	display: flex;
+.botao>button{
+	height: 				7vh;
+	width:					12vw;
+	background:		 		#6C63FF;
+	box-shadow: 			0px 0.25vw 0.25vh rgba(23, 23, 23, 0.1);
+	border: 				none;
+	border-radius: 			1vh;
+	font-family: 			'Lato', Georgia, sans-serif;
+	font-style: 			normal;
+	font-weight: 			700;
+	color:					white;
 }
+.botao>button:hover{
+		transform: 			scale(1.01);
+	}
