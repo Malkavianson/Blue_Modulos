@@ -28,6 +28,29 @@
 	.botao>button{
 		font-size: 			3vh;
 	}
+	.second>div{
+		height: 				85vh;
+		width: 					72vw;
+		display: 				flex;
+		flex-wrap: 				wrap;
+		justify-content: 		space-around;
+	}
+	.colors{
+		position: 				relative;
+		height: 				40vh;
+		width: 					18.33vw;
+		display: 				flex;
+		align-items: 			flex-end;
+	}
+	.colors>div{
+		height:					12vh;
+		padding:				2.5vh;
+		gap:					1.5vh;
+		display: 				flex;
+		flex-direction:			column;
+		background:				white;
+		overflow: auto;
+	}
 }
 @media (orientation: portrait) {
 	.first{
@@ -57,6 +80,30 @@
 	.botao>button{
 		font-size: 			3vw;
 	}
+	.second>div{
+		height: 				85vh;
+		width: 					72vw;
+		display: 				flex;
+		flex-wrap: 				wrap;
+		justify-content: 		space-around;
+		gap:					2vh;
+	}
+	.colors{
+		position: 				relative;
+		height: 				40vh;
+		width: 					25vw;
+		display: 				flex;
+		align-items: 			flex-end;
+	}
+	.colors>div{
+		height:					12vh;
+		padding:				2.5vh;
+		gap:					1.5vh;
+		display: 				flex;
+		flex-direction:			column;
+		background:				white;
+		overflow: auto;
+	}
 }
 
 h1{
@@ -78,7 +125,7 @@ img{
 .first{
 	position: 				relative;
 	height: 				100vh;
-	width: 					100vw;
+	width: 					revert;
 	display: 				flex;
 	background:				#D7D4FF;
 }
@@ -115,62 +162,12 @@ img{
 .second{
 	position: 				relative;
 	height: 				100vh;
-	width: 					100vw;
+	width: 					revert;
 	display: 				flex;
     align-items: 			center;
     justify-content: 		center;
 	flex-wrap: 				wrap;
 	background:				#E5E5E5;
-}
-@media (orientation: portrait) {
-	.second>div{
-		height: 				40vh;
-		width: 					90vw;
-		display: 				flex;
-		justify-content: 		space-around;
-		overflow: 				auto;
-	}
-	.colors{
-		position: 				relative;
-		height: 				40vh;
-		width: 					25vw;
-		display: 				flex;
-		align-items: 			flex-end;
-	}
-	.colors>div{
-		height:					12vh;
-		padding:				2.5vh;
-		gap:					1.5vh;
-		display: 				flex;
-		flex-direction:			column;
-		background:				white;
-		overflow: auto;
-	}
-}
-@media (orientation: landscape){
-	.second>div{
-		height: 				40vh;
-		width: 					90vw;
-		display: 				flex;
-		justify-content: 		space-around;
-		overflow: 				auto;
-	}
-	.colors{
-		position: 				relative;
-		height: 				40vh;
-		width: 					18.33vw;
-		display: 				flex;
-		align-items: 			flex-end;
-	}
-	.colors>div{
-		height:					12vh;
-		padding:				2.5vh;
-		gap:					1.5vh;
-		display: 				flex;
-		flex-direction:			column;
-		background:				white;
-		overflow: auto;
-	}
 }
 .colors>div>h1{
 	font-size: 3vh;
