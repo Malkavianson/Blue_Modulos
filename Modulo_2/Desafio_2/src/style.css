@@ -5,29 +5,26 @@
 
 @media (orientation: landscape) {
 	.first{
-		flex-direction: 	row;
+		flex-direction: 		row;
 	}
 	.first>div{
-	height: 				100vh;
-	width: 					50vw;
+		height: 				100vh;
+		width: 					50vw;
 	}
 	.text{
-		height: 			25vh;
-		width: 				29vw;
-		flex-direction: 	column;
+		height: 				25vh;
+		width: 					29vw;
+		flex-direction: 		column;
 	}
 	h1{
-		font-size: 			6vh;
+		font-size: 				6vh;
 	}
 	p{
-		font-size: 			3.3vh;
-		line-height: 		5.5vh;
+		font-size: 				3.3vh;
+		line-height: 			5.5vh;
 	}
 	.botao{
-		width: 				inherit;	
-	}
-	.botao>button{
-		font-size: 			3vh;
+		width: 					inherit;	
 	}
 	.second>div{
 		height: 				85vh;
@@ -55,31 +52,28 @@
 }
 @media (orientation: portrait) {
 	.first{
-		flex-direction: 	column;
-		align-items: 		center;
+		flex-direction: 		column;
+		align-items: 			center;
 	}
 	.first>div{
-		height: 			50vh;
-		width: 				100vw;
+		height: 				50vh;
+		width: 					100vw;
 	}
 	.text{
-		height: 			50vh;
-		width: 				90vw;
-		flex-direction: 	row;
-		align-items: 		center;
+		height: 				50vh;
+		width: 					90vw;
+		flex-direction: 		row;
+		align-items: 			center;
 	}
 	h1{
-		font-size: 			6vw;
+		font-size: 				6vw;
 	}
 	p{
-		font-size:			3.3vw;
-		line-height: 		5.5vw;
+		font-size:				3.3vw;
+		line-height: 			5.5vw;
 	}
 	.botao{
-		width: 				fit-content;	
-	}
-	.botao>button{
-		font-size: 			3vw;
+		width: 					fit-content;	
 	}
 	.second>div{
 		height: 				85vh;
@@ -108,145 +102,146 @@
 }
 
 h1{
-	font-family: 			'Merriweather', Georgia, serif;
-	font-style: 			normal;
-	font-weight: 			400;
-	color: 					#2B2B2B;
+	font-family: 				'Merriweather', Georgia, serif;
+	font-style: 				normal;
+	font-weight: 				400;
+	color: 						#2B2B2B;
 }
 p{
-	font-family: 			'Lato', Georgia, sans-serif;
-	font-style: 			normal;
-	font-weight:			400;
-	color: 					#555555;	
+	font-family: 				'Lato', Georgia, sans-serif;
+	font-style: 				normal;
+	font-weight:				400;
+	color: 						#555555;	
 }
 img{
-	max-width: 				75%;
-	max-height: 			75%;
+	max-width: 					75%;
+	max-height: 				75%;
 }
 .first{
-	position: 				relative;
-	height: 				100vh;
-	width: 					revert;
-	display: 				flex;
-	background:				#D7D4FF;
+	position: 					relative;
+	height: 					100vh;
+	width: 						revert;
+	display: 					flex;
+	background:					#D7D4FF;
 }
 .first>div{
-	position:				relative;
-	display:				flex;
-	align-items: 			center;
-	justify-content: 		center;
+	position:					relative;
+	display:					flex;
+	align-items: 				center;
+	justify-content: 			center;
 }
 .first>div>div{
-	position:				relative;
-	display:				flex;
-	justify-content: 		center;
+	position:					relative;
+	display:					flex;
+	justify-content: 			center;
 }
 .text>p{
-	width: 					31vw;
+	width: 						31vw;
 }
 .botao>button{
-	height: 				7vh;
-	width:					12vw;
-	background:		 		#6C63FF;
-	box-shadow: 			0px 0.25vw 0.25vh rgba(23, 23, 23, 0.1);
-	border: 				none;
-	border-radius: 			1vh;
-	font-family: 			'Lato', Georgia, sans-serif;
-	font-style: 			normal;
-	font-weight: 			700;
-	color:					white;
+	height: 					4.5vw;
+	width:						12vw;
+	background:		 			#6C63FF;
+	box-shadow: 				0px 0.25vw 0.25vh rgba(23, 23, 23, 0.1);
+	border: 					none;
+	border-radius: 				1vh;
+	font-family: 				'Lato', Georgia, sans-serif;
+	font-style: 				normal;
+	font-weight: 				700;
+	color:						white;
+	font-size: 					2vw;
 }
 .botao>button:hover{
-	transform: 				scale(1.01);
+	transform: 					scale(1.01);
 }
 
 .second{
-	position: 				relative;
-	height: 				100vh;
-	width: 					revert;
-	display: 				flex;
-    align-items: 			center;
-    justify-content: 		center;
-	flex-wrap: 				wrap;
-	background:				#E5E5E5;
+	position: 					relative;
+	height: 					100vh;
+	width: 						revert;
+	display: 					flex;
+    align-items: 				center;
+    justify-content: 			center;
+	flex-wrap: 					wrap;
+	background:					#E5E5E5;
 }
 .colors>div>h1{
-	font-size: 3vh;
-	line-height: 2.5vh;
+	font-size: 					3vh;
+	line-height:				2.5vh;
 }
 .colors>div>p{
-	font-size: 2.3vh;
-    line-height: 2.5vh;
+	font-size: 					2.3vh;
+    line-height: 				2.5vh;
 }
 #c1{
-	background: #FF6363;
+	background: 				#FF6363;
 }
 #c2{
-	background: #63ECFF;
+	background: 				#63ECFF;
 }
 #c3{
-	background: #F363FF;
+	background: 				#F363FF;
 }
 #c4{
-	background: #63FF73;
+	background: 				#63FF73;
 }
 #c5{
-	background: #FFDD63;
+	background: 				#FFDD63;
 }
 #c6{
-	background: #6663FF;
+	background: 				#6663FF;
 }
 
 .third{
-	height: 110vh;
-	width: revert;
-	background: #D7D4FF;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
-	align-items: center;
+	height: 					110vh;
+	width: 						revert;
+	background: 				#D7D4FF;
+	display: 					flex;
+	flex-direction: 			column;
+	justify-content: 			space-evenly;
+	align-items: 				center;
 }
 span{
-	font-family: 			'Merriweather', Georgia, serif;
-	font-style: 			normal;
-	font-weight: 			400;
-	color: 					#2B2B2B;
-	font-size: 				4.5vh;
-	line-height: 			4.3vh;
+	font-family: 				'Merriweather', Georgia, serif;
+	font-style: 				normal;
+	font-weight: 				400;
+	color: 						#2B2B2B;
+	font-size: 					4.5vh;
+	line-height: 				4.3vh;
 }
 .third>input{
-	height: 5vh;
-	width: 45vw;
-	background: white;
-	border: none;
-	border-radius: 1vw;
-	padding: 1vw;
+	height: 					5vh;
+	width: 						45vw;
+	background: 				white;
+	border: 					none;
+	border-radius: 				1vw;
+	padding: 					1vw;
 }
 .third>textarea{
-	height: 25vh;
-	width: 45vw;
-	background: white;
-	border: none;
-	border-radius: 1vw;
-	padding: 1vw;
-	resize: vertical;
+	height: 					25vh;
+	width: 						45vw;
+	background: 				white;
+	border: 					none;
+	border-radius: 				1vw;
+	padding: 					1vw;
+	resize: 					vertical;
 	
 }
 .third>button{
-	height: 8vh;
-	width: 47vw;
-	border: none;
-	border-radius: 1vw;
-	padding: 1vw;
-	font-family: 'Lato', Georgia, sans-serif;
-	font-style: normal;
-	font-weight: 700;
-	font-size: 3.5vh;
-	line-height: 3.8vh;
-	display: flex;
-	justify-content: center;
-	box-shadow: 0vw 0.05vw 0.5vh rgba(23, 23, 23, 0.1);
-	align-items: center;
-	color: white;
-	background: #6C63FF;
+	height: 					8vh;
+	width: 						47vw;
+	border: 					none;
+	border-radius: 				1vw;
+	padding: 					1vw;
+	font-family: 				'Lato', Georgia, sans-serif;
+	font-style: 				normal;
+	font-weight: 				700;
+	font-size: 					3.5vh;
+	line-height: 				3.8vh;
+	display: 					flex;
+	justify-content: 			center;
+	box-shadow: 				0vw 0.05vw 0.5vh rgba(23, 23, 23, 0.1);
+	align-items: 				center;
+	color: 						white;
+	background: 				#6C63FF;
 }
