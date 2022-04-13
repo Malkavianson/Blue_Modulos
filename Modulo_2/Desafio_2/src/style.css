@@ -91,7 +91,7 @@
 	}
 	.colors{
 		position: 				relative;
-		height: 				40vh;
+		height: 				28vh;
 		width: 					25vw;
 		display: 				flex;
 		align-items: 			flex-end;
@@ -241,8 +241,8 @@ span{
 	font-family: 'Lato', Georgia, sans-serif;
 	font-style: normal;
 	font-weight: 700;
-	font-size: 20px;
-	line-height: 24px;
+	font-size: 3.5vh;
+	line-height: 3.8vh;
 	display: flex;
 	justify-content: center;
 	box-shadow: 0vw 0.05vw 0.5vh rgba(23, 23, 23, 0.1);
