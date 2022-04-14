@@ -110,7 +110,7 @@
 		display: flex;
 		flex-direction: column;
 		margin-top: calc(var(--vh, 1vh) * 0.2);
-		margin-left: calc(var(--vh, 1vh) * 38);
+		margin-left: calc(var(--vh, 1vh) * 45);
 		cursor: pointer;
 	}
 	.menu>div{
@@ -284,7 +284,7 @@
 		display: flex;
 		flex-direction: column;
 		margin-top: calc(var(--vh, 1vh) * 0.2);
-		margin-left: calc(var(--vh, 1vh) * 38);
+		margin-left: calc(var(--vh, 1vh) * 55);
 		cursor: pointer;
 	}
 	.menu>div{
