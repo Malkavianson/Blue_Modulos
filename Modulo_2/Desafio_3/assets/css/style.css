@@ -141,11 +141,11 @@ main>div{
 }
 @media (min-aspect-ratio: 4/3){
 	.showroom>div{
-		height: 				40%;
+		height: 				45%;
 		width: 					100%;
 	}
 	.showroom>div>div{
-		height: 				80%;
+		width: 					13%;
 	}
 }
 @media (max-aspect-ratio: 4/3){
