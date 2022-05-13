@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang='en'>
+	
+	<head>
+
+		<title>Malkavian's mind</title>
+		<meta charset="utf-8">
+		<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="icon" href="./src/icon.png">
+
+		<link rel="stylesheet" href="./src/style.css">	
+		
+		<script src='./src/scripts.js' defer></script>
+		<script type="text/javascript">
+			let vh = window.innerHeight * 0.01;
+			document.documentElement.style.setProperty('--vh', `${vh}px`);
+			window.addEventListener('resize', function(){
+				let vh = window.innerHeight * 0.01;
+				document.documentElement.style.setProperty('--vh', `${vh}px`);
+			});
+		</script>
+
+	</head>
+	<body>
+		<header>
+			<div class='titulo'>
+				<div class='tituloSqr'>
+					<h1>Malkavian's mind through the looking mirror</h1>
+				</div>
+			</div>
+		</header>
+		<main>
+			<article>
+				<div class='escopo'>
+					<section>
+						<div class='btnBlock'>
+							<div class='txt' id='t' style='display: flex'>
+								<h2> ☸️ </h2>
+								<p>Você agora está preso<br/> Na mente de um malkaviano... <br/> Veja como ele se sente:</p>
+							</div>
+							<div class='btn'>
+								<button class='btn' id='b' style='display: flex' onclick='c.change()'> 😵‍💫 </button>
+							</div>
+						</div>
+					</section>
+					<figure>
+						<div class='picBlock'>
+							<div class='img' id='im'>
+								<img id='i' style='display: flex; max-height:90%' src="./src/bgUpper.png" alt="Malkavian's mirror">
+							</div>
+						</div>
+					</figure>
+				</div>
+			</article>
+		</main>
+		<footer>
+			<div class='rodape'>
+				<a href="https://github.com/Malkavianson" target="_blank">created with madness by @MalkavianSon</p>
+			</div>
+		</footer>
+	</body>
+</html>
