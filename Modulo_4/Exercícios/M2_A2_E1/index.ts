@@ -40,4 +40,4 @@ export function logPerson(person: Person) {
 }
 
 console.log('Persons: ');
-persons.forEach(user => logPerson(user));
+persons.forEach(person => logPerson(person));
