@@ -1,0 +1,14 @@
+{
+  "name": "exercicio1",
+  "version": "1.0.0",
+  "description": "Exercicio 1 da Aula 2 do Módulo 4 do curso de FullStack da Blue EdtTech",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "malkavianson",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.7.4"
+  }
+}
