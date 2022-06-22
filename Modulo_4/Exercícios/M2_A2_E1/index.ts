@@ -1,16 +1,16 @@
 interface User {
 	name: string;
 	age: number;
-	occupation: string;
+	occupation?: string;
 }
 
 interface Admin {
 	name: string;
 	age: number;
-	role: string;
+	role?: string;
 }
 
-export type Person = User | Admin;
+export type Person = User & Admin;
 
 export const persons: Person[] = [
 	{
@@ -36,7 +36,13 @@ export const persons: Person[] = [
 ];
 
 export function logPerson(person: Person) {
-	console.log(` - ${person.name}, ${person.age}`);
+	let additionalInformation: string | undefined;
+	if (person.role) {
+		additionalInformation = person.role;
+	} else {
+		additionalInformation = person.occupation;
+	}
+	console.log(` - ${person.name}, ${person.age}, ${additionalInformation}`);
 }
 
 console.log('Persons: ');
